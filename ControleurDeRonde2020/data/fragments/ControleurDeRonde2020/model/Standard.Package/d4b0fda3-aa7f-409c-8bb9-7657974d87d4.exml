@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="controleurderonde2020" version="4">
+  <OBJECT>
+    <ID name="controleurderonde2020" mc="Standard.Package" uid="d4b0fda3-aa7f-409c-8bb9-7657974d87d4"/>
+    <PID name="ControleurDeRonde2020" mc="Standard.Project" uid="02c91801-1d36-4285-98b3-80a6366d5c39"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[controleurderonde2020]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Application smartphone" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+        <COMPID name="Application station d'accueil" mc="Standard.Package" uid="3eec2b5c-4fce-4dda-b8d3-4e053659d8ce"/>
+        <COMPID name="Agent de sécurité" mc="Standard.Actor" uid="3cc51881-b2ad-4ebd-ae7c-8b7669a0b3eb"/>
+        <COMPID name="Responsable sécurité" mc="Standard.Actor" uid="4ee96c3c-7d6d-496c-b0e8-633ca5f32fad"/>
+        <COMPID name="Responsable de sécurité" mc="Standard.Actor" uid="c09022c9-44d6-4a37-ac13-41ca6790772d"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="controleurderonde2020 Use Case diagram" mc="Standard.UseCaseDiagram" uid="054ba1fa-fa97-4b5e-9f55-8306f2445d07"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
