@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Application station d'accueil" version="4">
+  <OBJECT>
+    <ID name="Application station d'accueil" mc="Standard.Package" uid="3eec2b5c-4fce-4dda-b8d3-4e053659d8ce"/>
+    <PID name="controleurderonde2020" mc="Standard.Package" uid="d4b0fda3-aa7f-409c-8bb9-7657974d87d4"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Application station d'accueil]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Administrer les Agents de sécurité" mc="Standard.UseCase" uid="a6ee602d-c29e-4edd-bad1-ebb5766044fc"/>
+        <COMPID name="Gérer les pointeaux" mc="Standard.UseCase" uid="2d0ba832-3e16-4868-837c-f02285bd6727"/>
+        <COMPID name="Identifier utilisateur" mc="Standard.UseCase" uid="a3105a8c-9427-48e0-b4d0-680d7d378a1d"/>
+        <COMPID name="Organiser une  ronde de surveillance" mc="Standard.UseCase" uid="0293ff15-a97c-491f-972a-fd3a141d7172"/>
+        <COMPID name="Etablir des statistiques sur les rondes" mc="Standard.UseCase" uid="264c8b6c-4ffd-4d86-baec-5130a46c7d8b"/>
+        <COMPID name="Visualiser un rapport de ronde" mc="Standard.UseCase" uid="91382438-6b72-48e5-a26f-5b522d40f281"/>
+        <COMPID name="Synchroniser le smartphone d'un agent" mc="Standard.UseCase" uid="53f1cf19-0dc4-418f-94a7-ff0d7e94a3df"/>
+        <COMPID name="Affecter les rondes de surveillance" mc="Standard.UseCase" uid="194d0e51-9248-460a-87e4-c9d841e65ac9"/>
+        <COMPID name="Synchroniser les rondes" mc="Standard.UseCase" uid="7b8ecbc0-4b33-4037-90be-68edd5583875"/>
+      </COMP>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="af691713-f9c1-4bd9-b717-8892dacac96e"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
