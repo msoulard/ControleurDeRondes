@@ -1,0 +1,7 @@
+digraph "Ui_IHMPointeau"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Ui_IHMPointeau\n|+ verticalLayout_2\l+ verticalSpacer\l+ horizontalLayout_6\l+ horizontalSpacer_5\l+ labelPointeau\l+ comboBoxPointeaux\l+ pushButtonAjouter\l+ horizontalSpacer_6\l+ line_2\l+ horizontalLayout_5\land 39 more...\l|+ setupUi()\l+ retranslateUi()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

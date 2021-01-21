@@ -1,0 +1,26 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node28 [label="QWidget",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node28 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="IHMAgent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_agent.html",tooltip=" "];
+  Node28 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="IHMAssociation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_association.html",tooltip=" "];
+  Node28 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="IHMIdentification",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_identification.html",tooltip=" "];
+  Node28 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="IHMLocalisation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_localisation.html",tooltip=" "];
+  Node28 -> Node33 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="IHMPointeau",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_pointeau.html",tooltip=" "];
+  Node28 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="IHMRapport",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_rapport.html",tooltip=" "];
+  Node28 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="IHMRonde",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_ronde.html",tooltip=" "];
+  Node28 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="IHMStatistiques",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_statistiques.html",tooltip=" "];
+  Node28 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="IHMSynchronisation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_synchronisation.html",tooltip=" "];
+}

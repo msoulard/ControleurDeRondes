@@ -1,0 +1,7 @@
+digraph "Ui_IHMRonde"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Ui_IHMRonde\n|+ verticalLayout_5\l+ horizontalLayout\l+ horizontalSpacer_3\l+ labelRonde\l+ comboBoxNom\l+ pushButtonAjouter\l+ horizontalSpacer_4\l+ line_2\l+ verticalLayout_4\l+ horizontalLayout_4\land 39 more...\l|+ setupUi()\l+ retranslateUi()\l+ setupUi()\l+ retranslateUi()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}
