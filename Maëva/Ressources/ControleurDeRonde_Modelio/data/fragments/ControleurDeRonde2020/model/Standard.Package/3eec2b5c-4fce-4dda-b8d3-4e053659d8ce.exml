@@ -22,8 +22,6 @@
         <COMPID name="Visualiser un rapport de ronde" mc="Standard.UseCase" uid="91382438-6b72-48e5-a26f-5b522d40f281"/>
         <COMPID name="Synchroniser le smartphone d'un agent" mc="Standard.UseCase" uid="53f1cf19-0dc4-418f-94a7-ff0d7e94a3df"/>
         <COMPID name="Affecter les rondes de surveillance" mc="Standard.UseCase" uid="194d0e51-9248-460a-87e4-c9d841e65ac9"/>
-        <COMPID name="Synchroniser les rondes" mc="Standard.UseCase" uid="7b8ecbc0-4b33-4037-90be-68edd5583875"/>
-        <COMPID name="Historique des rondes" mc="Standard.UseCase" uid="b872e538-c24b-434a-a5af-3e07f8dfacca"/>
       </COMP>
       <COMP relation="Descriptor">
         <OBJECT>
