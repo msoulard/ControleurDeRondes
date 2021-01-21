@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="le responsable" version="4">
+  <OBJECT>
+    <ID name="le responsable" mc="Standard.Actor" uid="6ed45d57-416d-453c-8b00-7444a42526b8"/>
+    <PID name="controleur de ronde" mc="Standard.Package" uid="fddee2c4-cb49-48bc-8160-2f97927c22b1"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[le responsable]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
