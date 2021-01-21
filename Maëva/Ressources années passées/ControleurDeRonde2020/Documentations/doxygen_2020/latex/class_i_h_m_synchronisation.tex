@@ -1,0 +1,345 @@
+\hypertarget{class_i_h_m_synchronisation}{}\doxysection{I\+H\+M\+Synchronisation Class Reference}
+\label{class_i_h_m_synchronisation}\index{IHMSynchronisation@{IHMSynchronisation}}
+
+
+{\ttfamily \#include $<$ihmsynchronisation.\+h$>$}
+
+
+
+Inheritance diagram for I\+H\+M\+Synchronisation\+:
+% FIG 0
+
+
+Collaboration diagram for I\+H\+M\+Synchronisation\+:
+% FIG 1
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_a9acb42eff5722cecada01292d7314e2d}{liste\+Smartphone\+Change}} (Q\+List$<$ Q\+String $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_h_m_synchronisation_a2de6ed58a11c77a5c8950d78c8d6cec0}{I\+H\+M\+Synchronisation}} (\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \&my\+Sql\+Bdd, Q\+String \+\_\+chemin\+Photos, Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_a2de6ed58a11c77a5c8950d78c8d6cec0}{I\+H\+M\+Synchronisation\+::\+I\+H\+M\+Synchronisation}} Constructeur de la classe \mbox{\hyperlink{class_i_h_m_synchronisation}{I\+H\+M\+Synchronisation}}. Le constructeur s\textquotesingle{}occupe ici de lancer toutes les classes secondaires, la détection des smartphones ainsi que l\textquotesingle{}initialisation de l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_h_m_synchronisation_a1fece5376cf66419d1857558572aa2b6}{$\sim$\+I\+H\+M\+Synchronisation}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_a1fece5376cf66419d1857558572aa2b6}{I\+H\+M\+Synchronisation\+::$\sim$\+I\+H\+M\+Synchronisation}} Destructeur de la classe Synchronisation. Le destructeur permet de stoper tous les processus lancés par l\textquotesingle{}application, permettant de ne pas avoir de message d\textquotesingle{}erreur à la fermeture de l\textquotesingle{}application supervision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_aff92e1bfabe885dff6d7e306916863c4}{on\+\_\+push\+Button\+Synchroniser\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_aff92e1bfabe885dff6d7e306916863c4}{I\+H\+M\+Synchronisation\+::on\+\_\+push\+Button\+Synchroniser\+\_\+clicked}} Ce slot permet, quand le bouton de synchronisation est pressé, de préparer les données de synchronisation et de les envoyer sur le smartphone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_ad9ffc47073e126d86e4f84be45f83724}{on\+Q\+Process\+Logs\+Ready\+Read}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_ad9ffc47073e126d86e4f84be45f83724}{I\+H\+M\+Synchronisation\+::on\+Q\+Process\+Logs\+Ready\+Read}} Ce slot permet de lire les logs envoyés par le smartphone et donc de détecter lorsque ce dernier a terminé sa partie de la synchronisation. Le slot lance ensuite le transfert des données du fichier récupéré vers la base de données du poste de supervision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_ac9cd6a4454e9c00588f31a8927ee7645}{on\+Animation\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_ac9cd6a4454e9c00588f31a8927ee7645}{I\+H\+M\+Synchronisation\+::on\+Animation\+Finished}} Ce slot permet, lorsque l\textquotesingle{}animation en cours de la progress bar est terminé, de lancer l\textquotesingle{}animation suivante. Cela permet une progression de la bar continue et fluide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_a705dcf83133a03fd0e6577263eb600ce}{on\+Nouveau\+Log}} (Q\+String texte, bool gras)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_a705dcf83133a03fd0e6577263eb600ce}{I\+H\+M\+Synchronisation\+::on\+Nouveau\+Log}} Ce slot permet de récupérer les messages de la classe \mbox{\hyperlink{class_gestion_s_q_lite}{Gestion\+S\+Q\+Lite}} et de les afficher dans les détails de l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_a1fbfa34109a612b404eed2521b7f009b}{on\+Timeaout\+Erreur\+Synchronisation}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_a1fbfa34109a612b404eed2521b7f009b}{I\+H\+M\+Synchronisation\+::on\+Timeaout\+Erreur\+Synchronisation}} Ce slot permet d\textquotesingle{}identifier si le smartphone en cours de synchronisation a eu un problème. Si le timer a le temps de se terminer et donc de lancer ce slot, la synchronisation en cours est considérée comme échouée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_aea3f7929f2daaab84a9aed9a15656b0a}{on\+Exit\+S\+Q\+Lite}} ()
+\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_afc3304dfab4d2e19f4de8f536cbd9228}{on\+Liste\+Smartphone\+Change}} (Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$ \+\_\+liste\+Smartphone)
+\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_ab80532ef89936288ea36d7e820a6d202}{on\+\_\+combo\+Box\+Selection\+Smartphone\+\_\+current\+Text\+Changed}} (const Q\+String \&arg1)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_ab80532ef89936288ea36d7e820a6d202}{I\+H\+M\+Synchronisation\+::on\+\_\+combo\+Box\+Selection\+Smartphone\+\_\+current\+Text\+Changed}} Ce slot permet d\textquotesingle{}activer ou de désactiver le bouton de synchronisation de l\textquotesingle{}interface si un smartphone est sélectionné ou non. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_a26ea511ae4ef559aef1297e5112dfa6e}{on\+\_\+push\+Button\+Details\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_a26ea511ae4ef559aef1297e5112dfa6e}{I\+H\+M\+Synchronisation\+::on\+\_\+push\+Button\+Details\+\_\+clicked}} Ce slot permet d\textquotesingle{}afficher ou de cacher les détails de la synchronisation en fonction de son état précédent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_a72caa6d4ae4b8f50c72ab909411b6fd9}{on\+\_\+push\+Button\+Detecter\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_h_m_synchronisation_a19989ab3e23852174c60b52348929ebb}{mise\+A\+Jour\+Combo\+Box}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_h_m_synchronisation_a19989ab3e23852174c60b52348929ebb}{I\+H\+M\+Synchronisation\+::mise\+A\+Jour\+Combo\+Box}} Cette méthode permet de mettre à jour la liste déroulante de liste des smartphones de l\textquotesingle{}interface lorsqu\textquotesingle{}un smartphone est ajouté ou enlevé. Cette manipulation permet de ne pas remettre à zéro la sélection lorsque la liste des smartphones connectés est modifiée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ui_1_1_i_h_m_synchronisation}{Ui\+::\+I\+H\+M\+Synchronisation}} $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_a7bf8079d459391c03962fd986a721d5d}{ui}}
+\item 
+\mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}} $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_a63bccd66a905cd434b86fbfda31f3d14}{detection\+U\+SB}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_adf4bc0cd7cc136699ac0dd491c5aba87}{timer\+Detection\+Smartphone}}
+\item 
+\mbox{\hyperlink{class_communication_a_d_b}{Communication\+A\+DB}} $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_af6b5f9ed4b18b64c72c80a3a57234222}{comm\+A\+DB}}
+\item 
+\mbox{\hyperlink{class_gestion_smartphones}{Gestion\+Smartphones}} $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_a4d5d9463c0b95c21fb5b7d944cb3d8e2}{gestion\+Smartphones}}
+\item 
+\mbox{\hyperlink{class_gestion_s_q_lite}{Gestion\+S\+Q\+Lite}} $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_a62fd3de3b2810a3e1488d4de9fe9aee4}{sqlite}}
+\item 
+Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$ \mbox{\hyperlink{class_i_h_m_synchronisation_aaea629a15bb1189f6f42dbec5fd83a63}{liste\+Smartphone}}
+\item 
+Q\+Process $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_a16a7db0bb005930b8bbd3796d4f62f1d}{ecouteur\+Log\+Android}}
+\item 
+Q\+Process $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_a6969e1509743af5c48a1316cdc57b422}{remise\+A\+Zero\+Log}}
+\item 
+Q\+Property\+Animation $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_ae1e04cb735cc92240ff214c2bdc04995}{animation}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_i_h_m_synchronisation_a45cfae38894545bed1b2be1fcf0df98a}{erreur\+Synchronisation}}
+\item 
+\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \mbox{\hyperlink{class_i_h_m_synchronisation_a53b4eb5f3031f68916af0028793424f8}{bdd}}
+\item 
+Q\+String \mbox{\hyperlink{class_i_h_m_synchronisation_a12911d0cce1eef97c6c4494c9ca4cccb}{chemin\+Photos}}
+\item 
+int \mbox{\hyperlink{class_i_h_m_synchronisation_ae472fee1a91da89c2fc181f3665b6e41}{etat\+Animation}}
+\item 
+int \mbox{\hyperlink{class_i_h_m_synchronisation_aa43fbe6978f3f0c877f57a7ebe069281}{etat\+Synchronisation}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a2de6ed58a11c77a5c8950d78c8d6cec0}\label{class_i_h_m_synchronisation_a2de6ed58a11c77a5c8950d78c8d6cec0}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!IHMSynchronisation@{IHMSynchronisation}}
+\index{IHMSynchronisation@{IHMSynchronisation}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{IHMSynchronisation()}{IHMSynchronisation()}}
+{\footnotesize\ttfamily I\+H\+M\+Synchronisation\+::\+I\+H\+M\+Synchronisation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \&}]{my\+Sql\+Bdd,  }\item[{Q\+String}]{\+\_\+chemin\+Photos,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_a2de6ed58a11c77a5c8950d78c8d6cec0}{I\+H\+M\+Synchronisation\+::\+I\+H\+M\+Synchronisation}} Constructeur de la classe \mbox{\hyperlink{class_i_h_m_synchronisation}{I\+H\+M\+Synchronisation}}. Le constructeur s\textquotesingle{}occupe ici de lancer toutes les classes secondaires, la détection des smartphones ainsi que l\textquotesingle{}initialisation de l\textquotesingle{}interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a1fece5376cf66419d1857558572aa2b6}\label{class_i_h_m_synchronisation_a1fece5376cf66419d1857558572aa2b6}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!````~IHMSynchronisation@{$\sim$IHMSynchronisation}}
+\index{````~IHMSynchronisation@{$\sim$IHMSynchronisation}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{$\sim$IHMSynchronisation()}{~IHMSynchronisation()}}
+{\footnotesize\ttfamily I\+H\+M\+Synchronisation\+::$\sim$\+I\+H\+M\+Synchronisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_a1fece5376cf66419d1857558572aa2b6}{I\+H\+M\+Synchronisation\+::$\sim$\+I\+H\+M\+Synchronisation}} Destructeur de la classe Synchronisation. Le destructeur permet de stoper tous les processus lancés par l\textquotesingle{}application, permettant de ne pas avoir de message d\textquotesingle{}erreur à la fermeture de l\textquotesingle{}application supervision. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a9acb42eff5722cecada01292d7314e2d}\label{class_i_h_m_synchronisation_a9acb42eff5722cecada01292d7314e2d}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!listeSmartphoneChange@{listeSmartphoneChange}}
+\index{listeSmartphoneChange@{listeSmartphoneChange}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{listeSmartphoneChange}{listeSmartphoneChange}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::liste\+Smartphone\+Change (\begin{DoxyParamCaption}\item[{Q\+List$<$ Q\+String $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a19989ab3e23852174c60b52348929ebb}\label{class_i_h_m_synchronisation_a19989ab3e23852174c60b52348929ebb}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!miseAJourComboBox@{miseAJourComboBox}}
+\index{miseAJourComboBox@{miseAJourComboBox}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{miseAJourComboBox()}{miseAJourComboBox()}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::mise\+A\+Jour\+Combo\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_a19989ab3e23852174c60b52348929ebb}{I\+H\+M\+Synchronisation\+::mise\+A\+Jour\+Combo\+Box}} Cette méthode permet de mettre à jour la liste déroulante de liste des smartphones de l\textquotesingle{}interface lorsqu\textquotesingle{}un smartphone est ajouté ou enlevé. Cette manipulation permet de ne pas remettre à zéro la sélection lorsque la liste des smartphones connectés est modifiée. 
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_ab80532ef89936288ea36d7e820a6d202}\label{class_i_h_m_synchronisation_ab80532ef89936288ea36d7e820a6d202}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!on\_comboBoxSelectionSmartphone\_currentTextChanged@{on\_comboBoxSelectionSmartphone\_currentTextChanged}}
+\index{on\_comboBoxSelectionSmartphone\_currentTextChanged@{on\_comboBoxSelectionSmartphone\_currentTextChanged}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{on\_comboBoxSelectionSmartphone\_currentTextChanged}{on\_comboBoxSelectionSmartphone\_currentTextChanged}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+\_\+combo\+Box\+Selection\+Smartphone\+\_\+current\+Text\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_ab80532ef89936288ea36d7e820a6d202}{I\+H\+M\+Synchronisation\+::on\+\_\+combo\+Box\+Selection\+Smartphone\+\_\+current\+Text\+Changed}} Ce slot permet d\textquotesingle{}activer ou de désactiver le bouton de synchronisation de l\textquotesingle{}interface si un smartphone est sélectionné ou non. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg1} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a26ea511ae4ef559aef1297e5112dfa6e}\label{class_i_h_m_synchronisation_a26ea511ae4ef559aef1297e5112dfa6e}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!on\_pushButtonDetails\_clicked@{on\_pushButtonDetails\_clicked}}
+\index{on\_pushButtonDetails\_clicked@{on\_pushButtonDetails\_clicked}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButtonDetails\_clicked}{on\_pushButtonDetails\_clicked}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+\_\+push\+Button\+Details\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_a26ea511ae4ef559aef1297e5112dfa6e}{I\+H\+M\+Synchronisation\+::on\+\_\+push\+Button\+Details\+\_\+clicked}} Ce slot permet d\textquotesingle{}afficher ou de cacher les détails de la synchronisation en fonction de son état précédent. 
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a72caa6d4ae4b8f50c72ab909411b6fd9}\label{class_i_h_m_synchronisation_a72caa6d4ae4b8f50c72ab909411b6fd9}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!on\_pushButtonDetecter\_clicked@{on\_pushButtonDetecter\_clicked}}
+\index{on\_pushButtonDetecter\_clicked@{on\_pushButtonDetecter\_clicked}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButtonDetecter\_clicked}{on\_pushButtonDetecter\_clicked}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+\_\+push\+Button\+Detecter\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_i_h_m_synchronisation_aff92e1bfabe885dff6d7e306916863c4}\label{class_i_h_m_synchronisation_aff92e1bfabe885dff6d7e306916863c4}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!on\_pushButtonSynchroniser\_clicked@{on\_pushButtonSynchroniser\_clicked}}
+\index{on\_pushButtonSynchroniser\_clicked@{on\_pushButtonSynchroniser\_clicked}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButtonSynchroniser\_clicked}{on\_pushButtonSynchroniser\_clicked}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+\_\+push\+Button\+Synchroniser\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_aff92e1bfabe885dff6d7e306916863c4}{I\+H\+M\+Synchronisation\+::on\+\_\+push\+Button\+Synchroniser\+\_\+clicked}} Ce slot permet, quand le bouton de synchronisation est pressé, de préparer les données de synchronisation et de les envoyer sur le smartphone. 
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_i_h_m_synchronisation_ac9cd6a4454e9c00588f31a8927ee7645}\label{class_i_h_m_synchronisation_ac9cd6a4454e9c00588f31a8927ee7645}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!onAnimationFinished@{onAnimationFinished}}
+\index{onAnimationFinished@{onAnimationFinished}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{onAnimationFinished}{onAnimationFinished}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+Animation\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_ac9cd6a4454e9c00588f31a8927ee7645}{I\+H\+M\+Synchronisation\+::on\+Animation\+Finished}} Ce slot permet, lorsque l\textquotesingle{}animation en cours de la progress bar est terminé, de lancer l\textquotesingle{}animation suivante. Cela permet une progression de la bar continue et fluide. 
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_aea3f7929f2daaab84a9aed9a15656b0a}\label{class_i_h_m_synchronisation_aea3f7929f2daaab84a9aed9a15656b0a}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!onExitSQLite@{onExitSQLite}}
+\index{onExitSQLite@{onExitSQLite}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{onExitSQLite}{onExitSQLite}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+Exit\+S\+Q\+Lite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_i_h_m_synchronisation_afc3304dfab4d2e19f4de8f536cbd9228}\label{class_i_h_m_synchronisation_afc3304dfab4d2e19f4de8f536cbd9228}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!onListeSmartphoneChange@{onListeSmartphoneChange}}
+\index{onListeSmartphoneChange@{onListeSmartphoneChange}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{onListeSmartphoneChange}{onListeSmartphoneChange}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+Liste\+Smartphone\+Change (\begin{DoxyParamCaption}\item[{Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$}]{\+\_\+liste\+Smartphone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a705dcf83133a03fd0e6577263eb600ce}\label{class_i_h_m_synchronisation_a705dcf83133a03fd0e6577263eb600ce}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!onNouveauLog@{onNouveauLog}}
+\index{onNouveauLog@{onNouveauLog}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{onNouveauLog}{onNouveauLog}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+Nouveau\+Log (\begin{DoxyParamCaption}\item[{Q\+String}]{texte,  }\item[{bool}]{gras }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_a705dcf83133a03fd0e6577263eb600ce}{I\+H\+M\+Synchronisation\+::on\+Nouveau\+Log}} Ce slot permet de récupérer les messages de la classe \mbox{\hyperlink{class_gestion_s_q_lite}{Gestion\+S\+Q\+Lite}} et de les afficher dans les détails de l\textquotesingle{}interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texte} & \\
+\hline
+{\em gras} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_h_m_synchronisation_ad9ffc47073e126d86e4f84be45f83724}\label{class_i_h_m_synchronisation_ad9ffc47073e126d86e4f84be45f83724}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!onQProcessLogsReadyRead@{onQProcessLogsReadyRead}}
+\index{onQProcessLogsReadyRead@{onQProcessLogsReadyRead}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{onQProcessLogsReadyRead}{onQProcessLogsReadyRead}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+Q\+Process\+Logs\+Ready\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_ad9ffc47073e126d86e4f84be45f83724}{I\+H\+M\+Synchronisation\+::on\+Q\+Process\+Logs\+Ready\+Read}} Ce slot permet de lire les logs envoyés par le smartphone et donc de détecter lorsque ce dernier a terminé sa partie de la synchronisation. Le slot lance ensuite le transfert des données du fichier récupéré vers la base de données du poste de supervision. 
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a1fbfa34109a612b404eed2521b7f009b}\label{class_i_h_m_synchronisation_a1fbfa34109a612b404eed2521b7f009b}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!onTimeaoutErreurSynchronisation@{onTimeaoutErreurSynchronisation}}
+\index{onTimeaoutErreurSynchronisation@{onTimeaoutErreurSynchronisation}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{onTimeaoutErreurSynchronisation}{onTimeaoutErreurSynchronisation}}
+{\footnotesize\ttfamily void I\+H\+M\+Synchronisation\+::on\+Timeaout\+Erreur\+Synchronisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_i_h_m_synchronisation_a1fbfa34109a612b404eed2521b7f009b}{I\+H\+M\+Synchronisation\+::on\+Timeaout\+Erreur\+Synchronisation}} Ce slot permet d\textquotesingle{}identifier si le smartphone en cours de synchronisation a eu un problème. Si le timer a le temps de se terminer et donc de lancer ce slot, la synchronisation en cours est considérée comme échouée. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i_h_m_synchronisation_ae1e04cb735cc92240ff214c2bdc04995}\label{class_i_h_m_synchronisation_ae1e04cb735cc92240ff214c2bdc04995}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!animation@{animation}}
+\index{animation@{animation}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{animation}{animation}}
+{\footnotesize\ttfamily Q\+Property\+Animation$\ast$ I\+H\+M\+Synchronisation\+::animation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a53b4eb5f3031f68916af0028793424f8}\label{class_i_h_m_synchronisation_a53b4eb5f3031f68916af0028793424f8}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!bdd@{bdd}}
+\index{bdd@{bdd}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{bdd}{bdd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} I\+H\+M\+Synchronisation\+::bdd\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a12911d0cce1eef97c6c4494c9ca4cccb}\label{class_i_h_m_synchronisation_a12911d0cce1eef97c6c4494c9ca4cccb}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!cheminPhotos@{cheminPhotos}}
+\index{cheminPhotos@{cheminPhotos}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{cheminPhotos}{cheminPhotos}}
+{\footnotesize\ttfamily Q\+String I\+H\+M\+Synchronisation\+::chemin\+Photos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_af6b5f9ed4b18b64c72c80a3a57234222}\label{class_i_h_m_synchronisation_af6b5f9ed4b18b64c72c80a3a57234222}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!commADB@{commADB}}
+\index{commADB@{commADB}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{commADB}{commADB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_communication_a_d_b}{Communication\+A\+DB}}$\ast$ I\+H\+M\+Synchronisation\+::comm\+A\+DB\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a63bccd66a905cd434b86fbfda31f3d14}\label{class_i_h_m_synchronisation_a63bccd66a905cd434b86fbfda31f3d14}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!detectionUSB@{detectionUSB}}
+\index{detectionUSB@{detectionUSB}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{detectionUSB}{detectionUSB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}}$\ast$ I\+H\+M\+Synchronisation\+::detection\+U\+SB\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a16a7db0bb005930b8bbd3796d4f62f1d}\label{class_i_h_m_synchronisation_a16a7db0bb005930b8bbd3796d4f62f1d}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!ecouteurLogAndroid@{ecouteurLogAndroid}}
+\index{ecouteurLogAndroid@{ecouteurLogAndroid}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{ecouteurLogAndroid}{ecouteurLogAndroid}}
+{\footnotesize\ttfamily Q\+Process$\ast$ I\+H\+M\+Synchronisation\+::ecouteur\+Log\+Android\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a45cfae38894545bed1b2be1fcf0df98a}\label{class_i_h_m_synchronisation_a45cfae38894545bed1b2be1fcf0df98a}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!erreurSynchronisation@{erreurSynchronisation}}
+\index{erreurSynchronisation@{erreurSynchronisation}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{erreurSynchronisation}{erreurSynchronisation}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ I\+H\+M\+Synchronisation\+::erreur\+Synchronisation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_ae472fee1a91da89c2fc181f3665b6e41}\label{class_i_h_m_synchronisation_ae472fee1a91da89c2fc181f3665b6e41}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!etatAnimation@{etatAnimation}}
+\index{etatAnimation@{etatAnimation}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{etatAnimation}{etatAnimation}}
+{\footnotesize\ttfamily int I\+H\+M\+Synchronisation\+::etat\+Animation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_aa43fbe6978f3f0c877f57a7ebe069281}\label{class_i_h_m_synchronisation_aa43fbe6978f3f0c877f57a7ebe069281}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!etatSynchronisation@{etatSynchronisation}}
+\index{etatSynchronisation@{etatSynchronisation}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{etatSynchronisation}{etatSynchronisation}}
+{\footnotesize\ttfamily int I\+H\+M\+Synchronisation\+::etat\+Synchronisation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a4d5d9463c0b95c21fb5b7d944cb3d8e2}\label{class_i_h_m_synchronisation_a4d5d9463c0b95c21fb5b7d944cb3d8e2}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!gestionSmartphones@{gestionSmartphones}}
+\index{gestionSmartphones@{gestionSmartphones}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{gestionSmartphones}{gestionSmartphones}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestion_smartphones}{Gestion\+Smartphones}}$\ast$ I\+H\+M\+Synchronisation\+::gestion\+Smartphones\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_aaea629a15bb1189f6f42dbec5fd83a63}\label{class_i_h_m_synchronisation_aaea629a15bb1189f6f42dbec5fd83a63}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!listeSmartphone@{listeSmartphone}}
+\index{listeSmartphone@{listeSmartphone}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{listeSmartphone}{listeSmartphone}}
+{\footnotesize\ttfamily Q\+List$<$\mbox{\hyperlink{struct_smartphone}{Smartphone}}$>$ I\+H\+M\+Synchronisation\+::liste\+Smartphone\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a6969e1509743af5c48a1316cdc57b422}\label{class_i_h_m_synchronisation_a6969e1509743af5c48a1316cdc57b422}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!remiseAZeroLog@{remiseAZeroLog}}
+\index{remiseAZeroLog@{remiseAZeroLog}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{remiseAZeroLog}{remiseAZeroLog}}
+{\footnotesize\ttfamily Q\+Process$\ast$ I\+H\+M\+Synchronisation\+::remise\+A\+Zero\+Log\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a62fd3de3b2810a3e1488d4de9fe9aee4}\label{class_i_h_m_synchronisation_a62fd3de3b2810a3e1488d4de9fe9aee4}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!sqlite@{sqlite}}
+\index{sqlite@{sqlite}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{sqlite}{sqlite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestion_s_q_lite}{Gestion\+S\+Q\+Lite}}$\ast$ I\+H\+M\+Synchronisation\+::sqlite\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_adf4bc0cd7cc136699ac0dd491c5aba87}\label{class_i_h_m_synchronisation_adf4bc0cd7cc136699ac0dd491c5aba87}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!timerDetectionSmartphone@{timerDetectionSmartphone}}
+\index{timerDetectionSmartphone@{timerDetectionSmartphone}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{timerDetectionSmartphone}{timerDetectionSmartphone}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ I\+H\+M\+Synchronisation\+::timer\+Detection\+Smartphone\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_synchronisation_a7bf8079d459391c03962fd986a721d5d}\label{class_i_h_m_synchronisation_a7bf8079d459391c03962fd986a721d5d}} 
+\index{IHMSynchronisation@{IHMSynchronisation}!ui@{ui}}
+\index{ui@{ui}!IHMSynchronisation@{IHMSynchronisation}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ui_1_1_i_h_m_synchronisation}{Ui\+::\+I\+H\+M\+Synchronisation}}$\ast$ I\+H\+M\+Synchronisation\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{ihmsynchronisation_8h}{ihmsynchronisation.\+h}}\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{ihmsynchronisation_8cpp}{ihmsynchronisation.\+cpp}}\end{DoxyCompactItemize}
