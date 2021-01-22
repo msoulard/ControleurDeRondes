@@ -14,7 +14,8 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedBehavior">
-        <COMPID name="Interaction" mc="Standard.Interaction" uid="18db7840-b4ac-4e81-88ba-0501dff70362"/>
+        <COMPID name="Interaction1" mc="Standard.Interaction" uid="ab5af961-fdba-4fea-b7ce-5ae17ec65abc"/>
+        <COMPID name="Interaction" mc="Standard.Interaction" uid="d5959cd0-f0d3-4c93-b979-2daf36fd748e"/>
       </COMP>
       <COMP relation="OwnedElement">
         <COMPID name="ApplicationMobileResponsable" mc="Standard.Class" uid="f82eba66-9f14-4c1c-99d7-e01020f9ce1d"/>
@@ -22,7 +23,10 @@
         <COMPID name="Ronde" mc="Standard.Class" uid="b18fcec8-fea1-46f0-9823-a7393669b20d"/>
         <COMPID name="ApplicationMobileAgent" mc="Standard.Class" uid="38d404c0-0c4e-483f-9983-c0ed53dbc59c"/>
         <COMPID name="Agent" mc="Standard.Actor" uid="c54e3333-30c5-40d9-b5a3-a58901ebfa6a"/>
-        <COMPID name="Tag Mifare" mc="Standard.Actor" uid="54dd9c88-2310-438e-b6a8-799c3299bb44"/>
+        <COMPID name="IHM" mc="Standard.Class" uid="19c0dd25-3991-4624-a3d7-43c4ad5fd87b"/>
+        <COMPID name="smartphone agent" mc="Standard.Class" uid="835a1238-7300-4112-8893-850f2c4fea48"/>
+        <COMPID name="Pointeau" mc="Standard.Class" uid="dadc2026-7433-45f7-9e59-fb4955b9bc01"/>
+        <COMPID name="BDD" mc="Standard.Class" uid="98a192fa-b4bf-401a-9350-c03e5097eee1"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>
