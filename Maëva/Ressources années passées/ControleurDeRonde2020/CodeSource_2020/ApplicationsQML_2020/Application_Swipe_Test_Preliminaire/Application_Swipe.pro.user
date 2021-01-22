@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.12.2, 2021-01-15T15:50:52. -->
+<!-- Written by QtCreator 4.12.2, 2021-01-22T11:52:28. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -8,7 +8,7 @@
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
-  <value type="int">0</value>
+  <value type="int">1</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.EditorSettings</variable>
@@ -361,8 +361,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">0</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Application_Swipe</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/Ressources années passées/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/Ressources années passées/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/Maëva/Ressources années passées/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/Maëva/Ressources années passées/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
@@ -612,8 +612,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Application_Swipe2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/Maëva/Ressources années passées/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/Maëva/Ressources années passées/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/Application_Swipe_Test_Preliminaire/Application_Swipe.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
@@ -624,7 +625,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/ControleurDeRonde2020/CodeSource_2020/ApplicationsQML_2020/build-Application_Swipe-Desktop_Qt_5_15_0_GCC_64bit-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
