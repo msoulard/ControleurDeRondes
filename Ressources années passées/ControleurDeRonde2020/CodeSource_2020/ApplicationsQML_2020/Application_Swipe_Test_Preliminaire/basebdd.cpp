@@ -12,7 +12,7 @@ QString BaseBDD::connexion()
 {
     DB = QSqlDatabase::addDatabase("QSQLITE");
            DB.setHostName("localhost");
-           DB.setDatabaseName("/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes/ControleurDeRonde2020/Bdd/controleurderonde2020_V2.sql");
+           DB.setDatabaseName("/home/bmezerette/ControleurDeRonde2020");
            DB.setUserName("root");
            DB.setPassword("totototo");
 

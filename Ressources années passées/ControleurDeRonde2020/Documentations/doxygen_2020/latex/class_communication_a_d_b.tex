@@ -1,0 +1,287 @@
+\hypertarget{class_communication_a_d_b}{}\doxysection{Communication\+A\+DB Class Reference}
+\label{class_communication_a_d_b}\index{CommunicationADB@{CommunicationADB}}
+
+
+{\ttfamily \#include $<$communicationadb.\+h$>$}
+
+
+
+Inheritance diagram for Communication\+A\+DB\+:
+% FIG 0
+
+
+Collaboration diagram for Communication\+A\+DB\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_communication_a_d_b_a0e1121a0cdbe9301aedaaef28c2d06e7}{Communication\+A\+DB}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_a0e1121a0cdbe9301aedaaef28c2d06e7}{Communication\+A\+D\+B\+::\+Communication\+A\+DB}} Constructeur de la classe Communication A\+DB. Ce constructeur s\textquotesingle{}occupe de déclarer les Q\+Process et de connecter les signaux de ces derniers aux slots de la classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_communication_a_d_b_a9ab3924b615b1083855809fa68650b51}{Communication\+A\+DB}} (Q\+String \+\_\+chemin\+Phontos)
+\item 
+\mbox{\hyperlink{class_communication_a_d_b_aef4643a8315f71cd9ff635450321681c}{$\sim$\+Communication\+A\+DB}} ()
+\item 
+Q\+List$<$ Q\+String $>$ \mbox{\hyperlink{class_communication_a_d_b_a046dcfe1c3608a52360e803cc7dc0b48}{obtenir\+Liste\+Id\+Smartphone}} ()
+\begin{DoxyCompactList}\small\item\em Communication\+A\+D\+B\+::obtenir\+Liste\+Smartphone Cette méthode permet de retourner la liste des smartphones connectés au PC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_communication_a_d_b_a3d190ac7bc33016e8ea16efc00cb49df}{mettre\+A\+Jour\+Liste\+Smartphone}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_a3d190ac7bc33016e8ea16efc00cb49df}{Communication\+A\+D\+B\+::mettre\+A\+Jour\+Liste\+Smartphone}} Cette méthode permet de relancer la détection des smartphones connectés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_communication_a_d_b_ab98dd6902c91bf32ad823b27a70783b6}{envoyer\+Fichier\+S\+Q\+Lite}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_ab98dd6902c91bf32ad823b27a70783b6}{Communication\+A\+D\+B\+::envoyer\+Fichier\+S\+Q\+Lite}} Cette méthode permet d\textquotesingle{}envoyer le fichier S\+Q\+Lite créé pour la copie des données entre le poste de supervision et le smartphone sur le smartphone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_communication_a_d_b_a8ca9a6f32735a665b9c61d45871f052a}{recuperer\+Fichier\+S\+Q\+Lite}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_a8ca9a6f32735a665b9c61d45871f052a}{Communication\+A\+D\+B\+::recuperer\+Fichier\+S\+Q\+Lite}} Cette méthode permet de récupérer le fichier S\+Q\+Lite créé pour la copie des données entre le poste de supervision et le smartphone sur le poste de supervision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_communication_a_d_b_a304f58a7474318bffd2ae5a1a5c87711}{recuperer\+Photos}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_a304f58a7474318bffd2ae5a1a5c87711}{Communication\+A\+D\+B\+::recuperer\+Photos}} Cette méthode permet de récupérer les photos prises avec l\textquotesingle{}application Rondier. Les photos sont ensuites supprimées du smartphone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_communication_a_d_b_af5b32b0047433c28d294955bdd48df2d}{appel\+Synchronisation\+Android}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_af5b32b0047433c28d294955bdd48df2d}{Communication\+A\+D\+B\+::appel\+Synchronisation\+Android}} Cette méthode d\textquotesingle{}appeler la classe \char`\"{}\+Synchronisation\char`\"{} du smartphone sélectionné dans la liste déroulante. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_communication_a_d_b_a87c44a51d0cc6228ac67b436c30d7989}{id\+Smartphone}}
+\item 
+Q\+String \mbox{\hyperlink{class_communication_a_d_b_aa4358781b851ff60b0bba6a3a49e7426}{chemin\+S\+Q\+Lite\+PC}}
+\item 
+Q\+String \mbox{\hyperlink{class_communication_a_d_b_af26b0fb5d11746cd4e463a55e7391271}{chemin\+S\+Q\+Lite\+Copie}}
+\item 
+Q\+String \mbox{\hyperlink{class_communication_a_d_b_a109307e02beb9a425a122920c349106e}{chemin\+Photos\+Android}}
+\item 
+Q\+String \mbox{\hyperlink{class_communication_a_d_b_ad35fc89e76adc522f1ad090902393806}{chemin\+Photos\+PC}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_communication_a_d_b_a82f4089d7327a0068764f2f1270a1743}{on\+Q\+Process\+Liste\+Appareils\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_a82f4089d7327a0068764f2f1270a1743}{Communication\+A\+D\+B\+::on\+Q\+Process\+Liste\+Appareils\+Finished}} Ce slot permet de terminer le Q\+Process de détection des smartphones connectés au poste de supervision une fois que se dernier a fini de s\textquotesingle{}éxecuter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_communication_a_d_b_ad9b5a0a2233fccf5b797f35f28b3dbbc}{on\+Q\+Process\+Liste\+Appareils\+Ready\+Read}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_ad9b5a0a2233fccf5b797f35f28b3dbbc}{Communication\+A\+D\+B\+::on\+Q\+Process\+Liste\+Appareils\+Ready\+Read}} Ce slot permet de traiter le résultat de la détection des smartphones connectés faite via le Q\+Process. J\textquotesingle{}utilise ici une expression régulière pour ne récupérer que l\textquotesingle{}ID du smartphone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_communication_a_d_b_a6f020aa71c9c166221ed7b6a9d4e4ee0}{on\+Q\+Process\+Synchronisation\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_communication_a_d_b_a6f020aa71c9c166221ed7b6a9d4e4ee0}{Communication\+A\+D\+B\+::on\+Q\+Process\+Synchronisation\+Finished}} Ce slot permet de terminer le Q\+Process qui s\textquotesingle{}occupe d\textquotesingle{}appeler la classe \char`\"{}\+Synchronisation\char`\"{} du smartphone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_communication_a_d_b_a06d006b619d09b3b963b2c580a184291}{ecoute\+Log\+Smartphone}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Process $\ast$ \mbox{\hyperlink{class_communication_a_d_b_a6a44dcfe876f3cff2193f23d0d148be4}{commande\+Liste\+Appareils}}
+\item 
+Q\+Process $\ast$ \mbox{\hyperlink{class_communication_a_d_b_a3466ffce85b0b3efb20f5e9bd4d79d2d}{commande\+Synchronisation}}
+\item 
+Q\+Process $\ast$ \mbox{\hyperlink{class_communication_a_d_b_afd1a9d591a266d51787302855630eef6}{commande\+Recuperation\+Photos}}
+\item 
+Q\+String \mbox{\hyperlink{class_communication_a_d_b_af23c20bbbe974ed5d44ee328e3a003c1}{chemin\+S\+Q\+Lite\+Android}}
+\item 
+int \mbox{\hyperlink{class_communication_a_d_b_acfdc05eda0606b4b5e3b2fb703ec6495}{etat\+Synchro}}
+\item 
+Q\+List$<$ Q\+String $>$ \mbox{\hyperlink{class_communication_a_d_b_af4e084bb4d417fa9e563e43aa413dfcc}{liste\+Id\+A\+D\+B\+Smartphone}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_communication_a_d_b_a0e1121a0cdbe9301aedaaef28c2d06e7}\label{class_communication_a_d_b_a0e1121a0cdbe9301aedaaef28c2d06e7}} 
+\index{CommunicationADB@{CommunicationADB}!CommunicationADB@{CommunicationADB}}
+\index{CommunicationADB@{CommunicationADB}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{CommunicationADB()}{CommunicationADB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Communication\+A\+D\+B\+::\+Communication\+A\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_a0e1121a0cdbe9301aedaaef28c2d06e7}{Communication\+A\+D\+B\+::\+Communication\+A\+DB}} Constructeur de la classe Communication A\+DB. Ce constructeur s\textquotesingle{}occupe de déclarer les Q\+Process et de connecter les signaux de ces derniers aux slots de la classe. 
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_communication_a_d_b_a9ab3924b615b1083855809fa68650b51}\label{class_communication_a_d_b_a9ab3924b615b1083855809fa68650b51}} 
+\index{CommunicationADB@{CommunicationADB}!CommunicationADB@{CommunicationADB}}
+\index{CommunicationADB@{CommunicationADB}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{CommunicationADB()}{CommunicationADB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Communication\+A\+D\+B\+::\+Communication\+A\+DB (\begin{DoxyParamCaption}\item[{Q\+String}]{\+\_\+chemin\+Phontos }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_communication_a_d_b_aef4643a8315f71cd9ff635450321681c}\label{class_communication_a_d_b_aef4643a8315f71cd9ff635450321681c}} 
+\index{CommunicationADB@{CommunicationADB}!````~CommunicationADB@{$\sim$CommunicationADB}}
+\index{````~CommunicationADB@{$\sim$CommunicationADB}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{$\sim$CommunicationADB()}{~CommunicationADB()}}
+{\footnotesize\ttfamily Communication\+A\+D\+B\+::$\sim$\+Communication\+A\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_communication_a_d_b_af5b32b0047433c28d294955bdd48df2d}\label{class_communication_a_d_b_af5b32b0047433c28d294955bdd48df2d}} 
+\index{CommunicationADB@{CommunicationADB}!appelSynchronisationAndroid@{appelSynchronisationAndroid}}
+\index{appelSynchronisationAndroid@{appelSynchronisationAndroid}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{appelSynchronisationAndroid()}{appelSynchronisationAndroid()}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::appel\+Synchronisation\+Android (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_af5b32b0047433c28d294955bdd48df2d}{Communication\+A\+D\+B\+::appel\+Synchronisation\+Android}} Cette méthode d\textquotesingle{}appeler la classe \char`\"{}\+Synchronisation\char`\"{} du smartphone sélectionné dans la liste déroulante. 
+
+\mbox{\Hypertarget{class_communication_a_d_b_a06d006b619d09b3b963b2c580a184291}\label{class_communication_a_d_b_a06d006b619d09b3b963b2c580a184291}} 
+\index{CommunicationADB@{CommunicationADB}!ecouteLogSmartphone@{ecouteLogSmartphone}}
+\index{ecouteLogSmartphone@{ecouteLogSmartphone}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{ecouteLogSmartphone()}{ecouteLogSmartphone()}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::ecoute\+Log\+Smartphone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_communication_a_d_b_ab98dd6902c91bf32ad823b27a70783b6}\label{class_communication_a_d_b_ab98dd6902c91bf32ad823b27a70783b6}} 
+\index{CommunicationADB@{CommunicationADB}!envoyerFichierSQLite@{envoyerFichierSQLite}}
+\index{envoyerFichierSQLite@{envoyerFichierSQLite}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{envoyerFichierSQLite()}{envoyerFichierSQLite()}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::envoyer\+Fichier\+S\+Q\+Lite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_ab98dd6902c91bf32ad823b27a70783b6}{Communication\+A\+D\+B\+::envoyer\+Fichier\+S\+Q\+Lite}} Cette méthode permet d\textquotesingle{}envoyer le fichier S\+Q\+Lite créé pour la copie des données entre le poste de supervision et le smartphone sur le smartphone. 
+
+\mbox{\Hypertarget{class_communication_a_d_b_a3d190ac7bc33016e8ea16efc00cb49df}\label{class_communication_a_d_b_a3d190ac7bc33016e8ea16efc00cb49df}} 
+\index{CommunicationADB@{CommunicationADB}!mettreAJourListeSmartphone@{mettreAJourListeSmartphone}}
+\index{mettreAJourListeSmartphone@{mettreAJourListeSmartphone}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{mettreAJourListeSmartphone()}{mettreAJourListeSmartphone()}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::mettre\+A\+Jour\+Liste\+Smartphone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_a3d190ac7bc33016e8ea16efc00cb49df}{Communication\+A\+D\+B\+::mettre\+A\+Jour\+Liste\+Smartphone}} Cette méthode permet de relancer la détection des smartphones connectés. 
+
+\mbox{\Hypertarget{class_communication_a_d_b_a046dcfe1c3608a52360e803cc7dc0b48}\label{class_communication_a_d_b_a046dcfe1c3608a52360e803cc7dc0b48}} 
+\index{CommunicationADB@{CommunicationADB}!obtenirListeIdSmartphone@{obtenirListeIdSmartphone}}
+\index{obtenirListeIdSmartphone@{obtenirListeIdSmartphone}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{obtenirListeIdSmartphone()}{obtenirListeIdSmartphone()}}
+{\footnotesize\ttfamily Q\+List$<$ Q\+String $>$ Communication\+A\+D\+B\+::obtenir\+Liste\+Id\+Smartphone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Communication\+A\+D\+B\+::obtenir\+Liste\+Smartphone Cette méthode permet de retourner la liste des smartphones connectés au PC. 
+
+\begin{DoxyReturn}{Returns}
+La liste des smartphones. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_communication_a_d_b_a82f4089d7327a0068764f2f1270a1743}\label{class_communication_a_d_b_a82f4089d7327a0068764f2f1270a1743}} 
+\index{CommunicationADB@{CommunicationADB}!onQProcessListeAppareilsFinished@{onQProcessListeAppareilsFinished}}
+\index{onQProcessListeAppareilsFinished@{onQProcessListeAppareilsFinished}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{onQProcessListeAppareilsFinished}{onQProcessListeAppareilsFinished}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::on\+Q\+Process\+Liste\+Appareils\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_a82f4089d7327a0068764f2f1270a1743}{Communication\+A\+D\+B\+::on\+Q\+Process\+Liste\+Appareils\+Finished}} Ce slot permet de terminer le Q\+Process de détection des smartphones connectés au poste de supervision une fois que se dernier a fini de s\textquotesingle{}éxecuter. 
+
+\mbox{\Hypertarget{class_communication_a_d_b_ad9b5a0a2233fccf5b797f35f28b3dbbc}\label{class_communication_a_d_b_ad9b5a0a2233fccf5b797f35f28b3dbbc}} 
+\index{CommunicationADB@{CommunicationADB}!onQProcessListeAppareilsReadyRead@{onQProcessListeAppareilsReadyRead}}
+\index{onQProcessListeAppareilsReadyRead@{onQProcessListeAppareilsReadyRead}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{onQProcessListeAppareilsReadyRead}{onQProcessListeAppareilsReadyRead}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::on\+Q\+Process\+Liste\+Appareils\+Ready\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_ad9b5a0a2233fccf5b797f35f28b3dbbc}{Communication\+A\+D\+B\+::on\+Q\+Process\+Liste\+Appareils\+Ready\+Read}} Ce slot permet de traiter le résultat de la détection des smartphones connectés faite via le Q\+Process. J\textquotesingle{}utilise ici une expression régulière pour ne récupérer que l\textquotesingle{}ID du smartphone. 
+
+\mbox{\Hypertarget{class_communication_a_d_b_a6f020aa71c9c166221ed7b6a9d4e4ee0}\label{class_communication_a_d_b_a6f020aa71c9c166221ed7b6a9d4e4ee0}} 
+\index{CommunicationADB@{CommunicationADB}!onQProcessSynchronisationFinished@{onQProcessSynchronisationFinished}}
+\index{onQProcessSynchronisationFinished@{onQProcessSynchronisationFinished}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{onQProcessSynchronisationFinished}{onQProcessSynchronisationFinished}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::on\+Q\+Process\+Synchronisation\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_a6f020aa71c9c166221ed7b6a9d4e4ee0}{Communication\+A\+D\+B\+::on\+Q\+Process\+Synchronisation\+Finished}} Ce slot permet de terminer le Q\+Process qui s\textquotesingle{}occupe d\textquotesingle{}appeler la classe \char`\"{}\+Synchronisation\char`\"{} du smartphone. 
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_communication_a_d_b_a8ca9a6f32735a665b9c61d45871f052a}\label{class_communication_a_d_b_a8ca9a6f32735a665b9c61d45871f052a}} 
+\index{CommunicationADB@{CommunicationADB}!recupererFichierSQLite@{recupererFichierSQLite}}
+\index{recupererFichierSQLite@{recupererFichierSQLite}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{recupererFichierSQLite()}{recupererFichierSQLite()}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::recuperer\+Fichier\+S\+Q\+Lite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_a8ca9a6f32735a665b9c61d45871f052a}{Communication\+A\+D\+B\+::recuperer\+Fichier\+S\+Q\+Lite}} Cette méthode permet de récupérer le fichier S\+Q\+Lite créé pour la copie des données entre le poste de supervision et le smartphone sur le poste de supervision. 
+
+\mbox{\Hypertarget{class_communication_a_d_b_a304f58a7474318bffd2ae5a1a5c87711}\label{class_communication_a_d_b_a304f58a7474318bffd2ae5a1a5c87711}} 
+\index{CommunicationADB@{CommunicationADB}!recupererPhotos@{recupererPhotos}}
+\index{recupererPhotos@{recupererPhotos}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{recupererPhotos()}{recupererPhotos()}}
+{\footnotesize\ttfamily void Communication\+A\+D\+B\+::recuperer\+Photos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_communication_a_d_b_a304f58a7474318bffd2ae5a1a5c87711}{Communication\+A\+D\+B\+::recuperer\+Photos}} Cette méthode permet de récupérer les photos prises avec l\textquotesingle{}application Rondier. Les photos sont ensuites supprimées du smartphone. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_communication_a_d_b_a109307e02beb9a425a122920c349106e}\label{class_communication_a_d_b_a109307e02beb9a425a122920c349106e}} 
+\index{CommunicationADB@{CommunicationADB}!cheminPhotosAndroid@{cheminPhotosAndroid}}
+\index{cheminPhotosAndroid@{cheminPhotosAndroid}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{cheminPhotosAndroid}{cheminPhotosAndroid}}
+{\footnotesize\ttfamily Q\+String Communication\+A\+D\+B\+::chemin\+Photos\+Android}
+
+\mbox{\Hypertarget{class_communication_a_d_b_ad35fc89e76adc522f1ad090902393806}\label{class_communication_a_d_b_ad35fc89e76adc522f1ad090902393806}} 
+\index{CommunicationADB@{CommunicationADB}!cheminPhotosPC@{cheminPhotosPC}}
+\index{cheminPhotosPC@{cheminPhotosPC}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{cheminPhotosPC}{cheminPhotosPC}}
+{\footnotesize\ttfamily Q\+String Communication\+A\+D\+B\+::chemin\+Photos\+PC}
+
+\mbox{\Hypertarget{class_communication_a_d_b_af23c20bbbe974ed5d44ee328e3a003c1}\label{class_communication_a_d_b_af23c20bbbe974ed5d44ee328e3a003c1}} 
+\index{CommunicationADB@{CommunicationADB}!cheminSQLiteAndroid@{cheminSQLiteAndroid}}
+\index{cheminSQLiteAndroid@{cheminSQLiteAndroid}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{cheminSQLiteAndroid}{cheminSQLiteAndroid}}
+{\footnotesize\ttfamily Q\+String Communication\+A\+D\+B\+::chemin\+S\+Q\+Lite\+Android\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_communication_a_d_b_af26b0fb5d11746cd4e463a55e7391271}\label{class_communication_a_d_b_af26b0fb5d11746cd4e463a55e7391271}} 
+\index{CommunicationADB@{CommunicationADB}!cheminSQLiteCopie@{cheminSQLiteCopie}}
+\index{cheminSQLiteCopie@{cheminSQLiteCopie}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{cheminSQLiteCopie}{cheminSQLiteCopie}}
+{\footnotesize\ttfamily Q\+String Communication\+A\+D\+B\+::chemin\+S\+Q\+Lite\+Copie}
+
+\mbox{\Hypertarget{class_communication_a_d_b_aa4358781b851ff60b0bba6a3a49e7426}\label{class_communication_a_d_b_aa4358781b851ff60b0bba6a3a49e7426}} 
+\index{CommunicationADB@{CommunicationADB}!cheminSQLitePC@{cheminSQLitePC}}
+\index{cheminSQLitePC@{cheminSQLitePC}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{cheminSQLitePC}{cheminSQLitePC}}
+{\footnotesize\ttfamily Q\+String Communication\+A\+D\+B\+::chemin\+S\+Q\+Lite\+PC}
+
+\mbox{\Hypertarget{class_communication_a_d_b_a6a44dcfe876f3cff2193f23d0d148be4}\label{class_communication_a_d_b_a6a44dcfe876f3cff2193f23d0d148be4}} 
+\index{CommunicationADB@{CommunicationADB}!commandeListeAppareils@{commandeListeAppareils}}
+\index{commandeListeAppareils@{commandeListeAppareils}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{commandeListeAppareils}{commandeListeAppareils}}
+{\footnotesize\ttfamily Q\+Process$\ast$ Communication\+A\+D\+B\+::commande\+Liste\+Appareils\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_communication_a_d_b_afd1a9d591a266d51787302855630eef6}\label{class_communication_a_d_b_afd1a9d591a266d51787302855630eef6}} 
+\index{CommunicationADB@{CommunicationADB}!commandeRecuperationPhotos@{commandeRecuperationPhotos}}
+\index{commandeRecuperationPhotos@{commandeRecuperationPhotos}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{commandeRecuperationPhotos}{commandeRecuperationPhotos}}
+{\footnotesize\ttfamily Q\+Process$\ast$ Communication\+A\+D\+B\+::commande\+Recuperation\+Photos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_communication_a_d_b_a3466ffce85b0b3efb20f5e9bd4d79d2d}\label{class_communication_a_d_b_a3466ffce85b0b3efb20f5e9bd4d79d2d}} 
+\index{CommunicationADB@{CommunicationADB}!commandeSynchronisation@{commandeSynchronisation}}
+\index{commandeSynchronisation@{commandeSynchronisation}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{commandeSynchronisation}{commandeSynchronisation}}
+{\footnotesize\ttfamily Q\+Process$\ast$ Communication\+A\+D\+B\+::commande\+Synchronisation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_communication_a_d_b_acfdc05eda0606b4b5e3b2fb703ec6495}\label{class_communication_a_d_b_acfdc05eda0606b4b5e3b2fb703ec6495}} 
+\index{CommunicationADB@{CommunicationADB}!etatSynchro@{etatSynchro}}
+\index{etatSynchro@{etatSynchro}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{etatSynchro}{etatSynchro}}
+{\footnotesize\ttfamily int Communication\+A\+D\+B\+::etat\+Synchro\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_communication_a_d_b_a87c44a51d0cc6228ac67b436c30d7989}\label{class_communication_a_d_b_a87c44a51d0cc6228ac67b436c30d7989}} 
+\index{CommunicationADB@{CommunicationADB}!idSmartphone@{idSmartphone}}
+\index{idSmartphone@{idSmartphone}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{idSmartphone}{idSmartphone}}
+{\footnotesize\ttfamily Q\+String Communication\+A\+D\+B\+::id\+Smartphone}
+
+\mbox{\Hypertarget{class_communication_a_d_b_af4e084bb4d417fa9e563e43aa413dfcc}\label{class_communication_a_d_b_af4e084bb4d417fa9e563e43aa413dfcc}} 
+\index{CommunicationADB@{CommunicationADB}!listeIdADBSmartphone@{listeIdADBSmartphone}}
+\index{listeIdADBSmartphone@{listeIdADBSmartphone}!CommunicationADB@{CommunicationADB}}
+\doxysubsubsection{\texorpdfstring{listeIdADBSmartphone}{listeIdADBSmartphone}}
+{\footnotesize\ttfamily Q\+List$<$Q\+String$>$ Communication\+A\+D\+B\+::liste\+Id\+A\+D\+B\+Smartphone\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{communicationadb_8h}{communicationadb.\+h}}\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{communicationadb_8cpp}{communicationadb.\+cpp}}\end{DoxyCompactItemize}

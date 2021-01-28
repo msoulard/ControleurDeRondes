@@ -1,0 +1,208 @@
+\hypertarget{class_gestion_smartphones}{}\doxysection{Gestion\+Smartphones Class Reference}
+\label{class_gestion_smartphones}\index{GestionSmartphones@{GestionSmartphones}}
+
+
+{\ttfamily \#include $<$gestionsmartphones.\+h$>$}
+
+
+
+Inheritance diagram for Gestion\+Smartphones\+:
+% FIG 0
+
+
+Collaboration diagram for Gestion\+Smartphones\+:
+% FIG 1
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gestion_smartphones_ada965d94ea85c5c0674f88519f535489}{liste\+Smartphone\+Change}} (Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestion_smartphones_a177b815dd6e08c7a33225b366e2af70d}{Gestion\+Smartphones}} (\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \&my\+S\+Q\+L\+Bdd, Q\+Object $\ast$parent=0)
+\item 
+int \mbox{\hyperlink{class_gestion_smartphones_a816b6e16fa7c61ea0ec61c1b66dc979a}{Obtenir\+Nombre\+Smartphone}} () const
+\item 
+void \mbox{\hyperlink{class_gestion_smartphones_ae6903eaa817ca91ad5451f1b92f7c53a}{Definir\+Nombre\+Smartphone}} (int value)
+\item 
+Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$ \mbox{\hyperlink{class_gestion_smartphones_a526254d0c95bd27ae9ddde89f794e1de}{Obtenir\+Liste\+Smartphone}} () const
+\item 
+bool \mbox{\hyperlink{class_gestion_smartphones_af22c2a218d3908dc3923cdad878730dd}{Smartphone\+Connecte}} (Q\+String id\+A\+D\+B\+Smartphone)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gestion_smartphones_afd1f2126c2e3d9b0c2da1983b9415ca4}{on\+Smartphone\+Connecte}} ()
+\item 
+void \mbox{\hyperlink{class_gestion_smartphones_af3cb157872554c8da48113bb6f334df8}{on\+Smartphone\+Deconnecte}} ()
+\item 
+void \mbox{\hyperlink{class_gestion_smartphones_acd6d9ceafd5b1a8b55fe225c8f096d89}{on\+Timer\+Liste\+Smartphone\+Timeout}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gestion_smartphones_a325b10032ef763f91132e68de58b3448}{Actualiser\+Liste\+Smartphone}} (Q\+List$<$ Q\+String $>$ liste\+Id\+Smartphone)
+\item 
+void \mbox{\hyperlink{class_gestion_smartphones_abbd47ef5316c59a889100edcbcfa50ad}{Ajouter\+Nouveau\+Smarphone}} (Q\+String id\+A\+DB, Q\+String \+\_\+nom\+Smartphone=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}} $\ast$ \mbox{\hyperlink{class_gestion_smartphones_a5369d6fa8773eb6952ff53252ebe34a0}{detection\+U\+SB}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_gestion_smartphones_a845910e6fdb00658086e7e971b484347}{timer\+Detection\+Smartphone}}
+\item 
+Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$ \mbox{\hyperlink{class_gestion_smartphones_ac28890312931a6b6d0a4a176831c08c4}{liste\+Smartphone}}
+\item 
+int \mbox{\hyperlink{class_gestion_smartphones_a42d406a90603eb4e1d106021c22aebe4}{nombre\+Smartphone}}
+\item 
+int \mbox{\hyperlink{class_gestion_smartphones_aaf569d7c492a411c744b967c2b26efc1}{nb\+Detection}}
+\item 
+\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \mbox{\hyperlink{class_gestion_smartphones_ae37188d30343ac12bcecfd562941f129}{bdd}}
+\item 
+\mbox{\hyperlink{class_communication_a_d_b}{Communication\+A\+DB}} $\ast$ \mbox{\hyperlink{class_gestion_smartphones_afd6b3cb64d53a4f0c2af7ed7d5378d01}{adb}}
+\item 
+\mbox{\hyperlink{class_message}{Message}} \mbox{\hyperlink{class_gestion_smartphones_a61fb88afd3cd4ce2c39c06c00c451ec8}{boite\+Message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_gestion_smartphones_a177b815dd6e08c7a33225b366e2af70d}\label{class_gestion_smartphones_a177b815dd6e08c7a33225b366e2af70d}} 
+\index{GestionSmartphones@{GestionSmartphones}!GestionSmartphones@{GestionSmartphones}}
+\index{GestionSmartphones@{GestionSmartphones}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{GestionSmartphones()}{GestionSmartphones()}}
+{\footnotesize\ttfamily Gestion\+Smartphones\+::\+Gestion\+Smartphones (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \&}]{my\+S\+Q\+L\+Bdd,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gestion_smartphones_a325b10032ef763f91132e68de58b3448}\label{class_gestion_smartphones_a325b10032ef763f91132e68de58b3448}} 
+\index{GestionSmartphones@{GestionSmartphones}!ActualiserListeSmartphone@{ActualiserListeSmartphone}}
+\index{ActualiserListeSmartphone@{ActualiserListeSmartphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{ActualiserListeSmartphone()}{ActualiserListeSmartphone()}}
+{\footnotesize\ttfamily void Gestion\+Smartphones\+::\+Actualiser\+Liste\+Smartphone (\begin{DoxyParamCaption}\item[{Q\+List$<$ Q\+String $>$}]{liste\+Id\+Smartphone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_gestion_smartphones_abbd47ef5316c59a889100edcbcfa50ad}\label{class_gestion_smartphones_abbd47ef5316c59a889100edcbcfa50ad}} 
+\index{GestionSmartphones@{GestionSmartphones}!AjouterNouveauSmarphone@{AjouterNouveauSmarphone}}
+\index{AjouterNouveauSmarphone@{AjouterNouveauSmarphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{AjouterNouveauSmarphone()}{AjouterNouveauSmarphone()}}
+{\footnotesize\ttfamily void Gestion\+Smartphones\+::\+Ajouter\+Nouveau\+Smarphone (\begin{DoxyParamCaption}\item[{Q\+String}]{id\+A\+DB,  }\item[{Q\+String}]{\+\_\+nom\+Smartphone = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_gestion_smartphones_ae6903eaa817ca91ad5451f1b92f7c53a}\label{class_gestion_smartphones_ae6903eaa817ca91ad5451f1b92f7c53a}} 
+\index{GestionSmartphones@{GestionSmartphones}!DefinirNombreSmartphone@{DefinirNombreSmartphone}}
+\index{DefinirNombreSmartphone@{DefinirNombreSmartphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{DefinirNombreSmartphone()}{DefinirNombreSmartphone()}}
+{\footnotesize\ttfamily void Gestion\+Smartphones\+::\+Definir\+Nombre\+Smartphone (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestion_smartphones_ada965d94ea85c5c0674f88519f535489}\label{class_gestion_smartphones_ada965d94ea85c5c0674f88519f535489}} 
+\index{GestionSmartphones@{GestionSmartphones}!listeSmartphoneChange@{listeSmartphoneChange}}
+\index{listeSmartphoneChange@{listeSmartphoneChange}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{listeSmartphoneChange}{listeSmartphoneChange}}
+{\footnotesize\ttfamily void Gestion\+Smartphones\+::liste\+Smartphone\+Change (\begin{DoxyParamCaption}\item[{Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_a526254d0c95bd27ae9ddde89f794e1de}\label{class_gestion_smartphones_a526254d0c95bd27ae9ddde89f794e1de}} 
+\index{GestionSmartphones@{GestionSmartphones}!ObtenirListeSmartphone@{ObtenirListeSmartphone}}
+\index{ObtenirListeSmartphone@{ObtenirListeSmartphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{ObtenirListeSmartphone()}{ObtenirListeSmartphone()}}
+{\footnotesize\ttfamily Q\+List$<$ \mbox{\hyperlink{struct_smartphone}{Smartphone}} $>$ Gestion\+Smartphones\+::\+Obtenir\+Liste\+Smartphone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_gestion_smartphones_a816b6e16fa7c61ea0ec61c1b66dc979a}\label{class_gestion_smartphones_a816b6e16fa7c61ea0ec61c1b66dc979a}} 
+\index{GestionSmartphones@{GestionSmartphones}!ObtenirNombreSmartphone@{ObtenirNombreSmartphone}}
+\index{ObtenirNombreSmartphone@{ObtenirNombreSmartphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{ObtenirNombreSmartphone()}{ObtenirNombreSmartphone()}}
+{\footnotesize\ttfamily int Gestion\+Smartphones\+::\+Obtenir\+Nombre\+Smartphone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_gestion_smartphones_afd1f2126c2e3d9b0c2da1983b9415ca4}\label{class_gestion_smartphones_afd1f2126c2e3d9b0c2da1983b9415ca4}} 
+\index{GestionSmartphones@{GestionSmartphones}!onSmartphoneConnecte@{onSmartphoneConnecte}}
+\index{onSmartphoneConnecte@{onSmartphoneConnecte}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{onSmartphoneConnecte}{onSmartphoneConnecte}}
+{\footnotesize\ttfamily void Gestion\+Smartphones\+::on\+Smartphone\+Connecte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_gestion_smartphones_af3cb157872554c8da48113bb6f334df8}\label{class_gestion_smartphones_af3cb157872554c8da48113bb6f334df8}} 
+\index{GestionSmartphones@{GestionSmartphones}!onSmartphoneDeconnecte@{onSmartphoneDeconnecte}}
+\index{onSmartphoneDeconnecte@{onSmartphoneDeconnecte}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{onSmartphoneDeconnecte}{onSmartphoneDeconnecte}}
+{\footnotesize\ttfamily void Gestion\+Smartphones\+::on\+Smartphone\+Deconnecte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_gestion_smartphones_acd6d9ceafd5b1a8b55fe225c8f096d89}\label{class_gestion_smartphones_acd6d9ceafd5b1a8b55fe225c8f096d89}} 
+\index{GestionSmartphones@{GestionSmartphones}!onTimerListeSmartphoneTimeout@{onTimerListeSmartphoneTimeout}}
+\index{onTimerListeSmartphoneTimeout@{onTimerListeSmartphoneTimeout}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{onTimerListeSmartphoneTimeout}{onTimerListeSmartphoneTimeout}}
+{\footnotesize\ttfamily void Gestion\+Smartphones\+::on\+Timer\+Liste\+Smartphone\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_gestion_smartphones_af22c2a218d3908dc3923cdad878730dd}\label{class_gestion_smartphones_af22c2a218d3908dc3923cdad878730dd}} 
+\index{GestionSmartphones@{GestionSmartphones}!SmartphoneConnecte@{SmartphoneConnecte}}
+\index{SmartphoneConnecte@{SmartphoneConnecte}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{SmartphoneConnecte()}{SmartphoneConnecte()}}
+{\footnotesize\ttfamily bool Gestion\+Smartphones\+::\+Smartphone\+Connecte (\begin{DoxyParamCaption}\item[{Q\+String}]{id\+A\+D\+B\+Smartphone }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_gestion_smartphones_afd6b3cb64d53a4f0c2af7ed7d5378d01}\label{class_gestion_smartphones_afd6b3cb64d53a4f0c2af7ed7d5378d01}} 
+\index{GestionSmartphones@{GestionSmartphones}!adb@{adb}}
+\index{adb@{adb}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{adb}{adb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_communication_a_d_b}{Communication\+A\+DB}}$\ast$ Gestion\+Smartphones\+::adb\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_ae37188d30343ac12bcecfd562941f129}\label{class_gestion_smartphones_ae37188d30343ac12bcecfd562941f129}} 
+\index{GestionSmartphones@{GestionSmartphones}!bdd@{bdd}}
+\index{bdd@{bdd}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{bdd}{bdd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} Gestion\+Smartphones\+::bdd\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_a61fb88afd3cd4ce2c39c06c00c451ec8}\label{class_gestion_smartphones_a61fb88afd3cd4ce2c39c06c00c451ec8}} 
+\index{GestionSmartphones@{GestionSmartphones}!boiteMessage@{boiteMessage}}
+\index{boiteMessage@{boiteMessage}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{boiteMessage}{boiteMessage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_message}{Message}} Gestion\+Smartphones\+::boite\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_a5369d6fa8773eb6952ff53252ebe34a0}\label{class_gestion_smartphones_a5369d6fa8773eb6952ff53252ebe34a0}} 
+\index{GestionSmartphones@{GestionSmartphones}!detectionUSB@{detectionUSB}}
+\index{detectionUSB@{detectionUSB}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{detectionUSB}{detectionUSB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}}$\ast$ Gestion\+Smartphones\+::detection\+U\+SB\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_ac28890312931a6b6d0a4a176831c08c4}\label{class_gestion_smartphones_ac28890312931a6b6d0a4a176831c08c4}} 
+\index{GestionSmartphones@{GestionSmartphones}!listeSmartphone@{listeSmartphone}}
+\index{listeSmartphone@{listeSmartphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{listeSmartphone}{listeSmartphone}}
+{\footnotesize\ttfamily Q\+List$<$\mbox{\hyperlink{struct_smartphone}{Smartphone}}$>$ Gestion\+Smartphones\+::liste\+Smartphone\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_aaf569d7c492a411c744b967c2b26efc1}\label{class_gestion_smartphones_aaf569d7c492a411c744b967c2b26efc1}} 
+\index{GestionSmartphones@{GestionSmartphones}!nbDetection@{nbDetection}}
+\index{nbDetection@{nbDetection}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{nbDetection}{nbDetection}}
+{\footnotesize\ttfamily int Gestion\+Smartphones\+::nb\+Detection\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_a42d406a90603eb4e1d106021c22aebe4}\label{class_gestion_smartphones_a42d406a90603eb4e1d106021c22aebe4}} 
+\index{GestionSmartphones@{GestionSmartphones}!nombreSmartphone@{nombreSmartphone}}
+\index{nombreSmartphone@{nombreSmartphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{nombreSmartphone}{nombreSmartphone}}
+{\footnotesize\ttfamily int Gestion\+Smartphones\+::nombre\+Smartphone\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestion_smartphones_a845910e6fdb00658086e7e971b484347}\label{class_gestion_smartphones_a845910e6fdb00658086e7e971b484347}} 
+\index{GestionSmartphones@{GestionSmartphones}!timerDetectionSmartphone@{timerDetectionSmartphone}}
+\index{timerDetectionSmartphone@{timerDetectionSmartphone}!GestionSmartphones@{GestionSmartphones}}
+\doxysubsubsection{\texorpdfstring{timerDetectionSmartphone}{timerDetectionSmartphone}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Gestion\+Smartphones\+::timer\+Detection\+Smartphone\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{gestionsmartphones_8h}{gestionsmartphones.\+h}}\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{gestionsmartphones_8cpp}{gestionsmartphones.\+cpp}}\end{DoxyCompactItemize}

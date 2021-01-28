@@ -1,0 +1,12 @@
+digraph "IHMSynchronisation::on_pushButtonDetecter_clicked"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="IHMSynchronisation\l::on_pushButtonDetecter\l_clicked",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="IHMSynchronisation\l::onListeSmartphoneChange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_synchronisation.html#afc3304dfab4d2e19f4de8f536cbd9228",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="IHMSynchronisation\l::miseAJourComboBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_synchronisation.html#a19989ab3e23852174c60b52348929ebb",tooltip="IHMSynchronisation::miseAJourComboBox Cette méthode permet de mettre à jour la liste déroulante de li..."];
+}

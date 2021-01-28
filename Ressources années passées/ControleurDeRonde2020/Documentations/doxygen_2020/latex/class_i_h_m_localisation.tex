@@ -1,0 +1,279 @@
+\hypertarget{class_i_h_m_localisation}{}\doxysection{I\+H\+M\+Localisation Class Reference}
+\label{class_i_h_m_localisation}\index{IHMLocalisation@{IHMLocalisation}}
+
+
+{\ttfamily \#include $<$ihmlocalisation.\+h$>$}
+
+
+
+Inheritance diagram for I\+H\+M\+Localisation\+:
+% FIG 0
+
+
+Collaboration diagram for I\+H\+M\+Localisation\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_h_m_localisation_a069927a84fb8b3bde19ca0bd548631b8}{I\+H\+M\+Localisation}} (\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \&my\+Sql\+Bdd, Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---P\+U\+B\+L\+I\+C-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---/// \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_h_m_localisation_aea7651c0f6a5facd3891d54c09defa18}{$\sim$ I\+H\+M\+Localisation}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a2393e32bf9978b1158f2bb03b4e1eb21}{on\+\_\+combo\+Box\+Localisation\+\_\+current\+Index\+Changed}} (const Q\+String \&arg1)
+\begin{DoxyCompactList}\small\item\em -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---P\+R\+I\+V\+A\+T\+E-\/\+S\+L\+O\+T\+S-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---/// \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_accf67225693dddf057079d404170d37a}{on\+\_\+line\+Edit\+Emplacement\+\_\+text\+Changed}} (const Q\+String \&arg1)
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a28fd13048fa60a053651a34cd956be64}{on\+\_\+combo\+Box\+Batiment\+\_\+text\+Changed}} (const Q\+String \&arg1)
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_ae13fcbd5ebbe965617e4b0400710e1d4}{on\+\_\+combo\+Box\+Etage\+\_\+text\+Changed}} (const Q\+String \&arg1)
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a00c28e7d3296feb90be0bbb89de21e67}{on\+\_\+push\+Button\+Ajouter\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a1212964a339fbf75da4f462f3d86b5ce}{on\+\_\+push\+Button\+Enregistrer\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a9f33997bd16d3a2a93f285d9b65f31a6}{on\+\_\+push\+Button\+Supprimer\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_i_h_m_localisation_ac3983ed60a587f83bd23df1ba32c9c42}{Demander\+Enregistrement}} ()
+\begin{DoxyCompactList}\small\item\em -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---P\+R\+I\+V\+A\+T\+E-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---/// \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_aff1c4b3ac7e30aea55501061d1293a55}{Nettoyer\+Champs}} ()
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a7b74cfeadebe880f4a5b1a6bb5c5653e}{Activer\+Champs}} (bool etat)
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a7d48d2dac7f88d1bea43b67c261da7ac}{Changer\+Etat\+Boutons}} (bool enregistrer, bool supprimer)
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_adb0545ab8794630f4cbffb1479dd42fe}{Afficher\+Localisation}} (\mbox{\hyperlink{class_localisation}{Localisation}} $\ast$une\+Localisation)
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a7cfd1d79bd61b29cac26819c2d3867fc}{Actualiser\+Liste\+Localisation}} ()
+\item 
+void \mbox{\hyperlink{class_i_h_m_localisation_a29e2f806ffff80c13edd8cf1bd385026}{Verifier\+Changement}} ()
+\item 
+bool \mbox{\hyperlink{class_i_h_m_localisation_a5375950945c6d800b8c8168b2c08ebb1}{Verifier\+Champs}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ui_1_1_i_h_m_localisation}{Ui\+::\+I\+H\+M\+Localisation}} $\ast$ \mbox{\hyperlink{class_i_h_m_localisation_aa4391f7fc97553b317f068e3fab0bf60}{ui}}
+\item 
+Q\+List$<$ \mbox{\hyperlink{class_localisation}{Localisation}} $\ast$ $>$ \mbox{\hyperlink{class_i_h_m_localisation_a6d7f7e168316c7eb13dc8efefe080b6f}{liste\+Localisation}}
+\item 
+\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \mbox{\hyperlink{class_i_h_m_localisation_a6d52d1ced56c7f32b9cda6fd2221b890}{bdd}}
+\item 
+int \mbox{\hyperlink{class_i_h_m_localisation_a4adb4cffcf43fb02d4e5a176452ee0d1}{selection\+Localisation}}
+\item 
+bool \mbox{\hyperlink{class_i_h_m_localisation_aa5cf7bd0ad97b3978a9171cfa022bb85}{localisation\+Actu\+Enregistrer}}
+\item 
+int \mbox{\hyperlink{class_i_h_m_localisation_a801cecb12d8ab04a12e9e75d98fa9900}{index\+Combo\+Box\+Localisation\+Actu}}
+\item 
+int \mbox{\hyperlink{class_i_h_m_localisation_afc7f95a7876daecf47b64cb5f10cb5f3}{id\+Liste\+Localisation\+Actu}}
+\item 
+\mbox{\hyperlink{class_message}{Message}} \mbox{\hyperlink{class_i_h_m_localisation_ab4d10631903f681d0078f5fbe62abb22}{boite\+Message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_h_m_localisation_a069927a84fb8b3bde19ca0bd548631b8}\label{class_i_h_m_localisation_a069927a84fb8b3bde19ca0bd548631b8}} 
+\index{IHMLocalisation@{IHMLocalisation}!IHMLocalisation@{IHMLocalisation}}
+\index{IHMLocalisation@{IHMLocalisation}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{IHMLocalisation()}{IHMLocalisation()}}
+{\footnotesize\ttfamily I\+H\+M\+Localisation\+::\+I\+H\+M\+Localisation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} \&}]{my\+Sql\+Bdd,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---P\+U\+B\+L\+I\+C-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---/// 
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_i_h_m_localisation_aea7651c0f6a5facd3891d54c09defa18}\label{class_i_h_m_localisation_aea7651c0f6a5facd3891d54c09defa18}} 
+\index{IHMLocalisation@{IHMLocalisation}!````~ IHMLocalisation@{$\sim$ IHMLocalisation}}
+\index{````~ IHMLocalisation@{$\sim$ IHMLocalisation}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{$\sim$ IHMLocalisation()}{~ IHMLocalisation()}}
+{\footnotesize\ttfamily I\+H\+M\+Localisation\+::$\sim$ \mbox{\hyperlink{class_i_h_m_localisation}{I\+H\+M\+Localisation}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_h_m_localisation_a7b74cfeadebe880f4a5b1a6bb5c5653e}\label{class_i_h_m_localisation_a7b74cfeadebe880f4a5b1a6bb5c5653e}} 
+\index{IHMLocalisation@{IHMLocalisation}!ActiverChamps@{ActiverChamps}}
+\index{ActiverChamps@{ActiverChamps}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{ActiverChamps()}{ActiverChamps()}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::\+Activer\+Champs (\begin{DoxyParamCaption}\item[{bool}]{etat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_i_h_m_localisation_a7cfd1d79bd61b29cac26819c2d3867fc}\label{class_i_h_m_localisation_a7cfd1d79bd61b29cac26819c2d3867fc}} 
+\index{IHMLocalisation@{IHMLocalisation}!ActualiserListeLocalisation@{ActualiserListeLocalisation}}
+\index{ActualiserListeLocalisation@{ActualiserListeLocalisation}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{ActualiserListeLocalisation()}{ActualiserListeLocalisation()}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::\+Actualiser\+Liste\+Localisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_i_h_m_localisation_adb0545ab8794630f4cbffb1479dd42fe}\label{class_i_h_m_localisation_adb0545ab8794630f4cbffb1479dd42fe}} 
+\index{IHMLocalisation@{IHMLocalisation}!AfficherLocalisation@{AfficherLocalisation}}
+\index{AfficherLocalisation@{AfficherLocalisation}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{AfficherLocalisation()}{AfficherLocalisation()}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::\+Afficher\+Localisation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_localisation}{Localisation}} $\ast$}]{une\+Localisation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_i_h_m_localisation_a7d48d2dac7f88d1bea43b67c261da7ac}\label{class_i_h_m_localisation_a7d48d2dac7f88d1bea43b67c261da7ac}} 
+\index{IHMLocalisation@{IHMLocalisation}!ChangerEtatBoutons@{ChangerEtatBoutons}}
+\index{ChangerEtatBoutons@{ChangerEtatBoutons}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{ChangerEtatBoutons()}{ChangerEtatBoutons()}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::\+Changer\+Etat\+Boutons (\begin{DoxyParamCaption}\item[{bool}]{enregistrer,  }\item[{bool}]{supprimer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_ac3983ed60a587f83bd23df1ba32c9c42}\label{class_i_h_m_localisation_ac3983ed60a587f83bd23df1ba32c9c42}} 
+\index{IHMLocalisation@{IHMLocalisation}!DemanderEnregistrement@{DemanderEnregistrement}}
+\index{DemanderEnregistrement@{DemanderEnregistrement}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{DemanderEnregistrement()}{DemanderEnregistrement()}}
+{\footnotesize\ttfamily bool I\+H\+M\+Localisation\+::\+Demander\+Enregistrement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---P\+R\+I\+V\+A\+T\+E-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---/// 
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_i_h_m_localisation_aff1c4b3ac7e30aea55501061d1293a55}\label{class_i_h_m_localisation_aff1c4b3ac7e30aea55501061d1293a55}} 
+\index{IHMLocalisation@{IHMLocalisation}!NettoyerChamps@{NettoyerChamps}}
+\index{NettoyerChamps@{NettoyerChamps}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{NettoyerChamps()}{NettoyerChamps()}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::\+Nettoyer\+Champs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_a28fd13048fa60a053651a34cd956be64}\label{class_i_h_m_localisation_a28fd13048fa60a053651a34cd956be64}} 
+\index{IHMLocalisation@{IHMLocalisation}!on\_comboBoxBatiment\_textChanged@{on\_comboBoxBatiment\_textChanged}}
+\index{on\_comboBoxBatiment\_textChanged@{on\_comboBoxBatiment\_textChanged}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{on\_comboBoxBatiment\_textChanged}{on\_comboBoxBatiment\_textChanged}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::on\+\_\+combo\+Box\+Batiment\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_i_h_m_localisation_ae13fcbd5ebbe965617e4b0400710e1d4}\label{class_i_h_m_localisation_ae13fcbd5ebbe965617e4b0400710e1d4}} 
+\index{IHMLocalisation@{IHMLocalisation}!on\_comboBoxEtage\_textChanged@{on\_comboBoxEtage\_textChanged}}
+\index{on\_comboBoxEtage\_textChanged@{on\_comboBoxEtage\_textChanged}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{on\_comboBoxEtage\_textChanged}{on\_comboBoxEtage\_textChanged}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::on\+\_\+combo\+Box\+Etage\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_i_h_m_localisation_a2393e32bf9978b1158f2bb03b4e1eb21}\label{class_i_h_m_localisation_a2393e32bf9978b1158f2bb03b4e1eb21}} 
+\index{IHMLocalisation@{IHMLocalisation}!on\_comboBoxLocalisation\_currentIndexChanged@{on\_comboBoxLocalisation\_currentIndexChanged}}
+\index{on\_comboBoxLocalisation\_currentIndexChanged@{on\_comboBoxLocalisation\_currentIndexChanged}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{on\_comboBoxLocalisation\_currentIndexChanged}{on\_comboBoxLocalisation\_currentIndexChanged}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::on\+\_\+combo\+Box\+Localisation\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---P\+R\+I\+V\+A\+T\+E-\/\+S\+L\+O\+T\+S-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---/// 
+
+Here is the call graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_i_h_m_localisation_accf67225693dddf057079d404170d37a}\label{class_i_h_m_localisation_accf67225693dddf057079d404170d37a}} 
+\index{IHMLocalisation@{IHMLocalisation}!on\_lineEditEmplacement\_textChanged@{on\_lineEditEmplacement\_textChanged}}
+\index{on\_lineEditEmplacement\_textChanged@{on\_lineEditEmplacement\_textChanged}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{on\_lineEditEmplacement\_textChanged}{on\_lineEditEmplacement\_textChanged}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::on\+\_\+line\+Edit\+Emplacement\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{class_i_h_m_localisation_a00c28e7d3296feb90be0bbb89de21e67}\label{class_i_h_m_localisation_a00c28e7d3296feb90be0bbb89de21e67}} 
+\index{IHMLocalisation@{IHMLocalisation}!on\_pushButtonAjouter\_clicked@{on\_pushButtonAjouter\_clicked}}
+\index{on\_pushButtonAjouter\_clicked@{on\_pushButtonAjouter\_clicked}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButtonAjouter\_clicked}{on\_pushButtonAjouter\_clicked}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::on\+\_\+push\+Button\+Ajouter\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{class_i_h_m_localisation_a1212964a339fbf75da4f462f3d86b5ce}\label{class_i_h_m_localisation_a1212964a339fbf75da4f462f3d86b5ce}} 
+\index{IHMLocalisation@{IHMLocalisation}!on\_pushButtonEnregistrer\_clicked@{on\_pushButtonEnregistrer\_clicked}}
+\index{on\_pushButtonEnregistrer\_clicked@{on\_pushButtonEnregistrer\_clicked}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButtonEnregistrer\_clicked}{on\_pushButtonEnregistrer\_clicked}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::on\+\_\+push\+Button\+Enregistrer\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{class_i_h_m_localisation_a9f33997bd16d3a2a93f285d9b65f31a6}\label{class_i_h_m_localisation_a9f33997bd16d3a2a93f285d9b65f31a6}} 
+\index{IHMLocalisation@{IHMLocalisation}!on\_pushButtonSupprimer\_clicked@{on\_pushButtonSupprimer\_clicked}}
+\index{on\_pushButtonSupprimer\_clicked@{on\_pushButtonSupprimer\_clicked}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButtonSupprimer\_clicked}{on\_pushButtonSupprimer\_clicked}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::on\+\_\+push\+Button\+Supprimer\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_a5375950945c6d800b8c8168b2c08ebb1}\label{class_i_h_m_localisation_a5375950945c6d800b8c8168b2c08ebb1}} 
+\index{IHMLocalisation@{IHMLocalisation}!VerifierChamps@{VerifierChamps}}
+\index{VerifierChamps@{VerifierChamps}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{VerifierChamps()}{VerifierChamps()}}
+{\footnotesize\ttfamily bool I\+H\+M\+Localisation\+::\+Verifier\+Champs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{class_i_h_m_localisation_a29e2f806ffff80c13edd8cf1bd385026}\label{class_i_h_m_localisation_a29e2f806ffff80c13edd8cf1bd385026}} 
+\index{IHMLocalisation@{IHMLocalisation}!VerifierChangement@{VerifierChangement}}
+\index{VerifierChangement@{VerifierChangement}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{VerifierChangement()}{VerifierChangement()}}
+{\footnotesize\ttfamily void I\+H\+M\+Localisation\+::\+Verifier\+Changement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i_h_m_localisation_a6d52d1ced56c7f32b9cda6fd2221b890}\label{class_i_h_m_localisation_a6d52d1ced56c7f32b9cda6fd2221b890}} 
+\index{IHMLocalisation@{IHMLocalisation}!bdd@{bdd}}
+\index{bdd@{bdd}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{bdd}{bdd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_acces_my_s_q_l}{Acces\+My\+S\+QL}} I\+H\+M\+Localisation\+::bdd\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_ab4d10631903f681d0078f5fbe62abb22}\label{class_i_h_m_localisation_ab4d10631903f681d0078f5fbe62abb22}} 
+\index{IHMLocalisation@{IHMLocalisation}!boiteMessage@{boiteMessage}}
+\index{boiteMessage@{boiteMessage}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{boiteMessage}{boiteMessage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_message}{Message}} I\+H\+M\+Localisation\+::boite\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_afc7f95a7876daecf47b64cb5f10cb5f3}\label{class_i_h_m_localisation_afc7f95a7876daecf47b64cb5f10cb5f3}} 
+\index{IHMLocalisation@{IHMLocalisation}!idListeLocalisationActu@{idListeLocalisationActu}}
+\index{idListeLocalisationActu@{idListeLocalisationActu}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{idListeLocalisationActu}{idListeLocalisationActu}}
+{\footnotesize\ttfamily int I\+H\+M\+Localisation\+::id\+Liste\+Localisation\+Actu\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_a801cecb12d8ab04a12e9e75d98fa9900}\label{class_i_h_m_localisation_a801cecb12d8ab04a12e9e75d98fa9900}} 
+\index{IHMLocalisation@{IHMLocalisation}!indexComboBoxLocalisationActu@{indexComboBoxLocalisationActu}}
+\index{indexComboBoxLocalisationActu@{indexComboBoxLocalisationActu}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{indexComboBoxLocalisationActu}{indexComboBoxLocalisationActu}}
+{\footnotesize\ttfamily int I\+H\+M\+Localisation\+::index\+Combo\+Box\+Localisation\+Actu\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_a6d7f7e168316c7eb13dc8efefe080b6f}\label{class_i_h_m_localisation_a6d7f7e168316c7eb13dc8efefe080b6f}} 
+\index{IHMLocalisation@{IHMLocalisation}!listeLocalisation@{listeLocalisation}}
+\index{listeLocalisation@{listeLocalisation}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{listeLocalisation}{listeLocalisation}}
+{\footnotesize\ttfamily Q\+List$<$\mbox{\hyperlink{class_localisation}{Localisation}} $\ast$$>$ I\+H\+M\+Localisation\+::liste\+Localisation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_aa5cf7bd0ad97b3978a9171cfa022bb85}\label{class_i_h_m_localisation_aa5cf7bd0ad97b3978a9171cfa022bb85}} 
+\index{IHMLocalisation@{IHMLocalisation}!localisationActuEnregistrer@{localisationActuEnregistrer}}
+\index{localisationActuEnregistrer@{localisationActuEnregistrer}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{localisationActuEnregistrer}{localisationActuEnregistrer}}
+{\footnotesize\ttfamily bool I\+H\+M\+Localisation\+::localisation\+Actu\+Enregistrer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_a4adb4cffcf43fb02d4e5a176452ee0d1}\label{class_i_h_m_localisation_a4adb4cffcf43fb02d4e5a176452ee0d1}} 
+\index{IHMLocalisation@{IHMLocalisation}!selectionLocalisation@{selectionLocalisation}}
+\index{selectionLocalisation@{selectionLocalisation}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{selectionLocalisation}{selectionLocalisation}}
+{\footnotesize\ttfamily int I\+H\+M\+Localisation\+::selection\+Localisation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i_h_m_localisation_aa4391f7fc97553b317f068e3fab0bf60}\label{class_i_h_m_localisation_aa4391f7fc97553b317f068e3fab0bf60}} 
+\index{IHMLocalisation@{IHMLocalisation}!ui@{ui}}
+\index{ui@{ui}!IHMLocalisation@{IHMLocalisation}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ui_1_1_i_h_m_localisation}{Ui\+::\+I\+H\+M\+Localisation}}$\ast$ I\+H\+M\+Localisation\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{ihmlocalisation_8h}{ihmlocalisation.\+h}}\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{ihmlocalisation_8cpp}{ihmlocalisation.\+cpp}}\end{DoxyCompactItemize}
