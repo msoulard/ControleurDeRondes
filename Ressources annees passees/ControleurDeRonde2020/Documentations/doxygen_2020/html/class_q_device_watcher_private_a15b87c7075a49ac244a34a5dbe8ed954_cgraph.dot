@@ -1,0 +1,14 @@
+digraph "QDeviceWatcherPrivate::emitDeviceAction"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="QDeviceWatcherPrivate\l::emitDeviceAction",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="QDeviceWatcherPrivate\l::emitDeviceAdded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_device_watcher_private.html#a83f9f96895f2cd8f98d48a5ef22a102d",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="QDeviceWatcherPrivate\l::emitDeviceChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_device_watcher_private.html#aee776fb4b91cbef5d2f115de46c68d47",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="QDeviceWatcherPrivate\l::emitDeviceRemoved",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_device_watcher_private.html#a644476ae42b84a95f28a0e60dcbdc058",tooltip=" "];
+}

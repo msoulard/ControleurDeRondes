@@ -1,0 +1,28 @@
+var class_ui___i_h_m_synchronisation =
+[
+    [ "retranslateUi", "class_ui___i_h_m_synchronisation.html#aa4c744a44838c9e30e3af551c69ea6dc", null ],
+    [ "setupUi", "class_ui___i_h_m_synchronisation.html#a1eaab83a16e6df8e987c9eec5c0421a1", null ],
+    [ "comboBoxSelectionSmartphone", "class_ui___i_h_m_synchronisation.html#aa4f7909d8f8cfbefad21fb2c082dd133", null ],
+    [ "horizontalLayout", "class_ui___i_h_m_synchronisation.html#a6e8ed73fb76d3cdecb52e37ffc2747c5", null ],
+    [ "horizontalLayout_2", "class_ui___i_h_m_synchronisation.html#a39341cdb4c868f6c85ab5275d95a1444", null ],
+    [ "horizontalLayout_3", "class_ui___i_h_m_synchronisation.html#ad346875ddc4f66f1daea3fcb96f95e2f", null ],
+    [ "horizontalLayout_4", "class_ui___i_h_m_synchronisation.html#a51c77c466b15d13027c97c7627bbb897", null ],
+    [ "horizontalSpacer", "class_ui___i_h_m_synchronisation.html#a6f0941bc3ea6bd1be21d1a26f6914b30", null ],
+    [ "horizontalSpacer_2", "class_ui___i_h_m_synchronisation.html#a4f26d287c96fed8d8871107459f0e3a9", null ],
+    [ "horizontalSpacer_3", "class_ui___i_h_m_synchronisation.html#ae69a83f495368bfa8471d7fe7669ae10", null ],
+    [ "horizontalSpacer_4", "class_ui___i_h_m_synchronisation.html#a36d51954a0358220bf4e3c5df7306bb6", null ],
+    [ "horizontalSpacer_5", "class_ui___i_h_m_synchronisation.html#aaea2c4befe982d93ad787d5a51e8e362", null ],
+    [ "labelDetecterSmartphone", "class_ui___i_h_m_synchronisation.html#aa4ad59e547e4526efa683639df009cba", null ],
+    [ "labelSelectionSmartphone", "class_ui___i_h_m_synchronisation.html#ab2cb6e3de648d4354aa4eccfc49a0d47", null ],
+    [ "listWidgetLog", "class_ui___i_h_m_synchronisation.html#a1ba82f0f482fd6890a3d1e3290221999", null ],
+    [ "progressBar", "class_ui___i_h_m_synchronisation.html#a6835967cc244eca44b30b153a523cda9", null ],
+    [ "pushButtonDetails", "class_ui___i_h_m_synchronisation.html#a401e193293e00a78f821f86db32048c6", null ],
+    [ "pushButtonDetecter", "class_ui___i_h_m_synchronisation.html#a5759286059924785e25f2ad2ba18a81c", null ],
+    [ "pushButtonSynchroniser", "class_ui___i_h_m_synchronisation.html#a9ef256132230bbe0baf9d69fc0228d8a", null ],
+    [ "verticalLayout", "class_ui___i_h_m_synchronisation.html#a189a185a4964723ac185ffdb2a477cd0", null ],
+    [ "verticalLayout_2", "class_ui___i_h_m_synchronisation.html#a85f5297b874bcdc3ff4e88af665f2efd", null ],
+    [ "verticalLayoutDetecterSmartphone", "class_ui___i_h_m_synchronisation.html#a90bd4799d2d5acdb5d522160a4eca588", null ],
+    [ "verticalLayoutSelectionSmartphone", "class_ui___i_h_m_synchronisation.html#a3c6c59a88a8d2e5bd31f2f4a0c03cb04", null ],
+    [ "verticalSpacer", "class_ui___i_h_m_synchronisation.html#a8b415eae957b0eaf03e6026e5dd9fc25", null ],
+    [ "verticalSpacer_2", "class_ui___i_h_m_synchronisation.html#aec99e7208a6a173cfded5f311787e07c", null ]
+];

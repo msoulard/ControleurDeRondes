@@ -1,0 +1,150 @@
+\hypertarget{class_q_device_watcher_private}{}\doxysection{Q\+Device\+Watcher\+Private Class Reference}
+\label{class_q_device_watcher_private}\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+
+
+{\ttfamily \#include $<$qdevicewatcher\+\_\+p.\+h$>$}
+
+
+
+Inheritance diagram for Q\+Device\+Watcher\+Private\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Device\+Watcher\+Private\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_device_watcher_private_a09d7ca58dad62fd18e8579a2c118bc29}{Q\+Device\+Watcher\+Private}} (Q\+Object $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_q_device_watcher_private_a80545fcd70e272e25b232cb30af5cacd}{$\sim$\+Q\+Device\+Watcher\+Private}} ()
+\item 
+void \mbox{\hyperlink{class_q_device_watcher_private_a9026e716f3e5996a06dc36d3864f9509}{set\+Watcher}} (\mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}} $\ast$w)
+\item 
+bool \mbox{\hyperlink{class_q_device_watcher_private_aae86c1f1f256617bf5428a1aeae85940}{start}} ()
+\item 
+bool \mbox{\hyperlink{class_q_device_watcher_private_a9b910bac83dbf1389a2a7d7a6396fea8}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_q_device_watcher_private_a83f9f96895f2cd8f98d48a5ef22a102d}{emit\+Device\+Added}} (const Q\+String \&dev)
+\item 
+void \mbox{\hyperlink{class_q_device_watcher_private_aee776fb4b91cbef5d2f115de46c68d47}{emit\+Device\+Changed}} (const Q\+String \&dev)
+\item 
+void \mbox{\hyperlink{class_q_device_watcher_private_a644476ae42b84a95f28a0e60dcbdc058}{emit\+Device\+Removed}} (const Q\+String \&dev)
+\item 
+void \mbox{\hyperlink{class_q_device_watcher_private_a15b87c7075a49ac244a34a5dbe8ed954}{emit\+Device\+Action}} (const Q\+String \&dev, const Q\+String \&action)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+List$<$ Q\+Object $\ast$ $>$ \mbox{\hyperlink{class_q_device_watcher_private_a5a370eb80faf353c335541283e455b7f}{event\+\_\+receivers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_device_watcher_private_a392c4c26fc47df8eac38a23282097d6a}{parse\+Device\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_q_device_watcher_private_aa83bf1b3dccb947751659a0521a2be3b}{init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}} $\ast$ \mbox{\hyperlink{class_q_device_watcher_private_aad20900d0dd9c1459c0dbde3d320dfa6}{watcher}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_device_watcher_private_a09d7ca58dad62fd18e8579a2c118bc29}\label{class_q_device_watcher_private_a09d7ca58dad62fd18e8579a2c118bc29}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{QDeviceWatcherPrivate()}{QDeviceWatcherPrivate()}}
+{\footnotesize\ttfamily Q\+Device\+Watcher\+Private\+::\+Q\+Device\+Watcher\+Private (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_a80545fcd70e272e25b232cb30af5cacd}\label{class_q_device_watcher_private_a80545fcd70e272e25b232cb30af5cacd}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!````~QDeviceWatcherPrivate@{$\sim$QDeviceWatcherPrivate}}
+\index{````~QDeviceWatcherPrivate@{$\sim$QDeviceWatcherPrivate}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDeviceWatcherPrivate()}{~QDeviceWatcherPrivate()}}
+{\footnotesize\ttfamily Q\+Device\+Watcher\+Private\+::$\sim$\+Q\+Device\+Watcher\+Private (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_device_watcher_private_a15b87c7075a49ac244a34a5dbe8ed954}\label{class_q_device_watcher_private_a15b87c7075a49ac244a34a5dbe8ed954}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!emitDeviceAction@{emitDeviceAction}}
+\index{emitDeviceAction@{emitDeviceAction}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{emitDeviceAction()}{emitDeviceAction()}}
+{\footnotesize\ttfamily void Q\+Device\+Watcher\+Private\+::emit\+Device\+Action (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{dev,  }\item[{const Q\+String \&}]{action }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_q_device_watcher_private_a83f9f96895f2cd8f98d48a5ef22a102d}\label{class_q_device_watcher_private_a83f9f96895f2cd8f98d48a5ef22a102d}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!emitDeviceAdded@{emitDeviceAdded}}
+\index{emitDeviceAdded@{emitDeviceAdded}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{emitDeviceAdded()}{emitDeviceAdded()}}
+{\footnotesize\ttfamily void Q\+Device\+Watcher\+Private\+::emit\+Device\+Added (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{dev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_aee776fb4b91cbef5d2f115de46c68d47}\label{class_q_device_watcher_private_aee776fb4b91cbef5d2f115de46c68d47}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!emitDeviceChanged@{emitDeviceChanged}}
+\index{emitDeviceChanged@{emitDeviceChanged}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{emitDeviceChanged()}{emitDeviceChanged()}}
+{\footnotesize\ttfamily void Q\+Device\+Watcher\+Private\+::emit\+Device\+Changed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{dev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_a644476ae42b84a95f28a0e60dcbdc058}\label{class_q_device_watcher_private_a644476ae42b84a95f28a0e60dcbdc058}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!emitDeviceRemoved@{emitDeviceRemoved}}
+\index{emitDeviceRemoved@{emitDeviceRemoved}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{emitDeviceRemoved()}{emitDeviceRemoved()}}
+{\footnotesize\ttfamily void Q\+Device\+Watcher\+Private\+::emit\+Device\+Removed (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{dev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_aa83bf1b3dccb947751659a0521a2be3b}\label{class_q_device_watcher_private_aa83bf1b3dccb947751659a0521a2be3b}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!init@{init}}
+\index{init@{init}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Q\+Device\+Watcher\+Private\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_a392c4c26fc47df8eac38a23282097d6a}\label{class_q_device_watcher_private_a392c4c26fc47df8eac38a23282097d6a}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!parseDeviceInfo@{parseDeviceInfo}}
+\index{parseDeviceInfo@{parseDeviceInfo}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{parseDeviceInfo}{parseDeviceInfo}}
+{\footnotesize\ttfamily void Q\+Device\+Watcher\+Private\+::parse\+Device\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_a9026e716f3e5996a06dc36d3864f9509}\label{class_q_device_watcher_private_a9026e716f3e5996a06dc36d3864f9509}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!setWatcher@{setWatcher}}
+\index{setWatcher@{setWatcher}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{setWatcher()}{setWatcher()}}
+{\footnotesize\ttfamily void Q\+Device\+Watcher\+Private\+::set\+Watcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}} $\ast$}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_aae86c1f1f256617bf5428a1aeae85940}\label{class_q_device_watcher_private_aae86c1f1f256617bf5428a1aeae85940}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!start@{start}}
+\index{start@{start}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily bool Q\+Device\+Watcher\+Private\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_a9b910bac83dbf1389a2a7d7a6396fea8}\label{class_q_device_watcher_private_a9b910bac83dbf1389a2a7d7a6396fea8}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!stop@{stop}}
+\index{stop@{stop}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily bool Q\+Device\+Watcher\+Private\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_device_watcher_private_a5a370eb80faf353c335541283e455b7f}\label{class_q_device_watcher_private_a5a370eb80faf353c335541283e455b7f}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!event\_receivers@{event\_receivers}}
+\index{event\_receivers@{event\_receivers}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{event\_receivers}{event\_receivers}}
+{\footnotesize\ttfamily Q\+List$<$Q\+Object$\ast$$>$ Q\+Device\+Watcher\+Private\+::event\+\_\+receivers}
+
+\mbox{\Hypertarget{class_q_device_watcher_private_aad20900d0dd9c1459c0dbde3d320dfa6}\label{class_q_device_watcher_private_aad20900d0dd9c1459c0dbde3d320dfa6}} 
+\index{QDeviceWatcherPrivate@{QDeviceWatcherPrivate}!watcher@{watcher}}
+\index{watcher@{watcher}!QDeviceWatcherPrivate@{QDeviceWatcherPrivate}}
+\doxysubsubsection{\texorpdfstring{watcher}{watcher}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_device_watcher}{Q\+Device\+Watcher}}$\ast$ Q\+Device\+Watcher\+Private\+::watcher\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{qdevicewatcher__p_8h}{qdevicewatcher\+\_\+p.\+h}}\item 
+C\+:/\+Users/hurea/\+Downloads/drive-\/download-\/20200601\+T140139\+Z-\/001/\+Supervision\+Rondier2020 (1)/\mbox{\hyperlink{qdevicewatcher_8cpp}{qdevicewatcher.\+cpp}}\end{DoxyCompactItemize}

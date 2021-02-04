@@ -1,0 +1,10 @@
+digraph "IHMAgent::ActiverChamps"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="IHMAgent::ActiverChamps",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="IHMAgent::ActiverChamps Active ou désactive les champs de l'ihm selon le paramètre,..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="IHMAgent::NetoyerChamps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_h_m_agent.html#a8ba2e0f9ee3393f464eec75729335b1f",tooltip="IHMAgent::NetoyerChamps Permet de vider les champs de l'ihm."];
+}

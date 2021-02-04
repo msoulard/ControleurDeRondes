@@ -1,0 +1,7 @@
+digraph "Localisation"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Localisation\n|- emplacement\l- batiment\l- etage\l|+ Localisation()\l+ ObtenirEmplacement()\l+ DefinirEmplacement()\l+ ObtenirBatiment()\l+ DefinirBatiment()\l+ ObtenirEtage()\l+ DefinirEtage()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}
