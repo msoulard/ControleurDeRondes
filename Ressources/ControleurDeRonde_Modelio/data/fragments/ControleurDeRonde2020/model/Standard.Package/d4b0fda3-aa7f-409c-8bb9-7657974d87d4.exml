@@ -22,6 +22,7 @@
         <COMPID name="Pointeaux" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
         <COMPID name="Anomalies" mc="Standard.Class" uid="397518d1-35c5-4b2e-beec-ce0b583666c1"/>
         <COMPID name="Application smartphone responsable" mc="Standard.Package" uid="c7f07d5e-57ac-43f9-8435-bd3907621051"/>
+        <COMPID name="AppliSmartphoneAgent" mc="Standard.Class" uid="06e9f987-24b7-4ba4-b119-16d918c7f1d8"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="controleurderonde2020 Use Case diagram" mc="Standard.UseCaseDiagram" uid="054ba1fa-fa97-4b5e-9f55-8306f2445d07"/>
