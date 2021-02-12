@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>rondBleu.png</file>
+        <file>rondNoir.png</file>
+        <file>rondOrange.png</file>
+        <file>rondRouge.png</file>
+        <file>rondVert.png</file>
+    </qresource>
+</RCC>
