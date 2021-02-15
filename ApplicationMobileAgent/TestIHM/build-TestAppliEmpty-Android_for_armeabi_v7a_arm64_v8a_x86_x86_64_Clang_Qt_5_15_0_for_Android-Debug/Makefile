@@ -316,7 +316,6 @@ compiler_rcc_clean:
 	-$(DEL_FILE) armeabi-v7a/qrc_qml.cpp armeabi-v7a/qrc_Pointeaux.cpp
 armeabi-v7a/qrc_qml.cpp: ../TestAppliEmpty/qml.qrc \
 		/opt/Qt/5.15.0/android/bin/rcc \
-		../TestAppliEmpty/fonctions.js \
 		../TestAppliEmpty/main.qml
 	/opt/Qt/5.15.0/android/bin/rcc -name qml ../TestAppliEmpty/qml.qrc -o armeabi-v7a/qrc_qml.cpp
 

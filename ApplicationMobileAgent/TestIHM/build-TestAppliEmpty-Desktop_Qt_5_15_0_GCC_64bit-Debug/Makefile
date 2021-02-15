@@ -987,6 +987,8 @@ main.o: ../TestAppliEmpty/main.cpp /opt/Qt/5.15.0/gcc_64/include/QtGui/QGuiAppli
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qpointer.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmetaobject.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtQml/qqmlerror.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtQml/QQmlContext \
+		/opt/Qt/5.15.0/gcc_64/include/QtQml/qqmlcontext.h \
 		../TestAppliEmpty/couleurs.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QObject \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QString

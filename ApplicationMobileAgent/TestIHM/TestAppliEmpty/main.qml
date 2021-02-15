@@ -14,12 +14,13 @@ Window {
     //@disable-check M16
     title: qsTr("Test")
 
-//    Button {
-//        id: button
-//        x: 178
-//        y: 316
-//        text: qsTr("Button")
-//    }
+    Button {
+        id: buttonAnomalie
+        x: 215
+        y: 126
+        text: qsTr("Anomalie")
+        onClicked: pointeauxModel.setEtat("red")
+    }
 
     //    RoundButton {
     //        id: roundButton
@@ -134,38 +135,38 @@ Window {
         border.width: 2
         radius: 5
         x:50
-        y:100
+        y:300
 
-        ListModel
-        {
-            id: modelPointeaux // Données -> liste de pointeaux
+//        ListModel
+//        {
+//            id: modelPointeaux // Données -> liste de pointeaux
 
-            ListElement {
-                lieu: "Accueil"
-                etat : "red"
-            }
-            ListElement {
-                lieu: "Salle B106"
-                etat: "blue"
-            }
-            ListElement {
-                lieu: "Salle B107"
-                etat: "green"
-            }
+//            ListElement {
+//                lieu: pointeauxModel.name
+//                etat : pointeauxModel.etat
+//            }
+//            ListElement {
+//                lieu: pointeauxModel.name
+//                etat: pointeauxModel.etat
+//            }
+//            ListElement {
+//                lieu: pointeauxModel.name
+//                etat: pointeauxModel.etat
+//            }
 
-            ListElement {
-                lieu: "Salle B108"
-                etat : "gray"
-            }
-            ListElement {
-                lieu: "Salle B112"
-                etat: "orange"
-            }
-            ListElement {
-                lieu: "Salle B113"
-                etat: "brown"
-            }
-        }
+//            ListElement {
+//                lieu: pointeauxModel.name
+//                etat : pointeauxModel.etat
+//            }
+//            ListElement {
+//                lieu: pointeauxModel.name
+//                etat: pointeauxModel.etat
+//            }
+//            ListElement {
+//                lieu: pointeauxModel.name
+//                etat: pointeauxModel.etat
+//            }
+//        }
 
         Component
         {
@@ -203,7 +204,7 @@ Window {
                 Text    //  texte correspondant
                 {
                     y:8
-                    text: "Désignation : " + lieu
+                    text: lieu
                 }
             }
         }
@@ -211,8 +212,9 @@ Window {
         ListView
         {
             anchors.fill: parent
-            model: modelPointeaux
+            model: pointeauxModel
             delegate: representation
         }
     }
+
 }
