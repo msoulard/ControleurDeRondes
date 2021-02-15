@@ -14,12 +14,12 @@ Window {
     //@disable-check M16
     title: qsTr("Test")
 
-    Button {
-        id: button
-        x: 178
-        y: 316
-        text: qsTr("Button")
-    }
+//    Button {
+//        id: button
+//        x: 178
+//        y: 316
+//        text: qsTr("Button")
+//    }
 
     //    RoundButton {
     //        id: roundButton
@@ -76,17 +76,17 @@ Window {
     //        font.pixelSize: 12
     //    }
 
-    ListModel {
-        id: pointeaux
-        ListElement {
-            //@disable-check M16
-            name: "Accueil"
-        }
-        ListElement {
-            //@disable-check M16
-            name: "Cours d'honneur"
-        }
-    }
+//    ListModel {
+//        id: pointeaux
+//        ListElement {
+//            //@disable-check M16
+//            name: "Accueil"
+//        }
+//        ListElement {
+//            //@disable-check M16
+//            name: "Cours d'honneur"
+//        }
+//    }
 
 
 
@@ -103,29 +103,116 @@ Window {
     //        source: "qrc:/img/rondBleu.png"
     //    }
 
-    ListView{
-        x: 105
-        width : 180
-        height: 200
-        model : pointeaux
-        delegate: Text {
-            text: name
+//    ListView{
+//        x: 105
+//        width : 180
+//        height: 200
+//        model : pointeaux
+//        delegate: Text {
+//            text: name
+//        }
+//    }
+//    ObjectModel{
+//        id: images
+//        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(3) ; radius : 50}
+//        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(2) ; radius : 50}
+//        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(0) ; radius : 50}
+//        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(4) ; radius : 50}
+//        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(1) ; radius : 50}
+//    }
+//    ListView{
+//        id: points
+//        anchors.fill: parent
+//        ScrollBar.vertical: ScrollBar{active:true}
+
+//        model : images
+
+//    }
+    Rectangle
+    {
+        width: 200; height: 90
+        border.width: 2
+        radius: 5
+        x:50
+        y:100
+
+        ListModel
+        {
+            id: modelPointeaux // Données -> liste de pointeaux
+
+            ListElement {
+                lieu: "Accueil"
+                etat : "red"
+            }
+            ListElement {
+                lieu: "Salle B106"
+                etat: "blue"
+            }
+            ListElement {
+                lieu: "Salle B107"
+                etat: "green"
+            }
+
+            ListElement {
+                lieu: "Salle B108"
+                etat : "gray"
+            }
+            ListElement {
+                lieu: "Salle B112"
+                etat: "orange"
+            }
+            ListElement {
+                lieu: "Salle B113"
+                etat: "brown"
+            }
         }
-    }
-    ObjectModel{
-        id: images
-        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(3) ; radius : 50}
-        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(2) ; radius : 50}
-        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(0) ; radius : 50}
-        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(4) ; radius : 50}
-        Rectangle{ height : 20; width : 20; color : pointCouleur.changerCouleur(1) ; radius : 50}
-    }
-    ListView{
-        id: points
-        anchors.fill: parent
-        ScrollBar.vertical: ScrollBar{active:true}
 
-        model : images
+        Component
+        {
+            id: representation // Manière dont s'affiche les données
+            Row
+            {
+                height: 30
+                spacing: 10
 
+                Text { text: " " } // pour ne pas coller la représentation graphique
+                Column
+                {
+                    Rectangle       // premier rectangle
+                    {
+                        x:5
+                        width: 5
+                        height: 8
+                        color: "black"
+                    }
+                    Rectangle       // rond
+                    {
+                        height: 15;
+                        width: 14;
+                        color: etat
+                        radius: 20
+                    }
+                    Rectangle   // deuxième rectangle
+                    {
+                        x:5
+                        width: 5
+                        height: 8
+                        color: "black"
+                    }
+                }
+                Text    //  texte correspondant
+                {
+                    y:8
+                    text: "Désignation : " + lieu
+                }
+            }
+        }
+
+        ListView
+        {
+            anchors.fill: parent
+            model: modelPointeaux
+            delegate: representation
+        }
     }
 }

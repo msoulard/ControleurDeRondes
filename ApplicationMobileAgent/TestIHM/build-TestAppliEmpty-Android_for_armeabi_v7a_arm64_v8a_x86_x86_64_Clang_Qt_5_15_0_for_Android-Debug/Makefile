@@ -51,11 +51,15 @@ OBJECTS_DIR   = armeabi-v7a/
 
 ####### Files
 
-SOURCES       = ../TestAppliEmpty/main.cpp armeabi-v7a/qrc_qml.cpp \
-		armeabi-v7a/qrc_Pointeaux.cpp
-OBJECTS       = armeabi-v7a/main.o \
+SOURCES       = ../TestAppliEmpty/couleurs.cpp \
+		../TestAppliEmpty/main.cpp armeabi-v7a/qrc_qml.cpp \
+		armeabi-v7a/qrc_Pointeaux.cpp \
+		armeabi-v7a/moc_couleurs.cpp
+OBJECTS       = armeabi-v7a/couleurs.o \
+		armeabi-v7a/main.o \
 		armeabi-v7a/qrc_qml.o \
-		armeabi-v7a/qrc_Pointeaux.o
+		armeabi-v7a/qrc_Pointeaux.o \
+		armeabi-v7a/moc_couleurs.o
 DIST          = /opt/Qt/5.15.0/android/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.15.0/android/mkspecs/common/unix.conf \
 		/opt/Qt/5.15.0/android/mkspecs/common/linux.conf \
@@ -243,7 +247,8 @@ DIST          = /opt/Qt/5.15.0/android/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.15.0/android/mkspecs/features/exceptions.prf \
 		/opt/Qt/5.15.0/android/mkspecs/features/yacc.prf \
 		/opt/Qt/5.15.0/android/mkspecs/features/lex.prf \
-		../TestAppliEmpty/TestAppliEmpty.pro  ../TestAppliEmpty/main.cpp
+		../TestAppliEmpty/TestAppliEmpty.pro ../TestAppliEmpty/couleurs.h ../TestAppliEmpty/couleurs.cpp \
+		../TestAppliEmpty/main.cpp
 QMAKE_TARGET  = libTestAppliEmpty_armeabi-v7a.so
 DESTDIR       = 
 TARGET        = libTestAppliEmpty_armeabi-v7a.so
@@ -271,7 +276,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../TestAppliEmpty/qml.qrc ../TestAppliEmpty/Pointeaux.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/Qt/5.15.0/android/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../TestAppliEmpty/main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../TestAppliEmpty/couleurs.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../TestAppliEmpty/couleurs.cpp ../TestAppliEmpty/main.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents TestAppliEmpty_fr_FR.ts $(DISTDIR)/
 
 
@@ -329,8 +335,68 @@ compiler_moc_predefs_clean:
 armeabi-v7a/moc_predefs.h: /opt/Qt/5.15.0/android/mkspecs/features/data/dummy.cpp
 	/opt/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -target armv7a-linux-androideabi21 -fno-limit-debug-info -fPIC -fstack-protector-strong -DANDROID -g -marm -O0 -std=gnu++11 -Wall -W -dM -E -o armeabi-v7a/moc_predefs.h /opt/Qt/5.15.0/android/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all:
+compiler_moc_header_make_all: armeabi-v7a/moc_couleurs.cpp
 compiler_moc_header_clean:
+	-$(DEL_FILE) armeabi-v7a/moc_couleurs.cpp
+armeabi-v7a/moc_couleurs.cpp: ../TestAppliEmpty/couleurs.h \
+		/opt/Qt/5.15.0/android/include/QtCore/QObject \
+		/opt/Qt/5.15.0/android/include/QtCore/qobject.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qobjectdefs.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qnamespace.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qglobal.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qconfig-bootstrapped.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qconfig.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qtcore-config.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qsystemdetection.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qprocessordetection.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcompilerdetection.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qtypeinfo.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qsysinfo.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qlogging.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qflags.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qbasicatomic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic_bootstrap.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qgenericatomic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic_cxx11.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic_msvc.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qglobalstatic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qmutex.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qnumeric.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qversiontagging.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstring.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qchar.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qbytearray.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qrefcount.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qarraydata.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringliteral.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringalgorithms.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringview.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringbuilder.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qlist.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qalgorithms.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qiterator.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qhashfunctions.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qpair.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qvector.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcontainertools_impl.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qpoint.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qbytearraylist.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringlist.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qregexp.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringmatcher.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcoreevent.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qscopedpointer.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qmetatype.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qvarlengtharray.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcontainerfwd.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qobject_impl.h \
+		/opt/Qt/5.15.0/android/include/QtCore/QString \
+		armeabi-v7a/moc_predefs.h \
+		/opt/Qt/5.15.0/android/bin/moc
+	/opt/Qt/5.15.0/android/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/TestIHM/build-TestAppliEmpty-Android_for_armeabi_v7a_arm64_v8a_x86_x86_64_Clang_Qt_5_15_0_for_Android-Debug/armeabi-v7a/moc_predefs.h' -I/opt/Qt/5.15.0/android/mkspecs/android-clang -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/TestIHM/TestAppliEmpty' -I/opt/Qt/5.15.0/android/include -I/opt/Qt/5.15.0/android/include/QtQuick -I/opt/Qt/5.15.0/android/include/QtGui -I/opt/Qt/5.15.0/android/include/QtQmlModels -I/opt/Qt/5.15.0/android/include/QtQml -I/opt/Qt/5.15.0/android/include/QtNetwork -I/opt/Qt/5.15.0/android/include/QtCore -I. -I/usr/include/c++/7.5.0 -I/usr/include/x86_64-linux-gnu/c++/7.5.0 -I/usr/include/c++/7.5.0/backward -I/usr/local/include -I/opt/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/9.0.8/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../TestAppliEmpty/couleurs.h -o armeabi-v7a/moc_couleurs.cpp
+
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
@@ -341,9 +407,66 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean 
 
 ####### Compile
+
+armeabi-v7a/couleurs.o: ../TestAppliEmpty/couleurs.cpp ../TestAppliEmpty/couleurs.h \
+		/opt/Qt/5.15.0/android/include/QtCore/QObject \
+		/opt/Qt/5.15.0/android/include/QtCore/qobject.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qobjectdefs.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qnamespace.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qglobal.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qconfig-bootstrapped.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qconfig.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qtcore-config.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qsystemdetection.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qprocessordetection.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcompilerdetection.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qtypeinfo.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qsysinfo.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qlogging.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qflags.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qbasicatomic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic_bootstrap.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qgenericatomic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic_cxx11.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qatomic_msvc.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qglobalstatic.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qmutex.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qnumeric.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qversiontagging.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstring.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qchar.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qbytearray.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qrefcount.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qarraydata.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringliteral.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringalgorithms.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringview.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringbuilder.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qlist.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qalgorithms.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qiterator.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qhashfunctions.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qpair.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qvector.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcontainertools_impl.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qpoint.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qbytearraylist.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringlist.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qregexp.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qstringmatcher.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcoreevent.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qscopedpointer.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qmetatype.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qvarlengtharray.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qcontainerfwd.h \
+		/opt/Qt/5.15.0/android/include/QtCore/qobject_impl.h \
+		/opt/Qt/5.15.0/android/include/QtCore/QString
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a/couleurs.o ../TestAppliEmpty/couleurs.cpp
 
 armeabi-v7a/main.o: ../TestAppliEmpty/main.cpp /opt/Qt/5.15.0/android/include/QtGui/QGuiApplication \
 		/opt/Qt/5.15.0/android/include/QtGui/qguiapplication.h \
@@ -439,7 +562,12 @@ armeabi-v7a/main.o: ../TestAppliEmpty/main.cpp /opt/Qt/5.15.0/android/include/Qt
 		/opt/Qt/5.15.0/android/include/QtQml/qqmlpropertyvaluesource.h \
 		/opt/Qt/5.15.0/android/include/QtCore/qpointer.h \
 		/opt/Qt/5.15.0/android/include/QtCore/qmetaobject.h \
-		/opt/Qt/5.15.0/android/include/QtQml/qqmlerror.h
+		/opt/Qt/5.15.0/android/include/QtQml/qqmlerror.h \
+		/opt/Qt/5.15.0/android/include/QtQml/QQmlContext \
+		/opt/Qt/5.15.0/android/include/QtQml/qqmlcontext.h \
+		../TestAppliEmpty/couleurs.h \
+		/opt/Qt/5.15.0/android/include/QtCore/QObject \
+		/opt/Qt/5.15.0/android/include/QtCore/QString
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a/main.o ../TestAppliEmpty/main.cpp
 
 armeabi-v7a/qrc_qml.o: armeabi-v7a/qrc_qml.cpp 
@@ -447,6 +575,9 @@ armeabi-v7a/qrc_qml.o: armeabi-v7a/qrc_qml.cpp
 
 armeabi-v7a/qrc_Pointeaux.o: armeabi-v7a/qrc_Pointeaux.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a/qrc_Pointeaux.o armeabi-v7a/qrc_Pointeaux.cpp
+
+armeabi-v7a/moc_couleurs.o: armeabi-v7a/moc_couleurs.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a/moc_couleurs.o armeabi-v7a/moc_couleurs.cpp
 
 ####### Install
 
