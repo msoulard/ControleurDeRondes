@@ -6,9 +6,10 @@
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+    Couleurs couleursPointeau;
     QList<QObject*> listePointeaux;
     for(int i = 0 ; i < 15 ; i++){
-        listePointeaux.append(new Couleurs("Désignation" + QString::number(i), "green"));
+        listePointeaux.append(new Couleurs("Désignation " + QString::number(i), couleursPointeau.changerCouleur((i==0?3:0))));
     }
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("pointeauxModel", QVariant::fromValue(listePointeaux));

@@ -54,12 +54,10 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../TestAppliEmpty/couleurs.cpp \
 		../TestAppliEmpty/main.cpp qrc_qml.cpp \
-		qrc_Pointeaux.cpp \
 		moc_couleurs.cpp
 OBJECTS       = couleurs.o \
 		main.o \
 		qrc_qml.o \
-		qrc_Pointeaux.o \
 		moc_couleurs.o
 DIST          = /opt/Qt/5.15.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.15.0/gcc_64/mkspecs/common/unix.conf \
@@ -483,8 +481,7 @@ Makefile: ../TestAppliEmpty/TestAppliEmpty.pro /opt/Qt/5.15.0/gcc_64/mkspecs/lin
 		/opt/Qt/5.15.0/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.15.0/gcc_64/mkspecs/features/lex.prf \
 		../TestAppliEmpty/TestAppliEmpty.pro \
-		../TestAppliEmpty/qml.qrc \
-		../TestAppliEmpty/Pointeaux.qrc
+		../TestAppliEmpty/qml.qrc
 	$(QMAKE) -o Makefile ../TestAppliEmpty/TestAppliEmpty.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
 /opt/Qt/5.15.0/gcc_64/mkspecs/features/spec_pre.prf:
 /opt/Qt/5.15.0/gcc_64/mkspecs/common/unix.conf:
@@ -692,7 +689,6 @@ Makefile: ../TestAppliEmpty/TestAppliEmpty.pro /opt/Qt/5.15.0/gcc_64/mkspecs/lin
 /opt/Qt/5.15.0/gcc_64/mkspecs/features/lex.prf:
 ../TestAppliEmpty/TestAppliEmpty.pro:
 ../TestAppliEmpty/qml.qrc:
-../TestAppliEmpty/Pointeaux.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ../TestAppliEmpty/TestAppliEmpty.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
 
@@ -707,7 +703,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../TestAppliEmpty/qml.qrc ../TestAppliEmpty/Pointeaux.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../TestAppliEmpty/qml.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/Qt/5.15.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../TestAppliEmpty/couleurs.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../TestAppliEmpty/couleurs.cpp ../TestAppliEmpty/main.cpp $(DISTDIR)/
@@ -735,23 +731,14 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all: qrc_qml.cpp qrc_Pointeaux.cpp
+compiler_rcc_make_all: qrc_qml.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_qml.cpp qrc_Pointeaux.cpp
+	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: ../TestAppliEmpty/qml.qrc \
 		/opt/Qt/5.15.0/gcc_64/bin/rcc \
 		../TestAppliEmpty/fonctions.js \
 		../TestAppliEmpty/main.qml
 	/opt/Qt/5.15.0/gcc_64/bin/rcc -name qml ../TestAppliEmpty/qml.qrc -o qrc_qml.cpp
-
-qrc_Pointeaux.cpp: ../TestAppliEmpty/Pointeaux.qrc \
-		/opt/Qt/5.15.0/gcc_64/bin/rcc \
-		../TestAppliEmpty/rondNoir.png \
-		../TestAppliEmpty/rondVert.png \
-		../TestAppliEmpty/rondRouge.png \
-		../TestAppliEmpty/rondBleu.png \
-		../TestAppliEmpty/rondOrange.png
-	/opt/Qt/5.15.0/gcc_64/bin/rcc -name Pointeaux ../TestAppliEmpty/Pointeaux.qrc -o qrc_Pointeaux.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
@@ -996,9 +983,6 @@ main.o: ../TestAppliEmpty/main.cpp /opt/Qt/5.15.0/gcc_64/include/QtGui/QGuiAppli
 
 qrc_qml.o: qrc_qml.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_qml.o qrc_qml.cpp
-
-qrc_Pointeaux.o: qrc_Pointeaux.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_Pointeaux.o qrc_Pointeaux.cpp
 
 moc_couleurs.o: moc_couleurs.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_couleurs.o moc_couleurs.cpp

@@ -18,16 +18,16 @@ QString Couleurs::changerCouleur(int i)
     QString couleur;
     switch (i) {
     case 1 :
-        couleur = "green";
+        couleur = "#00FF00"; //vert
         break;
     case 2 :
-        couleur = "orange";
+        couleur = "#ffa500"; //orange
         break;
     case 3 :
-        couleur = "blue";
+        couleur = "#0000FF"; //bleu
         break;
     case 4 :
-        couleur = "red";
+        couleur = "#FF0000"; //rouge
         break;
     default:
         couleur = "black";

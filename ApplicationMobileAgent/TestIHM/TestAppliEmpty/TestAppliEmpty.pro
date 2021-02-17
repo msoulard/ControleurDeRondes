@@ -17,8 +17,7 @@ SOURCES += \
         couleurs.cpp \
         main.cpp
 
-RESOURCES += qml.qrc \
-    Pointeaux.qrc
+RESOURCES += qml.qrc
 
 TRANSLATIONS += \
     TestAppliEmpty_fr_FR.ts

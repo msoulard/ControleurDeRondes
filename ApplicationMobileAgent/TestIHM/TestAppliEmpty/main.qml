@@ -1,4 +1,4 @@
-import QtQuick 2.12
+import QtQuick 2.15
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
@@ -13,14 +13,6 @@ Window {
     height: 480
     //@disable-check M16
     title: qsTr("Test")
-
-    Button {
-        id: buttonAnomalie
-        x: 215
-        y: 126
-        text: qsTr("Anomalie")
-        onClicked: pointeauxModel.setEtat("red")
-    }
 
     //    RoundButton {
     //        id: roundButton
@@ -135,7 +127,7 @@ Window {
         border.width: 2
         radius: 5
         x:50
-        y:300
+        y:200
 
 //        ListModel
 //        {
@@ -171,11 +163,13 @@ Window {
         Component
         {
             id: representation // Manière dont s'affiche les données
+
             Row
             {
                 height: 30
                 spacing: 10
-
+                required property string etat
+                required property string lieu
                 Text { text: " " } // pour ne pas coller la représentation graphique
                 Column
                 {
@@ -188,8 +182,10 @@ Window {
                     }
                     Rectangle       // rond
                     {
+                        id: etatPointeau
                         height: 15;
                         width: 14;
+
                         color: etat
                         radius: 20
                     }
@@ -211,10 +207,46 @@ Window {
 
         ListView
         {
+            id: listePointeaux
             anchors.fill: parent
             model: pointeauxModel
             delegate: representation
         }
     }
 
+
+    Button {
+        id: buttonAnomalie
+        x: 215
+        y: 126
+        text: qsTr("Anomalie")
+        onClicked: {
+            var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+            //l'état devient rouge
+            //item.etat = Qt.rgba(255, 0, 0);
+            item.etat = "#FF0000";
+        }
+    }
+    Button {
+        id: buttonScanner
+        x: 350
+        y: 126
+        text: qsTr("Pointeau scanné")
+        onClicked: {
+            //récupérer l'index courrant de l'item
+            var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+            //si la couleur est bleu
+            if(item.etat === "#0000FF"){
+                //il met en vert
+              item.etat = "#00FF00";
+            }
+            //il incrémente l'index courant
+            listePointeaux.incrementCurrentIndex();
+            //il récupère l'index courrant
+            item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+            //l'état du pointeau courrant devient bleu
+            item.etat = "#0000FF";
+
+        }
+    }
 }
