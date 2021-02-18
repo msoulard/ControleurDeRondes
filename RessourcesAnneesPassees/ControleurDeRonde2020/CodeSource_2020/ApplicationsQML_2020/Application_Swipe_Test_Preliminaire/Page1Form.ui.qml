@@ -27,7 +27,7 @@ Page {
 
     Image {
         id: image1
-        x: 15
+        x: 9
         y: 100
         width: 200
         height: 200

@@ -63,7 +63,6 @@ ApplicationWindow {
     footer: TabBar {
         id: tabBar
         currentIndex: leRondier.currentIndex
-
         TabButton {
             text: qsTr("Identification")
         }

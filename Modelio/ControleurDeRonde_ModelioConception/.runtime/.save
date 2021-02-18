@@ -1,0 +1,5 @@
+#Thu Feb 18 17:48:48 CET 2021
+org.modelio.diagram.editor.OpenedDiagrams3='Diagramme de classe Application smartphone agent' {8f535ac4-3d5b-412c-b023-aa69ddc3e794} Standard.ClassDiagram
+org.modelio.diagram.editor.OpenedDiagrams2='Diagramme d'\u00E9tat D\u00E9roulement de la ronde' {ef93e36c-55e6-47b0-82d4-b37ab8fd6214} Standard.StateMachineDiagram
+org.modelio.diagram.editor.OpenedDiagrams1='Diagramme de s\u00E9quence R\u00E9aliser une ronde' {3041f937-d3e9-4176-83a2-47a3b4f9ca76} Standard.SequenceDiagram
+org.modelio.diagram.editor.OpenedDiagrams0='controleurderonde2020 Use Case diagram' {054ba1fa-fa97-4b5e-9f55-8306f2445d07} Standard.UseCaseDiagram

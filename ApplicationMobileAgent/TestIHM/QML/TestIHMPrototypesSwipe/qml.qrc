@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Identification.ui.qml</file>
+        <file>SelectionRonde.ui.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Anomalie.ui.qml</file>
+        <file>Photo.ui.qml</file>
+        <file>DeroulementRonde.qml</file>
+        <file>main.js</file>
+    </qresource>
+</RCC>
