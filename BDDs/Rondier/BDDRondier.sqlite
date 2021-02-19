@@ -1,0 +1,84 @@
+CREATE DATABASE IF NOT EXISTS `Rondier` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `Rondier`;
+
+CREATE TABLE `AGENTS` (
+  `idagent` VARCHAR(42),
+  `nom` VARCHAR(42),
+  `prenom` VARCHAR(42),
+  `numbadge` VARCHAR(42),
+  PRIMARY KEY (`idagent`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ANOMALIES` (
+  `idanomalie` VARCHAR(42),
+  `description` VARCHAR(42),
+  `photos` VARCHAR(42),
+  PRIMARY KEY (`idanomalie`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `LIEUX` (
+  `idlieux` VARCHAR(42),
+  `batiment` VARCHAR(42),
+  `etage` VARCHAR(42),
+  `emplacement` VARCHAR(42),
+  `idpointeau` VARCHAR(42),
+  PRIMARY KEY (`idlieux`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `PEUTFAIRE` (
+  `idagent` VARCHAR(42),
+  `idronde` VARCHAR(42),
+  PRIMARY KEY (`idagent`, `idronde`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `AETEEFFECTUEEPAR` (
+  `idronde` VARCHAR(42),
+  `idagent` VARCHAR(42),
+  `date` VARCHAR(42),
+  `heure` VARCHAR(42),
+  PRIMARY KEY (`idronde`, `idagent`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `AETESCANNE` (
+  `idpointeau` VARCHAR(42),
+  `idagent` VARCHAR(42),
+  `idronde` VARCHAR(42),
+  `idanomalie` VARCHAR(42),
+  `ordre` VARCHAR(42),
+  `temps` VARCHAR(42),
+  PRIMARY KEY (`idpointeau`, `idagent`, `idronde`, `idanomalie`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `RONDES` (
+  `idronde` VARCHAR(42),
+  `nom` VARCHAR(42),
+  PRIMARY KEY (`idronde`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `COMPORTE` (
+  `idronde` VARCHAR(42),
+  `idpointeau` VARCHAR(42),
+  `ordre` VARCHAR(42),
+  `tempsmini` VARCHAR(42),
+  `tempsmaxi` VARCHAR(42),
+  PRIMARY KEY (`idronde`, `idpointeau`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `POINTEAUX` (
+  `idpointeau` VARCHAR(42),
+  `designation` VARCHAR(42),
+  `tag_mifare` VARCHAR(42),
+  PRIMARY KEY (`idpointeau`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `LIEUX` ADD FOREIGN KEY (`idpointeau`) REFERENCES `POINTEAUX` (`idpointeau`);
+ALTER TABLE `PEUTFAIRE` ADD FOREIGN KEY (`idronde`) REFERENCES `RONDES` (`idronde`);
+ALTER TABLE `PEUTFAIRE` ADD FOREIGN KEY (`idagent`) REFERENCES `AGENTS` (`idagent`);
+ALTER TABLE `AETEEFFECTUEEPAR` ADD FOREIGN KEY (`idagent`) REFERENCES `AGENTS` (`idagent`);
+ALTER TABLE `AETEEFFECTUEEPAR` ADD FOREIGN KEY (`idronde`) REFERENCES `RONDES` (`idronde`);
+ALTER TABLE `AETESCANNE` ADD FOREIGN KEY (`idanomalie`) REFERENCES `ANOMALIES` (`idanomalie`);
+ALTER TABLE `AETESCANNE` ADD FOREIGN KEY (`idronde`) REFERENCES `RONDES` (`idronde`);
+ALTER TABLE `AETESCANNE` ADD FOREIGN KEY (`idagent`) REFERENCES `AGENTS` (`idagent`);
+ALTER TABLE `AETESCANNE` ADD FOREIGN KEY (`idpointeau`) REFERENCES `POINTEAUX` (`idpointeau`);
+ALTER TABLE `COMPORTE` ADD FOREIGN KEY (`idpointeau`) REFERENCES `POINTEAUX` (`idpointeau`);
+ALTER TABLE `COMPORTE` ADD FOREIGN KEY (`idronde`) REFERENCES `RONDES` (`idronde`);

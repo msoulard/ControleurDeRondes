@@ -36,6 +36,12 @@ QString Pointeau::changerCouleur(int i)
     return couleur;
 }
 
+void Pointeau::horodater()
+{
+    horodatage = QDateTime::currentDateTime();
+    qDebug() << horodatage;
+}
+
 QString Pointeau::lieu() const
 {
     return m_lieu;

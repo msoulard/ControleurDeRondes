@@ -3,14 +3,15 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 import QtQml.Models 2.15
+import QtQml 2.2
 
 Page {
     property alias buttonAnomalie: buttonAnomalie
     property alias buttonPointeauScanne: buttonPointeauScanne
     property alias buttonInterrompreLaRonde: buttonInterrompreLaRonde
     property alias buttonIgnorerLePointeau: buttonIgnorerLePointeau
-    width: 600
 
+    width: 600
     title: "Déroulement de la ronde"
 
     GridLayout {
@@ -18,8 +19,6 @@ Page {
         x: 0
         y: 0
         width: 560
-
-
         columns: 2
 
         Text {
@@ -145,7 +144,14 @@ Page {
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                 //l'état devient rouge
                 //item.etat = Qt.rgba(255, 0, 0);
-                item.etat = "#FF0000";
+                item.etat = "#FF0000";                
+                //il incrémente l'index courant
+                listePointeaux.incrementCurrentIndex();
+                //il récupère l'index courrant
+                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                //l'état du pointeau courrant devient bleu
+                item.etat = "#0000FF";
+                pointeauxModel.horodater();
             }
         }
         Button {
@@ -167,7 +173,6 @@ Page {
                 item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                 //l'état du pointeau courrant devient bleu
                 item.etat = "#0000FF";
-
             }
         }
 

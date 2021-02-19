@@ -2,6 +2,8 @@
 #define POINTEAU_H
 
 #include <QObject>
+#include <QDateTime>
+#include <QDebug>
 
 class Pointeau : public QObject
 {
@@ -14,6 +16,7 @@ public:
     explicit Pointeau(QObject *parent = nullptr);
     Pointeau(const QString &lieu, const QString &etat, QObject *parent = 0);
     Q_INVOKABLE QString changerCouleur(int i);
+    Q_INVOKABLE void horodater();
 
     QString lieu() const;
     void setLieu(const QString &lieu);
@@ -28,6 +31,7 @@ signals:
 private:
     QString m_lieu;
     QString m_etat;
+    QDateTime horodatage;
 };
 
 #endif // POINTEAU_H

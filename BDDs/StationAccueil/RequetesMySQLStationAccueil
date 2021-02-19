@@ -1,0 +1,134 @@
+INSERT INTO Agents(idagent, nom, prenom, numbadge, statut) VALUES (1, 'Bidule', 'Jean-Pierre', '1524ADFF52', true);
+INSERT INTO Agents(idagent, nom, prenom, numbadge, statut) VALUES (2, 'Letessier', 'Yoann', 'ADM24123ALD', true);
+INSERT INTO Agents(idagent, nom, prenom, numbadge, statut) VALUES (3, 'Cabaret', 'Damien', 'D12Q546Q21', false);
+INSERT INTO Agents(idagent, nom, prenom, numbadge, statut) VALUES (4, 'Truc', 'Anaïs', '1D2FZ45D23WC', true);
+INSERT INTO Agents(idagent, nom, prenom, numbadge, statut) VALUES (5, 'Lambert', 'Martin', 'DFS245ED12', true);
+
+INSERT INTO Responsable(idresponsable, nom, prenom, numbadge, login, mdp, statut) VALUES (1, 'Bidule', 'Jean-Pierre', '1524ADFF52', 'toto', 'toto', true);
+
+INSERT INTO Rondes(idronde, nom, statut) VALUES (1, 'Lycée Touchard-Washington', true);
+INSERT INTO Rondes(idronde, nom, statut) VALUES (2, 'Carrefour', true);
+INSERT INTO Rondes(idronde, nom, statut) VALUES (3, 'Auchan', true);
+INSERT INTO Rondes(idronde, nom, statut) VALUES (4, 'Jacobins', true);
+INSERT INTO Rondes(idronde, nom, statut) VALUES (5, 'Lidl', false);
+INSERT INTO Rondes(idronde, nom, statut) VALUES (6, 'LaFayette', false);
+INSERT INTO Rondes(idronde, nom, statut) VALUES (7, 'Médiathèque', false);
+INSERT INTO Rondes(idronde, nom, statut) VALUES (8, 'Gares', false);
+
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (1, 'Ici', true, 'SFDGH5456DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (2, 'Là-bas', true, 'SFDGH5455DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (3, 'Cours', true, 'SFDGH5454DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (4, 'Place', true, 'SFDGH5453DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (5, 'Quai', true, 'SFDGH5452QS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (6, 'Classe', true, 'SFDGH5452DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (7, 'Couloire', true, 'SFDGH5451DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (8, 'Toilettes', true, 'SFDGH5446DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (9, 'Bureau', true, 'SFDGH54186DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (10, 'Entrepôt', true, 'SFDGH52456DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (11, 'Escaliers', true, 'SFDGH54562DQS');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (12, 'Cuisine', false, 'SFDGH5456DQS1');
+INSERT INTO Pointeaux(idpointeau, designation, statut, tag_mifare) VALUES (13, 'Ascenseur', true, 'SFDGH5456DQ2S');
+
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (1, 'A', '1', 'A104', 13);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (2, 'B', 'Rez-de-chaussé', 'B004', 11);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (3, 'C', 'Sous-sol', 'Porte A', 10);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (4, 'D', '2', 'D205', 9);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (5, 'E', '4', 'E415', 8);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (6, 'Eglise', 'Clochet', 'Cloche', 7);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (7, 'Dortoir', '2', 'Chambre 209', 6);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (8, 'Self', '0', 'Table 10', 5);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (9, 'F', '3', 'F310', 4);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (10, 'G', '-1', 'Porte D', 3);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (11, 'H', '2', 'H222', 2);
+INSERT INTO Lieux(idlieux, batiment, etage, emplacement, idpointeau) VALUES (12, 'I', '1', 'I119', 1);
+
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 1, 1, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 2, 2, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 3, 3, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 4, 4, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 5, 5, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 6, 6, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 7, 7, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 8, 9, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 9, 8, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 10, 10, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 11, 11, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (1, 13, 12, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 10, 1, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 11, 2, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 9, 3, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 8, 4, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 6, 5, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 5, 6, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 4, 7, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 2, 8, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 1, 9, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (2, 3, 10, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 11, 1, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 1, 2, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 13, 3, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 9, 4, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 2, 5, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 4, 6, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 6, 7, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (3, 10, 8, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 13, 1, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 11, 2, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 10, 3, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 9, 4, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 8, 5, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 7, 6, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 6, 7, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 5, 8, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 4, 9, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 3, 10, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 2, 11, '10:00', '15:00');
+INSERT INTO Comporte (idronde, idpointeau, ordre, tempsmini, tempsmaxi) VALUES (4, 1, 12, '10:00', '15:00');
+
+INSERT INTO PeutFaire(idagent, idronde) VALUES (1,1);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (1,2);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (1,3);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (1,4);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (2,1);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (2,2);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (2,3);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (2,4);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (3,1);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (3,2);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (3,3);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (3,4);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (4,1);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (4,2);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (4,3);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (4,4);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (5,1);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (5,2);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (5,3);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (5,4);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (1,6);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (1,7);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (2,8);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (5,5);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (4,6);
+INSERT INTO PeutFaire(idagent, idronde) VALUES (3,7);
+
+INSERT INTO Anomalies(idanomalie, description) VALUES (1, 'Toilettes bouchées');
+INSERT INTO Anomalies(idanomalie, description) VALUES (2, 'Alarme incendie déteriorée');
+INSERT INTO Anomalies(idanomalie, description) VALUES (3, 'Fenêtre ouverte');
+INSERT INTO Anomalies(idanomalie, description) VALUES (4, 'Fuites d'eau');
+INSERT INTO Anomalies(idanomalie, description) VALUES (5, 'Porte cassée');
+INSERT INTO Anomalies(idanomalie, description) VALUES (6, 'Volet cassé');
+INSERT INTO Anomalies(idanomalie, description) VALUES (7, 'Extincteur inexistant');
+
+INSERT INTO AEteScanne(idpointeau, idagent, idronde, ordre, temps) VALUES 
+
+
+
+
+
+
+
+
+
+
+

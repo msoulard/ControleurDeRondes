@@ -3,6 +3,7 @@
 #include <QtSql/QSqlError>
 #include <QtSql/QSqlQuery>
 #include <QMessageBox>
+
 BaseBDD::BaseBDD()
 {
 
