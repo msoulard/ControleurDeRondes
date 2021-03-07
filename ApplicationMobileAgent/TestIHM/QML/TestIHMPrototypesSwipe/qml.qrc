@@ -5,8 +5,8 @@
         <file>SelectionRonde.ui.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>Anomalie.ui.qml</file>
-        <file>Photo.ui.qml</file>
         <file>DeroulementRonde.qml</file>
         <file>main.js</file>
+        <file>Photo.qml</file>
     </qresource>
 </RCC>

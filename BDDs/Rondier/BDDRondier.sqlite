@@ -2,74 +2,74 @@ CREATE DATABASE IF NOT EXISTS `Rondier` DEFAULT CHARACTER SET utf8 COLLATE utf8_
 USE `Rondier`;
 
 CREATE TABLE `AGENTS` (
-  `idagent` VARCHAR(42),
-  `nom` VARCHAR(42),
-  `prenom` VARCHAR(42),
-  `numbadge` VARCHAR(42),
+  `idagent` INTEGER,
+  `nom` TEXT,
+  `prenom` TEXT,
+  `numbadge` TEXT,
   PRIMARY KEY (`idagent`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 CREATE TABLE `ANOMALIES` (
-  `idanomalie` VARCHAR(42),
-  `description` VARCHAR(42),
-  `photos` VARCHAR(42),
+  `idanomalie` INTEGER,
+  `description` TEXT,
+  `photos` TEXT,
   PRIMARY KEY (`idanomalie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 CREATE TABLE `LIEUX` (
-  `idlieux` VARCHAR(42),
-  `batiment` VARCHAR(42),
-  `etage` VARCHAR(42),
-  `emplacement` VARCHAR(42),
-  `idpointeau` VARCHAR(42),
+  `idlieux` INTEGER,
+  `batiment` TEXT,
+  `etage` TEXT,
+  `emplacement` TEXT,
+  `idpointeau` INTEGER,
   PRIMARY KEY (`idlieux`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 CREATE TABLE `PEUTFAIRE` (
-  `idagent` VARCHAR(42),
-  `idronde` VARCHAR(42),
+  `idagent` INTEGER,
+  `idronde` INTEGER,
   PRIMARY KEY (`idagent`, `idronde`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 CREATE TABLE `AETEEFFECTUEEPAR` (
-  `idronde` VARCHAR(42),
-  `idagent` VARCHAR(42),
-  `date` VARCHAR(42),
-  `heure` VARCHAR(42),
+  `idronde` INTEGER,
+  `idagent` INTEGER,
+  `date` TEXT,
+  `heure` TEXT,
   PRIMARY KEY (`idronde`, `idagent`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 CREATE TABLE `AETESCANNE` (
-  `idpointeau` VARCHAR(42),
-  `idagent` VARCHAR(42),
-  `idronde` VARCHAR(42),
-  `idanomalie` VARCHAR(42),
-  `ordre` VARCHAR(42),
-  `temps` VARCHAR(42),
+  `idpointeau` INTEGER,
+  `idagent` INTEGER,
+  `idronde` INTEGER,
+  `idanomalie` INTEGER,
+  `ordre` INTEGER,
+  `temps` TEXT,
   PRIMARY KEY (`idpointeau`, `idagent`, `idronde`, `idanomalie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 CREATE TABLE `RONDES` (
-  `idronde` VARCHAR(42),
-  `nom` VARCHAR(42),
+  `idronde` INTEGER,
+  `nom` TEXT,
   PRIMARY KEY (`idronde`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 CREATE TABLE `COMPORTE` (
-  `idronde` VARCHAR(42),
-  `idpointeau` VARCHAR(42),
-  `ordre` VARCHAR(42),
-  `tempsmini` VARCHAR(42),
-  `tempsmaxi` VARCHAR(42),
+  `idronde` INTEGER,
+  `idpointeau` INTEGER,
+  `ordre` INTEGER,
+  `tempsmini` TEXT,
+  `tempsmaxi` TEXT,
   PRIMARY KEY (`idronde`, `idpointeau`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 CREATE TABLE `POINTEAUX` (
-  `idpointeau` VARCHAR(42),
-  `designation` VARCHAR(42),
-  `tag_mifare` VARCHAR(42),
+  `idpointeau` INTEGER,
+  `designation` TEXT,
+  `tag_mifare` TEXT,
   PRIMARY KEY (`idpointeau`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 ALTER TABLE `LIEUX` ADD FOREIGN KEY (`idpointeau`) REFERENCES `POINTEAUX` (`idpointeau`);
 ALTER TABLE `PEUTFAIRE` ADD FOREIGN KEY (`idronde`) REFERENCES `RONDES` (`idronde`);

@@ -36,3 +36,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     pointeau.h
+
+ANDROID_ABIS = armeabi-v7a arm64-v8a
