@@ -79,8 +79,6 @@ Page {
             Component
             {
                 id: representation // Manière dont s'affiche les données
-
-
                 Row
                 {
                     height: 30
@@ -135,25 +133,16 @@ Page {
             }
         }
 
-        Button {
-            id: buttonAnomalie
+        Text {
+            id: descriptionPointeau
             x: 626
-            y: 332
-            text: qsTr("Anomalie")
-            onClicked: {
-                var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //l'état devient rouge
-                //item.etat = Qt.rgba(255, 0, 0);
-                item.etat = "#FF0000";                
-                //il incrémente l'index courant
-                listePointeaux.incrementCurrentIndex();
-                //il récupère l'index courrant
-                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //l'état du pointeau courrant devient bleu
-                item.etat = "#0000FF";
-                pointeauxModel.horodater();
-            }
+            y: 68
+            width: 172
+            height: 126
+            text: qsTr("Description :")
+            font.pixelSize: 12
         }
+
         Button {
             id: buttonPointeauScanne
             x: 398
@@ -177,8 +166,28 @@ Page {
         }
 
         Button {
+            id: buttonAnomalie
+            x: 626
+            y: 332
+            text: qsTr("Anomalie")
+            onClicked: {
+                var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                //l'état devient rouge
+                //item.etat = Qt.rgba(255, 0, 0);
+                item.etat = "#FF0000";
+                //il incrémente l'index courant
+                listePointeaux.incrementCurrentIndex();
+                //il récupère l'index courrant
+                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                //l'état du pointeau courrant devient bleu
+                item.etat = "#0000FF";
+                pointeauxModel.horodater();
+            }
+        }
+
+        Button {
             id: buttonInterrompreLaRonde
-            x: 42
+            x: 100
             y: 410
             width: 146
             height: 40
@@ -190,16 +199,6 @@ Page {
             x: 575
             y: 417
             text: qsTr("Ignorer le pointeau")
-        }
-
-        Text {
-            id: descriptionPointeau
-            x: 626
-            y: 68
-            width: 172
-            height: 126
-            text: qsTr("Description :")
-            font.pixelSize: 12
         }
 
 

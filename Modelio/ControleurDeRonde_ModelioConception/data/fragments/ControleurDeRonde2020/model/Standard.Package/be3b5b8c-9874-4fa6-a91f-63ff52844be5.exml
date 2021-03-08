@@ -26,9 +26,15 @@
         <COMPID name="Identification" mc="Standard.Class" uid="db7321e9-8812-4cda-bcc9-99a75a529df3"/>
         <COMPID name="SelectionRonde" mc="Standard.Class" uid="1afabfa0-078f-4730-b55b-e6b96e9eed77"/>
         <COMPID name="DeroulementRonde" mc="Standard.Class" uid="294ec4ea-d12d-4ebf-a32d-645999f9a23f"/>
-        <COMPID name="Anomalie" mc="Standard.Class" uid="6a96479c-5ce7-4fab-b731-8ba7bee7a7e5"/>
+        <COMPID name="AnomalieIHM" mc="Standard.Class" uid="6a96479c-5ce7-4fab-b731-8ba7bee7a7e5"/>
         <COMPID name="Photo" mc="Standard.Class" uid="60d5d7ee-8014-41a2-87fc-8d2c31795f32"/>
         <COMPID name="AccesBDD" mc="Standard.Class" uid="b6f1aeb2-0ba1-47b2-86ed-3196ccf9dac9"/>
+        <COMPID name="Pointeaux" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
+        <COMPID name="Anomalie" mc="Standard.Class" uid="397518d1-35c5-4b2e-beec-ce0b583666c1"/>
+        <COMPID name="LecteurNFC" mc="Standard.Class" uid="5186e799-7866-4575-8ca4-f5341db70066"/>
+        <COMPID name="QNearFieldManager" mc="Standard.Class" uid="ce50e60d-ac19-42c9-a199-3690fcdeb3f4"/>
+        <COMPID name="QNearFieldTarget" mc="Standard.Class" uid="33aff999-f50e-4836-b553-0afe02b40e30"/>
+        <COMPID name="QNearFieldTarget *" mc="Standard.DataType" uid="9aeb4736-eb68-40e0-b4fd-439afaf472e9"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="Diagramme de classe Application smartphone agent" mc="Standard.ClassDiagram" uid="8f535ac4-3d5b-412c-b023-aa69ddc3e794"/>

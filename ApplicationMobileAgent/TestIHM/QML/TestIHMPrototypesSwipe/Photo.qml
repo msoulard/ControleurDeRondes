@@ -72,8 +72,8 @@ Page {
     ToolButton{
         id: toolButton
         anchors{
-            top: parent.top
-            topMargin: 20
+            bottom: parent.bottom
+            bottomMargin: 20
             horizontalCenter: parent.horizontalCenter
         }
         icon{
@@ -91,32 +91,32 @@ Page {
         }
         background: Rectangle { color:  "green" }
     }
-    Rectangle {
-        width: parent.width
-        height: parent.height/2
-        anchors.bottom: parent.bottom
-        color: "#FF0000"
+//    Rectangle {
+//        width: parent.width
+//        height: parent.height/2
+//        anchors.bottom: parent.bottom
+//        color: "#FF0000"
 
-        clip: true
-        Flickable {
-            id: _Flickable
-            anchors.fill: parent
-            contentWidth: _Image_PhotoPreview.sourceSize.width
-            contentHeight: _Image_PhotoPreview.sourceSize.height
-            Image {
-                id: _Image_PhotoPreview
-                scale: 0.5
-                fillMode: Image.PreserveAspectFit
-                PinchArea {
-                    anchors.fill: parent
-                    pinch.target: _Image_PhotoPreview
-                    enabled: true
-                    pinch.minimumScale: 0.35
-                    pinch.maximumScale: 2.0
+//        clip: true
+//        Flickable {
+//            id: _Flickable
+//            anchors.fill: parent
+//            contentWidth: _Image_PhotoPreview.sourceSize.width
+//            contentHeight: _Image_PhotoPreview.sourceSize.height
+//            Image {
+//                id: _Image_PhotoPreview
+//                scale: 0.5
+//                fillMode: Image.PreserveAspectFit
+//                PinchArea {
+//                    anchors.fill: parent
+//                    pinch.target: _Image_PhotoPreview
+//                    enabled: true
+//                    pinch.minimumScale: 0.35
+//                    pinch.maximumScale: 2.0
 
-                }
-            }
-        }
-    }
+//                }
+//            }
+//        }
+//    }
 }
 

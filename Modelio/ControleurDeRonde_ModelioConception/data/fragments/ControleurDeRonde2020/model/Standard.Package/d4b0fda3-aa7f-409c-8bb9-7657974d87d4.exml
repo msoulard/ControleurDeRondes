@@ -18,9 +18,6 @@
         <COMPID name="Application station d'accueil" mc="Standard.Package" uid="3eec2b5c-4fce-4dda-b8d3-4e053659d8ce"/>
         <COMPID name="Agent de sécurité" mc="Standard.Actor" uid="3cc51881-b2ad-4ebd-ae7c-8b7669a0b3eb"/>
         <COMPID name="Responsable de sécurité" mc="Standard.Actor" uid="c09022c9-44d6-4a37-ac13-41ca6790772d"/>
-        <COMPID name="Ronde" mc="Standard.Class" uid="69b0a332-c3ef-4150-8180-e80f6e1afca9"/>
-        <COMPID name="Pointeaux" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
-        <COMPID name="Anomalies" mc="Standard.Class" uid="397518d1-35c5-4b2e-beec-ce0b583666c1"/>
         <COMPID name="Application smartphone responsable" mc="Standard.Package" uid="c7f07d5e-57ac-43f9-8435-bd3907621051"/>
         <COMPID name="AppliSmartphoneAgent" mc="Standard.Class" uid="06e9f987-24b7-4ba4-b119-16d918c7f1d8"/>
       </COMP>
