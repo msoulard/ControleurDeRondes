@@ -4,6 +4,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 import QtQml.Models 2.15
 import QtQml 2.2
+import QtQuick.Dialogs 1.2
 
 Page {
     property alias buttonAnomalie: buttonAnomalie
@@ -148,6 +149,7 @@ Page {
             x: 398
             y: 417
             text: qsTr("Pointeau scanné")
+            required property QDateTime heure
             onClicked: {
                 //récupérer l'index courrant de l'item
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
@@ -156,6 +158,8 @@ Page {
                     //il met en vert
                     item.etat = "#00FF00";
                 }
+                //horodater le pointeau
+                item.heure = pointeauxModel.horodater();
                 //il incrémente l'index courant
                 listePointeaux.incrementCurrentIndex();
                 //il récupère l'index courrant
@@ -192,6 +196,35 @@ Page {
             width: 146
             height: 40
             text: qsTr("Interrompre la ronde")
+            onClicked: dialogVerif.open()
+        }
+
+        Dialog{
+            id: dialogVerif
+            title: "Interruption de la ronde"
+            onAccepted: Qt.quit();
+            onRejected: {
+                this.close()
+            }
+
+            contentItem: Rectangle{
+                Column{
+                    anchors.fill: parent
+                    Text{
+                        text: "Voulez-vous interrompre la ronde ?"
+                    }
+                    Button{
+                        id: valider
+                        text: "Valider"
+                        onClicked: dialogVerif.accepted()
+                    }
+                    Button{
+                        id: annuler
+                        text: "Annuler"
+                        onClicked: dialogVerif.rejected()
+                    }
+                }
+            }
         }
 
         Button {

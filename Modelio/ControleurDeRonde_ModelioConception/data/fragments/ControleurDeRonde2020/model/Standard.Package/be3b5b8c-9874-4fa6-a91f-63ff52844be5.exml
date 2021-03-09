@@ -35,6 +35,7 @@
         <COMPID name="QNearFieldManager" mc="Standard.Class" uid="ce50e60d-ac19-42c9-a199-3690fcdeb3f4"/>
         <COMPID name="QNearFieldTarget" mc="Standard.Class" uid="33aff999-f50e-4836-b553-0afe02b40e30"/>
         <COMPID name="QNearFieldTarget *" mc="Standard.DataType" uid="9aeb4736-eb68-40e0-b4fd-439afaf472e9"/>
+        <COMPID name="QSqlDatabase" mc="Standard.Class" uid="24e642b5-3e2b-47a8-8464-287a87b6d244"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="Diagramme de classe Application smartphone agent" mc="Standard.ClassDiagram" uid="8f535ac4-3d5b-412c-b023-aa69ddc3e794"/>

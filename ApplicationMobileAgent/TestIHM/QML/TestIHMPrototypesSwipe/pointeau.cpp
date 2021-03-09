@@ -67,3 +67,16 @@ void Pointeau::setEtat(const QString &etat)
         emit etatChanged();
     }
 }
+
+QDateTime Pointeau::heure() const
+{
+    return horodatage;
+}
+
+void Pointeau::setHeure(const QDateTime &heure)
+{
+    if(heure != horodatage){
+        horodatage = heure;
+        emit heureChanged();
+    }
+}

@@ -11,6 +11,7 @@ class Pointeau : public QObject
 
     Q_PROPERTY(QString lieu READ lieu WRITE setLieu NOTIFY lieuChanged)
     Q_PROPERTY(QString etat READ etat WRITE setEtat NOTIFY etatChanged)
+    Q_PROPERTY(QDateTime heure READ heure WRITE setHeure NOTIFY heureChanged)
 
 public:
     explicit Pointeau(QObject *parent = nullptr);
@@ -24,9 +25,13 @@ public:
     QString etat() const;
     void setEtat(const QString &etat);
 
+    QDateTime heure() const;
+    void setHeure(const QDateTime &heure);
+
 signals:
     void lieuChanged();
     void etatChanged();
+    void heureChanged();
 
 private:
     QString m_lieu;

@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
     Pointeau couleursPointeau;
-    QList<QObject*> listePointeaux;
+    QList<Pointeau*> listePointeaux;
     for(int i = 0 ; i < 15 ; i++){
         listePointeaux.append(new Pointeau("Désignation " + QString::number(i), couleursPointeau.changerCouleur((i==0?3:0))));
     }
