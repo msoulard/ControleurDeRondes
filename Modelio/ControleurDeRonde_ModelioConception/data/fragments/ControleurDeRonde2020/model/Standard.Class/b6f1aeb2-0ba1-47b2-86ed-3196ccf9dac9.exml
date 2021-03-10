@@ -125,7 +125,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="idPointeau" mc="Standard.Parameter" uid="3909074e-1ee3-42a2-8d13-e262cef78960"/>
+                <ID name="tag_mifare" mc="Standard.Parameter" uid="3909074e-1ee3-42a2-8d13-e262cef78960"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -137,7 +137,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idPointeau]]></ATT>
+                  <ATT name="Name"><![CDATA[tag_mifare]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>

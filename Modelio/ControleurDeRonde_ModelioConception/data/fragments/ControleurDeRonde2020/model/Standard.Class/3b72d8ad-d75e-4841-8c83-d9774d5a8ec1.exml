@@ -1,15 +1,17 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="QNearFieldTarget *" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="QDateTime" version="4">
   <OBJECT>
-    <ID name="QNearFieldTarget *" mc="Standard.DataType" uid="9aeb4736-eb68-40e0-b4fd-439afaf472e9"/>
+    <ID name="QDateTime" mc="Standard.Class" uid="3b72d8ad-d75e-4841-8c83-d9774d5a8ec1"/>
     <PID name="Application smartphone agent" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
     <ATTRIBUTES>
-      <ATT name="IsElementary">true</ATT>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[QNearFieldTarget *]]></ATT>
+      <ATT name="Name"><![CDATA[QDateTime]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES></DEPENDENCIES>
