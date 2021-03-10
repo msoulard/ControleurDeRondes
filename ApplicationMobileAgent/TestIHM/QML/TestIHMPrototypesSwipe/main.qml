@@ -35,7 +35,12 @@ ApplicationWindow {
         DeroulementRonde{
             id: deroulementRonde
             buttonAnomalie.onClicked: {
+                //Fonction.pointeauValider();
                 Fonction.changerPage();
+            }
+            buttonPointeauScanne.onClicked: {
+                //Fonction.pointeauValider();
+                pointeauHorodater.horodater();
             }
         }
 

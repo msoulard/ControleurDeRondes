@@ -6,6 +6,8 @@ import QtQml.Models 2.15
 import QtQml 2.2
 import QtQuick.Dialogs 1.2
 
+import "main.js" as Fonction
+
 Page {
     property alias buttonAnomalie: buttonAnomalie
     property alias buttonPointeauScanne: buttonPointeauScanne
@@ -149,7 +151,6 @@ Page {
             x: 398
             y: 417
             text: qsTr("Pointeau scanné")
-            required property QDateTime heure
             onClicked: {
                 //récupérer l'index courrant de l'item
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
@@ -158,8 +159,6 @@ Page {
                     //il met en vert
                     item.etat = "#00FF00";
                 }
-                //horodater le pointeau
-                item.heure = pointeauxModel.horodater();
                 //il incrémente l'index courant
                 listePointeaux.incrementCurrentIndex();
                 //il récupère l'index courrant
@@ -175,6 +174,7 @@ Page {
             y: 332
             text: qsTr("Anomalie")
             onClicked: {
+                Fonction.pointeauScanne();
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                 //l'état devient rouge
                 //item.etat = Qt.rgba(255, 0, 0);
@@ -185,7 +185,6 @@ Page {
                 item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                 //l'état du pointeau courrant devient bleu
                 item.etat = "#0000FF";
-                pointeauxModel.horodater();
             }
         }
 
