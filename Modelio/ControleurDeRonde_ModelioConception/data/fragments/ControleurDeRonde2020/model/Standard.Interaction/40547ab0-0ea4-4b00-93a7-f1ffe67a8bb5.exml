@@ -494,7 +494,7 @@
               <OBJECT>
                 <ID name="" mc="Standard.Message" uid="d140645a-8610-4ce2-a34c-3254d427a90a"/>
                 <ATTRIBUTES>
-                  <ATT name="Argument"></ATT>
+                  <ATT name="Argument"><![CDATA[id_pointeau]]></ATT>
                   <ATT name="KindOfMessage">CompleteKind</ATT>
                   <ATT name="SortOfMessage">SyncCall</ATT>
                   <ATT name="Sequence"><![CDATA[16]]></ATT>
@@ -1048,7 +1048,7 @@
               <OBJECT>
                 <ID name="" mc="Standard.Message" uid="9971d6f1-c0dd-42f9-86b0-61675e27823c"/>
                 <ATTRIBUTES>
-                  <ATT name="Argument"></ATT>
+                  <ATT name="Argument"><![CDATA[id_pointeau]]></ATT>
                   <ATT name="KindOfMessage">CompleteKind</ATT>
                   <ATT name="SortOfMessage">SyncCall</ATT>
                   <ATT name="Sequence"><![CDATA[22]]></ATT>
@@ -1316,7 +1316,7 @@
               <OBJECT>
                 <ID name="ObtenirRondes" mc="Standard.Message" uid="70bbb275-169c-4d52-9dff-47cc6965090d"/>
                 <ATTRIBUTES>
-                  <ATT name="Argument"></ATT>
+                  <ATT name="Argument"><![CDATA[id_agent]]></ATT>
                   <ATT name="KindOfMessage">CompleteKind</ATT>
                   <ATT name="SortOfMessage">SyncCall</ATT>
                   <ATT name="Sequence"><![CDATA[6]]></ATT>
@@ -1446,7 +1446,7 @@
               <OBJECT>
                 <ID name="ObtenirPointeaux" mc="Standard.Message" uid="229653d2-8622-400e-868d-db1e1035ddf7"/>
                 <ATTRIBUTES>
-                  <ATT name="Argument"></ATT>
+                  <ATT name="Argument"><![CDATA[id_ronde]]></ATT>
                   <ATT name="KindOfMessage">CompleteKind</ATT>
                   <ATT name="SortOfMessage">SyncCall</ATT>
                   <ATT name="Sequence"><![CDATA[9]]></ATT>
@@ -1576,7 +1576,7 @@
               <OBJECT>
                 <ID name="RecupererLePointeau" mc="Standard.Message" uid="a14ee567-eadd-43df-8caa-0e20f039ba48"/>
                 <ATTRIBUTES>
-                  <ATT name="Argument"></ATT>
+                  <ATT name="Argument"><![CDATA[tag_mifare]]></ATT>
                   <ATT name="KindOfMessage">CompleteKind</ATT>
                   <ATT name="SortOfMessage">SyncCall</ATT>
                   <ATT name="Sequence"><![CDATA[14]]></ATT>
@@ -1839,7 +1839,7 @@
               <OBJECT>
                 <ID name="" mc="Standard.Message" uid="3a01f79a-5401-4e36-b321-9ee4454afac9"/>
                 <ATTRIBUTES>
-                  <ATT name="Argument"></ATT>
+                  <ATT name="Argument"><![CDATA[numBadge]]></ATT>
                   <ATT name="KindOfMessage">CompleteKind</ATT>
                   <ATT name="SortOfMessage">SyncCall</ATT>
                   <ATT name="Sequence"><![CDATA[4]]></ATT>
@@ -2362,6 +2362,22 @@
                 <DEPENDENCIES>
                   <LINK relation="Base">
                     <ID name="tagDetecte" mc="Standard.Signal" uid="ce4d3b64-af75-464c-a4d9-a3d08556a70a"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="requete" mc="Standard.BindableInstance" uid="bcb81f67-c591-4e6f-a9d2-dc69a1ad5866"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[requete]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="QSqlQuery" mc="Standard.Class" uid="6c027292-0af4-49e2-af34-9e5b65870310"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>

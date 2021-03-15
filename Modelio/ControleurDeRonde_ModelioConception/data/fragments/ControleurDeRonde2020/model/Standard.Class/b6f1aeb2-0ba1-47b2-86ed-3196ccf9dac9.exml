@@ -31,7 +31,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="idRonde" mc="Standard.Parameter" uid="3463b11c-79e5-40a6-b359-112e18ba387f"/>
+                <ID name="_id_ronde" mc="Standard.Parameter" uid="3463b11c-79e5-40a6-b359-112e18ba387f"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -43,7 +43,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idRonde]]></ATT>
+                  <ATT name="Name"><![CDATA[_id_ronde]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -70,7 +70,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="idAgent" mc="Standard.Parameter" uid="9832d0d0-6e54-4e7d-85c7-6d0eba97a03f"/>
+                <ID name="_id_agent" mc="Standard.Parameter" uid="9832d0d0-6e54-4e7d-85c7-6d0eba97a03f"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -82,7 +82,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idAgent]]></ATT>
+                  <ATT name="Name"><![CDATA[_id_agent]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -125,7 +125,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="tag_mifare" mc="Standard.Parameter" uid="3909074e-1ee3-42a2-8d13-e262cef78960"/>
+                <ID name="_tag_mifare" mc="Standard.Parameter" uid="3909074e-1ee3-42a2-8d13-e262cef78960"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -137,12 +137,12 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[tag_mifare]]></ATT>
+                  <ATT name="Name"><![CDATA[_tag_mifare]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -164,7 +164,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="numBadge" mc="Standard.Parameter" uid="7e61a297-5772-4ed9-9e53-d5852417786f"/>
+                <ID name="_numBadge" mc="Standard.Parameter" uid="7e61a297-5772-4ed9-9e53-d5852417786f"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -176,7 +176,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[numBadge]]></ATT>
+                  <ATT name="Name"><![CDATA[_numBadge]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -263,6 +263,20 @@
           <DEPENDENCIES>
             <LINK relation="SuperType">
               <ID name="QObject" mc="Standard.Class" uid="bb01daa8-5a2c-432f-9863-48810e74d043"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Standard.Usage" uid="8c72f241-1d7f-4175-b09a-264bf9dabd47"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <ID name="QSqlQuery" mc="Standard.Class" uid="6c027292-0af4-49e2-af34-9e5b65870310"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

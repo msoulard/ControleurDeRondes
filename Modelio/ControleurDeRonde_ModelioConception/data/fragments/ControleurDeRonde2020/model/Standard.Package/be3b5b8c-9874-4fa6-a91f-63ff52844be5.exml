@@ -36,6 +36,7 @@
         <COMPID name="QNearFieldTarget" mc="Standard.Class" uid="33aff999-f50e-4836-b553-0afe02b40e30"/>
         <COMPID name="QSqlDatabase" mc="Standard.Class" uid="24e642b5-3e2b-47a8-8464-287a87b6d244"/>
         <COMPID name="QDateTime" mc="Standard.Class" uid="3b72d8ad-d75e-4841-8c83-d9774d5a8ec1"/>
+        <COMPID name="QSqlQuery" mc="Standard.Class" uid="6c027292-0af4-49e2-af34-9e5b65870310"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="Diagramme de classe Application smartphone agent" mc="Standard.ClassDiagram" uid="8f535ac4-3d5b-412c-b023-aa69ddc3e794"/>
