@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Application smartphone agent" version="4">
+  <OBJECT>
+    <ID name="Application smartphone agent" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+    <PID name="controleurderonde2020" mc="Standard.Package" uid="d4b0fda3-aa7f-409c-8bb9-7657974d87d4"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Application smartphone agent]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Réaliser une ronde" mc="Standard.UseCase" uid="668f0523-eec6-48ef-b6c6-5d61a9b5ddd9"/>
+        <COMPID name="Scanner un point de passage" mc="Standard.UseCase" uid="4cdd2ee5-a5e3-4710-9e5e-925848237e30"/>
+        <COMPID name="Constater une anomalie" mc="Standard.UseCase" uid="789a5018-401a-4e9f-a368-39e886b03995"/>
+        <COMPID name="Prendre une anomalie en photo" mc="Standard.UseCase" uid="6f94b44a-9923-43e5-8c05-c4feabdde2b7"/>
+        <COMPID name="Horodater un point de passage" mc="Standard.UseCase" uid="c5550de7-ae8e-4642-b818-843fff833b77"/>
+        <COMPID name="Envoyer une ronde de surveillance" mc="Standard.UseCase" uid="ed8aef6f-16d8-48ad-ab04-a35c545ee22f"/>
+        <COMPID name="Télécharger des rondes de surveillance" mc="Standard.UseCase" uid="5873fec1-a222-4bc5-8f56-f874b6a6284f"/>
+        <COMPID name="Identifier un agent de sécurité" mc="Standard.UseCase" uid="ac5dad3f-37da-426d-95de-43e10b70a685"/>
+        <COMPID name="QObject" mc="Standard.Class" uid="bb01daa8-5a2c-432f-9863-48810e74d043"/>
+        <COMPID name="Identification" mc="Standard.Class" uid="db7321e9-8812-4cda-bcc9-99a75a529df3"/>
+        <COMPID name="SelectionRonde" mc="Standard.Class" uid="1afabfa0-078f-4730-b55b-e6b96e9eed77"/>
+        <COMPID name="DeroulementRonde" mc="Standard.Class" uid="294ec4ea-d12d-4ebf-a32d-645999f9a23f"/>
+        <COMPID name="AnomalieIHM" mc="Standard.Class" uid="6a96479c-5ce7-4fab-b731-8ba7bee7a7e5"/>
+        <COMPID name="Photo" mc="Standard.Class" uid="60d5d7ee-8014-41a2-87fc-8d2c31795f32"/>
+        <COMPID name="AccesBDD" mc="Standard.Class" uid="b6f1aeb2-0ba1-47b2-86ed-3196ccf9dac9"/>
+        <COMPID name="Pointeaux" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
+        <COMPID name="Anomalie" mc="Standard.Class" uid="397518d1-35c5-4b2e-beec-ce0b583666c1"/>
+        <COMPID name="LecteurNFC" mc="Standard.Class" uid="5186e799-7866-4575-8ca4-f5341db70066"/>
+        <COMPID name="QNearFieldManager" mc="Standard.Class" uid="ce50e60d-ac19-42c9-a199-3690fcdeb3f4"/>
+        <COMPID name="QNearFieldTarget" mc="Standard.Class" uid="33aff999-f50e-4836-b553-0afe02b40e30"/>
+        <COMPID name="QSqlDatabase" mc="Standard.Class" uid="24e642b5-3e2b-47a8-8464-287a87b6d244"/>
+        <COMPID name="QDateTime" mc="Standard.Class" uid="3b72d8ad-d75e-4841-8c83-d9774d5a8ec1"/>
+        <COMPID name="QSqlQuery" mc="Standard.Class" uid="6c027292-0af4-49e2-af34-9e5b65870310"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagramme de classe Application smartphone agent" mc="Standard.ClassDiagram" uid="8f535ac4-3d5b-412c-b023-aa69ddc3e794"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
