@@ -86,8 +86,8 @@ Page {
                 {
                     height: 30
                     spacing: 10
-                    required property string couleur
-                    required property string designation
+                    required property string m_couleur
+                    required property string m_designation
                     Text { text: " " } // pour ne pas coller la représentation graphique
                     Column
                     {
@@ -104,7 +104,7 @@ Page {
                             height: 15;
                             width: 14;
 
-                            color: couleur
+                            color: m_couleur
                             radius: 20
                         }
                         Rectangle   // deuxième rectangle
@@ -118,7 +118,7 @@ Page {
                     Text    //  texte correspondant
                     {
                         y:8
-                        text: designation
+                        text: m_designation
                     }
                 }
             }
@@ -155,16 +155,16 @@ Page {
                 //récupérer l'index courrant de l'item
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                 //si la couleur est bleu
-                if(item.couleur === "#0000FF"){
+                if(item.m_couleur === "#0000FF"){
                     //il met en vert
-                    item.couleur = "#00FF00";
+                    item.m_couleur = "#00FF00";
                 }
                 //il incrémente l'index courant
                 listePointeaux.incrementCurrentIndex();
                 //il récupère l'index courrant
                 item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                 //l'état du pointeau courrant devient bleu
-                item.couleur = "#0000FF";
+                item.m_couleur = "#0000FF";
             }
         }
 
@@ -232,7 +232,5 @@ Page {
             y: 417
             text: qsTr("Ignorer le pointeau")
         }
-
-
     }
 }

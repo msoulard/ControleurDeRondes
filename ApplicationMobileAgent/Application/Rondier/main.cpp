@@ -1,15 +1,32 @@
+/**
+  @file main.cpp
+  @details Programme principal
+  @author Maëva Soulard
+  @date 18/03/2021
+  */
+
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "pointeaux.h"
 
+using namespace std;
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
-    Pointeaux couleursPointeau;
+    Pointeaux *couleursPointeau;
     QList<QObject*> listePointeaux;
     for(int i = 0 ; i < 15 ; i++){
-        listePointeaux.append(new Pointeaux("Désignation " + QString::number(i), couleursPointeau.changerCouleur((i==0?3:0))));
+        couleursPointeau=new Pointeaux();
+        couleursPointeau->setDesignation("Désignation " + QString::number(i));
+        if (i==0){   // premier pointeau en bleu
+            couleursPointeau->setCouleur("#0000FF");
+        }
+        else{
+            couleursPointeau->setCouleur("#000000");
+        }
+        listePointeaux.append(couleursPointeau);
     }
     QQmlApplicationEngine engine;
     //permet de récupérer les valeurs de la liste en C++ pour les utiliser en QML

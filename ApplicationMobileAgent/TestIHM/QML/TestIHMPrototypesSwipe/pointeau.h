@@ -14,8 +14,7 @@ class Pointeau : public QObject
 
 public:
     explicit Pointeau(QObject *parent = nullptr);
-    Pointeau(const QString &lieu, const QString &etat, QObject *parent = 0);
-    Q_INVOKABLE QString changerCouleur(int i);
+    Pointeau(const QString lieu, const QString etat, QObject *parent = 0);
     Q_INVOKABLE void horodater();
 
     QString lieu() const;

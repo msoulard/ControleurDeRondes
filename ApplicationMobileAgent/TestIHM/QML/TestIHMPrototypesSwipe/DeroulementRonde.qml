@@ -174,7 +174,6 @@ Page {
             y: 332
             text: qsTr("Anomalie")
             onClicked: {
-                Fonction.pointeauScanne();
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                 //l'état devient rouge
                 //item.etat = Qt.rgba(255, 0, 0);

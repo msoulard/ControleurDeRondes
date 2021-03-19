@@ -1,69 +1,62 @@
+/**
+  @file pointeaux.cpp
+  @details Définition et déclaration des méthodes de la classe Pointeaux
+  @author Maëva Soulard
+  @date 18/03/2021
+  */
+
 #include "pointeaux.h"
 
+/**
+ * @brief Pointeaux::Pointeaux
+ * @param parent
+ */
 Pointeaux::Pointeaux(QObject *parent) : QObject(parent)
 {
 
 }
 
-Pointeaux::Pointeaux(const QString &_designation, const QString &_couleur, QObject *parent) :
-    QObject(parent),
-    m_designation(_designation),
-    m_couleur(_couleur)
-{
-
-}
-
-QString Pointeaux::changerCouleur(int i)
-{
-    QString couleur;
-    switch (i) {
-    case 1 :
-        couleur = "#00FF00"; //vert
-        break;
-    case 2 :
-        couleur = "#ffa500"; //orange
-        break;
-    case 3 :
-        couleur = "#0000FF"; //bleu
-        break;
-    case 4 :
-        couleur = "#FF0000"; //rouge
-        break;
-    default:
-        couleur = "black";
-        break;
-    }
-    return couleur;
-}
-
+/**
+ * @brief Pointeaux::horodater
+ */
 void Pointeaux::horodater()
 {
     horodatage = QDateTime::currentDateTime();
     qDebug() << horodatage;
 }
 
-QString Pointeaux::designation() const
+/**
+ * @brief Pointeaux::getDesignation
+ * @return
+ */
+QString Pointeaux::getDesignation() const
 {
-    return m_designation;
+    return designation;
 }
 
-void Pointeaux::setDesignation(const QString &_designation)
+/**
+ * @brief Pointeaux::setDesignation
+ * @param value
+ */
+void Pointeaux::setDesignation(const QString &value)
 {
-    if(_designation != m_designation){
-        m_designation = _designation;
-        emit designationChanged();
-    }
+    designation = value;
 }
 
-QString Pointeaux::couleur() const
+/**
+ * @brief Pointeaux::getCouleur
+ * @return
+ */
+QString Pointeaux::getCouleur() const
 {
-    return m_couleur;
+    return couleur;
 }
 
-void Pointeaux::setCouleur(const QString &_couleur)
+/**
+ * @brief Pointeaux::setCouleur
+ * @param value
+ */
+void Pointeaux::setCouleur(const QString &value)
 {
-    if(_couleur != m_couleur){
-        m_couleur = _couleur;
-        emit couleurChanged();
-    }
+    couleur = value;
 }

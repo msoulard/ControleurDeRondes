@@ -6,10 +6,21 @@
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
-    Pointeau couleursPointeau;
+    Pointeau *couleursPointeau;
     QList<QObject*> listePointeaux;
     for(int i = 0 ; i < 15 ; i++){
-        listePointeaux.append(new Pointeau("Désignation " + QString::number(i), couleursPointeau.changerCouleur((i==0?3:0))));
+        couleursPointeau=new Pointeau();
+        couleursPointeau->setLieu("Désignation " + QString::number(i));
+
+        if (i==0)   // premier pointeau
+        {
+            couleursPointeau->setEtat("#0000FF");
+        }
+        else
+        {
+            couleursPointeau->setEtat("#000000");
+        }
+        listePointeaux.append(couleursPointeau);
     }
     QQmlApplicationEngine engine;
     //permet de récupérer les valeurs de la liste en C++ pour les utiliser en QML

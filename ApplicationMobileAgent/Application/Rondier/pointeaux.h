@@ -1,3 +1,11 @@
+/**
+  @file pointeaux.h
+  @brief The Pointeaux class
+  @details Déclaration de la classe Pointeaux héritant de la classe QObject
+  @author Maëva Soulard
+  @date 18/03/2021
+  */
+
 #ifndef POINTEAUX_H
 #define POINTEAUX_H
 
@@ -7,28 +15,28 @@
 
 class Pointeaux : public QObject
 {
-    Q_PROPERTY(QString designation READ designation WRITE setDesignation NOTIFY designationChanged)
-    Q_PROPERTY(QString couleur READ couleur WRITE setCouleur NOTIFY couleurChanged)
+    Q_OBJECT
+
+    Q_PROPERTY(QString m_designation READ getDesignation WRITE setDesignation NOTIFY designationChanged)
+    Q_PROPERTY(QString m_couleur READ getCouleur WRITE setCouleur NOTIFY couleurChanged)
 
 public:
     explicit Pointeaux(QObject *parent = nullptr);
-    Pointeaux(const QString &_designation, const QString &_couleur, QObject *parent = 0);
-    Q_INVOKABLE QString changerCouleur(int i);
     Q_INVOKABLE void horodater();
 
-    QString designation() const;
-    void setDesignation(const QString &_designation);
+    QString getDesignation() const;
+    void setDesignation(const QString &value);
 
-    QString couleur() const;
-    void setCouleur(const QString &_couleur);
+    QString getCouleur() const;
+    void setCouleur(const QString &value);
 
 signals:
     void designationChanged();
     void couleurChanged();
 
 private:
-    QString m_designation;
-    QString m_couleur;
+    QString designation;
+    QString couleur;
     QDateTime horodatage;
 };
 
