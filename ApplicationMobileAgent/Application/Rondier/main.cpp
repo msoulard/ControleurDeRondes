@@ -9,6 +9,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "pointeaux.h"
+#include "accesbdd.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     Pointeaux *couleursPointeau;
     QList<QObject*> listePointeaux;
+    AccesBDD bdd;
     for(int i = 0 ; i < 15 ; i++){
         couleursPointeau=new Pointeaux();
         couleursPointeau->setDesignation("Désignation " + QString::number(i));
