@@ -24,3 +24,33 @@ AccesBDD::AccesBDD(QObject *parent) : QObject(parent)
     }
 
 }
+
+void AccesBDD::ObtenirPointeaux(int _id_ronde)
+{
+
+}
+
+void AccesBDD::ObtenirRondes(int _id_agent)
+{
+
+}
+
+void AccesBDD::RecupererLePointeau(QString _tag_mifare)
+{
+
+}
+
+void AccesBDD::VerificationBadge(int _numBadge)
+{
+
+}
+
+void AccesBDD::MettreAJourBdd()
+{
+
+}
+
+void AccesBDD::EnregistrerAnomalie(int _id_pointeau)
+{
+
+}

@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Envoyer une ronde de surveillance" version="4">
   <OBJECT>
     <ID name="Envoyer une ronde de surveillance" mc="Standard.UseCase" uid="ed8aef6f-16d8-48ad-ab04-a35c545ee22f"/>
-    <PID name="Application smartphone" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+    <PID name="controleurderonde2020" mc="Standard.Package" uid="d4b0fda3-aa7f-409c-8bb9-7657974d87d4"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

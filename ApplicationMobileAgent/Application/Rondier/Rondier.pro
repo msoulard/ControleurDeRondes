@@ -1,5 +1,6 @@
 QT += quick
 QT += sql
+QT += nfc
 
 CONFIG += c++11
 
@@ -16,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         accesbdd.cpp \
+        lecteurnfc.cpp \
         main.cpp \
         pointeaux.cpp
 
@@ -38,4 +40,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     accesbdd.h \
+    lecteurnfc.h \
     pointeaux.h

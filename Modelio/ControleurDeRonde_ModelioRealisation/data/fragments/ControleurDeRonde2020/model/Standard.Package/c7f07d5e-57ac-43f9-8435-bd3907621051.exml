@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Application smartphone responsable" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Créateur de ronde" version="4">
   <OBJECT>
-    <ID name="Application smartphone responsable" mc="Standard.Package" uid="c7f07d5e-57ac-43f9-8435-bd3907621051"/>
+    <ID name="Créateur de ronde" mc="Standard.Package" uid="c7f07d5e-57ac-43f9-8435-bd3907621051"/>
     <PID name="controleurderonde2020" mc="Standard.Package" uid="d4b0fda3-aa7f-409c-8bb9-7657974d87d4"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
@@ -9,7 +9,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Application smartphone responsable]]></ATT>
+      <ATT name="Name"><![CDATA[Créateur de ronde]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>

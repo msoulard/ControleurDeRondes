@@ -14,12 +14,16 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="Application smartphone agent" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+        <COMPID name="Rondier" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
         <COMPID name="Application station d'accueil" mc="Standard.Package" uid="3eec2b5c-4fce-4dda-b8d3-4e053659d8ce"/>
         <COMPID name="Agent de sécurité" mc="Standard.Actor" uid="3cc51881-b2ad-4ebd-ae7c-8b7669a0b3eb"/>
         <COMPID name="Responsable de sécurité" mc="Standard.Actor" uid="c09022c9-44d6-4a37-ac13-41ca6790772d"/>
-        <COMPID name="Application smartphone responsable" mc="Standard.Package" uid="c7f07d5e-57ac-43f9-8435-bd3907621051"/>
-        <COMPID name="AppliSmartphoneAgent" mc="Standard.Class" uid="06e9f987-24b7-4ba4-b119-16d918c7f1d8"/>
+        <COMPID name="Créateur de ronde" mc="Standard.Package" uid="c7f07d5e-57ac-43f9-8435-bd3907621051"/>
+        <COMPID name="Rondier" mc="Standard.Class" uid="06e9f987-24b7-4ba4-b119-16d918c7f1d8"/>
+        <COMPID name="Scanner un point de passage" mc="Standard.UseCase" uid="4cdd2ee5-a5e3-4710-9e5e-925848237e30"/>
+        <COMPID name="Identifier un agent de sécurité" mc="Standard.UseCase" uid="ac5dad3f-37da-426d-95de-43e10b70a685"/>
+        <COMPID name="Télécharger des rondes de surveillance" mc="Standard.UseCase" uid="5873fec1-a222-4bc5-8f56-f874b6a6284f"/>
+        <COMPID name="Envoyer une ronde de surveillance" mc="Standard.UseCase" uid="ed8aef6f-16d8-48ad-ab04-a35c545ee22f"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="controleurderonde2020 Use Case diagram" mc="Standard.UseCaseDiagram" uid="054ba1fa-fa97-4b5e-9f55-8306f2445d07"/>

@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_NFC_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../Rondier -I. -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++
+INCPATH       = -I../Rondier -I. -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++
 QMAKE         = /opt/Qt/5.15.0/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -39,8 +39,8 @@ COMPRESS      = gzip -9f
 DISTNAME      = Rondier1.0.0
 DISTDIR = /home/USERS/ELEVES/SNIR2019/msoulard/Controleur\ de\ rondes\ 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-Rondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/.tmp/Rondier1.0.0
 LINK          = g++
-LFLAGS        = -Wl,-rpath,/opt/Qt/5.15.0/gcc_64/lib
-LIBS          = $(SUBLIBS) /opt/Qt/5.15.0/gcc_64/lib/libQt5Quick.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Gui.so /opt/Qt/5.15.0/gcc_64/lib/libQt5QmlModels.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Qml.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Network.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Sql.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Core.so -lGL -lpthread   
+LFLAGS        = -Wl,-rpath,/opt/Qt/5.15.0/gcc_64/lib -Wl,-rpath-link,/opt/Qt/5.15.0/gcc_64/lib
+LIBS          = $(SUBLIBS) /opt/Qt/5.15.0/gcc_64/lib/libQt5Quick.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Gui.so /opt/Qt/5.15.0/gcc_64/lib/libQt5QmlModels.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Qml.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Network.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Sql.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Nfc.so /opt/Qt/5.15.0/gcc_64/lib/libQt5Core.so -lGL -lpthread   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -53,17 +53,21 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Rondier/accesbdd.cpp \
+		../Rondier/lecteurnfc.cpp \
 		../Rondier/main.cpp \
 		../Rondier/pointeaux.cpp qrc_qml.cpp \
 		qrc_Images.cpp \
 		moc_accesbdd.cpp \
+		moc_lecteurnfc.cpp \
 		moc_pointeaux.cpp
 OBJECTS       = accesbdd.o \
+		lecteurnfc.o \
 		main.o \
 		pointeaux.o \
 		qrc_qml.o \
 		qrc_Images.o \
 		moc_accesbdd.o \
+		moc_lecteurnfc.o \
 		moc_pointeaux.o
 DIST          = /opt/Qt/5.15.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.15.0/gcc_64/mkspecs/common/unix.conf \
@@ -270,7 +274,9 @@ DIST          = /opt/Qt/5.15.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.15.0/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.15.0/gcc_64/mkspecs/features/lex.prf \
 		../Rondier/Rondier.pro ../Rondier/accesbdd.h \
+		../Rondier/lecteurnfc.h \
 		../Rondier/pointeaux.h ../Rondier/accesbdd.cpp \
+		../Rondier/lecteurnfc.cpp \
 		../Rondier/main.cpp \
 		../Rondier/pointeaux.cpp
 QMAKE_TARGET  = Rondier
@@ -715,8 +721,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Rondier/qml.qrc ../Rondier/Images.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/Qt/5.15.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Rondier/accesbdd.h ../Rondier/pointeaux.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Rondier/accesbdd.cpp ../Rondier/main.cpp ../Rondier/pointeaux.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Rondier/accesbdd.h ../Rondier/lecteurnfc.h ../Rondier/pointeaux.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Rondier/accesbdd.cpp ../Rondier/lecteurnfc.cpp ../Rondier/main.cpp ../Rondier/pointeaux.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents Rondier_fr_FR.ts $(DISTDIR)/
 
 
@@ -766,9 +772,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /opt/Qt/5.15.0/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++11 -Wall -Wextra -dM -E -o moc_predefs.h /opt/Qt/5.15.0/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_accesbdd.cpp moc_pointeaux.cpp
+compiler_moc_header_make_all: moc_accesbdd.cpp moc_lecteurnfc.cpp moc_pointeaux.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_accesbdd.cpp moc_pointeaux.cpp
+	-$(DEL_FILE) moc_accesbdd.cpp moc_lecteurnfc.cpp moc_pointeaux.cpp
 moc_accesbdd.cpp: ../Rondier/accesbdd.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QObject \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject.h \
@@ -827,9 +833,95 @@ moc_accesbdd.cpp: ../Rondier/accesbdd.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqldatabase.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsqlglobal.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDebug \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qset.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		moc_predefs.h \
 		/opt/Qt/5.15.0/gcc_64/bin/moc
-	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-Rondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/Rondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Rondier/accesbdd.h -o moc_accesbdd.cpp
+	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-Rondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/Rondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Rondier/accesbdd.h -o moc_accesbdd.cpp
+
+moc_lecteurnfc.cpp: ../Rondier/lecteurnfc.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QObject \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qnamespace.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qconfig.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtcore-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsystemdetection.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qprocessordetection.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcompilerdetection.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtypeinfo.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsysinfo.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlogging.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qflags.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qbasicatomic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qgenericatomic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic_msvc.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qversiontagging.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qbytearray.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qarraydata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringbuilder.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlist.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qalgorithms.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qiterator.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qpair.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qbytearraylist.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringlist.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qregexp.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringmatcher.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qscopedpointer.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmetatype.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvarlengtharray.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNearFieldManager \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qnearfieldmanager.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qtnfcglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNearFieldTarget \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qnearfieldtarget.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QList \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QMetaType \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QSharedDataPointer \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNdefRecord \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qndefrecord.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNdefFilter \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qndeffilter.h \
+		moc_predefs.h \
+		/opt/Qt/5.15.0/gcc_64/bin/moc
+	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-Rondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/Rondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Rondier/lecteurnfc.h -o moc_lecteurnfc.cpp
 
 moc_pointeaux.cpp: ../Rondier/pointeaux.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QObject \
@@ -902,7 +994,7 @@ moc_pointeaux.cpp: ../Rondier/pointeaux.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
 		moc_predefs.h \
 		/opt/Qt/5.15.0/gcc_64/bin/moc
-	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-Rondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/Rondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Rondier/pointeaux.h -o moc_pointeaux.cpp
+	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-Rondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/Rondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Rondier/pointeaux.h -o moc_pointeaux.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -975,8 +1067,92 @@ accesbdd.o: ../Rondier/accesbdd.cpp ../Rondier/accesbdd.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlDatabase \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqldatabase.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsqlglobal.h \
-		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDebug \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qset.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o accesbdd.o ../Rondier/accesbdd.cpp
+
+lecteurnfc.o: ../Rondier/lecteurnfc.cpp ../Rondier/lecteurnfc.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QObject \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qnamespace.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qconfig.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtcore-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsystemdetection.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qprocessordetection.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcompilerdetection.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtypeinfo.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsysinfo.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlogging.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qflags.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qbasicatomic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qgenericatomic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qatomic_msvc.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qversiontagging.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qbytearray.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qarraydata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringbuilder.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlist.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qalgorithms.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qiterator.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qpair.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qbytearraylist.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringlist.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qregexp.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qstringmatcher.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qscopedpointer.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmetatype.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvarlengtharray.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNearFieldManager \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qnearfieldmanager.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qtnfcglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNearFieldTarget \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qnearfieldtarget.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QList \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QMetaType \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QSharedDataPointer \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNdefRecord \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qndefrecord.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/QNdefFilter \
+		/opt/Qt/5.15.0/gcc_64/include/QtNfc/qndeffilter.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o lecteurnfc.o ../Rondier/lecteurnfc.cpp
 
 main.o: ../Rondier/main.cpp /opt/Qt/5.15.0/gcc_64/include/QtGui/QGuiApplication \
 		/opt/Qt/5.15.0/gcc_64/include/QtGui/qguiapplication.h \
@@ -1079,7 +1255,12 @@ main.o: ../Rondier/main.cpp /opt/Qt/5.15.0/gcc_64/include/QtGui/QGuiApplication 
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QObject \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDateTime \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qdatetime.h \
-		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDebug
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDebug \
+		../Rondier/accesbdd.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlDatabase \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqldatabase.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsqlglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Rondier/main.cpp
 
 pointeaux.o: ../Rondier/pointeaux.cpp ../Rondier/pointeaux.h \
@@ -1161,6 +1342,9 @@ qrc_Images.o: qrc_Images.cpp
 
 moc_accesbdd.o: moc_accesbdd.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_accesbdd.o moc_accesbdd.cpp
+
+moc_lecteurnfc.o: moc_lecteurnfc.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_lecteurnfc.o moc_lecteurnfc.cpp
 
 moc_pointeaux.o: moc_pointeaux.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_pointeaux.o moc_pointeaux.cpp

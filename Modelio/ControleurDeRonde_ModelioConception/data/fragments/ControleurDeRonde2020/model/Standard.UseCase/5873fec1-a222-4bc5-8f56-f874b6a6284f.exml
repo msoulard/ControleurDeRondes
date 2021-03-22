@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Télécharger des rondes de surveillance" version="4">
   <OBJECT>
     <ID name="Télécharger des rondes de surveillance" mc="Standard.UseCase" uid="5873fec1-a222-4bc5-8f56-f874b6a6284f"/>
-    <PID name="Application smartphone" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+    <PID name="controleurderonde2020" mc="Standard.Package" uid="d4b0fda3-aa7f-409c-8bb9-7657974d87d4"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>
