@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_AccesBDD_t {
-    QByteArrayData data[11];
-    char stringdata0[136];
+    QByteArrayData data[13];
+    char stringdata0[169];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,13 +42,16 @@ QT_MOC_LITERAL(6, 61, 19), // "RecupererLePointeau"
 QT_MOC_LITERAL(7, 81, 11), // "_tag_mifare"
 QT_MOC_LITERAL(8, 93, 17), // "VerificationBadge"
 QT_MOC_LITERAL(9, 111, 9), // "_numBadge"
-QT_MOC_LITERAL(10, 121, 14) // "MettreAJourBdd"
+QT_MOC_LITERAL(10, 121, 14), // "MettreAJourBdd"
+QT_MOC_LITERAL(11, 136, 19), // "EnregistrerAnomalie"
+QT_MOC_LITERAL(12, 156, 12) // "_id_pointeau"
 
     },
     "AccesBDD\0ObtenirPointeaux\0\0_id_ronde\0"
     "ObtenirRondes\0_id_agent\0RecupererLePointeau\0"
     "_tag_mifare\0VerificationBadge\0_numBadge\0"
-    "MettreAJourBdd"
+    "MettreAJourBdd\0EnregistrerAnomalie\0"
+    "_id_pointeau"
 };
 #undef QT_MOC_LITERAL
 
@@ -58,7 +61,7 @@ static const uint qt_meta_data_AccesBDD[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -66,11 +69,12 @@ static const uint qt_meta_data_AccesBDD[] = {
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x02 /* Public */,
-       4,    1,   42,    2, 0x02 /* Public */,
-       6,    1,   45,    2, 0x02 /* Public */,
-       8,    1,   48,    2, 0x02 /* Public */,
-      10,    0,   51,    2, 0x02 /* Public */,
+       1,    1,   44,    2, 0x02 /* Public */,
+       4,    1,   47,    2, 0x02 /* Public */,
+       6,    1,   50,    2, 0x02 /* Public */,
+       8,    1,   53,    2, 0x02 /* Public */,
+      10,    0,   56,    2, 0x02 /* Public */,
+      11,    1,   57,    2, 0x02 /* Public */,
 
  // methods: parameters
     QMetaType::Void, QMetaType::Int,    3,
@@ -78,6 +82,7 @@ static const uint qt_meta_data_AccesBDD[] = {
     QMetaType::Void, QMetaType::QString,    7,
     QMetaType::Void, QMetaType::Int,    9,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   12,
 
        0        // eod
 };
@@ -93,6 +98,7 @@ void AccesBDD::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 2: _t->RecupererLePointeau((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 3: _t->VerificationBadge((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 4: _t->MettreAJourBdd(); break;
+        case 5: _t->EnregistrerAnomalie((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -127,13 +133,13 @@ int AccesBDD::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

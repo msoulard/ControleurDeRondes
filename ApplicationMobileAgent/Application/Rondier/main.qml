@@ -20,9 +20,9 @@ ApplicationWindow {
 
         Identification {
             id: identification
-            boutonSelectionRonde.onClicked: {
-                Fonction.changerPage();
-            }
+//            boutonSelectionRonde.onClicked: {
+//                Fonction.changerPage();
+//            }
         }
 
         SelectionRonde {
@@ -38,10 +38,10 @@ ApplicationWindow {
                 //Fonction.pointeauValider();
                 Fonction.changerPage();
             }
-            buttonPointeauScanne.onClicked: {
-                //Fonction.pointeauValider();
-                pointeauHorodater.horodater();
-            }
+//            buttonPointeauScanne.onClicked: {
+//                //Fonction.pointeauValider();
+//                pointeauHorodater.horodater();
+//            }
         }
 
         Anomalie{

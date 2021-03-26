@@ -10,7 +10,7 @@ import "main.js" as Fonction
 
 Page {
     property alias buttonAnomalie: buttonAnomalie
-    property alias buttonPointeauScanne: buttonPointeauScanne
+//    property alias buttonPointeauScanne: buttonPointeauScanne
     property alias buttonInterrompreLaRonde: buttonInterrompreLaRonde
     property alias buttonIgnorerLePointeau: buttonIgnorerLePointeau
 
@@ -146,27 +146,27 @@ Page {
             font.pixelSize: 12
         }
 
-        Button {
-            id: buttonPointeauScanne
-            x: 398
-            y: 417
-            text: qsTr("Pointeau scanné")
-            onClicked: {
-                //récupérer l'index courrant de l'item
-                var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //si la couleur est bleu
-                if(item.m_couleur === "#0000FF"){
-                    //il met en vert
-                    item.m_couleur = "#00FF00";
-                }
-                //il incrémente l'index courant
-                listePointeaux.incrementCurrentIndex();
-                //il récupère l'index courrant
-                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //l'état du pointeau courrant devient bleu
-                item.m_couleur = "#0000FF";
-            }
-        }
+//        Button {
+//            id: buttonPointeauScanne
+//            x: 398
+//            y: 417
+//            text: qsTr("Pointeau scanné")
+//            onClicked: {
+//                //récupérer l'index courrant de l'item
+//                var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+//                //si la couleur est bleu
+//                if(item.m_couleur === "#0000FF"){
+//                    //il met en vert
+//                    item.m_couleur = "#00FF00";
+//                }
+//                //il incrémente l'index courant
+//                listePointeaux.incrementCurrentIndex();
+//                //il récupère l'index courrant
+//                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+//                //l'état du pointeau courrant devient bleu
+//                item.m_couleur = "#0000FF";
+//            }
+//        }
 
         Button {
             id: buttonAnomalie

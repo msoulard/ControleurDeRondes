@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.11
 
 Page {
-    property alias boutonSelectionRonde: boutonSelectionRonde
+//    property alias boutonSelectionRonde: boutonSelectionRonde
     width: 600
     height: 400
     id: identification
@@ -61,13 +61,13 @@ Page {
         source: "qrc:/img/Logo_NFC.jpg"
     }
 
-    Button {
-        id: boutonSelectionRonde
-        x: 130
-        y: 323
-        text: qsTr("Sélection de la ronde")
-        //onClicked: SelectionRonde
-    }
+//    Button {
+//        id: boutonSelectionRonde
+//        x: 130
+//        y: 323
+//        text: qsTr("Sélection de la ronde")
+//    }
+
 }
 
 /*##^##
