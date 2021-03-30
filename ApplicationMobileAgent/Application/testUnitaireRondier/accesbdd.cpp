@@ -45,10 +45,23 @@ QString AccesBdd::obtenirPointeaux(int _id_ronde)
 
 }
 
-void AccesBdd::obtenirRondes(QList<Ronde*> &_listeRondes)
+QList<QString> AccesBdd::obtenirRondes(QString _numBadge)
 {
-    Ronde *ronde;
+    QList<QString> _listeNomRondes;
+    QString ronde;
     if(db.isOpen()){
+        ///Récupérer l'id de l'agent
+        QSqlQuery requete_agent(db);
+        requete_agent.prepare("SELECT agents.id_agent FROM agents WHERE agents.numbadge=:num");
+        requete_agent.bindValue(":num", _numBadge);
+        if(!requete_agent.exec()){
+            qDebug() << "problème lors de la requête SQL (agents) : " << requete_agent.lastError();
+        }
+        else{
+            while(requete_agent.next()){
+                idAgent = requete_agent.value("id_agent").toInt();
+            }
+        }
         QSqlQuery requete(db);
         requete.prepare("SELECT rondes.nom, rondes.id_ronde FROM rondes INNER JOIN peutFaire ON rondes.id_ronde = peutFaire.id_ronde WHERE peutFaire.id_agent=:id");
         requete.bindValue(":id", idAgent);
@@ -57,13 +70,39 @@ void AccesBdd::obtenirRondes(QList<Ronde*> &_listeRondes)
         }
         else{
             while(requete.next()){
-                ronde = new Ronde(requete.value("nom").toString(), requete.value("id_ronde").toInt());
-                _listeRondes.append(ronde);
+                ronde = requete.value("nom").toString();
+                _listeNomRondes.append(ronde);
             }
         }
     }
-    qDebug() << _listeRondes;
+    ronde = "";
+    qDebug() << _listeNomRondes;
+//    for(int i = 0 ; i < _listeNomRondes.length() ; i ++){
+//        ronde = ronde + _listeNomRondes.at(i);
+//    }
+//    return ronde;
+    return _listeNomRondes;
 }
+
+//void AccesBdd::obtenirRondes(QList<Ronde*> &_listeRondes)
+//{
+//    Ronde *ronde;
+//    if(db.isOpen()){
+//        QSqlQuery requete(db);
+//        requete.prepare("SELECT rondes.nom, rondes.id_ronde FROM rondes INNER JOIN peutFaire ON rondes.id_ronde = peutFaire.id_ronde WHERE peutFaire.id_agent=:id");
+//        requete.bindValue(":id", idAgent);
+//        if(!requete.exec()){
+//            qDebug() << "problème lors de la requête SQL (rondes) : " << requete.lastError();
+//        }
+//        else{
+//            while(requete.next()){
+//                ronde = new Ronde(requete.value("nom").toString(), requete.value("id_ronde").toInt());
+//                _listeRondes.append(ronde);
+//            }
+//        }
+//    }
+//    qDebug() << _listeRondes;
+//}
 
 void AccesBdd::RecupererLePointeau(QString _tag_mifare)
 {

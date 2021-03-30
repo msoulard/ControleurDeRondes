@@ -10,7 +10,6 @@
 #include "../testUnitaireRondier/accesbdd.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
-#include <QtCore/QList>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'accesbdd.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
@@ -23,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_AccesBdd_t {
-    QByteArrayData data[14];
-    char stringdata0[182];
+    QByteArrayData data[13];
+    char stringdata0[169];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,21 +39,19 @@ QT_MOC_LITERAL(3, 23, 9), // "_numBadge"
 QT_MOC_LITERAL(4, 33, 16), // "obtenirPointeaux"
 QT_MOC_LITERAL(5, 50, 9), // "_id_ronde"
 QT_MOC_LITERAL(6, 60, 13), // "obtenirRondes"
-QT_MOC_LITERAL(7, 74, 14), // "QList<Ronde*>&"
-QT_MOC_LITERAL(8, 89, 12), // "_listeRondes"
-QT_MOC_LITERAL(9, 102, 19), // "RecupererLePointeau"
-QT_MOC_LITERAL(10, 122, 11), // "_tag_mifare"
-QT_MOC_LITERAL(11, 134, 14), // "MettreAJourBdd"
-QT_MOC_LITERAL(12, 149, 19), // "EnregistrerAnomalie"
-QT_MOC_LITERAL(13, 169, 12) // "_id_pointeau"
+QT_MOC_LITERAL(7, 74, 14), // "QList<QString>"
+QT_MOC_LITERAL(8, 89, 19), // "RecupererLePointeau"
+QT_MOC_LITERAL(9, 109, 11), // "_tag_mifare"
+QT_MOC_LITERAL(10, 121, 14), // "MettreAJourBdd"
+QT_MOC_LITERAL(11, 136, 19), // "EnregistrerAnomalie"
+QT_MOC_LITERAL(12, 156, 12) // "_id_pointeau"
 
     },
     "AccesBdd\0obtenirAgent\0\0_numBadge\0"
     "obtenirPointeaux\0_id_ronde\0obtenirRondes\0"
-    "QList<Ronde*>&\0_listeRondes\0"
-    "RecupererLePointeau\0_tag_mifare\0"
-    "MettreAJourBdd\0EnregistrerAnomalie\0"
-    "_id_pointeau"
+    "QList<QString>\0RecupererLePointeau\0"
+    "_tag_mifare\0MettreAJourBdd\0"
+    "EnregistrerAnomalie\0_id_pointeau"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,17 +72,17 @@ static const uint qt_meta_data_AccesBdd[] = {
        1,    1,   44,    2, 0x02 /* Public */,
        4,    1,   47,    2, 0x02 /* Public */,
        6,    1,   50,    2, 0x02 /* Public */,
-       9,    1,   53,    2, 0x02 /* Public */,
-      11,    0,   56,    2, 0x02 /* Public */,
-      12,    1,   57,    2, 0x02 /* Public */,
+       8,    1,   53,    2, 0x02 /* Public */,
+      10,    0,   56,    2, 0x02 /* Public */,
+      11,    1,   57,    2, 0x02 /* Public */,
 
  // methods: parameters
     QMetaType::QString, QMetaType::QString,    3,
     QMetaType::QString, QMetaType::Int,    5,
-    QMetaType::Void, 0x80000000 | 7,    8,
-    QMetaType::Void, QMetaType::QString,   10,
+    0x80000000 | 7, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::QString,    9,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   13,
+    QMetaType::Void, QMetaType::Int,   12,
 
        0        // eod
 };
@@ -100,7 +97,8 @@ void AccesBdd::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         case 1: { QString _r = _t->obtenirPointeaux((*reinterpret_cast< int(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 2: _t->obtenirRondes((*reinterpret_cast< QList<Ronde*>(*)>(_a[1]))); break;
+        case 2: { QList<QString> _r = _t->obtenirRondes((*reinterpret_cast< QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QList<QString>*>(_a[0]) = std::move(_r); }  break;
         case 3: _t->RecupererLePointeau((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 4: _t->MettreAJourBdd(); break;
         case 5: _t->EnregistrerAnomalie((*reinterpret_cast< int(*)>(_a[1]))); break;

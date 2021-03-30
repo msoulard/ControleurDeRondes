@@ -18,7 +18,8 @@ public:
     explicit AccesBdd(QObject *parent = nullptr);
     Q_INVOKABLE QString obtenirAgent(QString _numBadge);
     Q_INVOKABLE QString obtenirPointeaux(int _id_ronde);
-    Q_INVOKABLE void obtenirRondes(QList<Ronde*> &_listeRondes);
+    //Q_INVOKABLE void obtenirRondes(QList<Ronde*> &_listeRondes);
+     Q_INVOKABLE QList<QString> obtenirRondes(QString _numBadge);
     Q_INVOKABLE void RecupererLePointeau(QString _tag_mifare);
     Q_INVOKABLE void MettreAJourBdd();
     Q_INVOKABLE void EnregistrerAnomalie(int _id_pointeau);

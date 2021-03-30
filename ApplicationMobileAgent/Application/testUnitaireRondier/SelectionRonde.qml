@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.5
 
+import "main.js" as Fonction
+
 Page {
     property alias buttonValider: buttonValider
 
@@ -25,7 +27,7 @@ Page {
         y: 70
         width: 392
         height: 45
-        text: qsTr("Bonjour " +agent.obtenirAgent("1B4DBE53")+", veuillez choisir votre ronde")
+        text: qsTr("Bonjour " +bdd.obtenirAgent("1B4DBE53")+", veuillez choisir votre ronde")
         wrapMode: Text.WordWrap
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignLeft
@@ -41,12 +43,13 @@ Page {
         y: 267
         text: qsTr("Valider")
     }
+
     ComboBox {
         id: comboBoxListeRondes
         x: 73
         y: 169
         width: 262
         height: 40
-        model : listeRondes
+        model : Fonction.obtenirNomRondes();
     }
 }

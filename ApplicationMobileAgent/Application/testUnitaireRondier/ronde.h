@@ -9,9 +9,12 @@ class Ronde : public QObject
 public:
     explicit Ronde(const QString _nom, const int _idRonde, QObject *parent = nullptr);
 
+    QString getNom() const;
+    void setNom(const QString &value);
+
 signals:
 
-private:
+public:
     QString nom;
     int idRonde;
 

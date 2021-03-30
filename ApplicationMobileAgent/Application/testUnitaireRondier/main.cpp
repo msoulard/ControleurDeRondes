@@ -24,14 +24,14 @@ int main(int argc, char *argv[])
         }
         listePointeaux.append(couleursPointeau);
     }
-    bdd.obtenirRondes(listeRondes);
+    //bdd.obtenirRondes(listeRondes);
     QQmlApplicationEngine engine;
     ///permet de récupérer les valeurs de la liste C++ pour les utiliser en QML
     engine.rootContext()->setContextProperty("pointeauxModel", QVariant::fromValue(listePointeaux));
     ///permet de faire le lien entre QML et classe C++
     engine.rootContext()->setContextProperty("pointeauHorodater", new Pointeau());
     ///permet de faire le lien entre QML et la classe AccesBdd
-    engine.rootContext()->setContextProperty("agent", new AccesBdd());
+    engine.rootContext()->setContextProperty("bdd", new AccesBdd());
     ///Récupérer en QML la liste des rondes possibles
     engine.rootContext()->setContextProperty("listeRondes", QVariant::fromValue(listeRondes));
     ///emplacement du fichier QML correspondant

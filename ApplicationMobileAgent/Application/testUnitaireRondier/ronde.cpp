@@ -7,3 +7,13 @@ Ronde::Ronde(const QString _nom, const int _idRonde, QObject *parent) :
 {
 
 }
+
+QString Ronde::getNom() const
+{
+    return nom;
+}
+
+void Ronde::setNom(const QString &value)
+{
+    nom = value;
+}
