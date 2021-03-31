@@ -6,6 +6,6 @@ function changerPage() {
 function obtenirNomRondes(){
     var nomRonde = bdd.obtenirRondes("1B4DBE53");
     console.log(nomRonde);
-     console.log(Array.from(nomRonde));
+    console.log(Array.from(nomRonde));
     return Array.from(nomRonde);
 }

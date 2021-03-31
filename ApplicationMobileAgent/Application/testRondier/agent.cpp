@@ -11,6 +11,7 @@ QString Agent::obtenirNomAgent(QString _numBadge)
     AccesBdd bdd;
     S_Agent unAgent;
     unAgent = bdd.obtenirAgent(_numBadge);
-    return unAgent.nom;
+    QString prenomNom = unAgent.prenom + " " + unAgent.nom;
+    return prenomNom;
 }
 

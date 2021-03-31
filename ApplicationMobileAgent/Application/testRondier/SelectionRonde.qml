@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.5
 
+import "main.js" as Fonction
+
 Page {
     property alias buttonValider: buttonValider
 
@@ -47,5 +49,6 @@ Page {
         y: 169
         width: 262
         height: 40
+        model: Fonction.obtenirNomRondes();
     }
 }

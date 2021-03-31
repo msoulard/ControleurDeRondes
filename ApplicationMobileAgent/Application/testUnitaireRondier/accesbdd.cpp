@@ -77,32 +77,9 @@ QList<QString> AccesBdd::obtenirRondes(QString _numBadge)
     }
     ronde = "";
     qDebug() << _listeNomRondes;
-//    for(int i = 0 ; i < _listeNomRondes.length() ; i ++){
-//        ronde = ronde + _listeNomRondes.at(i);
-//    }
-//    return ronde;
     return _listeNomRondes;
 }
 
-//void AccesBdd::obtenirRondes(QList<Ronde*> &_listeRondes)
-//{
-//    Ronde *ronde;
-//    if(db.isOpen()){
-//        QSqlQuery requete(db);
-//        requete.prepare("SELECT rondes.nom, rondes.id_ronde FROM rondes INNER JOIN peutFaire ON rondes.id_ronde = peutFaire.id_ronde WHERE peutFaire.id_agent=:id");
-//        requete.bindValue(":id", idAgent);
-//        if(!requete.exec()){
-//            qDebug() << "problème lors de la requête SQL (rondes) : " << requete.lastError();
-//        }
-//        else{
-//            while(requete.next()){
-//                ronde = new Ronde(requete.value("nom").toString(), requete.value("id_ronde").toInt());
-//                _listeRondes.append(ronde);
-//            }
-//        }
-//    }
-//    qDebug() << _listeRondes;
-//}
 
 void AccesBdd::RecupererLePointeau(QString _tag_mifare)
 {

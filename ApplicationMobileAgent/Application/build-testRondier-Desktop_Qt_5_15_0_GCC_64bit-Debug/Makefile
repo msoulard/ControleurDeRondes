@@ -846,8 +846,6 @@ moc_accesbdd.cpp: ../testRondier/accesbdd.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h \
-		../testRondier/agent.h \
-		../testRondier/accesbdd.h \
 		moc_predefs.h \
 		/opt/Qt/5.15.0/gcc_64/bin/moc
 	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-testRondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/testRondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../testRondier/accesbdd.h -o moc_accesbdd.cpp
@@ -928,7 +926,6 @@ moc_agent.cpp: ../testRondier/agent.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h \
-		../testRondier/agent.h \
 		moc_predefs.h \
 		/opt/Qt/5.15.0/gcc_64/bin/moc
 	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-testRondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/testRondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../testRondier/agent.h -o moc_agent.cpp
@@ -1060,6 +1057,28 @@ moc_ronde.cpp: ../testRondier/ronde.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontainerfwd.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDebug \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qset.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../testRondier/accesbdd.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlDatabase \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqldatabase.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsqlglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlQuery \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h \
 		moc_predefs.h \
 		/opt/Qt/5.15.0/gcc_64/bin/moc
 	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-testRondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/testRondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../testRondier/ronde.h -o moc_ronde.cpp
@@ -1153,7 +1172,8 @@ accesbdd.o: ../testRondier/accesbdd.cpp ../testRondier/accesbdd.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h \
-		../testRondier/agent.h
+		../testRondier/agent.h \
+		../testRondier/ronde.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o accesbdd.o ../testRondier/accesbdd.cpp
 
 agent.o: ../testRondier/agent.cpp ../testRondier/agent.h \
@@ -1331,6 +1351,7 @@ main.o: ../testRondier/main.cpp /opt/Qt/5.15.0/gcc_64/include/QtGui/QGuiApplicat
 		/opt/Qt/5.15.0/gcc_64/include/QtQml/qqmlerror.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtQml/QQmlContext \
 		/opt/Qt/5.15.0/gcc_64/include/QtQml/qqmlcontext.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QList \
 		../testRondier/pointeau.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QObject \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDateTime \
@@ -1345,7 +1366,8 @@ main.o: ../testRondier/main.cpp /opt/Qt/5.15.0/gcc_64/include/QtGui/QGuiApplicat
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h \
-		../testRondier/agent.h
+		../testRondier/agent.h \
+		../testRondier/ronde.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../testRondier/main.cpp
 
 pointeau.o: ../testRondier/pointeau.cpp ../testRondier/pointeau.h \
@@ -1472,7 +1494,29 @@ ronde.o: ../testRondier/ronde.cpp ../testRondier/ronde.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmetatype.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvarlengtharray.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontainerfwd.h \
-		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject_impl.h
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDebug \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qset.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../testRondier/accesbdd.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlDatabase \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqldatabase.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsqlglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlQuery \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ronde.o ../testRondier/ronde.cpp
 
 qrc_qml.o: qrc_qml.cpp 

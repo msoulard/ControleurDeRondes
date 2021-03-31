@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     ///permet de faire le lien entre QML et la classe AccesBdd
     engine.rootContext()->setContextProperty("agent", new Agent());
     ///Récupérer en QML la liste des rondes possibles
-    engine.rootContext()->setContextProperty("rondesModel", QVariant::fromValue(listeRondes));
+    engine.rootContext()->setContextProperty("ronde", new Ronde());
     ///emplacement du fichier QML correspondant
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
