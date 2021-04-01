@@ -2,7 +2,7 @@
 
 Ronde::Ronde(QObject *parent) : QObject(parent)
 {
-
+    indexRondeCourante = -1;
 }
 
 /**
@@ -30,9 +30,43 @@ QList<QString> Ronde::obtenirListeRondes(QString _numBadge)
         listeNoms.append(ronde->getNom());
     }
     ///Afficher la liste des noms dans la console
-    qDebug() << listeNoms;
+    qDebug() << "liste des rondes : " << listeNoms;
     ///Retourner la liste des noms des rondes
     return listeNoms;
+}
+
+/**
+ * @brief Ronde::mettreAJourIndexCourant
+ * @param _indexRonde
+ */
+void Ronde::mettreAJourIndexCourant(int _indexRonde)
+{
+    indexRondeCourante = _indexRonde;
+    qDebug() << "index courant : " << indexRondeCourante ;
+    qDebug() << "nom de la ronde courante (MAJ index) : " << listeRondes.at(indexRondeCourante)->getNom();
+}
+
+/**
+ * @brief Ronde::obtenirNomRonde
+ * @return
+ */
+QString Ronde::obtenirNomRondeCourante()
+{
+    QString nomRonde = "";
+    if(indexRondeCourante != -1){
+        nomRonde = listeRondes.at(indexRondeCourante)->getNom();
+    }
+    qDebug() << "nom de la ronde courante : " << nomRonde;
+    return nomRonde;
+}
+
+int Ronde::obtenirIdRondeCourante()
+{
+    int idRonde = 0;
+    if(indexRondeCourante != -1){
+      idRonde = listeRondes.at(indexRondeCourante)->getId();
+    }
+    return idRonde;
 }
 
 /**

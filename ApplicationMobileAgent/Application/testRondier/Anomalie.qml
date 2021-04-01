@@ -8,6 +8,7 @@ Page {
     property alias buttonAnnuler: buttonAnnuler
     property alias buttonPhoto: buttonPhoto
     property alias buttonValiderAnomalie: buttonValiderAnomalie
+    property alias nomRonde : nomRonde
 
     title: "Anomalie"
     Text {
@@ -47,7 +48,6 @@ Page {
         y: 121
         width: 400
         height: 15
-        text: qsTr("Nom de la ronde")
         font.underline: true
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter

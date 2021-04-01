@@ -5,6 +5,7 @@ import "main.js" as Fonction
 
 Page {
     property alias buttonValider: buttonValider
+    property alias comboBoxListeRondes : comboBoxListeRondes
 
     Text {
         id: titre

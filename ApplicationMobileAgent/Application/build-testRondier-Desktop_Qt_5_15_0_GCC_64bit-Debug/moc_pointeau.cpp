@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Pointeau_t {
-    QByteArrayData data[9];
-    char stringdata0[95];
+    QByteArrayData data[11];
+    char stringdata0[166];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,16 +36,21 @@ QT_MOC_LITERAL(0, 0, 8), // "Pointeau"
 QT_MOC_LITERAL(1, 9, 18), // "designationChanged"
 QT_MOC_LITERAL(2, 28, 0), // ""
 QT_MOC_LITERAL(3, 29, 14), // "couleurChanged"
-QT_MOC_LITERAL(4, 44, 10), // "numChanged"
-QT_MOC_LITERAL(5, 55, 9), // "horodater"
-QT_MOC_LITERAL(6, 65, 13), // "m_designation"
-QT_MOC_LITERAL(7, 79, 9), // "m_couleur"
-QT_MOC_LITERAL(8, 89, 5) // "m_num"
+QT_MOC_LITERAL(4, 44, 9), // "horodater"
+QT_MOC_LITERAL(5, 54, 33), // "obtenirListeDesignationsPoint..."
+QT_MOC_LITERAL(6, 88, 14), // "QList<QString>"
+QT_MOC_LITERAL(7, 103, 8), // "_idRonde"
+QT_MOC_LITERAL(8, 112, 29), // "obtenirListeCouleursPointeaux"
+QT_MOC_LITERAL(9, 142, 13), // "m_designation"
+QT_MOC_LITERAL(10, 156, 9) // "m_couleur"
 
     },
     "Pointeau\0designationChanged\0\0"
-    "couleurChanged\0numChanged\0horodater\0"
-    "m_designation\0m_couleur\0m_num"
+    "couleurChanged\0horodater\0"
+    "obtenirListeDesignationsPointeaux\0"
+    "QList<QString>\0_idRonde\0"
+    "obtenirListeCouleursPointeaux\0"
+    "m_designation\0m_couleur"
 };
 #undef QT_MOC_LITERAL
 
@@ -55,38 +60,38 @@ static const uint qt_meta_data_Pointeau[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
-       3,   38, // properties
+       5,   14, // methods
+       2,   46, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       3,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   34,    2, 0x06 /* Public */,
-       3,    0,   35,    2, 0x06 /* Public */,
-       4,    0,   36,    2, 0x06 /* Public */,
+       1,    0,   39,    2, 0x06 /* Public */,
+       3,    0,   40,    2, 0x06 /* Public */,
 
  // methods: name, argc, parameters, tag, flags
-       5,    0,   37,    2, 0x02 /* Public */,
+       4,    0,   41,    2, 0x02 /* Public */,
+       5,    1,   42,    2, 0x02 /* Public */,
+       8,    0,   45,    2, 0x02 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
 
  // methods: parameters
-    QMetaType::Int,
+    QMetaType::Void,
+    0x80000000 | 6, QMetaType::Int,    7,
+    0x80000000 | 6,
 
  // properties: name, type, flags
-       6, QMetaType::QString, 0x00495003,
-       7, QMetaType::QString, 0x00495003,
-       8, QMetaType::Int, 0x00495003,
+       9, QMetaType::QString, 0x00495003,
+      10, QMetaType::QString, 0x00495003,
 
  // properties: notify_signal_id
        0,
        1,
-       2,
 
        0        // eod
 };
@@ -99,9 +104,11 @@ void Pointeau::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: _t->designationChanged(); break;
         case 1: _t->couleurChanged(); break;
-        case 2: _t->numChanged(); break;
-        case 3: { int _r = _t->horodater();
-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 2: _t->horodater(); break;
+        case 3: { QList<QString> _r = _t->obtenirListeDesignationsPointeaux((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QList<QString>*>(_a[0]) = std::move(_r); }  break;
+        case 4: { QList<QString> _r = _t->obtenirListeCouleursPointeaux();
+            if (_a[0]) *reinterpret_cast< QList<QString>*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -120,13 +127,6 @@ void Pointeau::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
                 return;
             }
         }
-        {
-            using _t = void (Pointeau::*)();
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Pointeau::numChanged)) {
-                *result = 2;
-                return;
-            }
-        }
     }
 #ifndef QT_NO_PROPERTIES
     else if (_c == QMetaObject::ReadProperty) {
@@ -136,7 +136,6 @@ void Pointeau::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: *reinterpret_cast< QString*>(_v) = _t->getDesignation(); break;
         case 1: *reinterpret_cast< QString*>(_v) = _t->getCouleur(); break;
-        case 2: *reinterpret_cast< int*>(_v) = _t->getNum(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -146,7 +145,6 @@ void Pointeau::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: _t->setDesignation(*reinterpret_cast< QString*>(_v)); break;
         case 1: _t->setCouleur(*reinterpret_cast< QString*>(_v)); break;
-        case 2: _t->setNum(*reinterpret_cast< int*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -183,29 +181,29 @@ int Pointeau::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 5;
     }
 #ifndef QT_NO_PROPERTIES
     else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 2;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 3;
+        _id -= 2;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 3;
+        _id -= 2;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 3;
+        _id -= 2;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 3;
+        _id -= 2;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 3;
+        _id -= 2;
     }
 #endif // QT_NO_PROPERTIES
     return _id;
@@ -221,12 +219,6 @@ void Pointeau::designationChanged()
 void Pointeau::couleurChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
-}
-
-// SIGNAL 2
-void Pointeau::numChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

@@ -12,30 +12,32 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
     Pointeau *couleursPointeau;
-    QList<QObject*> listePointeaux;
-    QList<QObject*> listeRondes;
+    QList<QObject*> listeDesignationPointeaux;
+    QList<Pointeau*> listePointeaux;
+    Ronde ronde;
 
     AccesBdd bdd;
-    for(int i = 0 ; i < 15 ; i++){
+    listePointeaux = bdd.obtenirPointeau(1);
+    for(int i = 0 ; i < listePointeaux.size() ; i++){
         couleursPointeau=new Pointeau();
-        couleursPointeau->setDesignation("Désignation " + QString::number(i));
+        couleursPointeau->setDesignation(listePointeaux.at(i)->getDesignation());
         if (i==0){   // premier pointeau en bleu
             couleursPointeau->setCouleur("#0000FF");
         }
         else{ //les suivant en noir
             couleursPointeau->setCouleur("#000000");
         }
-        listePointeaux.append(couleursPointeau);
+        listeDesignationPointeaux.append(couleursPointeau);
     }
 
     QQmlApplicationEngine engine;
     ///permet de récupérer les valeurs de la liste C++ pour les utiliser en QML
-    engine.rootContext()->setContextProperty("pointeauxModel", QVariant::fromValue(listePointeaux));
-    ///permet de faire le lien entre QML et classe C++
-    engine.rootContext()->setContextProperty("pointeauHorodater", new Pointeau());
-    ///permet de faire le lien entre QML et la classe AccesBdd
+    engine.rootContext()->setContextProperty("pointeauxModel", QVariant::fromValue(listeDesignationPointeaux));
+    ///permet de faire le lien entre QML et classe Pointeau
+    engine.rootContext()->setContextProperty("pointeau", new Pointeau());
+    ///permet de faire le lien entre QML et la classe Agent
     engine.rootContext()->setContextProperty("agent", new Agent());
-    ///Récupérer en QML la liste des rondes possibles
+    ///permet de faire le lien entre QML et la classe Ronde
     engine.rootContext()->setContextProperty("ronde", new Ronde());
     ///emplacement du fichier QML correspondant
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));

@@ -13,6 +13,10 @@ Page {
     property alias buttonPointeauScanne: buttonPointeauScanne
     property alias buttonInterrompreLaRonde: buttonInterrompreLaRonde
     property alias buttonIgnorerLePointeau: buttonIgnorerLePointeau
+    property alias nomRonde : nomRonde
+    property alias listePointeaux : listePointeaux
+    //property alias etatPointeau : etatPointeau
+    //property alias designationPointeau : designationPointeau
 
     title: "Déroulement de la ronde"
 
@@ -62,7 +66,6 @@ Page {
             y: -39
             width: 400
             height: 15
-            text: qsTr("Nom de la ronde")
             font.underline: true
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
@@ -103,10 +106,9 @@ Page {
                             id: etatPointeau
                             height: 15;
                             width: 14;
-
-                            color: m_couleur
                             radius: 20
-                        }
+                            color: m_couleur
+                       }
                         Rectangle   // deuxième rectangle
                         {
                             x:5
@@ -117,6 +119,7 @@ Page {
                     }
                     Text    //  texte correspondant
                     {
+                        id: designationPointeau
                         y:8
                         text: m_designation
                     }
@@ -131,7 +134,7 @@ Page {
                 anchors.topMargin: 36
                 anchors.bottomMargin: 40
                 anchors.fill: parent
-                model: pointeauxModel
+                //model: Fonction.obtenirDesignationPointeau()
                 delegate: representation
             }
         }

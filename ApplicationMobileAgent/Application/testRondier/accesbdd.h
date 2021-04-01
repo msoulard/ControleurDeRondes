@@ -9,6 +9,7 @@
 
 struct S_Agent;
 class Ronde;
+class Pointeau;
 
 class AccesBdd : public QObject
 {
@@ -18,6 +19,7 @@ public:
     ~AccesBdd();
     S_Agent obtenirAgent(QString _numBadge);
     QList<Ronde*> obtenirRondes(QString _numBadge);
+    QList<Pointeau*> obtenirPointeau(int _idRonde);
 
 signals:
 private :

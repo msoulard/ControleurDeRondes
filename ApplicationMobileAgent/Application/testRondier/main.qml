@@ -21,20 +21,23 @@ ApplicationWindow {
             id: selectionRonde
             buttonValider.onClicked: {
                 Fonction.changerPage();
+                var index = comboBoxListeRondes.currentIndex;
+                ronde.mettreAJourIndexCourant(index);
+                deroulementRonde.nomRonde.text = Fonction.obtenirNomRondeCourante();
+                anomalie.nomRonde.text = Fonction.obtenirNomRondeCourante();
+                //deroulementRonde.etatPointeau.color = Fonction.obtenirDesignationPointeau();
+                //deroulementRonde.designationPointeau.text = Fonction.obtenirDesignationPointeau();
+                deroulementRonde.listePointeaux.model = Fonction.obtenirDesignationPointeau().lists;
+                selectionRonde.destroy();
             }
         }
-        //required property int m_num
         DeroulementRonde{
             id: deroulementRonde
             buttonAnomalie.onClicked: {
                 Fonction.changerPage();
             }
             buttonPointeauScanne.onClicked: {
-                var m_num = 10 ;
-                console.log("avant "+m_num);
-                m_num = pointeauHorodater.horodater();
-                //pointeauHorodater.horodater();
-                console.log("après "+m_num);
+                pointeau.horodater();
             }
         }
 

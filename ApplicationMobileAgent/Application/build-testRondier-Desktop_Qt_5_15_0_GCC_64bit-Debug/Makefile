@@ -999,6 +999,15 @@ moc_pointeau.cpp: ../testRondier/pointeau.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../testRondier/accesbdd.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlDatabase \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqldatabase.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsqlglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlQuery \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h \
 		moc_predefs.h \
 		/opt/Qt/5.15.0/gcc_64/bin/moc
 	/opt/Qt/5.15.0/gcc_64/bin/moc $(DEFINES) --include '/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-testRondier-Desktop_Qt_5_15_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.15.0/gcc_64/mkspecs/linux-g++ -I'/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/ApplicationMobileAgent/Application/testRondier' -I/opt/Qt/5.15.0/gcc_64/include -I/opt/Qt/5.15.0/gcc_64/include/QtQuick -I/opt/Qt/5.15.0/gcc_64/include/QtGui -I/opt/Qt/5.15.0/gcc_64/include/QtQmlModels -I/opt/Qt/5.15.0/gcc_64/include/QtQml -I/opt/Qt/5.15.0/gcc_64/include/QtNetwork -I/opt/Qt/5.15.0/gcc_64/include/QtSql -I/opt/Qt/5.15.0/gcc_64/include/QtNfc -I/opt/Qt/5.15.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../testRondier/pointeau.h -o moc_pointeau.cpp
@@ -1173,7 +1182,10 @@ accesbdd.o: ../testRondier/accesbdd.cpp ../testRondier/accesbdd.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
 		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h \
 		../testRondier/agent.h \
-		../testRondier/ronde.h
+		../testRondier/ronde.h \
+		../testRondier/pointeau.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/QDateTime \
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qdatetime.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o accesbdd.o ../testRondier/accesbdd.cpp
 
 agent.o: ../testRondier/agent.cpp ../testRondier/agent.h \
@@ -1438,7 +1450,16 @@ pointeau.o: ../testRondier/pointeau.cpp ../testRondier/pointeau.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qset.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qcontiguouscache.h \
 		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer.h \
-		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h
+		/opt/Qt/5.15.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../testRondier/accesbdd.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlDatabase \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqldatabase.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsqlglobal.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qtsql-config.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlQuery \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlquery.h \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/QSqlError \
+		/opt/Qt/5.15.0/gcc_64/include/QtSql/qsqlerror.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pointeau.o ../testRondier/pointeau.cpp
 
 ronde.o: ../testRondier/ronde.cpp ../testRondier/ronde.h \

@@ -1,6 +1,7 @@
 #include "accesbdd.h"
 #include "agent.h"
 #include "ronde.h"
+#include "pointeau.h"
 
 /**
  * @brief AccesBdd::AccesBdd
@@ -100,4 +101,35 @@ QList<Ronde*> AccesBdd::obtenirRondes(QString _numBadge)
     }
     qDebug() << _listeNomRondes;
     return _listeNomRondes;
+}
+
+QList<Pointeau *> AccesBdd::obtenirPointeau(int _idRonde)
+{
+    QList<Pointeau*> listePointeaux;
+    Pointeau *unPointeau;
+    if(db.isOpen()){
+        QSqlQuery requete(db);
+        requete.prepare("SELECT pointeaux.id_pointeau, pointeaux.designation, pointeaux.tag_mifare, pointeaux.batiment, pointeaux.etage, pointeaux.emplacement, comporte.ordre, comporte.tempsmini, comporte.tempsmaxi FROM pointeaux INNER JOIN comporte ON comporte.id_pointeau = pointeaux.id_pointeau WHERE comporte.id_ronde = :id ");
+        requete.bindValue(":id", _idRonde);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (pointeaux) : " << requete.lastError();
+        }
+        else{
+            while(requete.next()){
+               unPointeau = new Pointeau();
+               unPointeau->setIdPointeau(requete.value("id_pointeau").toInt());
+               unPointeau->setDesignation(requete.value("designation").toString());
+               unPointeau->setTagMifare(requete.value("tag_mifare").toString());
+               unPointeau->setBatiment(requete.value("batiment").toString());
+               unPointeau->setEtage(requete.value("etage").toString());
+               unPointeau->setEmplacement(requete.value("emplacement").toString());
+               unPointeau->setOrdre(requete.value("ordre").toInt());
+               unPointeau->setTempsMini(requete.value("tempsmini").toString());
+               unPointeau->setTempsMaxi(requete.value("tempsmaxi").toString());
+               listePointeaux.append(unPointeau);
+            }
+        }
+    }
+    qDebug() << listePointeaux;
+    return listePointeaux;
 }
