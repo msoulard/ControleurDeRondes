@@ -107,7 +107,7 @@ Page {
                             height: 15;
                             width: 14;
                             radius: 20
-                            color: m_couleur
+                            color: listePointeaux.currentIndex == index ? "#0000FF" : "#000000"
                        }
                         Rectangle   // deuxième rectangle
                         {
@@ -122,6 +122,10 @@ Page {
                         id: designationPointeau
                         y:8
                         text: m_designation
+                        MouseArea{
+                            anchors.fill: parent
+                            onClicked: listePointeaux.currentIndex = index
+                        }
                     }
                 }
             }

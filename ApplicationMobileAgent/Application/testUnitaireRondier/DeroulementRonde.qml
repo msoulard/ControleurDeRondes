@@ -101,9 +101,8 @@ Page {
                         Rectangle       // rond
                         {
                             id: etatPointeau
-                            height: 15;
-                            width: 14;
-
+                            height: 15
+                            width: 14
                             color: m_couleur
                             radius: 20
                         }

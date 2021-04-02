@@ -6,5 +6,6 @@
         <file>Photo.qml</file>
         <file>SelectionRonde.qml</file>
         <file>main.js</file>
+        <file>ListViewDelegate.qml</file>
     </qresource>
 </RCC>

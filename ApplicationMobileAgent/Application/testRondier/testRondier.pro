@@ -1,6 +1,5 @@
 QT += quick
 QT += sql
-QT += nfc
 
 CONFIG += c++11
 
@@ -20,6 +19,7 @@ SOURCES += \
         agent.cpp \
         main.cpp \
         pointeau.cpp \
+        provider.cpp \
         ronde.cpp
 
 RESOURCES += qml.qrc
@@ -42,4 +42,6 @@ HEADERS += \
     accesbdd.h \
     agent.h \
     pointeau.h \
+    provider.h \
+    qobject_list_model.h \
     ronde.h

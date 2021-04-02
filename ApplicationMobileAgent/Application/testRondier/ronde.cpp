@@ -12,26 +12,26 @@ Ronde::Ronde(QObject *parent) : QObject(parent)
  */
 QList<QString> Ronde::obtenirListeRondes(QString _numBadge)
 {
-    ///Accès à la base de données
+    //Accès à la base de données
     AccesBdd bdd;
-    ///Liste des noms des rondes
+    //Liste des noms des rondes
     QList<QString> listeNoms;
-    ///Intance d'une ronde permettant de récupérer la ronde courante dans la boucle for
+    //Intance d'une ronde permettant de récupérer la ronde courante dans la boucle for
     Ronde *ronde;
-    ///Récupérer la liste des rondes correspondantes à l'agent
+    //Récupérer la liste des rondes correspondantes à l'agent
     listeRondes = bdd.obtenirRondes(_numBadge);
-    ///Boucle qui permet de récupérer que les noms des rondes
+    //Boucle qui permet de récupérer que les noms des rondes
     for(int i = 0 ; i < listeRondes.size() ; i ++){
-        ///Intanciation de la ronde
+        //Intanciation de la ronde
         ronde = new Ronde();
-        ///Mise à jour de la ronde avec les données de la ronde courante de la liste
+        //Mise à jour de la ronde avec les données de la ronde courante de la liste
         ronde = listeRondes.at(i);
-        ///Ajouter les noms des rondes dans la liste des noms des rondes
+        //Ajouter les noms des rondes dans la liste des noms des rondes
         listeNoms.append(ronde->getNom());
     }
-    ///Afficher la liste des noms dans la console
+    //Afficher la liste des noms dans la console
     qDebug() << "liste des rondes : " << listeNoms;
-    ///Retourner la liste des noms des rondes
+    //Retourner la liste des noms des rondes
     return listeNoms;
 }
 
