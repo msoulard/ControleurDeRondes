@@ -12,7 +12,7 @@ AccesBdd::AccesBdd(QObject *parent) : QObject(parent)
     ///Indiquer le type de la base de données
     db = QSqlDatabase::addDatabase("QSQLITE");
     ///Indiquer l'emplacement de la base de données
-    db.setDatabaseName("/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
+    db.setDatabaseName("C:/Users/soula/Documents/Cours/SNIR2/Projet 2021/Maëva/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
     ///Ouverture de la base de données
     db.open();
     ///Vérification de l'ouverture de la base de données
