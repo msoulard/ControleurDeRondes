@@ -1,7 +1,0 @@
-#Fri Mar 19 09:57:12 CET 2021
-base.0=/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/RessourcesAnneesPassees/ControleurDeRonde2020/CodeSource_2020/build-testnfc-Android_for_armeabi_v7a_arm64_v8a_x86_x86_64_Clang_Qt_5_15_0_for_Android-Debug/android-build/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/RessourcesAnneesPassees/ControleurDeRonde2020/CodeSource_2020/build-testnfc-Android_for_armeabi_v7a_arm64_v8a_x86_x86_64_Clang_Qt_5_15_0_for_Android-Debug/android-build/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
