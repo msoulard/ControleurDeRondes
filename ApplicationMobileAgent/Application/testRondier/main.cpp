@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 //    QList<Pointeau*> listePointeaux;
 //    Ronde ronde;
 
-    AccesBdd bdd;
+    //AccesBdd bdd;
 //    listePointeaux = bdd.obtenirPointeau(1);
 //    for(int i = 0 ; i < listePointeaux.size() ; i++){
 //        couleursPointeau=new Pointeau();
