@@ -22,7 +22,8 @@ SOURCES += \
         pointeau.cpp \
         ronde.cpp
 
-RESOURCES += qml.qrc
+RESOURCES += qml.qrc \
+    Images.qrc
 
 TRANSLATIONS += \
     testRondier_fr_FR.ts

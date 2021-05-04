@@ -17,6 +17,9 @@ ApplicationWindow {
         id: leRondier
         anchors.fill: parent
 
+        Identification {
+            id: identification
+        }
         SelectionRonde {
             id: selectionRonde
             buttonValider.onClicked: {
@@ -44,13 +47,70 @@ ApplicationWindow {
         Anomalie{
             id: anomalie
             buttonAnnuler.onClicked: {
-                leRondier.currentIndex = leRondier.currentIndex-1;
+                onClicked: dialogVerifAnnulation.open()
             }
+
+            Dialog{
+                id: dialogVerifAnnulation
+                title: "Annulation de l'anomalie"
+                onAccepted: leRondier.currentIndex = leRondier.currentIndex-1;
+                onRejected: {
+                    this.close()
+                }
+
+                contentItem: Rectangle{
+                    Column{
+                        anchors.fill: parent
+                        Text{
+                            text: "Voulez-vous annuler l'anomalie ?"
+                        }
+                        Button{
+                            id: a_valider
+                            text: "Valider"
+                            onClicked: dialogVerifAnnulation.accepted()
+                        }
+                        Button{
+                            id: a_annuler
+                            text: "Annuler"
+                            onClicked: dialogVerifAnnulation.rejected()
+                        }
+                    }
+                }
+            }
+
             buttonPhoto.onClicked: {
                 Fonction.changerPage();
             }
             buttonValiderAnomalie.onClicked: {
-                leRondier.currentIndex = leRondier.currentIndex-1;
+                onClicked: dialogVerifValidation.open()
+            }
+
+            Dialog{
+                id: dialogVerifValidation
+                title: "Validation de l'anomalie"
+                onAccepted: leRondier.currentIndex = leRondier.currentIndex-1;
+                onRejected: {
+                    this.close()
+                }
+
+                contentItem: Rectangle{
+                    Column{
+                        anchors.fill: parent
+                        Text{
+                            text: "Voulez-vous valider l'anomalie ?"
+                        }
+                        Button{
+                            id: v_valider
+                            text: "Valider"
+                            onClicked: dialogVerifValidation.accepted()
+                        }
+                        Button{
+                            id: v_annuler
+                            text: "Annuler"
+                            onClicked: dialogVerifValidation.rejected()
+                        }
+                    }
+                }
             }
         }
 
