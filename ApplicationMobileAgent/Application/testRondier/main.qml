@@ -27,7 +27,7 @@ ApplicationWindow {
                 anomalie.nomRonde.text = Fonction.obtenirNomRondeCourante();
                 //deroulementRonde.etatPointeau.color = Fonction.obtenirDesignationPointeau();
                 //deroulementRonde.designationPointeau.text = Fonction.obtenirDesignationPointeau();
-                deroulementRonde.listePointeaux.model = Fonction.obtenirDesignationPointeau();
+                deroulementRonde.listePointeaux.model = pointeau.obtenirListeDesignationsPointeaux(ronde.obtenirIdRondeCourante());
                 selectionRonde.destroy();
             }
         }
