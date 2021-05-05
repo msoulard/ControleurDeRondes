@@ -13,6 +13,10 @@ Page {
     property alias buttonPointeauScanne: buttonPointeauScanne
     property alias buttonInterrompreLaRonde: buttonInterrompreLaRonde
     property alias buttonIgnorerLePointeau: buttonIgnorerLePointeau
+    property alias nomRonde : nomRonde
+    property alias listePointeaux : listePointeaux
+    //property alias etatPointeau : etatPointeau
+    //property alias designationPointeau : designationPointeau
 
     title: "Déroulement de la ronde"
 
@@ -62,12 +66,12 @@ Page {
             y: -39
             width: 400
             height: 15
-            text: qsTr("Nom de la ronde")
             font.underline: true
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 15
             Layout.columnSpan: 2
+            text: Fonction.obtenirNomRondeCourante();
         }
         Rectangle
         {
@@ -101,11 +105,11 @@ Page {
                         Rectangle       // rond
                         {
                             id: etatPointeau
-                            height: 15
-                            width: 14
-                            color: m_couleur
+                            height: 15;
+                            width: 14;
                             radius: 20
-                        }
+                            color: m_couleur
+                       }
                         Rectangle   // deuxième rectangle
                         {
                             x:5
@@ -116,12 +120,16 @@ Page {
                     }
                     Text    //  texte correspondant
                     {
+                        id: designationPointeau
                         y:8
                         text: m_designation
+                        MouseArea{
+                            anchors.fill: parent
+                            onClicked: listePointeaux.currentIndex = index
+                        }
                     }
                 }
             }
-
             ListView
             {
                 id: listePointeaux
@@ -230,5 +238,12 @@ Page {
             y: 417
             text: qsTr("Ignorer le pointeau")
         }
+
     }
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

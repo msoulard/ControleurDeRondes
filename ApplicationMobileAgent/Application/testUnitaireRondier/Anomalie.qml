@@ -4,10 +4,13 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 import QtQml.Models 2.15
 
+import "main.js" as Fonction
+
 Page {
     property alias buttonAnnuler: buttonAnnuler
     property alias buttonPhoto: buttonPhoto
     property alias buttonValiderAnomalie: buttonValiderAnomalie
+    property alias nomRonde : nomRonde
 
     title: "Anomalie"
     Text {
@@ -47,11 +50,11 @@ Page {
         y: 121
         width: 400
         height: 15
-        text: qsTr("Nom de la ronde")
         font.underline: true
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 15
+        text: Fonction.obtenirNomRondeCourante();
     }
 
     Text {
@@ -60,7 +63,7 @@ Page {
         y: 142
         width: 56
         height: 15
-        text: qsTr("Pointeau :")
+        text: qsTr("Pointeau : " + Fonction.obtenirDesignationPointeau())
         font.underline: true
         font.pixelSize: 12
     }

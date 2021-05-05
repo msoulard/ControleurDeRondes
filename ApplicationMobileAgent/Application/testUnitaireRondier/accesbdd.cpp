@@ -1,24 +1,48 @@
 #include "accesbdd.h"
+#include "agent.h"
+#include "ronde.h"
+#include "pointeau.h"
 
+/**
+ * @brief AccesBdd::AccesBdd
+ * @param parent
+ */
 AccesBdd::AccesBdd(QObject *parent) : QObject(parent)
 {
-    ///Indiquer le type de la base de données
+    //Indiquer le type de la base de données
     db = QSqlDatabase::addDatabase("QSQLITE");
-    ///Indiquer l'emplacement de la base de données
-    db.setDatabaseName("/home/USERS/ELEVES/SNIR2019/msoulard/Controleur de rondes 2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
-    ///Ouverture de la base de données
+    //Indiquer l'emplacement de la base de données sur l'odinateur
+    db.setDatabaseName("/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
+    //Indiquer l'emplacement de la base de données sur le téléphone
+    //db.setDatabaseName("/data/data/org.qtproject.testRondier/db/Rondier_BDDRemplie.db");
+    //Ouverture de la base de données
     db.open();
-    ///Vérification de l'ouverture de la base de données
-    if(! db.isOpen()){ ///Si la base données n'a pas réussi à être ouverte
+    //Vérification de l'ouverture de la base de données
+    if(! db.isOpen()){ //Si la base données n'a pas réussi à être ouverte
         qDebug() << "Problème à l'ouverture";
     }
-    else{ ///Si la base de données est ouverte
+    else{ //Si la base de données est ouverte
         qDebug() << "Ouverture réussie" ;
     }
 }
 
-QString AccesBdd::obtenirAgent(QString _numBadge)
+/**
+ * @brief AccesBdd::~AccesBdd
+ */
+AccesBdd::~AccesBdd()
 {
+    db.close();
+}
+
+/**
+ * @brief AccesBdd::obtenirAgent
+ * @param _numBadge
+ * @return
+ */
+S_Agent AccesBdd::obtenirAgent(QString _numBadge)
+{
+    S_Agent agent;
+    agent.numBadge = _numBadge;
     if(db.isOpen()){
         QSqlQuery requete(db);
         requete.prepare("SELECT agents.nom, agents.prenom, agents.id_agent FROM agents WHERE agents.numbadge=:num");
@@ -28,27 +52,26 @@ QString AccesBdd::obtenirAgent(QString _numBadge)
         }
         else{
             while(requete.next()){
-                nomAgent = requete.value("nom").toString();
-                prenomAgent = requete.value("prenom").toString();
-                idAgent = requete.value("id_agent").toInt();
+                agent.nom = requete.value("nom").toString();
+                agent.prenom = requete.value("prenom").toString();
+                agent.id=requete.value("id_agent").toInt();
             }
         }
     }
-    //obtenirRondes();
-    QString prenomNom = prenomAgent + " " + nomAgent;
-    qDebug() << prenomNom;
-    return prenomNom;
+
+    return agent ;
 }
 
-QString AccesBdd::obtenirPointeaux(int _id_ronde)
+/**
+ * @brief AccesBdd::obtenirRondes
+ * @param _numBadge
+ * @return
+ */
+QList<Ronde*> AccesBdd::obtenirRondes(QString _numBadge)
 {
-
-}
-
-QList<QString> AccesBdd::obtenirRondes(QString _numBadge)
-{
-    QList<QString> _listeNomRondes;
-    QString ronde;
+    QList<Ronde*> _listeNomRondes;
+    Ronde *ronde;
+    int idAgent = 0;
     if(db.isOpen()){
         ///Récupérer l'id de l'agent
         QSqlQuery requete_agent(db);
@@ -62,6 +85,7 @@ QList<QString> AccesBdd::obtenirRondes(QString _numBadge)
                 idAgent = requete_agent.value("id_agent").toInt();
             }
         }
+        ///Récupérer les rondes correspondantes à l'agent
         QSqlQuery requete(db);
         requete.prepare("SELECT rondes.nom, rondes.id_ronde FROM rondes INNER JOIN peutFaire ON rondes.id_ronde = peutFaire.id_ronde WHERE peutFaire.id_agent=:id");
         requete.bindValue(":id", idAgent);
@@ -70,28 +94,44 @@ QList<QString> AccesBdd::obtenirRondes(QString _numBadge)
         }
         else{
             while(requete.next()){
-                ronde = requete.value("nom").toString();
+                ronde = new Ronde();
+                ronde->setNom(requete.value("nom").toString());
+                ronde->setId(requete.value("id_ronde").toInt());
                 _listeNomRondes.append(ronde);
             }
         }
     }
-    ronde = "";
     qDebug() << _listeNomRondes;
     return _listeNomRondes;
 }
 
-
-void AccesBdd::RecupererLePointeau(QString _tag_mifare)
+QList<Pointeau *> AccesBdd::obtenirPointeau(int _idRonde)
 {
-
-}
-
-void AccesBdd::MettreAJourBdd()
-{
-
-}
-
-void AccesBdd::EnregistrerAnomalie(int _id_pointeau)
-{
-
+    QList<Pointeau*> listePointeaux;
+    Pointeau *unPointeau;
+    if(db.isOpen()){
+        QSqlQuery requete(db);
+        requete.prepare("SELECT pointeaux.id_pointeau, pointeaux.designation, pointeaux.tag_mifare, pointeaux.batiment, pointeaux.etage, pointeaux.emplacement, comporte.ordre, comporte.tempsmini, comporte.tempsmaxi FROM pointeaux INNER JOIN comporte ON comporte.id_pointeau = pointeaux.id_pointeau WHERE comporte.id_ronde = :id ");
+        requete.bindValue(":id", _idRonde);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (pointeaux) : " << requete.lastError();
+        }
+        else{
+            while(requete.next()){
+               unPointeau = new Pointeau();
+               unPointeau->setIdPointeau(requete.value("id_pointeau").toInt());
+               unPointeau->setDesignation(requete.value("designation").toString());
+               unPointeau->setTagMifare(requete.value("tag_mifare").toString());
+               unPointeau->setBatiment(requete.value("batiment").toString());
+               unPointeau->setEtage(requete.value("etage").toString());
+               unPointeau->setEmplacement(requete.value("emplacement").toString());
+               unPointeau->setOrdre(requete.value("ordre").toInt());
+               unPointeau->setTempsMini(requete.value("tempsmini").toString());
+               unPointeau->setTempsMaxi(requete.value("tempsmaxi").toString());
+               listePointeaux.append(unPointeau);
+            }
+        }
+    }
+    qDebug() << listePointeaux;
+    return listePointeaux;
 }

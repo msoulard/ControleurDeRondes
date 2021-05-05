@@ -4,8 +4,21 @@ function changerPage() {
 }
 
 function obtenirNomRondes(){
-    var nomRonde = bdd.obtenirRondes("1B4DBE53");
-    console.log(nomRonde);
+    var nomRonde = ronde.obtenirListeRondes("1B4DBE53");
     console.log(Array.from(nomRonde));
     return Array.from(nomRonde);
+}
+
+function obtenirNomRondeCourante(){
+    obtenirNomRondes();
+    var nomRondeCourante = ronde.obtenirNomRondeCourante();
+    console.log(nomRondeCourante);
+    return nomRondeCourante;
+}
+
+function obtenirDesignationPointeau(){
+    var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
+    var designationPointeau = pointeau.
+    console.log(designationPointeau);
+    return designationPointeau;
 }

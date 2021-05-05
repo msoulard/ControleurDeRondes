@@ -129,7 +129,7 @@ Page {
 //                    }
 //                }
 //            }
-            ListView
+            ComboBox
             {
                 id: listePointeaux
                 anchors.rightMargin: 13

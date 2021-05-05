@@ -1,23 +1,39 @@
-#ifndef RONDES_H
-#define RONDES_H
+#ifndef RONDE_H
+#define RONDE_H
 
 #include <QObject>
+#include <QDebug>
+
+#include "accesbdd.h"
+
+//struct S_Ronde{
+//    QString nom;
+//    int id;
+//};
 
 class Ronde : public QObject
 {
     Q_OBJECT
 public:
-    explicit Ronde(const QString _nom, const int _idRonde, QObject *parent = nullptr);
+    explicit Ronde(QObject *parent = nullptr);
+    Q_INVOKABLE QList<QString> obtenirListeRondes(QString _numBadge);
+    Q_INVOKABLE void mettreAJourIndexCourant(int _indexRonde);
+    Q_INVOKABLE QString obtenirNomRondeCourante();
+    Q_INVOKABLE int obtenirIdRondeCourante();
 
     QString getNom() const;
     void setNom(const QString &value);
 
+    int getId() const;
+    void setId(int value);
+
 signals:
 
-public:
+private :
     QString nom;
-    int idRonde;
-
+    int id;
+    QList<Ronde*> listeRondes;
+    int indexRondeCourante;
 };
 
-#endif // RONDES_H
+#endif // RONDE_H

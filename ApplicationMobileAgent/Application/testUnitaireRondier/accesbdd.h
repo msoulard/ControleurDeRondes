@@ -6,40 +6,24 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
-#include <pointeau.h>
-#include <ronde.h>
 
-using namespace std;
+struct S_Agent;
+class Ronde;
+class Pointeau;
 
 class AccesBdd : public QObject
 {
     Q_OBJECT
 public:
     explicit AccesBdd(QObject *parent = nullptr);
-    Q_INVOKABLE QString obtenirAgent(QString _numBadge);
-    Q_INVOKABLE QString obtenirPointeaux(int _id_ronde);
-    Q_INVOKABLE QList<QString> obtenirRondes(QString _numBadge);
-    Q_INVOKABLE void RecupererLePointeau(QString _tag_mifare);
-    Q_INVOKABLE void MettreAJourBdd();
-    Q_INVOKABLE void EnregistrerAnomalie(int _id_pointeau);
-
+    ~AccesBdd();
+    S_Agent obtenirAgent(QString _numBadge);
+    QList<Ronde*> obtenirRondes(QString _numBadge);
+    QList<Pointeau*> obtenirPointeau(int _idRonde);
 
 signals:
-
 private :
     QSqlDatabase db;
-    ///Agents
-    QString nomAgent;
-    QString prenomAgent;
-    int idAgent;
-    ///Rondes
-    //QList<QString> nomRondes;
-    //QList<int> idRondes;
-    QString nomRondeCourante;
-    int idRondeCourante;
-
-
 };
-
 
 #endif // ACCESBDD_H

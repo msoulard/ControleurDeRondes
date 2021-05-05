@@ -1,6 +1,6 @@
 QT += quick
 QT += sql
-QT += nfc
+QT += core
 
 CONFIG += c++11
 
@@ -18,7 +18,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         accesbdd.cpp \
         agent.cpp \
-        lecteurnfc.cpp \
         main.cpp \
         pointeau.cpp \
         ronde.cpp
@@ -39,9 +38,10 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+DISTFILES +=
+
 HEADERS += \
     accesbdd.h \
     agent.h \
-    lecteurnfc.h \
     pointeau.h \
     ronde.h

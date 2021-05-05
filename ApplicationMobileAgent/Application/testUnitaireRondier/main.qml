@@ -17,38 +17,83 @@ ApplicationWindow {
         id: leRondier
         anchors.fill: parent
 
-        SelectionRonde {
-            id: selectionRonde
-
-            buttonValider.onClicked: {
-                Fonction.changerPage();
-            }
-        }
-        //required property int m_num
         DeroulementRonde{
             id: deroulementRonde
             buttonAnomalie.onClicked: {
                 Fonction.changerPage();
             }
             buttonPointeauScanne.onClicked: {
-                var m_num = 10 ;
-                console.log("avant "+m_num);
-                m_num = pointeauHorodater.horodater();
-                //pointeauHorodater.horodater();
-                console.log("après "+m_num);
+                pointeau.horodater();
             }
         }
 
         Anomalie{
             id: anomalie
             buttonAnnuler.onClicked: {
-                leRondier.currentIndex = leRondier.currentIndex-1;
+                onClicked: dialogVerifAnnulation.open()
             }
+
+            Dialog{
+                id: dialogVerifAnnulation
+                title: "Annulation de l'anomalie"
+                onAccepted: leRondier.currentIndex = leRondier.currentIndex-1;
+                onRejected: {
+                    this.close()
+                }
+
+                contentItem: Rectangle{
+                    Column{
+                        anchors.fill: parent
+                        Text{
+                            text: "Voulez-vous annuler l'anomalie ?"
+                        }
+                        Button{
+                            id: a_valider
+                            text: "Valider"
+                            onClicked: dialogVerifAnnulation.accepted()
+                        }
+                        Button{
+                            id: a_annuler
+                            text: "Annuler"
+                            onClicked: dialogVerifAnnulation.rejected()
+                        }
+                    }
+                }
+            }
+
             buttonPhoto.onClicked: {
                 Fonction.changerPage();
             }
             buttonValiderAnomalie.onClicked: {
-                leRondier.currentIndex = leRondier.currentIndex-1;
+                onClicked: dialogVerifValidation.open()
+            }
+
+            Dialog{
+                id: dialogVerifValidation
+                title: "Validation de l'anomalie"
+                onAccepted: leRondier.currentIndex = leRondier.currentIndex-1;
+                onRejected: {
+                    this.close()
+                }
+
+                contentItem: Rectangle{
+                    Column{
+                        anchors.fill: parent
+                        Text{
+                            text: "Voulez-vous valider l'anomalie ?"
+                        }
+                        Button{
+                            id: v_valider
+                            text: "Valider"
+                            onClicked: dialogVerifValidation.accepted()
+                        }
+                        Button{
+                            id: v_annuler
+                            text: "Annuler"
+                            onClicked: dialogVerifValidation.rejected()
+                        }
+                    }
+                }
             }
         }
 
