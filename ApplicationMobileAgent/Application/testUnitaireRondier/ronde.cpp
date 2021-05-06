@@ -12,6 +12,7 @@ Ronde::Ronde(QObject *parent) : QObject(parent)
 void Ronde::mettreAJourIndexCourant(int _indexRonde)
 {
     indexRondeCourante = _indexRonde;
+    AccesBdd bdd;
     qDebug() << "index courant : " << indexRondeCourante ;
     qDebug() << "nom de la ronde courante (MAJ index) : " << bdd.getListeRondes().at(indexRondeCourante)->getNom();
 }
@@ -24,6 +25,7 @@ QString Ronde::obtenirNomRondeCourante()
 {
     //mettreAJourIndexCourant(0);
     indexRondeCourante = 1;
+    AccesBdd bdd;
     QString nomRonde = "";
     if(indexRondeCourante != -1){
         nomRonde = bdd.getListeRondes().at(indexRondeCourante)->getNom();
@@ -35,6 +37,7 @@ QString Ronde::obtenirNomRondeCourante()
 int Ronde::obtenirIdRondeCourante()
 {
     int idRonde = 0;
+    AccesBdd bdd;
     if(indexRondeCourante != -1){
       idRonde = bdd.getListeRondes().at(indexRondeCourante)->getId();
     }

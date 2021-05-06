@@ -100,7 +100,7 @@ QList<Ronde*> AccesBdd::obtenirListeRondes(QString _numBadge)
             }
         }
     }
-    qDebug() << listeRondes;
+    qDebug() << "requête SQL :" << listeRondes;
     return listeRondes;
 }
 

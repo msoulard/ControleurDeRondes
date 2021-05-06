@@ -29,7 +29,6 @@ public:
 signals:
 
 private :
-    AccesBdd bdd;
     QString nom;
     int id;
     int indexRondeCourante;
