@@ -20,10 +20,12 @@ public:
     S_Agent obtenirAgent(QString _numBadge);
     QList<Ronde*> obtenirListeRondes(QString _numBadge);
     QList<Pointeau*> obtenirListePointeaux(int _idRonde);
-    Q_INVOKABLE QList<QObject*> obtenirListeDesignationsPointeaux();
+    Q_INVOKABLE QList<QObject*> obtenirListePointeauxQML();
+    Q_INVOKABLE QList<QString> obtenirListeDesignationsPointeaux();
     Q_INVOKABLE QList<QString> obtenirListeNomsRondes(QString _numBadge);
+    Q_INVOKABLE QList<QString> obtenirListeEmplacementPointeaux();
 
-    QList<Ronde *> getListeRondes() const;
+    Q_INVOKABLE QList<Ronde *> getListeRondes() const;
     void setListeRondes(const QList<Ronde *> &value);
 
 signals:

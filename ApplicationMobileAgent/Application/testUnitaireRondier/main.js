@@ -10,16 +10,25 @@ function obtenirNomRondes(){
 }
 
 function obtenirNomRondeCourante(){
-    obtenirNomRondes();
-    ronde.mettreAJourIndexCourant(1);
-    var nomRondeCourante = ronde.obtenirNomRondeCourante();
+    var listeNomsRondes = obtenirNomRondes();
+    var nomRondeCourante = listeNomsRondes[1];
     console.log(nomRondeCourante);
     return nomRondeCourante;
 }
 
 function obtenirDesignationPointeau(){
-    //var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
-    var designationPointeau = pointeau.getDesignation();
+    var listeDesignationPointeaux = bdd.obtenirListeDesignationsPointeaux();
+    var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
+    console.log(pointeauCourant);
+    var designationPointeau = listeDesignationPointeaux[pointeauCourant-1];
     console.log(designationPointeau);
     return designationPointeau;
+}
+
+function obtenirEmplacementPointeau(){
+    var listeEmplacement = bdd.obtenirListeEmplacementPointeaux();
+    var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
+    var emplacementPointeau = listeEmplacement[pointeauCourant-1];
+    console.log(emplacementPointeau);
+    return emplacementPointeau;
 }

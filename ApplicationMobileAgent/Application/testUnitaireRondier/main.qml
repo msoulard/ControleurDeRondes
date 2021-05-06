@@ -21,10 +21,11 @@ ApplicationWindow {
             id: deroulementRonde
             buttonAnomalie.onClicked: {
                 console.log(listePointeaux.currentIndex-1);
-                anomalie.designationPointeau.text = qsTr("Pointeau : " + pointeau.obtenirDesignationPointeauCourant(listePointeaux.currentIndex-1));
+                anomalie.designationPointeau.text = qsTr("Pointeau : " + Fonction.obtenirDesignationPointeau());
                 Fonction.changerPage();
             }
             buttonPointeauScanne.onClicked: {
+                emplacementPointeau.text = qsTr("Emplacement suivant : " + Fonction.obtenirEmplacementPointeau());
                 pointeau.horodater();
             }
         }

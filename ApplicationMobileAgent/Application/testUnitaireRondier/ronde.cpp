@@ -23,12 +23,12 @@ void Ronde::mettreAJourIndexCourant(int _indexRonde)
  */
 QString Ronde::obtenirNomRondeCourante()
 {
-    //mettreAJourIndexCourant(0);
-    indexRondeCourante = 1;
+    mettreAJourIndexCourant(1);
     AccesBdd bdd;
     QString nomRonde = "";
     if(indexRondeCourante != -1){
-        nomRonde = bdd.getListeRondes().at(indexRondeCourante)->getNom();
+        qDebug() << bdd.getListeRondes().at(indexRondeCourante)->getNom();
+        //nomRonde = bdd.getListeRondes().at(indexRondeCourante)->getNom();
     }
     qDebug() << "nom de la ronde courante : " << nomRonde;
     return nomRonde;

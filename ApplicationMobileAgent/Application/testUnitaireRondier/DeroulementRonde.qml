@@ -15,9 +15,7 @@ Page {
     property alias buttonIgnorerLePointeau: buttonIgnorerLePointeau
     property alias nomRonde : nomRonde
     property alias listePointeaux : listePointeaux
-    //property alias etatPointeau : etatPointeau
-    //property alias designationPointeau : designationPointeau
-
+    property alias emplacementPointeau : emplacementPointeau
     title: "Déroulement de la ronde"
 
     GridLayout {
@@ -144,12 +142,31 @@ Page {
         }
 
         Text {
-            id: descriptionPointeau
+            id: emplacementPointeau
             x: 626
             y: 68
             width: 172
             height: 126
-            text: qsTr("Description :")
+            font.pixelSize: 12
+        }
+
+        Text {
+            id: tempsMiniPointeau
+            x: 626
+            y: 68
+            width: 172
+            height: 126
+            text: qsTr("Temps mini :")
+            font.pixelSize: 12
+        }
+
+        Text {
+            id: tempsMaxiPointeau
+            x: 626
+            y: 68
+            width: 172
+            height: 126
+            text: qsTr("Temps maxi :")
             font.pixelSize: 12
         }
 

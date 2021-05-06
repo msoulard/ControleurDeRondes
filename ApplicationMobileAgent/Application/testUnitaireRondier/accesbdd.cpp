@@ -135,7 +135,7 @@ QList<Pointeau *> AccesBdd::obtenirListePointeaux(int _idRonde)
     return listePointeaux;
 }
 
-QList<QObject*> AccesBdd::obtenirListeDesignationsPointeaux()
+QList<QObject*> AccesBdd::obtenirListePointeauxQML()
 {
     QList<QObject*> listeDesignationsPointeaux;
     QList<Pointeau*> listePointeaux;
@@ -154,6 +154,19 @@ QList<QObject*> AccesBdd::obtenirListeDesignationsPointeaux()
     return listeDesignationsPointeaux;
 }
 
+QList<QString> AccesBdd::obtenirListeDesignationsPointeaux()
+{
+    QList<QString> listeDesignations;
+    QList<Pointeau*> listePointeaux;
+    QString designation;
+    listePointeaux = obtenirListePointeaux(1);
+    foreach(Pointeau *p, listePointeaux){
+        designation = p->getDesignation();
+        listeDesignations.append(designation);
+    }
+    return listeDesignations;
+}
+
 QList<QString> AccesBdd::obtenirListeNomsRondes(QString _numBadge)
 {
     QList<QString> listeNomRondes;
@@ -163,6 +176,20 @@ QList<QString> AccesBdd::obtenirListeNomsRondes(QString _numBadge)
     }
     qDebug() << listeNomRondes;
     return listeNomRondes;
+}
+
+QList<QString> AccesBdd::obtenirListeEmplacementPointeaux()
+{
+    QList<QString> listeEmplacements;
+    QList<Pointeau*> listePointeaux;
+    QString emplacement;
+    listePointeaux = obtenirListePointeaux(1);
+    foreach(Pointeau *p, listePointeaux){
+        emplacement = p->getEmplacement();
+        listeEmplacements.append(emplacement);
+    }
+    return listeEmplacements;
+
 }
 
 QList<Ronde *> AccesBdd::getListeRondes() const
