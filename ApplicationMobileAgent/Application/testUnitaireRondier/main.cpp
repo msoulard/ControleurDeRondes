@@ -2,7 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QList>
-#include <QTimer>
+#include <QDebug>
 
 #include "pointeau.h"
 #include "accesbdd.h"
@@ -13,26 +13,27 @@ int main(int argc, char *argv[])
 {
     AccesBdd bdd;
     QGuiApplication app(argc, argv);
-    Pointeau *pointeau;
     QList<QObject*> listeDesignationPointeaux;
     QList<Pointeau*> listePointeaux;
 
-    listePointeaux = bdd.obtenirPointeau(1);
-    for(int i = 0 ; i < listePointeaux.size() ; i++){
-        pointeau=new Pointeau();
-        pointeau->setDesignation(listePointeaux.at(i)->getDesignation());
-        if (i==0){   // premier pointeau en bleu
-            pointeau->setCouleur("#0000FF");
+    listePointeaux = bdd.obtenirListePointeaux(1);
+    foreach (Pointeau *p, listePointeaux) {
+        if (p==listePointeaux.first()){   // premier pointeau en bleu
+            p->setCouleur("#0000FF");
         }
         else{ //les suivant en noir
-            pointeau->setCouleur("#000000");
+            p->setCouleur("#000000");
         }
-        listeDesignationPointeaux.append(pointeau);
+
+        listeDesignationPointeaux.append(p);
     }
+    qDebug() << listePointeaux;
 
     QQmlApplicationEngine engine;
     //permet de récupérer les valeurs de la liste C++ pour les utiliser en QML
     engine.rootContext()->setContextProperty("pointeauxModel", QVariant::fromValue(listeDesignationPointeaux));
+    //permet de faire le lien entre QML et classe AccesBdd
+    engine.rootContext()->setContextProperty("bdd", new AccesBdd());
     //permet de faire le lien entre QML et classe Pointeau
     engine.rootContext()->setContextProperty("pointeau", new Pointeau());
     //permet de faire le lien entre QML et la classe Agent

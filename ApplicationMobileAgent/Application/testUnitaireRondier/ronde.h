@@ -16,7 +16,6 @@ class Ronde : public QObject
     Q_OBJECT
 public:
     explicit Ronde(QObject *parent = nullptr);
-    Q_INVOKABLE QList<QString> obtenirListeRondes(QString _numBadge);
     Q_INVOKABLE void mettreAJourIndexCourant(int _indexRonde);
     Q_INVOKABLE QString obtenirNomRondeCourante();
     Q_INVOKABLE int obtenirIdRondeCourante();
@@ -30,9 +29,9 @@ public:
 signals:
 
 private :
+    AccesBdd bdd;
     QString nom;
     int id;
-    QList<Ronde*> listeRondes;
     int indexRondeCourante;
 };
 

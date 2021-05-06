@@ -11,6 +11,7 @@ Page {
     property alias buttonPhoto: buttonPhoto
     property alias buttonValiderAnomalie: buttonValiderAnomalie
     property alias nomRonde : nomRonde
+    property alias designationPointeau : designationPointeau
 
     title: "Anomalie"
     Text {
@@ -63,7 +64,6 @@ Page {
         y: 142
         width: 56
         height: 15
-        text: qsTr("Pointeau : " + Fonction.obtenirDesignationPointeau())
         font.underline: true
         font.pixelSize: 12
     }

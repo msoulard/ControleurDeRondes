@@ -20,6 +20,8 @@ ApplicationWindow {
         DeroulementRonde{
             id: deroulementRonde
             buttonAnomalie.onClicked: {
+                console.log(listePointeaux.currentIndex-1);
+                anomalie.designationPointeau.text = qsTr("Pointeau : " + pointeau.obtenirDesignationPointeauCourant(listePointeaux.currentIndex-1));
                 Fonction.changerPage();
             }
             buttonPointeauScanne.onClicked: {

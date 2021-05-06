@@ -17,9 +17,6 @@ class Pointeau : public QObject
 public:
     explicit Pointeau(QObject *parent = nullptr);
     Q_INVOKABLE void horodater();
-    Q_INVOKABLE QList<QString> obtenirListeDesignationsPointeaux(int _idRonde);
-    Q_INVOKABLE QList<QString> obtenirListeCouleursPointeaux();
-    Q_INVOKABLE QString obtenirDesignationPointeauCourant(int _index);
 
     QString getCouleur() const;
     void setCouleur(const QString &value);
@@ -27,7 +24,7 @@ public:
     int getIdPointeau() const;
     void setIdPointeau(int value);
 
-    QString getDesignation() const;
+    Q_INVOKABLE QString getDesignation() const;
     void setDesignation(const QString &value);
 
     QString getTagMifare() const;
@@ -58,7 +55,6 @@ signals:
 private:
     QString couleur;
     QDateTime horodatage;
-    QList<Pointeau*> listePointeaux;
     ///Attributs du pointeau
     int idPointeau;
     QString designation;

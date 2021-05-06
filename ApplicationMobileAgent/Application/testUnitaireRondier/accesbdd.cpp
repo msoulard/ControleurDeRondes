@@ -67,9 +67,8 @@ S_Agent AccesBdd::obtenirAgent(QString _numBadge)
  * @param _numBadge
  * @return
  */
-QList<Ronde*> AccesBdd::obtenirRondes(QString _numBadge)
+QList<Ronde*> AccesBdd::obtenirListeRondes(QString _numBadge)
 {
-    QList<Ronde*> _listeNomRondes;
     Ronde *ronde;
     int idAgent = 0;
     if(db.isOpen()){
@@ -97,18 +96,18 @@ QList<Ronde*> AccesBdd::obtenirRondes(QString _numBadge)
                 ronde = new Ronde();
                 ronde->setNom(requete.value("nom").toString());
                 ronde->setId(requete.value("id_ronde").toInt());
-                _listeNomRondes.append(ronde);
+                listeRondes.append(ronde);
             }
         }
     }
-    qDebug() << _listeNomRondes;
-    return _listeNomRondes;
+    qDebug() << listeRondes;
+    return listeRondes;
 }
 
-QList<Pointeau *> AccesBdd::obtenirPointeau(int _idRonde)
+QList<Pointeau *> AccesBdd::obtenirListePointeaux(int _idRonde)
 {
-    QList<Pointeau*> listePointeaux;
     Pointeau *unPointeau;
+    QList<Pointeau*> listePointeaux;
     if(db.isOpen()){
         QSqlQuery requete(db);
         requete.prepare("SELECT pointeaux.id_pointeau, pointeaux.designation, pointeaux.tag_mifare, pointeaux.batiment, pointeaux.etage, pointeaux.emplacement, comporte.ordre, comporte.tempsmini, comporte.tempsmaxi FROM pointeaux INNER JOIN comporte ON comporte.id_pointeau = pointeaux.id_pointeau WHERE comporte.id_ronde = :id ");
@@ -134,4 +133,44 @@ QList<Pointeau *> AccesBdd::obtenirPointeau(int _idRonde)
     }
     qDebug() << listePointeaux;
     return listePointeaux;
+}
+
+QList<QObject*> AccesBdd::obtenirListeDesignationsPointeaux()
+{
+    QList<QObject*> listeDesignationsPointeaux;
+    QList<Pointeau*> listePointeaux;
+    listePointeaux = obtenirListePointeaux(1);
+    foreach (Pointeau *p, listePointeaux) {
+        if (p==listePointeaux.first()){   // premier pointeau en bleu
+            p->setCouleur("#0000FF");
+        }
+        else{ //les suivant en noir
+            p->setCouleur("#000000");
+        }
+
+        listeDesignationsPointeaux.append(p);
+    }
+    qDebug() << listeDesignationsPointeaux;
+    return listeDesignationsPointeaux;
+}
+
+QList<QString> AccesBdd::obtenirListeNomsRondes(QString _numBadge)
+{
+    QList<QString> listeNomRondes;
+    listeRondes = obtenirListeRondes(_numBadge);
+    for(int i = 0 ; i < listeRondes.size() ; i++){
+        listeNomRondes.append(listeRondes.at(i)->getNom());
+    }
+    qDebug() << listeNomRondes;
+    return listeNomRondes;
+}
+
+QList<Ronde *> AccesBdd::getListeRondes() const
+{
+    return listeRondes;
+}
+
+void AccesBdd::setListeRondes(const QList<Ronde *> &value)
+{
+    listeRondes = value;
 }

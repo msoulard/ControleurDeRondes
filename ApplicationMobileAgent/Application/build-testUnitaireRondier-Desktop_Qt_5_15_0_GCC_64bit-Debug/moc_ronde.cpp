@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Ronde_t {
-    QByteArrayData data[9];
-    char stringdata0[134];
+    QByteArrayData data[6];
+    char stringdata0[90];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,18 +33,14 @@ struct qt_meta_stringdata_Ronde_t {
 static const qt_meta_stringdata_Ronde_t qt_meta_stringdata_Ronde = {
     {
 QT_MOC_LITERAL(0, 0, 5), // "Ronde"
-QT_MOC_LITERAL(1, 6, 18), // "obtenirListeRondes"
-QT_MOC_LITERAL(2, 25, 14), // "QList<QString>"
-QT_MOC_LITERAL(3, 40, 0), // ""
-QT_MOC_LITERAL(4, 41, 9), // "_numBadge"
-QT_MOC_LITERAL(5, 51, 23), // "mettreAJourIndexCourant"
-QT_MOC_LITERAL(6, 75, 11), // "_indexRonde"
-QT_MOC_LITERAL(7, 87, 23), // "obtenirNomRondeCourante"
-QT_MOC_LITERAL(8, 111, 22) // "obtenirIdRondeCourante"
+QT_MOC_LITERAL(1, 6, 23), // "mettreAJourIndexCourant"
+QT_MOC_LITERAL(2, 30, 0), // ""
+QT_MOC_LITERAL(3, 31, 11), // "_indexRonde"
+QT_MOC_LITERAL(4, 43, 23), // "obtenirNomRondeCourante"
+QT_MOC_LITERAL(5, 67, 22) // "obtenirIdRondeCourante"
 
     },
-    "Ronde\0obtenirListeRondes\0QList<QString>\0"
-    "\0_numBadge\0mettreAJourIndexCourant\0"
+    "Ronde\0mettreAJourIndexCourant\0\0"
     "_indexRonde\0obtenirNomRondeCourante\0"
     "obtenirIdRondeCourante"
 };
@@ -56,7 +52,7 @@ static const uint qt_meta_data_Ronde[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,14 +60,12 @@ static const uint qt_meta_data_Ronde[] = {
        0,       // signalCount
 
  // methods: name, argc, parameters, tag, flags
-       1,    1,   34,    3, 0x02 /* Public */,
-       5,    1,   37,    3, 0x02 /* Public */,
-       7,    0,   40,    3, 0x02 /* Public */,
-       8,    0,   41,    3, 0x02 /* Public */,
+       1,    1,   29,    2, 0x02 /* Public */,
+       4,    0,   32,    2, 0x02 /* Public */,
+       5,    0,   33,    2, 0x02 /* Public */,
 
  // methods: parameters
-    0x80000000 | 2, QMetaType::QString,    4,
-    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void, QMetaType::Int,    3,
     QMetaType::QString,
     QMetaType::Int,
 
@@ -84,12 +78,10 @@ void Ronde::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         auto *_t = static_cast<Ronde *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: { QList<QString> _r = _t->obtenirListeRondes((*reinterpret_cast< QString(*)>(_a[1])));
-            if (_a[0]) *reinterpret_cast< QList<QString>*>(_a[0]) = std::move(_r); }  break;
-        case 1: _t->mettreAJourIndexCourant((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: { QString _r = _t->obtenirNomRondeCourante();
+        case 0: _t->mettreAJourIndexCourant((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: { QString _r = _t->obtenirNomRondeCourante();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 3: { int _r = _t->obtenirIdRondeCourante();
+        case 2: { int _r = _t->obtenirIdRondeCourante();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -125,13 +117,13 @@ int Ronde::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 3;
     }
     return _id;
 }
