@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-testUnitaireRondier-Android_for_armeabi_v7a_arm64_v8a_x86_x86_64_Clang_Qt_5_15_0_for_Android-Debug/android-build/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/ApplicationMobileAgent/Application/build-testUnitaireRondier-Android_for_armeabi_v7a_arm64_v8a_x86_x86_64_Clang_Qt_5_15_0_for_Android-Debug/android-build/res/values/libs.xml",
+                    "from": {
+                        "startLines": "9,32,13,2",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "292,1305,347,55",
+                        "endLines": "11,34,30,4",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "341,1570,1299,166"
+                    },
+                    "to": {
+                        "startLines": "2,5,8,26",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,109,379,1336",
+                        "endLines": "4,7,25,28",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "104,374,1331,1447"
+                    }
+                },
+                {
+                    "source": "/opt/Qt/5.15.0/android/src/android/java/res/values/strings.xml",
+                    "from": {
+                        "startLines": "5,4,3,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "319,197,85,427",
+                        "endColumns": "107,121,111,97",
+                        "endOffsets": "422,314,192,520"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "1452,1560,1682,1794",
+                        "endColumns": "107,121,111,97",
+                        "endOffsets": "1555,1677,1789,1887"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -16,19 +16,25 @@ Page {
     property alias nomRonde : nomRonde
     property alias listePointeaux : listePointeaux
     property alias emplacementPointeau : emplacementPointeau
+    property alias tempsMiniPointeau: tempsMiniPointeau
+    property alias tempsMaxiPointeau: tempsMaxiPointeau
+    property alias batimentPointeau: batimentPointeau
+    property alias etagePointeau: etagePointeau
     title: "Déroulement de la ronde"
 
     GridLayout {
         id: gridLayout
         x: 0
         y: 0
-        width: 560
+        width: width.parent
+        height: height.parent
         columns: 2
+        rows : 10
 
         Text {
             id: titre
-            x: 21
-            y: -60
+            x: 16
+            y: 0
             width: 600
             height: 46
             color: "#9c0101"
@@ -43,8 +49,8 @@ Page {
 
         Text {
             id: message
-            x: 14
-            y: -45
+            x: 24
+            y: 38
             width: 592
             height: 45
             text: qsTr("Veuillez valider les pointeaux indiqués.")
@@ -60,39 +66,35 @@ Page {
 
         Text {
             id: nomRonde
-            x: 84
-            y: -39
-            width: 400
+            x: 29
+            y: 89
+            width: 336
             height: 15
             font.underline: true
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
+            //            verticalAlignment: Text.AlignVCenter
+            //            horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 15
             Layout.columnSpan: 2
             text: Fonction.obtenirNomRondeCourante();
         }
-        Rectangle
-        {
+        Rectangle {
             width:217; height: 192
             border.width: 2
             radius: 5
-            x:-235
-            y:125
-            Layout.rowSpan: 3
+            x:29
+            y:110
+            Layout.rowSpan: 5
 
-            Component
-            {
+            Component {
                 id: representation // Manière dont s'affiche les données
-                Row
-                {
+                Row {
                     height: 30
                     spacing: 10
                     //Déclaration de variables QML qui font le lien avec celles en C++
                     required property string m_couleur
                     required property string m_designation
                     Text { text: " " } // pour ne pas coller la représentation graphique
-                    Column
-                    {
+                    Column {
                         Rectangle       // premier rectangle
                         {
                             x:5
@@ -107,7 +109,7 @@ Page {
                             width: 14;
                             radius: 20
                             color: m_couleur
-                       }
+                        }
                         Rectangle   // deuxième rectangle
                         {
                             x:5
@@ -128,8 +130,7 @@ Page {
                     }
                 }
             }
-            ListView
-            {
+            ListView {
                 id: listePointeaux
                 anchors.rightMargin: 13
                 anchors.leftMargin: 14
@@ -143,37 +144,63 @@ Page {
 
         Text {
             id: emplacementPointeau
-            x: 626
-            y: 68
+            x: 274
+            y: 135
             width: 172
-            height: 126
+            height: 14
             font.pixelSize: 12
+            Layout.column: 1
+            Layout.row: 3
+        }
+
+        Text {
+            id: batimentPointeau
+            x: 274
+            y: 155
+            width: 172
+            height: 14
+            font.pixelSize: 12
+            Layout.column: 1
+            Layout.row: 4
+        }
+
+        Text {
+            id: etagePointeau
+            x: 274
+            y: 175
+            width: 172
+            height: 14
+            font.pixelSize: 12
+            Layout.column: 1
+            Layout.row: 5
         }
 
         Text {
             id: tempsMiniPointeau
-            x: 626
-            y: 68
+            x: 274
+            y: 195
             width: 172
-            height: 126
-            text: qsTr("Temps mini :")
+            height: 14
             font.pixelSize: 12
+            Layout.column: 1
+            Layout.row: 6
         }
 
         Text {
             id: tempsMaxiPointeau
-            x: 626
-            y: 68
+            x: 274
+            y: 215
             width: 172
-            height: 126
-            text: qsTr("Temps maxi :")
+            height: 14
             font.pixelSize: 12
+            Layout.column: 1
+            Layout.row: 7
         }
 
         Button {
             id: buttonPointeauScanne
-            x: 398
-            y: 417
+            x: 274
+            y: 294
             text: qsTr("Pointeau scanné")
             onClicked: {
                 //récupérer l'index courrant de l'item
@@ -192,10 +219,17 @@ Page {
             }
         }
 
+        TextField {
+            id: textField
+            x: 274
+            y: 248
+            placeholderText: qsTr("Numéro de badge")
+        }
+
         Button {
             id: buttonAnomalie
-            x: 626
-            y: 332
+            x: 346
+            y: 353
             text: qsTr("Anomalie")
             onClicked: {
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
@@ -212,16 +246,24 @@ Page {
         }
 
         Button {
+            id: buttonIgnorerLePointeau
+            x: 188
+            y: 353
+            text: qsTr("Ignorer le pointeau")
+        }
+
+
+        Button {
             id: buttonInterrompreLaRonde
-            x: 100
-            y: 410
+            x: 21
+            y: 353
             width: 146
             height: 40
             text: qsTr("Interrompre la ronde")
             onClicked: dialogVerif.open()
         }
 
-        Dialog{
+        Dialog {
             id: dialogVerif
             title: "Interruption de la ronde"
             onAccepted: Qt.quit();
@@ -249,12 +291,6 @@ Page {
             }
         }
 
-        Button {
-            id: buttonIgnorerLePointeau
-            x: 575
-            y: 417
-            text: qsTr("Ignorer le pointeau")
-        }
 
     }
 }

@@ -28,7 +28,39 @@ function obtenirDesignationPointeau(){
 function obtenirEmplacementPointeau(){
     var listeEmplacement = bdd.obtenirListeEmplacementPointeaux();
     var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
-    var emplacementPointeau = listeEmplacement[pointeauCourant-1];
+    var emplacementPointeau = listeEmplacement[pointeauCourant];
     console.log(emplacementPointeau);
     return emplacementPointeau;
+}
+
+function obtenirTempsMiniPointeau(){
+    var listeTempsMini = bdd.obtenirListeTempsMiniPointeaux();
+    var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
+    var tempsMini = listeTempsMini[pointeauCourant];
+    console.log(tempsMini);
+    return tempsMini;
+}
+
+function obtenirTempsMaxiPointeau(){
+    var listeTempsMaxi = bdd.obtenirListeTempsMaxiPointeaux();
+    var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
+    var tempsMaxi = listeTempsMaxi[pointeauCourant];
+    console.log(tempsMaxi);
+    return tempsMaxi;
+}
+
+function obtenirBatimentPointeau(){
+    var listeBatiments = bdd.obtenirListeBatimentPointeaux();
+    var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
+    var batiment = listeBatiments[pointeauCourant];
+    console.log(batiment);
+    return batiment;
+}
+
+function obtenirEtagePointeau(){
+    var listeEtage = bdd.obtenirListeEtagePointeaux();
+    var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
+    var etage = listeEtage[pointeauCourant];
+    console.log(etage);
+    return etage;
 }

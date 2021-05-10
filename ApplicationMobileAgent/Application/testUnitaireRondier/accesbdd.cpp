@@ -192,6 +192,58 @@ QList<QString> AccesBdd::obtenirListeEmplacementPointeaux()
 
 }
 
+QList<QString> AccesBdd::obtenirListeTempsMiniPointeaux()
+{
+    QList<QString> listeTempsMini;
+    QList<Pointeau*> listePointeaux;
+    QString tempsMini;
+    listePointeaux = obtenirListePointeaux(1);
+    foreach(Pointeau *p, listePointeaux){
+        tempsMini = p->getTempsMini();
+        listeTempsMini.append(tempsMini);
+    }
+    return listeTempsMini;
+}
+
+QList<QString> AccesBdd::obtenirListeTempsMaxiPointeaux()
+{
+    QList<QString> listeTempsMaxi;
+    QList<Pointeau*> listePointeaux;
+    QString tempsMaxi;
+    listePointeaux = obtenirListePointeaux(1);
+    foreach(Pointeau *p, listePointeaux){
+        tempsMaxi = p->getTempsMaxi();
+        listeTempsMaxi.append(tempsMaxi);
+    }
+    return listeTempsMaxi;
+}
+
+QList<QString> AccesBdd::obtenirListeBatimentPointeaux()
+{
+    QList<QString> listeBatiment;
+    QList<Pointeau*> listePointeaux;
+    QString batiment;
+    listePointeaux = obtenirListePointeaux(1);
+    foreach(Pointeau *p, listePointeaux){
+        batiment = p->getBatiment();
+        listeBatiment.append(batiment);
+    }
+    return listeBatiment;
+}
+
+QList<QString> AccesBdd::obtenirListeEtagePointeaux()
+{
+    QList<QString> listeEtage;
+    QList<Pointeau*> listePointeaux;
+    QString etage;
+    listePointeaux = obtenirListePointeaux(1);
+    foreach(Pointeau *p, listePointeaux){
+        etage = p->getEtage();
+        listeEtage.append(etage);
+    }
+    return listeEtage;
+}
+
 QList<Ronde *> AccesBdd::getListeRondes() const
 {
     return listeRondes;

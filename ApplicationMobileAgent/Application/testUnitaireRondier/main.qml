@@ -9,8 +9,8 @@ import "main.js" as Fonction
 ApplicationWindow {
     //flags: Qt.WindowFullScreen
     visible: true
-    width: 640
-    height: 400
+    width: 600
+    height: 800
     title: qsTr("Rondier")
 
     SwipeView {
@@ -26,6 +26,10 @@ ApplicationWindow {
             }
             buttonPointeauScanne.onClicked: {
                 emplacementPointeau.text = qsTr("Emplacement suivant : " + Fonction.obtenirEmplacementPointeau());
+                batimentPointeau.text = qsTr("Bâtiment suivant : " + Fonction.obtenirBatimentPointeau());
+                etagePointeau.text = qsTr("Etage suivant : " + Fonction.obtenirEtagePointeau());
+                tempsMiniPointeau.text = qsTr("Temps mini : " + Fonction.obtenirTempsMiniPointeau());
+                tempsMaxiPointeau.text = qsTr("Temps maxi : " + Fonction.obtenirTempsMaxiPointeau());
                 pointeau.horodater();
             }
         }

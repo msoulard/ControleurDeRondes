@@ -24,6 +24,10 @@ public:
     Q_INVOKABLE QList<QString> obtenirListeDesignationsPointeaux();
     Q_INVOKABLE QList<QString> obtenirListeNomsRondes(QString _numBadge);
     Q_INVOKABLE QList<QString> obtenirListeEmplacementPointeaux();
+    Q_INVOKABLE QList<QString> obtenirListeTempsMiniPointeaux();
+    Q_INVOKABLE QList<QString> obtenirListeTempsMaxiPointeaux();
+    Q_INVOKABLE QList<QString> obtenirListeBatimentPointeaux();
+    Q_INVOKABLE QList<QString> obtenirListeEtagePointeaux();
 
     Q_INVOKABLE QList<Ronde *> getListeRondes() const;
     void setListeRondes(const QList<Ronde *> &value);
