@@ -12,6 +12,7 @@ Page {
     property alias buttonValiderAnomalie: buttonValiderAnomalie
     property alias nomRonde : nomRonde
     property alias designationPointeau : designationPointeau
+    property alias textAreaDescriptionAnomalie : textAreaDescriptionAnomalie
 
     title: "Anomalie"
     Text {
@@ -31,8 +32,8 @@ Page {
 
     Text {
         id: message
-        x: 8
-        y: 70
+        x: 6
+        y: 43
         width: 624
         height: 45
         text: qsTr("Veuillez indiquer le sujet de l'anomalie")
@@ -47,8 +48,8 @@ Page {
 
     Text {
         id: nomRonde
-        x: 0
-        y: 121
+        x: 3
+        y: 90
         width: 400
         height: 15
         font.underline: true
@@ -60,8 +61,8 @@ Page {
 
     Text {
         id: designationPointeau
-        x: 8
-        y: 142
+        x: 9
+        y: 115
         width: 56
         height: 15
         font.underline: true
@@ -70,8 +71,8 @@ Page {
 
     Text {
         id: descriptionAnomalie
-        x: 8
-        y: 163
+        x: 10
+        y: 135
         text: qsTr("Description :")
         font.underline: true
         font.pixelSize: 12
@@ -79,23 +80,38 @@ Page {
 
     Button {
         id: buttonAnnuler
-        x: 255
-        y: 335
+        x: 254
+        y: 298
         text: qsTr("Annuler")
     }
 
     Button {
         id: buttonPhoto
-        x: 255
-        y: 279
+        x: 254
+        y: 241
         text: qsTr("Photo")
     }
 
     Button {
         id: buttonValiderAnomalie
-        x: 75
-        y: 335
+        x: 78
+        y: 298
         text: qsTr("Valider l'anomalie")
     }
 
+    TextArea {
+        id: textAreaDescriptionAnomalie
+        x: 7
+        y: 154
+        width: 237
+        height: 135
+        placeholderText: qsTr("Description de l'anomalie")
+    }
+
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

@@ -19,6 +19,11 @@ ApplicationWindow {
 
         DeroulementRonde{
             id: deroulementRonde
+            emplacementPointeau.text : qsTr("Emplacement suivant : " + Fonction.obtenirEmplacementPointeau())
+            batimentPointeau.text : qsTr("Bâtiment suivant : " + Fonction.obtenirBatimentPointeau())
+            etagePointeau.text : qsTr("Etage suivant : " + Fonction.obtenirEtagePointeau())
+            tempsMiniPointeau.text : qsTr("Temps mini : " + Fonction.obtenirTempsMiniPointeau())
+            tempsMaxiPointeau.text : qsTr("Temps maxi : " + Fonction.obtenirTempsMaxiPointeau())
             buttonAnomalie.onClicked: {
                 console.log(listePointeaux.currentIndex-1);
                 anomalie.designationPointeau.text = qsTr("Pointeau : " + Fonction.obtenirDesignationPointeau());
@@ -31,6 +36,12 @@ ApplicationWindow {
                 tempsMiniPointeau.text = qsTr("Temps mini : " + Fonction.obtenirTempsMiniPointeau());
                 tempsMaxiPointeau.text = qsTr("Temps maxi : " + Fonction.obtenirTempsMaxiPointeau());
                 pointeau.horodater();
+            }
+            buttonIgnorerLePointeau.onClicked: {
+                anomalie.designationPointeau.text = qsTr("Pointeau : " + Fonction.obtenirDesignationPointeau());
+                anomalie.textAreaDescriptionAnomalie.text = qsTr("Pointeau ignoré");
+                pointeau.horodater();
+                Fonction.changerPage();
             }
         }
 

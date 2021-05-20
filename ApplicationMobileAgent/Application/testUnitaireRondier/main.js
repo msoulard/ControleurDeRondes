@@ -20,7 +20,14 @@ function obtenirDesignationPointeau(){
     var listeDesignationPointeaux = bdd.obtenirListeDesignationsPointeaux();
     var pointeauCourant = deroulementRonde.listePointeaux.currentIndex;
     console.log(pointeauCourant);
-    var designationPointeau = listeDesignationPointeaux[pointeauCourant-1];
+    var designationPointeau;
+    if(pointeauCourant === 0){
+        designationPointeau = listeDesignationPointeaux[pointeauCourant];
+    }
+    else{
+        designationPointeau = listeDesignationPointeaux[pointeauCourant-1];
+    }
+
     console.log(designationPointeau);
     return designationPointeau;
 }
@@ -63,4 +70,8 @@ function obtenirEtagePointeau(){
     var etage = listeEtage[pointeauCourant];
     console.log(etage);
     return etage;
+}
+
+function verifierTagPointeau(){
+
 }

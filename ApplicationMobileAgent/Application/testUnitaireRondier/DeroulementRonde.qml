@@ -20,16 +20,19 @@ Page {
     property alias tempsMaxiPointeau: tempsMaxiPointeau
     property alias batimentPointeau: batimentPointeau
     property alias etagePointeau: etagePointeau
+    property alias textFieldTag: textFieldTag
+
     title: "Déroulement de la ronde"
 
     GridLayout {
         id: gridLayout
-        x: 0
-        y: 0
+        x: 15
+        y: 8
         width: width.parent
         height: height.parent
+        visible: true
         columns: 2
-        rows : 10
+        rows : 15
 
         Text {
             id: titre
@@ -83,7 +86,7 @@ Page {
             radius: 5
             x:29
             y:110
-            Layout.rowSpan: 5
+            Layout.rowSpan: 10
 
             Component {
                 id: representation // Manière dont s'affiche les données
@@ -201,6 +204,8 @@ Page {
             id: buttonPointeauScanne
             x: 274
             y: 294
+            Layout.column: 1
+            Layout.row: 9
             text: qsTr("Pointeau scanné")
             onClicked: {
                 //récupérer l'index courrant de l'item
@@ -220,9 +225,11 @@ Page {
         }
 
         TextField {
-            id: textField
+            id: textFieldTag0
             x: 274
             y: 248
+            Layout.column: 1
+            Layout.row: 8
             placeholderText: qsTr("Numéro de badge")
         }
 
@@ -230,6 +237,8 @@ Page {
             id: buttonAnomalie
             x: 346
             y: 353
+            Layout.column: 0
+            Layout.row: 13
             text: qsTr("Anomalie")
             onClicked: {
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
@@ -247,9 +256,22 @@ Page {
 
         Button {
             id: buttonIgnorerLePointeau
-            x: 188
+            x: 150
             y: 353
+            Layout.column: 1
+            Layout.row: 13
             text: qsTr("Ignorer le pointeau")
+            onClicked: {
+                var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                //l'état devient rouge
+                item.m_couleur = "#FF0000";
+                //il incrémente l'index courant
+                listePointeaux.incrementCurrentIndex();
+                //il récupère l'index courrant
+                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                //l'état du pointeau courrant devient bleu
+                item.m_couleur = "#0000FF";
+            }
         }
 
 
@@ -258,7 +280,9 @@ Page {
             x: 21
             y: 353
             width: 146
-            height: 40
+            height: 40            
+            Layout.column: 0
+            Layout.row: 14
             text: qsTr("Interrompre la ronde")
             onClicked: dialogVerif.open()
         }

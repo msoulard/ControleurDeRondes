@@ -127,8 +127,10 @@ QList<Pointeau *> AccesBdd::obtenirListePointeaux(int _idRonde)
                unPointeau->setEtage(requete.value("etage").toString());
                unPointeau->setEmplacement(requete.value("emplacement").toString());
                unPointeau->setOrdre(requete.value("ordre").toInt());
-               unPointeau->setTempsMini(requete.value("tempsmini").toString());
-               unPointeau->setTempsMaxi(requete.value("tempsmaxi").toString());
+               //mid(0,8) permet d'afficher les 8 premiers caractères (heures:minutes:secondes)
+               unPointeau->setTempsMini(requete.value("tempsmini").toString().mid(0,8));
+               //left(8) permet d'afficher les 8 premiers caractères (heures:minutes:secondes)
+               unPointeau->setTempsMaxi(requete.value("tempsmaxi").toString().left(8));
                listePointeaux.append(unPointeau);
             }
         }
