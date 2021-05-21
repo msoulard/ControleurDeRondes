@@ -25,7 +25,7 @@ ApplicationWindow {
             tempsMiniPointeau.text : qsTr("Temps mini : " + Fonction.obtenirTempsMiniPointeau())
             tempsMaxiPointeau.text : qsTr("Temps maxi : " + Fonction.obtenirTempsMaxiPointeau())
             buttonAnomalie.onClicked: {
-                console.log(listePointeaux.currentIndex-1);
+                //console.log(listePointeaux.currentIndex-1);
                 anomalie.designationPointeau.text = qsTr("Pointeau : " + Fonction.obtenirDesignationPointeau());
                 Fonction.changerPage();
             }

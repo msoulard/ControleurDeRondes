@@ -1,5 +1,9 @@
 #include "ronde.h"
 
+/**
+ * @brief Ronde::Ronde
+ * @param parent
+ */
 Ronde::Ronde(QObject *parent) : QObject(parent)
 {
     indexRondeCourante = -1;
@@ -34,6 +38,10 @@ QString Ronde::obtenirNomRondeCourante()
     return nomRonde;
 }
 
+/**
+ * @brief Ronde::obtenirIdRondeCourante
+ * @return
+ */
 int Ronde::obtenirIdRondeCourante()
 {
     int idRonde = 0;

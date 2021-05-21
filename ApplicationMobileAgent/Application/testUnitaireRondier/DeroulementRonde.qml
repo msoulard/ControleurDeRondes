@@ -210,22 +210,31 @@ Page {
             onClicked: {
                 //récupérer l'index courrant de l'item
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //si la couleur est bleu
-                if(item.m_couleur === "#0000FF"){
-                    //il met en vert
-                    item.m_couleur = "#00FF00";
+                //vérifier le tag donné
+                var verif = Fonction.verifierTagPointeau();
+                //si le resultat est correct
+                if(verif === "correct"){
+                        //il met en vert
+                        item.m_couleur = "#00FF00";
+                        //il incrémente l'index courant
+                        listePointeaux.incrementCurrentIndex();
+                        //il récupère l'index courrant
+                        item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                        //l'état du pointeau courrant devient bleu
+                        item.m_couleur = "#0000FF";
                 }
-                //il incrémente l'index courant
-                listePointeaux.incrementCurrentIndex();
-                //il récupère l'index courrant
-                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //l'état du pointeau courrant devient bleu
-                item.m_couleur = "#0000FF";
+                else{
+                    //le pointeau courant reste bleu
+                    item.m_couleur = "#0000FF";
+                    //le mauvais pointeau scanné devient orange
+                    var fauxPointeau = listePointeaux.itemAtIndex(verif);
+                    fauxPointeau.m_couleur = "#FFA500";
+                }
             }
         }
 
         TextField {
-            id: textFieldTag0
+            id: textFieldTag
             x: 274
             y: 248
             Layout.column: 1
@@ -241,16 +250,15 @@ Page {
             Layout.row: 13
             text: qsTr("Anomalie")
             onClicked: {
-                var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex-1);
                 //l'état devient rouge
-                //item.etat = Qt.rgba(255, 0, 0);
                 item.m_couleur = "#FF0000";
-                //il incrémente l'index courant
-                listePointeaux.incrementCurrentIndex();
-                //il récupère l'index courrant
-                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //l'état du pointeau courrant devient bleu
-                item.m_couleur = "#0000FF";
+//                //il incrémente l'index courant
+//                listePointeaux.incrementCurrentIndex();
+//                //il récupère l'index courrant
+//                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+//                //l'état du pointeau courrant devient bleu
+//                item.m_couleur = "#0000FF";
             }
         }
 
