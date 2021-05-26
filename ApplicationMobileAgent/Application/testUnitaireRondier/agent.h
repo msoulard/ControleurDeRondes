@@ -1,3 +1,10 @@
+/**
+  @file agent.h
+  @brief Déclaration de la classe Agent
+  @author Maëva Soulard
+  @date 26/03/2021
+*/
+
 #ifndef AGENT_H
 #define AGENT_H
 
@@ -19,14 +26,6 @@ class Agent : public QObject
 public:
     explicit Agent(QObject *parent = nullptr);
      Q_INVOKABLE QString obtenirNomAgent(QString _numBadge);
-signals:
-
-public:
-    AccesBdd *bdd;
-    QString nom;
-    QString prenom;
-    int id;
-    QString numBadge;
 };
 
 #endif // AGENT_H

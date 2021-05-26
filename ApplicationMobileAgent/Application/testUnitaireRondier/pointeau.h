@@ -1,3 +1,10 @@
+/**
+  @file pointeau.h
+  @brief Déclaration de la classe Pointeau
+  @author Maëva Soulard
+  @date 26/03/2021
+*/
+
 #ifndef POINTEAU_H
 #define POINTEAU_H
 

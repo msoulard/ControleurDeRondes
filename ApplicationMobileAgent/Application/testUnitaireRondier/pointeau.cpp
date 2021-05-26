@@ -1,8 +1,17 @@
+/**
+  @file pointeau.cpp
+  @brief Implémentation de la classe Pointeau
+  @details Classe permettant de gérer un pointeau
+  @author Maëva Soulard
+  @date 26/03/2021
+*/
+
 #include "pointeau.h"
 
 /**
  * @brief Pointeau::Pointeau
  * @param parent
+ * @details Constructeur de la classe
  */
 Pointeau::Pointeau(QObject *parent) : QObject(parent)
 {
@@ -11,6 +20,7 @@ Pointeau::Pointeau(QObject *parent) : QObject(parent)
 
 /**
  * @brief Pointeau::horodater
+ * @details Méthode qui permet d'horodater un pointeau
  */
 void Pointeau::horodater()
 {
@@ -21,6 +31,7 @@ void Pointeau::horodater()
 /**
  * @brief Pointeau::getDesignation
  * @return
+ * @details Méthode qui permet de retourner la désignation d'un pointeau
  */
 QString Pointeau::getDesignation() const
 {
@@ -30,6 +41,7 @@ QString Pointeau::getDesignation() const
 /**
  * @brief Pointeau::setDesignation
  * @param value
+ * @details Méthode qui permet de mettre à jour la désignation d'un pointeau
  */
 void Pointeau::setDesignation(const QString &value)
 {
@@ -39,6 +51,7 @@ void Pointeau::setDesignation(const QString &value)
 /**
  * @brief Pointeau::getCouleur
  * @return
+ * @details Méthode qui permet de retourner la couleur d'un pointeau
  */
 QString Pointeau::getCouleur() const
 {
@@ -48,12 +61,18 @@ QString Pointeau::getCouleur() const
 /**
  * @brief Pointeau::setCouleur
  * @param value
+ * @details Méthode qui permet de mettre à jour la couleur d'un pointeau
  */
 void Pointeau::setCouleur(const QString &value)
 {
     couleur = value;
 }
 
+/**
+ * @brief Pointeau::getIdPointeau
+ * @return
+ * @details Méthode qui permet de retourner l'id d'un pointeau
+ */
 int Pointeau::getIdPointeau() const
 {
     return idPointeau;
@@ -62,6 +81,7 @@ int Pointeau::getIdPointeau() const
 /**
  * @brief Pointeau::setIdPointeau
  * @param value
+ * @details Méthode qui permet de mettre à jour l'id d'un pointeau
  */
 void Pointeau::setIdPointeau(int value)
 {
@@ -71,6 +91,7 @@ void Pointeau::setIdPointeau(int value)
 /**
  * @brief Pointeau::getTagMifare
  * @return
+ * @details Méthode qui permet de retourner le tag MIFARE d'un pointeau
  */
 QString Pointeau::getTagMifare() const
 {
@@ -80,6 +101,7 @@ QString Pointeau::getTagMifare() const
 /**
  * @brief Pointeau::setTagMifare
  * @param value
+ * @details Méthode qui permet de mettre à jour le tag MIFARE d'un pointeau
  */
 void Pointeau::setTagMifare(const QString &value)
 {
@@ -89,6 +111,7 @@ void Pointeau::setTagMifare(const QString &value)
 /**
  * @brief Pointeau::getBatiment
  * @return
+ * @details Méthode qui permet de retourner le bâtiment d'un pointeau
  */
 QString Pointeau::getBatiment() const
 {
@@ -98,6 +121,7 @@ QString Pointeau::getBatiment() const
 /**
  * @brief Pointeau::setBatiment
  * @param value
+ * @details Méthode qui permet de mettre à jour le bâtiment d'un pointeau
  */
 void Pointeau::setBatiment(const QString &value)
 {
@@ -107,6 +131,7 @@ void Pointeau::setBatiment(const QString &value)
 /**
  * @brief Pointeau::getEtage
  * @return
+ * @details Méthode qui permet de retourner l'étage d'un pointeau
  */
 QString Pointeau::getEtage() const
 {
@@ -116,6 +141,7 @@ QString Pointeau::getEtage() const
 /**
  * @brief Pointeau::setEtage
  * @param value
+ * @details Méthode qui permet de mettre à jour l'étage d'un pointeau
  */
 void Pointeau::setEtage(const QString &value)
 {
@@ -125,6 +151,7 @@ void Pointeau::setEtage(const QString &value)
 /**
  * @brief Pointeau::getEmplacement
  * @return
+ * @details Méthode qui permet de retourner l'emplacement d'un pointeau
  */
 QString Pointeau::getEmplacement() const
 {
@@ -134,6 +161,7 @@ QString Pointeau::getEmplacement() const
 /**
  * @brief Pointeau::setEmplacement
  * @param value
+ * @details Méthode qui permet de mettre à jour l'emplacement d'un pointeau
  */
 void Pointeau::setEmplacement(const QString &value)
 {

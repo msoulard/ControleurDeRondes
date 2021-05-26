@@ -68,7 +68,12 @@ ApplicationWindow {
                         Button{
                             id: a_valider
                             text: "Valider"
-                            onClicked: dialogVerifAnnulation.accepted()
+                            onClicked: {
+                                dialogVerifAnnulation.accepted();
+                                var item = deroulementRonde.listePointeaux.itemAtIndex(deroulementRonde.listePointeaux.currentIndex-1);
+                                //l'état devient vert
+                                item.m_couleur = "#00FF00";
+                            }
                         }
                         Button{
                             id: a_annuler

@@ -1,8 +1,6 @@
 /**
   @file accesbdd.cpp
   @brief Implémentation de la classe AccesBdd
-  @details Classe permettant l'accès à la base de données
-  @version 5
   @author Maëva Soulard
   @date 26/03/2021
 */
@@ -15,6 +13,7 @@
 /**
  * @brief AccesBdd::AccesBdd
  * @param parent
+ * @details Contructeur de la classe qui permet l'accès à la base de données
  */
 AccesBdd::AccesBdd(QObject *parent) : QObject(parent)
 {
@@ -39,9 +38,11 @@ AccesBdd::AccesBdd(QObject *parent) : QObject(parent)
 
 /**
  * @brief AccesBdd::~AccesBdd
+ * @details Destructeur de la classe
  */
 AccesBdd::~AccesBdd()
 {
+    //fermer la base de données
     db.close();
 }
 
@@ -49,13 +50,12 @@ AccesBdd::~AccesBdd()
  * @brief AccesBdd::obtenirAgent
  * @param _numBadge
  * @return
+ * @details Méthode qui permet d'obtenir un agent en fonction de son numéro de badge
  */
 S_Agent AccesBdd::obtenirAgent(QString _numBadge)
 {
-    numeroBadge = _numBadge;
     S_Agent agent;
     agent.numBadge = _numBadge;
-
     if(db.isOpen()){
         QSqlQuery requete(db);
         requete.prepare("SELECT agents.nom, agents.prenom, agents.id_agent FROM agents WHERE agents.numbadge=:num");
@@ -71,6 +71,7 @@ S_Agent AccesBdd::obtenirAgent(QString _numBadge)
             }
         }
     }
+    idAgent = agent.id;
 
     return agent ;
 }
@@ -79,24 +80,12 @@ S_Agent AccesBdd::obtenirAgent(QString _numBadge)
  * @brief AccesBdd::obtenirRondes
  * @param _numBadge
  * @return
+ * @details Méthode qui permet de récupérer la liste de rondes en fonction du numéro de badge de l'agent
  */
 QList<Ronde*> AccesBdd::obtenirListeRondes()
 {
     Ronde *ronde;
-    int idAgent = 0;
     if(db.isOpen()){
-        ///Récupérer l'id de l'agent
-        QSqlQuery requete_agent(db);
-        requete_agent.prepare("SELECT agents.id_agent FROM agents WHERE agents.numbadge=:num");
-        requete_agent.bindValue(":num", numeroBadge);
-        if(!requete_agent.exec()){
-            qDebug() << "problème lors de la requête SQL (agents) : " << requete_agent.lastError();
-        }
-        else{
-            while(requete_agent.next()){
-                idAgent = requete_agent.value("id_agent").toInt();
-            }
-        }
         ///Récupérer les rondes correspondantes à l'agent
         QSqlQuery requete(db);
         requete.prepare("SELECT rondes.nom, rondes.id_ronde FROM rondes INNER JOIN peutFaire ON rondes.id_ronde = peutFaire.id_ronde WHERE peutFaire.id_agent=:id");
@@ -121,6 +110,7 @@ QList<Ronde*> AccesBdd::obtenirListeRondes()
  * @brief AccesBdd::obtenirListePointeaux
  * @param _idRonde
  * @return
+ * @details Méthode qui permet d'obtenir la liste des pointeaux en fonctiond de la ronde choisie
  */
 QList<Pointeau *> AccesBdd::obtenirListePointeaux(int _idRonde)
 {
@@ -158,6 +148,7 @@ QList<Pointeau *> AccesBdd::obtenirListePointeaux(int _idRonde)
 /**
  * @brief AccesBdd::obtenirListePointeauxQML
  * @return
+ * @details Méthode qui permet de récupérer et d'afficher en QML la liste des pointeaux
  */
 QList<QObject*> AccesBdd::obtenirListePointeauxQML()
 {
@@ -181,6 +172,7 @@ QList<QObject*> AccesBdd::obtenirListePointeauxQML()
 /**
  * @brief AccesBdd::obtenirListeDesignationsPointeaux
  * @return
+ * @details Méthode qui permet de récupérer la liste des désignations des pointeaux
  */
 QList<QString> AccesBdd::obtenirListeDesignationsPointeaux()
 {
@@ -199,11 +191,12 @@ QList<QString> AccesBdd::obtenirListeDesignationsPointeaux()
  * @brief AccesBdd::obtenirListeNomsRondes
  * @param _numBadge
  * @return
+ * @details Méthode qui permet de récupérer la liste des noms des rondes en fonction de l'agent
  */
 QList<QString> AccesBdd::obtenirListeNomsRondes()
 {
     QList<QString> listeNomRondes;
-    listeRondes = obtenirListeRondes();
+    setListeRondes(obtenirListeRondes());
     for(int i = 0 ; i < listeRondes.size() ; i++){
         listeNomRondes.append(listeRondes.at(i)->getNom());
     }
@@ -214,6 +207,7 @@ QList<QString> AccesBdd::obtenirListeNomsRondes()
 /**
  * @brief AccesBdd::obtenirListeEmplacementPointeaux
  * @return
+ * @details Méthode qui permet d'obenir la liste des emplacements des pointeaux
  */
 QList<QString> AccesBdd::obtenirListeEmplacementPointeaux()
 {
@@ -232,6 +226,7 @@ QList<QString> AccesBdd::obtenirListeEmplacementPointeaux()
 /**
  * @brief AccesBdd::obtenirListeTempsMiniPointeaux
  * @return
+ * @details Méthode qui permet d'obtenir la liste des temps minimum des pointeaux
  */
 QList<QString> AccesBdd::obtenirListeTempsMiniPointeaux()
 {
@@ -249,6 +244,7 @@ QList<QString> AccesBdd::obtenirListeTempsMiniPointeaux()
 /**
  * @brief AccesBdd::obtenirListeTempsMaxiPointeaux
  * @return
+ * @details Méthode qui permet d'obtenir la liste des temps maximum des pointeaux
  */
 QList<QString> AccesBdd::obtenirListeTempsMaxiPointeaux()
 {
@@ -266,6 +262,7 @@ QList<QString> AccesBdd::obtenirListeTempsMaxiPointeaux()
 /**
  * @brief AccesBdd::obtenirListeBatimentPointeaux
  * @return
+ * @details Méthode qui permet d'obtenir la liste des bâtiments des pointeaux
  */
 QList<QString> AccesBdd::obtenirListeBatimentPointeaux()
 {
@@ -283,6 +280,7 @@ QList<QString> AccesBdd::obtenirListeBatimentPointeaux()
 /**
  * @brief AccesBdd::obtenirListeEtagePointeaux
  * @return
+ * @details Méthode qui permet d'obtenir la liste des étages des pointeaux
  */
 QList<QString> AccesBdd::obtenirListeEtagePointeaux()
 {
@@ -300,6 +298,7 @@ QList<QString> AccesBdd::obtenirListeEtagePointeaux()
 /**
  * @brief AccesBdd::obtenirListeTagPointeaux
  * @return
+ * @details Méthode qui permet d'obtenir la liste des tags des pointeaux
  */
 QList<QString> AccesBdd::obtenirListeTagPointeaux()
 {
@@ -315,41 +314,60 @@ QList<QString> AccesBdd::obtenirListeTagPointeaux()
     return listeTag;
 }
 
+/**
+ * @brief AccesBdd::mettreAJourTableAEteEffectueePar
+ * @details Méthode qui permet de mettre à jour la table aEteEffectueePar dans la base de données
+ */
 void AccesBdd::mettreAJourTableAEteEffectueePar()
 {
-    int idAgent;
+    int idAgent = obtenirIdAgent("1B4DBE53");
     int idRonde;
+    qDebug() << "idAgent : " << idAgent;
+    //int idRonde;
+}
+
+/**
+ * @brief AccesBdd::obtenirIdAgent
+ * @param _numBadge
+ * @return
+ * @details Méthode qui permet d'obtenir l'id de l'agent
+ */
+int AccesBdd::obtenirIdAgent(QString _numBadge)
+{
+    int id = 0;
     if(db.isOpen()){
         ///Récupérer l'id de l'agent
         QSqlQuery requete_agent(db);
         requete_agent.prepare("SELECT agents.id_agent FROM agents WHERE agents.numbadge=:num");
-        requete_agent.bindValue(":num", numeroBadge);
+        requete_agent.bindValue(":num", _numBadge);
         if(!requete_agent.exec()){
             qDebug() << "problème lors de la requête SQL (agents) : " << requete_agent.lastError();
         }
         else{
             while(requete_agent.next()){
-                idAgent = requete_agent.value("id_agent").toInt();
+                id = requete_agent.value("id_agent").toInt();
             }
         }
-
     }
+    return id;
 }
 
-    /**
+/**
  * @brief AccesBdd::getListeRondes
  * @return
+ * @details Méthode qui permet de récupérer la liste des rondes dans une autre classe
  */
-    QList<Ronde *> AccesBdd::getListeRondes() const
-    {
-        return listeRondes;
-    }
+QList<Ronde *> AccesBdd::getListeRondes() const
+{
+    return listeRondes;
+}
 
-    /**
+/**
  * @brief AccesBdd::setListeRondes
  * @param value
+ * @details Méthode qui permet de mettre à jour la liste des rondes
  */
-    void AccesBdd::setListeRondes(const QList<Ronde *> &value)
-    {
-        listeRondes = value;
-    }
+void AccesBdd::setListeRondes(const QList<Ronde *> &value)
+{
+    listeRondes = value;
+}

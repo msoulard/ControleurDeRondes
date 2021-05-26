@@ -1,3 +1,10 @@
+/**
+  @file ronde.cpp
+  @brief Implémentation de la classe Ronde
+  @author Maëva Soulard
+  @date 26/03/2021
+*/
+
 #include "ronde.h"
 
 /**
@@ -32,7 +39,7 @@ QString Ronde::obtenirNomRondeCourante()
     QString nomRonde = "";
     if(indexRondeCourante != -1){
         qDebug() << bdd.getListeRondes().at(indexRondeCourante)->getNom();
-        //nomRonde = bdd.getListeRondes().at(indexRondeCourante)->getNom();
+        nomRonde = bdd.getListeRondes().at(indexRondeCourante)->getNom();
     }
     qDebug() << "nom de la ronde courante : " << nomRonde;
     return nomRonde;

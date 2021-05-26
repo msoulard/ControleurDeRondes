@@ -1,7 +1,6 @@
 /**
   @file accesbdd.h
   @brief Déclaration de la classe AccesBdd
-  @version 5
   @author Maëva Soulard
   @date 26/03/2021
 */
@@ -38,6 +37,7 @@ public:
     Q_INVOKABLE QList<QString> obtenirListeEtagePointeaux();
     Q_INVOKABLE QList<QString> obtenirListeTagPointeaux();
     Q_INVOKABLE void mettreAJourTableAEteEffectueePar();
+    int obtenirIdAgent(QString _numBadge);
 
     Q_INVOKABLE QList<Ronde *> getListeRondes() const;
     void setListeRondes(const QList<Ronde *> &value);
@@ -46,7 +46,7 @@ signals:
 private :
     QSqlDatabase db;
     QList<Ronde*> listeRondes;
-    QString numeroBadge;
+    int idAgent;
 };
 
 #endif // ACCESBDD_H

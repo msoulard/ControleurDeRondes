@@ -210,11 +210,25 @@ Page {
             onClicked: {
                 //récupérer l'index courrant de l'item
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
+                //récupérer le nombre d'item dans la liste
+                var nb = listePointeaux.count;
+                console.log("nombre d'item dans la liste : " + nb);
+                //récupérer l'index courant du pointeau
+                var indexCourant = listePointeaux.currentIndex;
                 //vérifier le tag donné
                 var verif = Fonction.verifierTagPointeau();
                 //si le resultat est correct
                 if(verif === "correct"){
-                        //il met en vert
+                    //vérifier si c'est le dernier pointeau de la liste
+                    if(indexCourant === (nb-1)){
+                        //il met le pointeau courant en vert
+                        item.m_couleur = "#00FF00";
+                        //il incrémente l'index courant
+                        listePointeaux.incrementCurrentIndex();
+                    }
+                    else{
+                        bdd.mettreAJourTableAEteEffectueePar();
+                        //il met le pointeau courant en vert
                         item.m_couleur = "#00FF00";
                         //il incrémente l'index courant
                         listePointeaux.incrementCurrentIndex();
@@ -222,6 +236,7 @@ Page {
                         item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
                         //l'état du pointeau courrant devient bleu
                         item.m_couleur = "#0000FF";
+                    }
                 }
                 else{
                     //le pointeau courant reste bleu
@@ -253,12 +268,6 @@ Page {
                 var item = listePointeaux.itemAtIndex(listePointeaux.currentIndex-1);
                 //l'état devient rouge
                 item.m_couleur = "#FF0000";
-//                //il incrémente l'index courant
-//                listePointeaux.incrementCurrentIndex();
-//                //il récupère l'index courrant
-//                item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-//                //l'état du pointeau courrant devient bleu
-//                item.m_couleur = "#0000FF";
             }
         }
 
@@ -275,9 +284,9 @@ Page {
                 item.m_couleur = "#FF0000";
                 //il incrémente l'index courant
                 listePointeaux.incrementCurrentIndex();
-                //il récupère l'index courrant
+                //il récupère l'index courant
                 item = listePointeaux.itemAtIndex(listePointeaux.currentIndex);
-                //l'état du pointeau courrant devient bleu
+                //l'état du pointeau courant devient bleu
                 item.m_couleur = "#0000FF";
             }
         }
@@ -288,7 +297,7 @@ Page {
             x: 21
             y: 353
             width: 146
-            height: 40            
+            height: 40
             Layout.column: 0
             Layout.row: 14
             text: qsTr("Interrompre la ronde")

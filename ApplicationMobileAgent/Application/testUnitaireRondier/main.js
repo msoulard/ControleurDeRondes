@@ -9,6 +9,12 @@ function obtenirNomRondes(){
     return Array.from(nomRonde);
 }
 
+function obtenirNumBadge(){
+    var numBadge = "1B4DBE53";
+    agent.obtenirNomAgent(numBadge);
+    return numBadge;
+}
+
 function obtenirNomRondeCourante(){
     var listeNomsRondes = obtenirNomRondes();
     var nomRondeCourante = listeNomsRondes[1];
