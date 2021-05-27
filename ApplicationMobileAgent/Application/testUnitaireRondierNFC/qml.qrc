@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Anomalie.qml</file>
+        <file>DeroulementRonde.qml</file>
+        <file>Photo.qml</file>
+        <file>main.js</file>
+    </qresource>
+</RCC>

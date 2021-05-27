@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Ven 02 Avril 2021 à 15:07
+-- Généré le :  Jeu 27 Mai 2021 à 11:05
 -- Version du serveur :  10.1.41-MariaDB-0+deb9u1
--- Version de PHP :  7.0.33-0+deb9u6
+-- Version de PHP :  7.0.33-0+deb9u10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";

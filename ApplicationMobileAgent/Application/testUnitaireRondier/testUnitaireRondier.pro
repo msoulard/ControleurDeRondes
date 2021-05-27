@@ -1,6 +1,7 @@
 QT += quick
 QT += sql
 QT += core
+QT += nfc
 
 CONFIG += c++11
 
@@ -18,6 +19,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         accesbdd.cpp \
         agent.cpp \
+        lecteurnfc.cpp \
         main.cpp \
         pointeau.cpp \
         ronde.cpp
@@ -43,5 +45,6 @@ DISTFILES +=
 HEADERS += \
     accesbdd.h \
     agent.h \
+    lecteurnfc.h \
     pointeau.h \
     ronde.h

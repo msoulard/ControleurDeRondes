@@ -4,6 +4,7 @@ function changerPage() {
 }
 
 function obtenirNomRondes(){
+    obtenirNumBadge();
     var nomRonde = bdd.obtenirListeNomsRondes();
     //console.log(Array.from(nomRonde));
     return Array.from(nomRonde);

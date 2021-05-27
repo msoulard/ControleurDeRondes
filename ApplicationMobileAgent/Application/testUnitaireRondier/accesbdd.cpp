@@ -17,6 +17,22 @@
  */
 AccesBdd::AccesBdd(QObject *parent) : QObject(parent)
 {
+
+}
+
+/**
+ * @brief AccesBdd::~AccesBdd
+ * @details Destructeur de la classe
+ */
+AccesBdd::~AccesBdd()
+{
+    //fermer la base de données
+    qDebug() << "BDD fermée" ;
+    //db.close();
+}
+
+void AccesBdd::connectionBDD()
+{
     //Indiquer le type de la base de données
     db = QSqlDatabase::addDatabase("QSQLITE");
     //Indiquer l'emplacement de la base de données sur l'odinateur (lycée)
@@ -34,16 +50,6 @@ AccesBdd::AccesBdd(QObject *parent) : QObject(parent)
     else{ //Si la base de données est ouverte
         qDebug() << "Ouverture réussie" ;
     }
-}
-
-/**
- * @brief AccesBdd::~AccesBdd
- * @details Destructeur de la classe
- */
-AccesBdd::~AccesBdd()
-{
-    //fermer la base de données
-    db.close();
 }
 
 /**
@@ -95,7 +101,7 @@ QList<Ronde*> AccesBdd::obtenirListeRondes()
         }
         else{
             while(requete.next()){
-                ronde = new Ronde();
+                ronde = new Ronde(*this);
                 ronde->setNom(requete.value("nom").toString());
                 ronde->setId(requete.value("id_ronde").toInt());
                 listeRondes.append(ronde);
