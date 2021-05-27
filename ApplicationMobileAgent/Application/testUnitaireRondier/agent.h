@@ -26,6 +26,8 @@ class Agent : public QObject
 public:
     explicit Agent(QObject *parent = nullptr);
      Q_INVOKABLE QString obtenirNomAgent(QString _numBadge);
+private:
+    S_Agent agent;
 };
 
 #endif // AGENT_H

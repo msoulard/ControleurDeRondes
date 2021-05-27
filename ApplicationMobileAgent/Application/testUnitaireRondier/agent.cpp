@@ -22,14 +22,13 @@ Agent::Agent( QObject *parent) :
  * @brief Agent::obtenirNomAgent
  * @param _numBadge
  * @return
- * @details Méthode qui permet d'obtenir le prénom et le nom de l'agent
+ * @details Méthode qui permet de mettre à jour la structure S_Agent et d'obtenir le prénom et le nom de l'agent
  */
 QString Agent::obtenirNomAgent(QString _numBadge)
 {
     AccesBdd bdd;
-    S_Agent unAgent;
-    unAgent = bdd.obtenirAgent(_numBadge);
-    QString prenomNom = unAgent.prenom + " " + unAgent.nom;
+    agent = bdd.obtenirAgent(_numBadge);
+    QString prenomNom = agent.prenom + " " + agent.nom;
     return prenomNom;
 }
 
