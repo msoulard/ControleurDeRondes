@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     //connection avec le lecteur NFC
     LecteurNFC leLecteur;
-    QObject::connect(&leLecteur, &LecteurNFC::tagDetecte, &leLecteur, &LecteurNFC::recupererTag);
+    //QObject::connect(&leLecteur, &LecteurNFC::tagDetecte, &leLecteur, &LecteurNFC::recupererTag);
     //lien avec l'application QML
     QQmlApplicationEngine engine;
     //permet de récupérer les valeurs de la liste C++ pour les utiliser en QML

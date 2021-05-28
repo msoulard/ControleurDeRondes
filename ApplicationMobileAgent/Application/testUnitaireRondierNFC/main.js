@@ -110,7 +110,7 @@ function verifierTagPointeauNFC(){
     var pointeauCourant= deroulementRonde.listePointeaux.currentIndex;
     var listeTag = bdd.obtenirListeTagPointeaux();
     var tagPointeau = listeTag[pointeauCourant];
-    var tagCourant = lecteurNFC.recupererTag();
+    var tagCourant = textFieldTag.text
     var resultat;
     console.log("tag courant : " + tagCourant);
     console.log("tag du pointeau : " + tagPointeau);

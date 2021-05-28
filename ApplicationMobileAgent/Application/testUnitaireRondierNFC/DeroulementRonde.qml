@@ -248,6 +248,14 @@ Page {
             }
         }
 
+        Connections {
+            target: lecteurNFC
+            onTagDetecte: {
+                //console.log("Tag : " + tagNFC)
+                textFieldTag.text = tagNFC
+            }
+        }
+
         TextField {
             id: textFieldTag
             x: 274

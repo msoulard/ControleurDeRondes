@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Identification.qml</file>
+        <file>SelectionRonde.qml</file>
+        <file>main.js</file>
+        <file>DeroulementRonde.qml</file>
+    </qresource>
+</RCC>

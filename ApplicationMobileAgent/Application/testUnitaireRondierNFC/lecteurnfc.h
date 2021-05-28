@@ -10,6 +10,7 @@
 #define LECTEURNFC_H
 
 #include <QObject>
+#include <qqml.h>
 
 QT_FORWARD_DECLARE_CLASS(QNearFieldManager)
 QT_FORWARD_DECLARE_CLASS(QNearFieldTarget)
@@ -17,10 +18,10 @@ QT_FORWARD_DECLARE_CLASS(QNearFieldTarget)
 class LecteurNFC : public QObject
 {
     Q_OBJECT
+
 public:
     explicit LecteurNFC(QObject *parent = nullptr);
     ~LecteurNFC();
-    Q_INVOKABLE QString recupererTag(const QString tagNfc);
 
 signals:
     void tagDetecte(QString tagNFC);
@@ -31,6 +32,7 @@ public slots:
 
 private:
     QNearFieldManager *manager;
+    QString tag;
 
 
 };

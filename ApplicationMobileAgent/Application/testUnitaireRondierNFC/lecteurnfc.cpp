@@ -43,16 +43,6 @@ LecteurNFC::~LecteurNFC()
 }
 
 /**
- * @brief LecteurNFC::RecupererTag
- * @param tagNfc
- * @return
- */
-QString LecteurNFC::recupererTag(const QString tagNfc)
-{
-    return tagNfc;
-}
-
-/**
  * @brief LecteurNFC::targetDetected
  * @param target
  */
