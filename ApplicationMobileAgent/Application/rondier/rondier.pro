@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         accesbdd.cpp \
         agent.cpp \
+        anomalie.cpp \
         main.cpp \
         pointeau.cpp \
         ronde.cpp \
@@ -42,6 +43,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     accesbdd.h \
     agent.h \
+    anomalie.h \
     pointeau.h \
     ronde.h \
     rondier.h

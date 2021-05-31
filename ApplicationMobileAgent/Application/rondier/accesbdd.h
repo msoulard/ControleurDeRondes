@@ -20,6 +20,9 @@ public:
     bool obtenirAgent(QString _numBadge, Agent &_agent);
     bool obtenirListeRondes(QList<Ronde*> &_listeRondes, int _idAgent);
     bool obtenirListePointeaux(QList<Pointeau*> &_listePointeaux,int _idRonde);
+    int mettreAJourTableAEteEffectueePar(int _idAgent, int _idRonde, QDateTime _horodatage);
+    int mettreAJourTableAEteScanneParSansAnomalie(int _idHistoriqueRonde, int _idPointeau, int _ordre, QDateTime _horodatage);
+    bool mettreAJourTableAEteScanneParAvecAnomalie(int _idAnomalie, int _idHistoriquePointeau);
 
 signals:
 private:

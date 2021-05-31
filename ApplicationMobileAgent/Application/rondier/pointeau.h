@@ -9,12 +9,12 @@ class Pointeau : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString m_emplacment READ getEmplacement WRITE setEmplacement NOTIFY emplacementChanged)
+    Q_PROPERTY(QString m_emplacement READ getEmplacement WRITE setEmplacement NOTIFY emplacementChanged)
     Q_PROPERTY(QString m_couleur READ getCouleur WRITE setCouleur NOTIFY couleurChanged)
 
 public:
     explicit Pointeau(QObject *parent = nullptr);
-    Q_INVOKABLE void horodater();
+    void horodater();
 
     QString getCouleur() const;
     void setCouleur(const QString &value);
@@ -45,6 +45,9 @@ public:
 
     QString getTempsMaxi() const;
     void setTempsMaxi(const QString &value);
+
+    QDateTime getHorodatage() const;
+    void setHorodatage(const QDateTime &value);
 
 signals:
     void emplacementChanged();

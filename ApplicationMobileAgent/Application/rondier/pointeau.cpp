@@ -110,3 +110,13 @@ void Pointeau::setTempsMaxi(const QString &value)
 {
     tempsMaxi = value;
 }
+
+QDateTime Pointeau::getHorodatage() const
+{
+    return horodatage;
+}
+
+void Pointeau::setHorodatage(const QDateTime &value)
+{
+    horodatage = value;
+}

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/db">
+        <file>Rondier_BDDRemplie.db</file>
+    </qresource>
+</RCC>

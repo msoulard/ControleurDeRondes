@@ -15,7 +15,7 @@ Page {
     property alias buttonIgnorerLePointeau: buttonIgnorerLePointeau
     property alias nomRonde : nomRonde
     property alias listePointeaux : listePointeaux
-    property alias emplacementPointeau : emplacementPointeau
+    property alias designationPointeau : designationPointeau
     property alias tempsMiniPointeau: tempsMiniPointeau
     property alias tempsMaxiPointeau: tempsMaxiPointeau
     property alias batimentPointeau: batimentPointeau
@@ -37,6 +37,7 @@ Page {
         Text {
             id: titre
             width: parent.width
+            Layout.columnSpan: 2
             color: "#9c0101"
             text: qsTr("DEROULEMENT DE LA RONDE")
             verticalAlignment: Text.AlignVCenter
@@ -44,7 +45,6 @@ Page {
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 25
-            Layout.columnSpan: 2
         }
 
         Text {
@@ -66,15 +66,13 @@ Page {
             font.underline: true
             font.pixelSize: 15
             Layout.columnSpan: 2
-            text: Fonction.obtenirNomRondeCourante();
         }
         Rectangle {
-            width:217
-            height: 192
+            width:parent.width/3
+            height: parent.height/2
             border.width: 2
             radius: 5
-            x:29
-            y:110
+            y: nomRonde.y+nomRonde.height+10
             Layout.rowSpan: 10
 
             Component {
@@ -129,70 +127,59 @@ Page {
                 anchors.topMargin: 36
                 anchors.bottomMargin: 40
                 anchors.fill: parent
-                model: listeEmplacements
                 delegate: representation
             }
         }
 
-        Text {
-            id: emplacementPointeau
-            x: 274
-            y: 135
-            width: 172
-            height: 14
-            font.pixelSize: 12
+        GroupBox {
+            id: groupBoxPointeau
+            width: parent.width/2
+            height: designationPointeau.height+batimentPointeau.height+etagePointeau.height+tempsMiniPointeau.height+tempsMaxiPointeau.height
             Layout.column: 1
-            Layout.row: 3
-        }
+            Layout.row: 2
+            Layout.rowSpan: 5
+            title: qsTr("Pointeau suivant :")
 
-        Text {
-            id: batimentPointeau
-            x: 274
-            y: 155
-            width: 172
-            height: 14
-            font.pixelSize: 12
-            Layout.column: 1
-            Layout.row: 4
-        }
+            ColumnLayout{
+                anchors.fill: parent
+                Text {
+                    id: designationPointeau
+                    width: parent.width
+                    font.pixelSize: 12
+                }
 
-        Text {
-            id: etagePointeau
-            x: 274
-            y: 175
-            width: 172
-            height: 14
-            font.pixelSize: 12
-            Layout.column: 1
-            Layout.row: 5
-        }
+                Text {
+                    id: batimentPointeau
+                    y: designationPointeau.y+designationPointeau.height+5
+                    width: parent.width
+                    font.pixelSize: 12
+                }
 
-        Text {
-            id: tempsMiniPointeau
-            x: 274
-            y: 195
-            width: 172
-            height: 14
-            font.pixelSize: 12
-            Layout.column: 1
-            Layout.row: 6
-        }
+                Text {
+                    id: etagePointeau
+                    y: batimentPointeau.y+batimentPointeau.height+5
+                    width: parent.width
+                    font.pixelSize: 12
+                }
 
-        Text {
-            id: tempsMaxiPointeau
-            x: 274
-            y: 215
-            width: 172
-            height: 14
-            font.pixelSize: 12
-            Layout.column: 1
-            Layout.row: 7
+                Text {
+                    id: tempsMiniPointeau
+                    y: etagePointeau.y+etagePointeau.height+5
+                    width: parent.width
+                    font.pixelSize: 12
+                }
+
+                Text {
+                    id: tempsMaxiPointeau
+                    y: tempsMiniPointeau.y+tempsMiniPointeau.height+5
+                    width: parent.width
+                    font.pixelSize: 12
+                }
+            }
         }
 
         Button {
             id: buttonPointeauScanne
-            x: 274
-            y: 294
             Layout.column: 1
             Layout.row: 9
             text: qsTr("Pointeau scanné")
@@ -216,7 +203,6 @@ Page {
                         listePointeaux.incrementCurrentIndex();
                     }
                     else{
-                        bdd.mettreAJourTableAEteEffectueePar();
                         //il met le pointeau courant en vert
                         item.m_couleur = "#00FF00";
                         //il incrémente l'index courant
@@ -239,8 +225,6 @@ Page {
 
         TextField {
             id: textFieldTag
-            x: 274
-            y: 248
             Layout.column: 1
             Layout.row: 8
             placeholderText: qsTr("Numéro de badge")
@@ -248,8 +232,6 @@ Page {
 
         Button {
             id: buttonAnomalie
-            x: 346
-            y: 353
             Layout.column: 0
             Layout.row: 13
             text: qsTr("Anomalie")
@@ -262,8 +244,6 @@ Page {
 
         Button {
             id: buttonIgnorerLePointeau
-            x: 150
-            y: 353
             Layout.column: 1
             Layout.row: 13
             text: qsTr("Ignorer le pointeau")
@@ -283,8 +263,6 @@ Page {
 
         Button {
             id: buttonInterrompreLaRonde
-            x: 21
-            y: 353
             width: 146
             height: 40
             Layout.column: 0

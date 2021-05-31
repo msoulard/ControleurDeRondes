@@ -76,7 +76,10 @@ bool AccesBdd::obtenirListePointeaux(QList<Pointeau *> &_listePointeaux, int _id
     bool retour = false;
     if(db.isOpen()){
         QSqlQuery requete(db);
-        requete.prepare("SELECT pointeaux.id_pointeau, pointeaux.designation, pointeaux.tag_mifare, pointeaux.batiment, pointeaux.etage, pointeaux.emplacement, comporte.ordre, comporte.tempsmini, comporte.tempsmaxi FROM pointeaux INNER JOIN comporte ON comporte.id_pointeau = pointeaux.id_pointeau WHERE comporte.id_ronde = :id ");
+        requete.prepare("SELECT pointeaux.id_pointeau, pointeaux.designation, pointeaux.tag_mifare, "
+                        "pointeaux.batiment, pointeaux.etage, pointeaux.emplacement, comporte.ordre, "
+                        "comporte.tempsmini, comporte.tempsmaxi FROM pointeaux INNER JOIN comporte ON "
+                        "comporte.id_pointeau = pointeaux.id_pointeau WHERE comporte.id_ronde = :id ORDER BY ordre");
         requete.bindValue(":id", _idRonde);
         if(!requete.exec()){
             qDebug() << "problème lors de la requête SQL (pointeaux) : " << requete.lastError();
@@ -101,5 +104,65 @@ bool AccesBdd::obtenirListePointeaux(QList<Pointeau *> &_listePointeaux, int _id
         }
     }
     //qDebug() << listePointeaux;
+    return retour;
+}
+
+int AccesBdd::mettreAJourTableAEteEffectueePar(int _idAgent, int _idRonde, QDateTime _horodatage)
+{
+    int retour = -1;
+    if(db.isOpen()){
+        QSqlQuery requete(db);
+        requete.prepare("INSERT INTO aEteEffectueePar (id_ronde, id_agent, date_heure) VALUES (:idRonde, :idAgent, :horodatage);");
+        requete.bindValue(":idRonde", _idRonde);
+        requete.bindValue(":idAgent",_idAgent);
+        requete.bindValue(":horodatage", _horodatage.toString("yyyy-MM-dd HH:mm:ss"));
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar) : " << requete.lastError();
+        }
+        else{
+            retour = requete.lastInsertId().toInt();
+        }
+    }
+
+    return retour;
+}
+
+int AccesBdd::mettreAJourTableAEteScanneParSansAnomalie(int _idHistoriqueRonde, int _idPointeau, int _ordre, QDateTime _horodatage)
+{
+    int retour = -1;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+            requete.prepare("INSERT INTO aEteScannePar (id_pointeau, ordre, date_heure,"
+                            " id_historiqueRonde) VALUES (:idPointeau, :ordre, :horodatage, "
+                            ":idHistoriqueRonde);");
+            requete.bindValue(":idPointeau", _idPointeau);
+            requete.bindValue(":ordre", _ordre);
+            requete.bindValue(":horodatage", _horodatage.toString("yyyy-MM-dd HH:mm:ss"));
+            requete.bindValue(":idHistoriqueRonde", _idHistoriqueRonde);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar sans anomalie) : " << requete.lastError();
+        }
+        else{
+            retour = requete.lastInsertId().toInt();
+        }
+    }
+    return retour;
+}
+
+bool AccesBdd::mettreAJourTableAEteScanneParAvecAnomalie(int _idAnomalie, int _idHistoriquePointeau)
+{
+    bool retour = false;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+        requete.prepare("UPDATE aEteScannePar SET id_anomalie = :idAnomalie WHERE id = :idHistoriquePointeau;");
+        requete.bindValue(":idAnomalie", _idAnomalie);
+        requete.bindValue(":idHistoriquePointeau", _idHistoriquePointeau);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar avec anomalie) : " << requete.lastError();
+        }
+        else{
+            retour = true;
+        }
+    }
     return retour;
 }

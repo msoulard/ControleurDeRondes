@@ -27,7 +27,6 @@ Page {
         text: qsTr("Veuillez scanner votre badge avec votre smartphone pour vous identifier")
         horizontalAlignment: Text.AlignHCenter
         wrapMode: Text.WordWrap
-
         font.bold: true
         font.pixelSize: 20
     }
