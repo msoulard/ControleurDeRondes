@@ -27,6 +27,7 @@ private:
     AccesBdd bdd;
     Agent agent;
     QList<Ronde*> listeRondes;
+    QList<Pointeau*> listePointeaux;
     Ronde *rondeCourante;
 };
 

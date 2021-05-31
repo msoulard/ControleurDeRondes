@@ -84,7 +84,7 @@ Page {
                     spacing: 10
                     //Déclaration de variables QML qui font le lien avec celles en C++
                     required property string m_couleur
-                    required property string m_designation
+                    required property string m_emplacement
                     Text { text: " " } // pour ne pas coller la représentation graphique
                     Column {
                         Rectangle       // premier rectangle
@@ -114,7 +114,7 @@ Page {
                     {
                         id: designationPointeau
                         y:8
-                        text: m_designation
+                        text: m_emplacement
                         MouseArea{
                             anchors.fill: parent
                             onClicked: listePointeaux.currentIndex = index
@@ -129,7 +129,7 @@ Page {
                 anchors.topMargin: 36
                 anchors.bottomMargin: 40
                 anchors.fill: parent
-                model: pointeauxModel
+                model: listeEmplacements
                 delegate: representation
             }
         }

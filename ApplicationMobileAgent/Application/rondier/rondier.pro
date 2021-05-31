@@ -18,6 +18,7 @@ SOURCES += \
         accesbdd.cpp \
         agent.cpp \
         main.cpp \
+        pointeau.cpp \
         ronde.cpp \
         rondier.cpp
 
@@ -41,5 +42,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     accesbdd.h \
     agent.h \
+    pointeau.h \
     ronde.h \
     rondier.h

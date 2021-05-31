@@ -3,7 +3,7 @@
 Rondier::Rondier(QQmlApplicationEngine &_engine, QObject *parent) : QObject(parent),
     engine(_engine)
 {
-    bdd.connexion("/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
+    bdd.connexion("C:/Users/soula/Documents/Cours/SNIR2/Projet 2021/Maëva/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
 
 
 }
@@ -29,7 +29,22 @@ QStringList Rondier::obtenirRondes()
 
 QString Rondier::obtenirNomRondeCourante(int _index)
 {
+    QList<QObject*> listeEmplacementPointeaux;
     rondeCourante = listeRondes.at(_index);
+    if(bdd.obtenirListePointeaux(listePointeaux, _index)){
+        foreach (Pointeau *p, listePointeaux) {
+            if (p==listePointeaux.first()){   // premier pointeau en bleu
+                p->setCouleur("#0000FF");
+            }
+            else{ //les suivant en noir
+                p->setCouleur("#000000");
+            }
+            p->setEmplacement(p->getEmplacement());
+            listeEmplacementPointeaux.append(p);
+        }
+        //permet de récupérer les emplacements des pointeaux du C++ en QML
+        engine.rootContext()->setContextProperty("listeEmplacements", QVariant::fromValue(listeEmplacementPointeaux));
+    }
     return rondeCourante->getNom();
 }
 

@@ -9,6 +9,7 @@
 
 #include "agent.h"
 #include "ronde.h"
+#include "pointeau.h"
 
 class AccesBdd : public QObject
 {
@@ -18,6 +19,7 @@ public:
     bool connexion(QString _emplacementFichier);
     bool obtenirAgent(QString _numBadge, Agent &_agent);
     bool obtenirListeRondes(QList<Ronde*> &_listeRondes, int _idAgent);
+    bool obtenirListePointeaux(QList<Pointeau*> &_listePointeaux,int _idRonde);
 
 signals:
 private:

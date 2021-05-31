@@ -69,3 +69,37 @@ bool AccesBdd::obtenirListeRondes(QList<Ronde *> &_listeRondes, int _idAgent)
     //qDebug() << "requête SQL :" << listeRondes;
     return retour;
 }
+
+bool AccesBdd::obtenirListePointeaux(QList<Pointeau *> &_listePointeaux, int _idRonde)
+{
+    Pointeau *unPointeau;
+    bool retour = false;
+    if(db.isOpen()){
+        QSqlQuery requete(db);
+        requete.prepare("SELECT pointeaux.id_pointeau, pointeaux.designation, pointeaux.tag_mifare, pointeaux.batiment, pointeaux.etage, pointeaux.emplacement, comporte.ordre, comporte.tempsmini, comporte.tempsmaxi FROM pointeaux INNER JOIN comporte ON comporte.id_pointeau = pointeaux.id_pointeau WHERE comporte.id_ronde = :id ");
+        requete.bindValue(":id", _idRonde);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (pointeaux) : " << requete.lastError();
+        }
+        else{
+            while(requete.next()){
+                retour = true;
+                unPointeau = new Pointeau();
+                unPointeau->setIdPointeau(requete.value("id_pointeau").toInt());
+                unPointeau->setDesignation(requete.value("designation").toString());
+                unPointeau->setTagMifare(requete.value("tag_mifare").toString());
+                unPointeau->setBatiment(requete.value("batiment").toString());
+                unPointeau->setEtage(requete.value("etage").toString());
+                unPointeau->setEmplacement(requete.value("emplacement").toString());
+                unPointeau->setOrdre(requete.value("ordre").toInt());
+                //mid(0,8) permet d'afficher les 8 premiers caractères (heures:minutes:secondes)
+                unPointeau->setTempsMini(requete.value("tempsmini").toString().mid(0,8));
+                //left(8) permet d'afficher les 8 premiers caractères (heures:minutes:secondes)
+                unPointeau->setTempsMaxi(requete.value("tempsmaxi").toString().left(8));
+                _listePointeaux.append(unPointeau);
+            }
+        }
+    }
+    //qDebug() << listePointeaux;
+    return retour;
+}
