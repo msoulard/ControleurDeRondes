@@ -53,11 +53,13 @@ ApplicationWindow{
                 tempsMaxiPointeau.text = qsTr("Temps maxi : " + Fonction.obtenirTempsMaxiPointeau());
             }
             buttonAnomalie.onClicked: {
+                Fonction.verifAppuieBouton = 0;
                 anomalie.emplacementPointeau.text = qsTr("Emplacement : " + Fonction.obtenirEmplacementPointeauAnomalie());
                 anomalie.designationPointeau.text = qsTr("Pointeau : " + Fonction.obtenirDesignationPointeauAnomalie());
                 Fonction.changerPage();
             }
             buttonIgnorerLePointeau.onClicked: {
+                Fonction.verifAppuieBouton = 1;
                 anomalie.emplacementPointeau.text = qsTr("Emplacement : " + Fonction.obtenirEmplacementPointeauAnomalie());
                 anomalie.designationPointeau.text = qsTr("Pointeau : " + Fonction.obtenirDesignationPointeauAnomalie());
                 anomalie.textAreaDescriptionAnomalie.text = qsTr("Pointeau ignoré");
@@ -89,6 +91,7 @@ ApplicationWindow{
                             id: a_valider
                             text: "Valider"
                             onClicked: {
+                                Fonction.verifAppuieBouton = -1;
                                 dialogVerifAnnulation.accepted();
                                 var item = deroulementRonde.listePointeaux.itemAtIndex(deroulementRonde.listePointeaux.currentIndex-1);
                                 //l'état devient vert
@@ -111,7 +114,10 @@ ApplicationWindow{
             Dialog{
                 id: dialogVerifValidation
                 title: "Validation de l'anomalie"
-                onAccepted: leRondier.currentIndex = leRondier.currentIndex-1;
+                onAccepted: {
+                    Fonction.declarerAnomalie();
+                    leRondier.currentIndex = leRondier.currentIndex-1;
+                }
                 onRejected: {
                     this.close()
                 }

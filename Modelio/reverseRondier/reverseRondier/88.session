@@ -1,0 +1,27 @@
+window_sizes 1280 959 314 960 803 104
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128088 // rondier
+    960 803 50 A2 0 0
+end
+show_stereotypes
+marked
+  attribute_ref 128088 // db
+  operation_ref 128088 // AccesBdd
+  operation_ref 128344 // obtenirAgent
+  operation_ref 128216 // connexion
+  operation_ref 128472 // obtenirListeRondes
+  operation_ref 128600 // obtenirListePointeaux
+  operation_ref 128728 // mettreAJourTableAEteEffectueePar
+  operation_ref 128984 // mettreAJourTableAEteScanneParAvecAnomalie
+  operation_ref 129112 // mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore
+  operation_ref 128856 // mettreAJourTableAEteScanneParSansAnomalie
+  operation_ref 129240 // mettreAJourTableAnomalies
+end
+selected operation_ref 128600 // obtenirListePointeaux
+open
+  classview_ref 128088 // rondier
+  class_ref 128088 // AccesBdd
+  class_ref 128728 // Rondier
+end
+end

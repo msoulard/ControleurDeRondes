@@ -1,0 +1,121 @@
+class AccesBdd
+!!!128088.cpp!!!	AccesBdd(inout parent : QObject = nullptr)
+
+!!!128216.cpp!!!	connexion(in _emplacementFichier : QString) : bool
+    bool retour = false;
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName(_emplacementFichier);
+    if(db.open()){
+        retour = true;
+        qDebug() << "Ouverture BDD réussie" ;
+    }
+    else{
+        qDebug() << "Problème à l'ouverture de la BDD" << db.lastError();
+    }
+    return retour;
+!!!128344.cpp!!!	obtenirAgent(in _numBadge : QString, inout _agent : Agent) : bool
+    bool retour = false;
+    if(db.isOpen())
+    {
+        QSqlQuery requete(db);
+        requete.prepare("SELECT agents.nom, agents.prenom, agents.id_agent FROM agents WHERE agents.numbadge=:num");
+        requete.bindValue(":num", _numBadge);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (agents) : " << requete.lastError();
+        }
+        else{
+            while(requete.next()){
+                retour = true;
+                _agent.setNom(requete.value("nom").toString());
+                _agent.setPrenom(requete.value("prenom").toString());
+                _agent.setId(requete.value("id_agent").toInt());
+                _agent.setNumBadge(_numBadge);
+            }
+        }
+    }
+    return retour;
+!!!128728.cpp!!!	mettreAJourTableAEteEffectueePar(in _idAgent : int, in _idRonde : int, in _horodatage : QDateTime) : int
+    int retour = -1;
+    if(db.isOpen()){
+        QSqlQuery requete(db);
+        requete.prepare("INSERT INTO aEteEffectueePar (id_ronde, id_agent, date_heure) VALUES (:idRonde, :idAgent, :horodatage);");
+        requete.bindValue(":idRonde", _idRonde);
+        requete.bindValue(":idAgent",_idAgent);
+        requete.bindValue(":horodatage", _horodatage.toString("yyyy-MM-dd HH:mm:ss"));
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar) : " << requete.lastError();
+        }
+        else{
+            retour = requete.lastInsertId().toInt();
+        }
+    }
+
+    return retour;
+!!!128856.cpp!!!	mettreAJourTableAEteScanneParSansAnomalie(in _idHistoriqueRonde : int, in _idPointeau : int, in _ordre : int, in _horodatage : QDateTime) : int
+    int retour = -1;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+            requete.prepare("INSERT INTO aEteScannePar (id_pointeau, ordre, date_heure,"
+                            " id_historiqueRonde) VALUES (:idPointeau, :ordre, :horodatage, "
+                            ":idHistoriqueRonde);");
+            requete.bindValue(":idPointeau", _idPointeau);
+            requete.bindValue(":ordre", _ordre);
+            requete.bindValue(":horodatage", _horodatage.toString("yyyy-MM-dd HH:mm:ss"));
+            requete.bindValue(":idHistoriqueRonde", _idHistoriqueRonde);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar sans anomalie) : " << requete.lastError();
+        }
+        else{
+            retour = requete.lastInsertId().toInt();
+        }
+    }
+    return retour;
+!!!128984.cpp!!!	mettreAJourTableAEteScanneParAvecAnomalie(in _idAnomalie : int, in _idHistoriquePointeau : int) : bool
+    bool retour = false;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+        requete.prepare("UPDATE aEteScannePar SET id_anomalie = :idAnomalie WHERE id = :idHistoriquePointeau;");
+        requete.bindValue(":idAnomalie", _idAnomalie);
+        requete.bindValue(":idHistoriquePointeau", _idHistoriquePointeau);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar avec anomalie) : " << requete.lastError();
+        }
+        else{
+            retour = true;
+        }
+    }
+    return retour;
+!!!129112.cpp!!!	mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(in _idAnomalie : int, in _idHistoriqueRonde : int, in _idPointeau : int, in _ordre : int, in _horodatage : QDateTime) : bool
+    bool retour = false;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+            requete.prepare("INSERT INTO aEteScannePar (id_pointeau, id_anomalie, ordre, date_heure,"
+                            " id_historiqueRonde) VALUES (:idPointeau, :idAnomalie, :ordre, :horodatage, "
+                            ":idHistoriqueRonde);");
+            requete.bindValue(":idPointeau", _idPointeau);
+            requete.bindValue(":idAnomalie", _idAnomalie);
+            requete.bindValue(":ordre", _ordre);
+            requete.bindValue(":horodatage", _horodatage.toString("yyyy-MM-dd HH:mm:ss"));
+            requete.bindValue(":idHistoriqueRonde", _idHistoriqueRonde);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar sans anomalie) : " << requete.lastError();
+        }
+        else{
+            retour = true;
+        }
+    }
+    return retour;
+!!!129240.cpp!!!	mettreAJourTableAnomalies(in _description : QString) : int
+    int retour = -1;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+        requete.prepare("INSERT INTO anomalies (description) VALUES (:description);");
+        requete.bindValue(":description", _description);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table anomalies) : " << requete.lastError();
+        }
+        else{
+            retour = requete.lastInsertId().toInt();
+        }
+    }
+    return retour;

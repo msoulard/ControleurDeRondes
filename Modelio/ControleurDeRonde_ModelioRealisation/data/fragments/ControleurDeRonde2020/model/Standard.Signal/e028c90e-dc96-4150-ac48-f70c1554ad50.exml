@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="lieuChanged" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="designationChanged" version="4">
   <OBJECT>
-    <ID name="lieuChanged" mc="Standard.Signal" uid="e028c90e-dc96-4150-ac48-f70c1554ad50"/>
+    <ID name="designationChanged" mc="Standard.Signal" uid="e028c90e-dc96-4150-ac48-f70c1554ad50"/>
     <PID name="Pointeaux" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
     <ATTRIBUTES>
       <ATT name="IsEvent">false</ATT>
@@ -11,7 +11,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[lieuChanged]]></ATT>
+      <ATT name="Name"><![CDATA[designationChanged]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES></DEPENDENCIES>

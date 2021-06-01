@@ -1,0 +1,19 @@
+class Agent
+!!!129368.cpp!!!	Agent(inout parent : QObject = nullptr)
+
+!!!129496.cpp!!!	getNom() : QString
+    return nom;
+!!!129624.cpp!!!	setNom(in value : QString) : void
+    nom = value;
+!!!129752.cpp!!!	getPrenom() : QString
+    return prenom;
+!!!129880.cpp!!!	setPrenom(in value : QString) : void
+    prenom = value;
+!!!130008.cpp!!!	getId() : int
+    return id;
+!!!130136.cpp!!!	setId(in value : int) : void
+    id = value;
+!!!130264.cpp!!!	getNumBadge() : QString
+    return numBadge;
+!!!130392.cpp!!!	setNumBadge(in value : QString) : void
+    numBadge = value;

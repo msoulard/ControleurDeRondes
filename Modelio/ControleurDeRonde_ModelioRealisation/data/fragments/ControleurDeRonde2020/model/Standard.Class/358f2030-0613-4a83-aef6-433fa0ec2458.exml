@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Pointeaux" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Pointeau" version="4">
   <OBJECT>
-    <ID name="Pointeaux" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
-    <PID name="Application smartphone agent" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+    <ID name="Pointeau" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
+    <PID name="Rondier" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Pointeaux]]></ATT>
+      <ATT name="Name"><![CDATA[Pointeau]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="HorodaterPointeau" mc="Standard.Operation" uid="5b807808-d399-4ead-9b1f-3ef03f63dba1"/>
+          <ID name="getDesignation" mc="Standard.Operation" uid="b9f03e15-b4b1-48ff-9976-43a87a80e42b"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -25,109 +25,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[HorodaterPointeau]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="_id_pointeau" mc="Standard.Parameter" uid="9d5b7429-2e4c-48ee-ad78-3a136f039750"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[_id_pointeau]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="ChangerCouleur" mc="Standard.Operation" uid="6e00d7c5-e46a-44da-ad11-4e46ff9cc16a"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[ChangerCouleur]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="etat" mc="Standard.Parameter" uid="16f4deb9-c658-40c8-afbb-3bd6fc74f23d"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[etat]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="581b85dd-da58-46cb-a3e1-139c4b5c3745"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[p2]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="lieu" mc="Standard.Operation" uid="b9f03e15-b4b1-48ff-9976-43a87a80e42b"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[lieu]]></ATT>
+            <ATT name="Name"><![CDATA[getDesignation]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -158,7 +56,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="etat" mc="Standard.Operation" uid="6a4b6f64-f282-472f-926e-2a4f93b9b183"/>
+          <ID name="getCouleur" mc="Standard.Operation" uid="6a4b6f64-f282-472f-926e-2a4f93b9b183"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -166,7 +64,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[etat]]></ATT>
+            <ATT name="Name"><![CDATA[getCouleur]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -197,7 +95,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setLieu" mc="Standard.Operation" uid="ee8f8d2a-3988-41c0-ad1f-6a30f336ffc1"/>
+          <ID name="setDesignation" mc="Standard.Operation" uid="ee8f8d2a-3988-41c0-ad1f-6a30f336ffc1"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -205,13 +103,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setLieu]]></ATT>
+            <ATT name="Name"><![CDATA[setDesignation]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="&amp;lieu" mc="Standard.Parameter" uid="ba33f3f8-73ec-41ae-afcb-5133c09ce47d"/>
+                <ID name="value" mc="Standard.Parameter" uid="ba33f3f8-73ec-41ae-afcb-5133c09ce47d"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -223,7 +121,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[&lieu]]></ATT>
+                  <ATT name="Name"><![CDATA[value]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -236,7 +134,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setEtat" mc="Standard.Operation" uid="5f2e775b-5cd8-4ae3-90c7-3b78294be786"/>
+          <ID name="setCouleur" mc="Standard.Operation" uid="5f2e775b-5cd8-4ae3-90c7-3b78294be786"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -244,13 +142,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setEtat]]></ATT>
+            <ATT name="Name"><![CDATA[setCouleur]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="&amp;etat" mc="Standard.Parameter" uid="6ede4f40-dc6a-4202-a3f4-5df4f6c15be7"/>
+                <ID name="value" mc="Standard.Parameter" uid="6ede4f40-dc6a-4202-a3f4-5df4f6c15be7"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -262,7 +160,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[&etat]]></ATT>
+                  <ATT name="Name"><![CDATA[value]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -277,7 +175,7 @@
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="m_etat" mc="Standard.Attribute" uid="f40a0b11-d35f-44aa-bd2a-f6dda347ea3b"/>
+          <ID name="designation" mc="Standard.Attribute" uid="f40a0b11-d35f-44aa-bd2a-f6dda347ea3b"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -291,7 +189,7 @@
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[m_etat]]></ATT>
+            <ATT name="Name"><![CDATA[designation]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -301,7 +199,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="m_lieu" mc="Standard.Attribute" uid="860082a8-1f7b-4d73-8f50-f6ede7af53df"/>
+          <ID name="couleur" mc="Standard.Attribute" uid="860082a8-1f7b-4d73-8f50-f6ede7af53df"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -315,7 +213,7 @@
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[m_lieu]]></ATT>
+            <ATT name="Name"><![CDATA[couleur]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -381,8 +279,8 @@
         </OBJECT>
       </COMP>
       <COMP relation="OwnedElement">
-        <COMPID name="lieuChanged" mc="Standard.Signal" uid="e028c90e-dc96-4150-ac48-f70c1554ad50"/>
-        <COMPID name="etatChanged" mc="Standard.Signal" uid="298b5dd5-a737-401e-922c-bcb3315d8bad"/>
+        <COMPID name="designationChanged" mc="Standard.Signal" uid="e028c90e-dc96-4150-ac48-f70c1554ad50"/>
+        <COMPID name="couleurChanged" mc="Standard.Signal" uid="298b5dd5-a737-401e-922c-bcb3315d8bad"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

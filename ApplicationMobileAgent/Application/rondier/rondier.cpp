@@ -3,10 +3,14 @@
 Rondier::Rondier(QQmlApplicationEngine &_engine, QObject *parent) : QObject(parent),
     engine(_engine)
 {
-    bdd.connexion("/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
+    //emplacement BDD téléphone(/data/data/org.qtproject.rondier/db/Rondier_BDDRemplie.db)
+    //emplacement BDD ordi(/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db)
+    bdd.connexion("/data/data/org.qtproject.rondier/db/Rondier_BDDRemplie.db");
     ordre = 0;
     idHistoriqueRonde = -1;
     idHistoriquePointeau = -1;
+    //permet de faire le lien entre QML et la classe LecteurNFC
+    engine.rootContext()->setContextProperty("lecteurNFC", &leLecteur);
 }
 
 Rondier::~Rondier()
@@ -166,10 +170,34 @@ void Rondier::mettreAJourTableAEteScanneParSansAnomalieBDD(int _index)
     }
 }
 
-void Rondier::mettreAJourTableAEteScanneParAvecAnomalieBDD(int _idAnomalie)
+void Rondier::mettreAJourTablesAEteScanneParAvecAnomalieEtAnomaliesBDD(QString _description)
 {
-    if(!bdd.mettreAJourTableAEteScanneParAvecAnomalie(_idAnomalie, idHistoriquePointeau)){
-        qDebug() << "bdd à jour avec anomalie (table aEteScannePar)";
+    int idAnomalie = bdd.mettreAJourTableAnomalies(_description);
+    if(idAnomalie != -1){
+        if(!bdd.mettreAJourTableAEteScanneParAvecAnomalie(idAnomalie, idHistoriquePointeau)){
+            qDebug() << "bdd à jour avec anomalie (table aEteScannePar)";
+        }
+    }
+    else{
+       qDebug() << "pb mise à jour bdd (table anomalies)";
+    }
+
+}
+
+void Rondier::mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD(int _index, int _idAnomalie, QString _description)
+{
+    Pointeau *p = listePointeaux.at(_index);
+    p->horodater();
+    if(_idAnomalie == 0){
+        _idAnomalie = bdd.mettreAJourTableAnomalies(_description);
+        if(!bdd.mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(_idAnomalie, idHistoriqueRonde, p->getIdPointeau(), ++ordre, p->getHorodatage())){
+            qDebug() << "bdd à jour avec Pointeau ignoré (table aEteScannePar)";
+        }
+    }
+    else{
+        if(!bdd.mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(_idAnomalie, idHistoriqueRonde, p->getIdPointeau(), ++ordre, p->getHorodatage())){
+            qDebug() << "bdd à jour avec Pointeau ignoré (table aEteScannePar)";
+        }
     }
 }
 

@@ -1,0 +1,50 @@
+class Pointeau
+!!!130520.cpp!!!	Pointeau(inout parent : QObject = nullptr)
+
+!!!130648.cpp!!!	horodater() : void
+    horodatage = QDateTime::currentDateTime();
+    qDebug() << horodatage;
+!!!130776.cpp!!!	getCouleur() : QString
+    return couleur;
+!!!130904.cpp!!!	setCouleur(in value : QString) : void
+    couleur = value;
+!!!131032.cpp!!!	getIdPointeau() : int
+    return idPointeau;
+!!!131160.cpp!!!	setIdPointeau(in value : int) : void
+    idPointeau = value;
+!!!131288.cpp!!!	getDesignation() : QString
+    return designation;
+!!!131416.cpp!!!	setDesignation(in value : QString) : void
+    designation = value;
+!!!131544.cpp!!!	getTagMifare() : QString
+    return tagMifare;
+!!!131672.cpp!!!	setTagMifare(in value : QString) : void
+    tagMifare = value;
+!!!131800.cpp!!!	getBatiment() : QString
+    return batiment;
+!!!131928.cpp!!!	setBatiment(in value : QString) : void
+    batiment = value;
+!!!132056.cpp!!!	getEtage() : QString
+    return etage;
+!!!132184.cpp!!!	setEtage(in value : QString) : void
+    etage = value;
+!!!132312.cpp!!!	getEmplacement() : QString
+    return emplacement;
+!!!132440.cpp!!!	setEmplacement(in value : QString) : void
+    emplacement = value;
+!!!132568.cpp!!!	getOrdre() : int
+    return ordre;
+!!!132696.cpp!!!	setOrdre(in value : int) : void
+    ordre = value;
+!!!132824.cpp!!!	getTempsMini() : QString
+    return tempsMini;
+!!!132952.cpp!!!	setTempsMini(in value : QString) : void
+    tempsMini = value;
+!!!133080.cpp!!!	getTempsMaxi() : QString
+    return tempsMaxi;
+!!!133208.cpp!!!	setTempsMaxi(in value : QString) : void
+    tempsMaxi = value;
+!!!133336.cpp!!!	getHorodatage() : QDateTime
+    return horodatage;
+!!!133464.cpp!!!	setHorodatage(in value : QDateTime) : void
+    horodatage = value;

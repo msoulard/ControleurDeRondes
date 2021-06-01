@@ -166,3 +166,43 @@ bool AccesBdd::mettreAJourTableAEteScanneParAvecAnomalie(int _idAnomalie, int _i
     }
     return retour;
 }
+
+bool AccesBdd::mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(int _idAnomalie, int _idHistoriqueRonde, int _idPointeau, int _ordre, QDateTime _horodatage)
+{
+    bool retour = false;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+            requete.prepare("INSERT INTO aEteScannePar (id_pointeau, id_anomalie, ordre, date_heure,"
+                            " id_historiqueRonde) VALUES (:idPointeau, :idAnomalie, :ordre, :horodatage, "
+                            ":idHistoriqueRonde);");
+            requete.bindValue(":idPointeau", _idPointeau);
+            requete.bindValue(":idAnomalie", _idAnomalie);
+            requete.bindValue(":ordre", _ordre);
+            requete.bindValue(":horodatage", _horodatage.toString("yyyy-MM-dd HH:mm:ss"));
+            requete.bindValue(":idHistoriqueRonde", _idHistoriqueRonde);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table aEteEffectueePar sans anomalie) : " << requete.lastError();
+        }
+        else{
+            retour = true;
+        }
+    }
+    return retour;
+}
+
+int AccesBdd::mettreAJourTableAnomalies(QString _description)
+{
+    int retour = -1;
+    QSqlQuery requete(db);
+    if(db.isOpen()){
+        requete.prepare("INSERT INTO anomalies (description) VALUES (:description);");
+        requete.bindValue(":description", _description);
+        if(!requete.exec()){
+            qDebug() << "problème lors de la requête SQL (mettre à jour table anomalies) : " << requete.lastError();
+        }
+        else{
+            retour = requete.lastInsertId().toInt();
+        }
+    }
+    return retour;
+}

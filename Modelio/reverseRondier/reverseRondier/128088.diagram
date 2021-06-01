@@ -1,0 +1,48 @@
+format 222
+
+classcanvas 128088 class_ref 128088 // AccesBdd
+  classdiagramsettings member_max_width 0 end
+  xyz 363.4 89.2 2000
+end
+classcanvas 128216 class_ref 128344 // Agent
+  classdiagramsettings member_max_width 0 end
+  xyz 507.8 497.8 2000
+end
+classcanvas 128344 class_ref 128600 // Ronde
+  classdiagramsettings member_max_width 0 end
+  xyz 1358 450.7 2000
+end
+classcanvas 128472 class_ref 128472 // Pointeau
+  classdiagramsettings member_max_width 0 end
+  xyz 33.6 453 2005
+end
+classcanvas 128600 class_ref 128728 // Rondier
+  classdiagramsettings member_max_width 0 end
+  xyz 467.8 987.8 2011
+end
+relationcanvas 128728 relation_ref 128728 // <directional composition>
+  from ref 128600 z 2012 to ref 128088
+  role_a_pos 939 337 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128856 relation_ref 128856 // <directional composition>
+  from ref 128600 z 2012 to ref 128216
+  role_a_pos 738 783 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128984 relation_ref 128984 // <unidirectional association>
+  from ref 128600 z 2012 stereotype "<<QList>>" xyz 1166 781.5 2012 to ref 128344
+  role_a_pos 1392 621 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129112 relation_ref 129112 // <unidirectional association>
+  from ref 128600 z 2012 stereotype "<<QList>>" xyz 478.5 956.5 2012 to ref 128472
+  role_a_pos 341 847 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129240 relation_ref 129240 // <unidirectional association>
+  from ref 128600 z 2012 to ref 128344
+  role_a_pos 1379 639 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

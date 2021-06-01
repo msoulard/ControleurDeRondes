@@ -1,3 +1,5 @@
+var verifAppuieBouton = -1;
+
 function obtenirNomAgent(_numBadge) {
     rondier.mettreAJourAgent(_numBadge);
     var prenomNom = agent.obtenirPrenomNom();
@@ -75,7 +77,7 @@ function verifierTagPointeau(){
                 if(tagCourant === listeTag[i]){
                     resultat = i;
                     console.log("index mauvais pointeau scanné : " + resultat);
-                    rondier.mettreAJourTableAEteScanneParAvecAnomalieBDD(1);
+                    rondier.mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD(i, 1);
                 }
             }
         }
@@ -112,4 +114,57 @@ function obtenirEmplacementPointeauAnomalie(){
         emplacementPointeau = listeEmplacementsPointeaux[pointeauCourant-1];
     }
     return emplacementPointeau;
+}
+
+function declarerAnomalie(){
+    var pointeauCourant;
+    var description = anomalie.textAreaDescriptionAnomalie.text;
+    switch (verifAppuieBouton){
+    case 0 :
+        pointeauCourant = deroulementRonde.listePointeaux.currentIndex - 1;
+        rondier.mettreAJourTablesAEteScanneParAvecAnomalieEtAnomaliesBDD(description);
+        console.log("button Anomalie appuyé pour accéder à la page Anomalie");
+        break;
+    case 1 :
+        pointeauCourant = deroulementRonde.listePointeaux.currentIndex-1;
+        rondier.mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD(pointeauCourant, 0, description);
+        console.log("bouton Ignorer pointeau appuyé pour accéder à la page Anomalie");
+        break;
+    default :
+        console.log("pas de bouton appuyé pour accéder à la page Anomalie");
+    }
+}
+
+function verifierTagPointeauNFC(_tag){
+    var pointeauCourant= deroulementRonde.listePointeaux.currentIndex;
+    var listeTag = bdd.obtenirListeTagPointeaux();
+    var tagPointeau = listeTag[pointeauCourant];
+    var tagCourant = _tag;
+    var resultat;
+    console.log("tag courant : " + tagCourant);
+    console.log("tag du pointeau : " + tagPointeau);
+
+    if(pointeauCourant === 0){
+        rondier.mettreAJourTableAEteEffectueeParBDD(pointeauCourant);
+    }
+
+    if(tagCourant === tagPointeau){
+        //le tag est correct
+        resultat = "correct";
+        console.log("pointeau scanné ok");
+        rondier.mettreAJourTableAEteScanneParSansAnomalieBDD(pointeauCourant);
+    }
+    else{
+        console.log("mauvais pointeau scanné");
+        for(var i = 0 ; i < listeTag.length ; i++){
+            if(i !== pointeauCourant){
+                if(tagCourant === listeTag[i]){
+                    resultat = i;
+                    console.log("index mauvais pointeau scanné : " + resultat);
+                    rondier.mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD(i, 1);
+                }
+            }
+        }
+    }
+    return resultat;
 }

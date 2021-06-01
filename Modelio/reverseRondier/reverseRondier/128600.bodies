@@ -1,0 +1,11 @@
+class Ronde
+!!!133848.cpp!!!	Ronde(inout parent : QObject = nullptr)
+
+!!!133976.cpp!!!	getId() : int
+    return id;
+!!!134104.cpp!!!	setId(in value : int) : void
+    id = value;
+!!!134232.cpp!!!	getNom() : QString
+    return nom;
+!!!134360.cpp!!!	setNom(in value : QString) : void
+    nom = value;

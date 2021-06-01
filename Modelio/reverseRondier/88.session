@@ -1,0 +1,13 @@
+window_sizes 1600 875 300 1294 719 104
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128088 // rondier
+    1294 719 100 A3 0 0
+end
+show_stereotypes
+selected class_ref 128856 // Rondier
+open
+  classview_ref 128088 // rondier
+  classview_ref 128216 // rondier
+end
+end

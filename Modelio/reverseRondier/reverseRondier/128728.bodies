@@ -1,0 +1,81 @@
+class Rondier
+!!!134488.cpp!!!	Rondier(inout _engine : QQmlApplicationEngine, inout parent : QObject = nullptr)
+    //emplacement BDD téléphone(/data/data/org.qtproject.rondier/db/Rondier_BDDRemplie.db)
+    //emplacement BDD ordi(/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db)
+    bdd.connexion("/data/data/org.qtproject.rondier/db/Rondier_BDDRemplie.db");
+    ordre = 0;
+    idHistoriqueRonde = -1;
+    idHistoriquePointeau = -1;
+    //permet de faire le lien entre QML et la classe LecteurNFC
+    engine.rootContext()->setContextProperty("lecteurNFC", &leLecteur);
+!!!134616.cpp!!!	~Rondier()
+    delete rondeCourante;
+    foreach(Ronde *r, listeRondes){
+        listeRondes.removeFirst();
+        delete r;
+    }
+    foreach(Pointeau *p, listePointeaux){
+        listePointeaux.removeFirst();
+        delete p;
+    }
+!!!134744.cpp!!!	mettreAJourAgent(in _numBadge : QString) : void
+    if(bdd.obtenirAgent(_numBadge, agent)){
+        //permet de faire le lien entre QML et la classe Agent
+        engine.rootContext()->setContextProperty("agent", &agent);
+    }
+!!!134872.cpp!!!	mettreAJourListePointeaux() : void
+    QList<QObject*> listeEmplacementPointeaux;
+    listePointeaux.clear();
+    if(bdd.obtenirListePointeaux(listePointeaux, rondeCourante->getId())){
+        foreach (Pointeau *p, listePointeaux) {
+            if (p==listePointeaux.first()){   // premier pointeau en bleu
+                p->setCouleur("#0000FF");
+            }
+            else{ //les suivant en noir
+                p->setCouleur("#000000");
+            }
+            p->setEmplacement(p->getEmplacement());
+            listeEmplacementPointeaux.append(p);
+        }
+        //permet de récupérer les emplacements des pointeaux du C++ en QML
+        engine.rootContext()->setContextProperty("pointeauxModel", QVariant::fromValue(listeEmplacementPointeaux));
+    }
+!!!135000.cpp!!!	mettreAJourTableAEteEffectueeParBDD(in _index : int) : void
+    Pointeau *p = listePointeaux.at(_index);
+    p->horodater();
+    idHistoriqueRonde = bdd.mettreAJourTableAEteEffectueePar(agent.getId(), rondeCourante->getId(), p->getHorodatage());
+    if(idHistoriqueRonde != -1){
+        qDebug() << "bdd à jour (table aEteEffectueePar)";
+    }
+!!!135128.cpp!!!	mettreAJourTableAEteScanneParSansAnomalieBDD(in _index : int) : void
+    Pointeau *p = listePointeaux.at(_index);
+    p->horodater();
+    idHistoriquePointeau = bdd.mettreAJourTableAEteScanneParSansAnomalie(idHistoriqueRonde, p->getIdPointeau(), ++ordre, p->getHorodatage());
+    if(idHistoriquePointeau != -1){
+        qDebug() << "bdd à jour sans anomalie (table aEteScannePar)";
+    }
+!!!135256.cpp!!!	mettreAJourTablesAEteScanneParAvecAnomalieEtAnomaliesBDD(in _description : QString) : void
+    int idAnomalie = bdd.mettreAJourTableAnomalies(_description);
+    if(idAnomalie != -1){
+        if(!bdd.mettreAJourTableAEteScanneParAvecAnomalie(idAnomalie, idHistoriquePointeau)){
+            qDebug() << "bdd à jour avec anomalie (table aEteScannePar)";
+        }
+    }
+    else{
+       qDebug() << "pb mise à jour bdd (table anomalies)";
+    }
+
+!!!135384.cpp!!!	mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD(in _index : int, in _idAnomalie : int, in _description : QString = "") : void
+    Pointeau *p = listePointeaux.at(_index);
+    p->horodater();
+    if(_idAnomalie == 0){
+        _idAnomalie = bdd.mettreAJourTableAnomalies(_description);
+        if(!bdd.mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(_idAnomalie, idHistoriqueRonde, p->getIdPointeau(), ++ordre, p->getHorodatage())){
+            qDebug() << "bdd à jour avec Pointeau ignoré (table aEteScannePar)";
+        }
+    }
+    else{
+        if(!bdd.mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(_idAnomalie, idHistoriqueRonde, p->getIdPointeau(), ++ordre, p->getHorodatage())){
+            qDebug() << "bdd à jour avec Pointeau ignoré (table aEteScannePar)";
+        }
+    }

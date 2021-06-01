@@ -11,7 +11,7 @@
 #include "accesbdd.h"
 #include "agent.h"
 #include "ronde.h"
-#include "anomalie.h"
+#include "lecteurnfc.h"
 
 class Rondier : public QObject
 {
@@ -34,12 +34,14 @@ public:
     //méthodes permettant de mettre à jour la base de données
     Q_INVOKABLE void mettreAJourTableAEteEffectueeParBDD(int _index);
     Q_INVOKABLE void mettreAJourTableAEteScanneParSansAnomalieBDD(int _index);
-    Q_INVOKABLE void mettreAJourTableAEteScanneParAvecAnomalieBDD(int _idAnomalie);
+    Q_INVOKABLE void mettreAJourTablesAEteScanneParAvecAnomalieEtAnomaliesBDD(QString _description);
+    Q_INVOKABLE void mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD(int _index, int _idAnomalie, QString _description = "");
 
 signals:
 private:
     QQmlApplicationEngine &engine;
     AccesBdd bdd;
+    LecteurNFC leLecteur;
     Agent agent;
     QList<Ronde*> listeRondes;
     QList<Pointeau*> listePointeaux;
