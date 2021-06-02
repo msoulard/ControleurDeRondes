@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Photo" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Identification.qml" version="4">
   <OBJECT>
-    <ID name="Photo" mc="Standard.Class" uid="60d5d7ee-8014-41a2-87fc-8d2c31795f32"/>
-    <PID name="Application smartphone agent" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+    <ID name="Identification.qml" mc="Standard.Class" uid="28c511ce-8c79-42cb-9ba3-904e1440b9bc"/>
+    <PID name="Rondier" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Photo]]></ATT>
+      <ATT name="Name"><![CDATA[Identification.qml]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="onClickedButtonPrisePhoto" mc="Standard.Operation" uid="ab39c5c7-f2a5-4cb2-937e-6713b05cfaf5"/>
+          <ID name="onClickedButtonValiderBadge" mc="Standard.Operation" uid="86d6dc43-7b50-4795-844b-cc4076e1ed7d"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -25,7 +25,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[onClickedButtonPrisePhoto]]></ATT>
+            <ATT name="Name"><![CDATA[onClickedButtonValiderBadge]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>

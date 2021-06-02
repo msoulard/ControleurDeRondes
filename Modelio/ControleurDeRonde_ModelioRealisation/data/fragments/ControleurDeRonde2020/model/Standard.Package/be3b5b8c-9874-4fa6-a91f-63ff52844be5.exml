@@ -19,18 +19,11 @@
         <COMPID name="Prendre une anomalie en photo" mc="Standard.UseCase" uid="6f94b44a-9923-43e5-8c05-c4feabdde2b7"/>
         <COMPID name="Horodater un point de passage" mc="Standard.UseCase" uid="c5550de7-ae8e-4642-b818-843fff833b77"/>
         <COMPID name="QObject" mc="Standard.Class" uid="bb01daa8-5a2c-432f-9863-48810e74d043"/>
-        <COMPID name="Identification" mc="Standard.Class" uid="db7321e9-8812-4cda-bcc9-99a75a529df3"/>
-        <COMPID name="SelectionRonde" mc="Standard.Class" uid="1afabfa0-078f-4730-b55b-e6b96e9eed77"/>
-        <COMPID name="DeroulementRonde" mc="Standard.Class" uid="294ec4ea-d12d-4ebf-a32d-645999f9a23f"/>
-        <COMPID name="Anomalie" mc="Standard.Class" uid="6a96479c-5ce7-4fab-b731-8ba7bee7a7e5"/>
-        <COMPID name="Photo" mc="Standard.Class" uid="60d5d7ee-8014-41a2-87fc-8d2c31795f32"/>
         <COMPID name="AccesBDD" mc="Standard.Class" uid="b6f1aeb2-0ba1-47b2-86ed-3196ccf9dac9"/>
         <COMPID name="Pointeau" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
         <COMPID name="LecteurNFC" mc="Standard.Class" uid="5186e799-7866-4575-8ca4-f5341db70066"/>
         <COMPID name="QNearFieldManager" mc="Standard.Class" uid="ce50e60d-ac19-42c9-a199-3690fcdeb3f4"/>
-        <COMPID name="QNearFieldTarget" mc="Standard.Class" uid="33aff999-f50e-4836-b553-0afe02b40e30"/>
         <COMPID name="QSqlDatabase" mc="Standard.Class" uid="24e642b5-3e2b-47a8-8464-287a87b6d244"/>
-        <COMPID name="QDateTime" mc="Standard.Class" uid="3b72d8ad-d75e-4841-8c83-d9774d5a8ec1"/>
         <COMPID name="QSqlQuery" mc="Standard.Class" uid="6c027292-0af4-49e2-af34-9e5b65870310"/>
         <COMPID name="Ronde" mc="Standard.Class" uid="d2fb5f4f-a337-42e0-9c56-35987fe37318"/>
         <COMPID name="Agent" mc="Standard.Class" uid="dcc4c146-e79c-40bf-b4c0-d7cfe6de874b"/>
@@ -38,9 +31,20 @@
         <COMPID name="QQmlApplicationEngine" mc="Standard.Class" uid="42b5f5d6-1465-47a6-9f97-74302f8c7547"/>
         <COMPID name="QList&lt;Ronde*&gt;" mc="Standard.DataType" uid="cc566b2b-b810-4af2-bd47-3675281e0213"/>
         <COMPID name="QList&lt;Pointeau*&gt;" mc="Standard.DataType" uid="0a4dd50d-bf91-41cf-90c5-d62356e20896"/>
+        <COMPID name="QDateTime" mc="Standard.DataType" uid="d516ea9d-5c70-4dda-a2c4-5faff7c7dd8c"/>
+        <COMPID name="QStringList" mc="Standard.DataType" uid="da4965b3-a854-4250-9e78-541f7a0f9f4f"/>
+        <COMPID name="QUrl" mc="Standard.DataType" uid="e2d92b53-0819-45be-9ca6-036475b57691"/>
+        <COMPID name="QNearFieldTarget" mc="Standard.DataType" uid="834d4930-d86c-48bf-a377-ed4f88d9adfe"/>
+        <COMPID name="main.js" mc="Standard.Class" uid="eb2f879c-d68f-43b6-bb65-dec20575f81f"/>
+        <COMPID name="main.qml" mc="Standard.Class" uid="b0c56907-904f-477a-a87a-529df72aab0a"/>
+        <COMPID name="Identification.qml" mc="Standard.Class" uid="28c511ce-8c79-42cb-9ba3-904e1440b9bc"/>
+        <COMPID name="SelectionRonde.qml" mc="Standard.Class" uid="83380edd-44e2-4aa6-a613-e41ee57851f4"/>
+        <COMPID name="DeroulementRonde.qml" mc="Standard.Class" uid="01263ec8-767b-4692-80a7-0f22fe3814ce"/>
+        <COMPID name="Anomalie.qml" mc="Standard.Class" uid="565b3d7e-a376-426e-b7eb-d84b07f64c4c"/>
       </COMP>
       <COMP relation="Product">
-        <COMPID name="Diagramme de classe Application smartphone agent" mc="Standard.ClassDiagram" uid="8f535ac4-3d5b-412c-b023-aa69ddc3e794"/>
+        <COMPID name="Diagramme de classe Rondier en C++" mc="Standard.ClassDiagram" uid="8f535ac4-3d5b-412c-b023-aa69ddc3e794"/>
+        <COMPID name="Diagramme de classe Rondier en QML" mc="Standard.ClassDiagram" uid="f7459f80-2df4-4ff1-9bbc-529cc61cab62"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

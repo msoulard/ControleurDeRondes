@@ -214,7 +214,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Ronde" mc="Standard.Class" uid="d2fb5f4f-a337-42e0-9c56-35987fe37318"/>
+                    <ID name="QList&lt;Ronde*&gt;" mc="Standard.DataType" uid="cc566b2b-b810-4af2-bd47-3675281e0213"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -299,7 +299,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Pointeau" mc="Standard.Class" uid="358f2030-0613-4a83-aef6-433fa0ec2458"/>
+                    <ID name="QList&lt;Pointeau*&gt;" mc="Standard.DataType" uid="0a4dd50d-bf91-41cf-90c5-d62356e20896"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -428,7 +428,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="QDateTime" mc="Standard.Class" uid="3b72d8ad-d75e-4841-8c83-d9774d5a8ec1"/>
+                    <ID name="QDateTime" mc="Standard.DataType" uid="d516ea9d-5c70-4dda-a2c4-5faff7c7dd8c"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -557,7 +557,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="QDateTime" mc="Standard.Class" uid="3b72d8ad-d75e-4841-8c83-d9774d5a8ec1"/>
+                    <ID name="QDateTime" mc="Standard.DataType" uid="d516ea9d-5c70-4dda-a2c4-5faff7c7dd8c"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -793,7 +793,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="QDateTime" mc="Standard.Class" uid="3b72d8ad-d75e-4841-8c83-d9774d5a8ec1"/>
+                    <ID name="QDateTime" mc="Standard.DataType" uid="d516ea9d-5c70-4dda-a2c4-5faff7c7dd8c"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>

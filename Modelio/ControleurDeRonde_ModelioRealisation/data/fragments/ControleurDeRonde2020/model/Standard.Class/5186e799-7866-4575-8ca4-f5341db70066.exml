@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="LecteurNFC" version="4">
   <OBJECT>
     <ID name="LecteurNFC" mc="Standard.Class" uid="5186e799-7866-4575-8ca4-f5341db70066"/>
-    <PID name="Application smartphone agent" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
+    <PID name="Rondier" mc="Standard.Package" uid="be3b5b8c-9874-4fa6-a91f-63ff52844be5"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -17,7 +17,43 @@
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="targetDetected" mc="Standard.Operation" uid="d6959521-e215-4ee5-8c0c-a92579b90220"/>
+          <ID name="LecteurNFC" mc="Standard.Operation" uid="525c05d7-528d-4725-8b3b-8d6aa9db847b"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[LecteurNFC]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Infrastructure.Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="~LecteurNFC" mc="Standard.Operation" uid="34fed761-6893-4281-af39-d8d505810204"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[~LecteurNFC]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="destroy" mc="Infrastructure.Stereotype" uid="00700680-0000-0206-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="targetDetected" mc="Standard.Operation" uid="e7c2581f-ff72-4be6-8542-73aae6d0cb13"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -31,11 +67,11 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="target" mc="Standard.Parameter" uid="ad14227e-fff0-49e8-9af5-9a16a6559e0f"/>
+                <ID name="target" mc="Standard.Parameter" uid="12d9c5df-2df4-45bc-ae5c-f919d59424c7"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">Out</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
                   <ATT name="DefaultValue"></ATT>
                   <ATT name="IsOrdered">false</ATT>
@@ -48,7 +84,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="QNearFieldTarget" mc="Standard.Class" uid="33aff999-f50e-4836-b553-0afe02b40e30"/>
+                    <ID name="QNearFieldTarget" mc="Standard.DataType" uid="834d4930-d86c-48bf-a377-ed4f88d9adfe"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -56,7 +92,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="targetLost" mc="Standard.Operation" uid="1cd9f2d5-8fa2-4ac9-98aa-d60b249d16f6"/>
+          <ID name="targetLost" mc="Standard.Operation" uid="4b39f62e-ab79-46ec-bb53-4d9d4af2caf9"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -70,11 +106,11 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="target" mc="Standard.Parameter" uid="b623a610-b143-4860-9f7d-d9aff0be53fd"/>
+                <ID name="target" mc="Standard.Parameter" uid="232a65a7-031f-4f96-a76c-afdf8cd572d8"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">Out</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
                   <ATT name="DefaultValue"></ATT>
                   <ATT name="IsOrdered">false</ATT>
@@ -87,7 +123,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="QNearFieldTarget" mc="Standard.Class" uid="33aff999-f50e-4836-b553-0afe02b40e30"/>
+                    <ID name="QNearFieldTarget" mc="Standard.DataType" uid="834d4930-d86c-48bf-a377-ed4f88d9adfe"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -95,9 +131,35 @@
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="tag" mc="Standard.Attribute" uid="12ee6693-744b-43a5-a471-11f50d07cd71"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[tag]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="manager" mc="Standard.AssociationEnd" uid="540154e8-1369-42d0-b961-2ffa6cd518f3"/>
+          <ID name="manager" mc="Standard.AssociationEnd" uid="921efbf1-0d5b-471a-9e8a-fdd742e91d28"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsComposition</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -105,8 +167,8 @@
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
@@ -119,7 +181,7 @@
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="d523d14d-edc1-4929-ad90-8ff15725daaf"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="f3eb5ec2-7f40-4943-82a3-8d3a34855cbe"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -137,11 +199,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="manager" mc="Standard.AssociationEnd" uid="540154e8-1369-42d0-b961-2ffa6cd518f3"/>
+                    <COMPID name="manager" mc="Standard.AssociationEnd" uid="921efbf1-0d5b-471a-9e8a-fdd742e91d28"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="0fba8b11-ccc1-4a91-8895-1bdab4de738a"/>
+                      <ID name="" mc="Standard.Association" uid="5d746991-8d73-4962-b332-5926e537c8a6"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -153,7 +215,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="0fba8b11-ccc1-4a91-8895-1bdab4de738a"/>
+              <COMPID name="" mc="Standard.Association" uid="5d746991-8d73-4962-b332-5926e537c8a6"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -174,7 +236,7 @@
         </OBJECT>
       </COMP>
       <COMP relation="OwnedElement">
-        <COMPID name="tagDetecte" mc="Standard.Signal" uid="ce4d3b64-af75-464c-a4d9-a3d08556a70a"/>
+        <COMPID name="tagDetecte" mc="Standard.Signal" uid="6e8350f7-07e4-425d-a4af-b26eff474b7f"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>
