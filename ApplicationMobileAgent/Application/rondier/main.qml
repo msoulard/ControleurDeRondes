@@ -83,7 +83,13 @@ ApplicationWindow{
             Dialog{
                 id: dialogVerifAnnulation
                 title: "Annulation de l'anomalie"
-                onAccepted: leRondier.currentIndex = leRondier.currentIndex-1;
+                onAccepted: {
+                    Fonction.verifAppuieBouton = -1;
+                    var item = deroulementRonde.listePointeaux.itemAtIndex(deroulementRonde.listePointeaux.currentIndex-1);
+                    //l'état devient vert
+                    item.m_couleur = "#00FF00";
+                    leRondier.currentIndex = leRondier.currentIndex-1;
+                }
                 onRejected: {
                     this.close()
                 }
@@ -98,11 +104,7 @@ ApplicationWindow{
                             id: a_valider
                             text: "Valider"
                             onClicked: {
-                                Fonction.verifAppuieBouton = -1;
                                 dialogVerifAnnulation.accepted();
-                                var item = deroulementRonde.listePointeaux.itemAtIndex(deroulementRonde.listePointeaux.currentIndex-1);
-                                //l'état devient vert
-                                item.m_couleur = "#00FF00";
                             }
                         }
                         Button{
