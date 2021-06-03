@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagramme de séquence Scanner un pointeau" version="4">
+  <OBJECT>
+    <ID name="Diagramme de séquence Scanner un pointeau" mc="Standard.SequenceDiagram" uid="a29c4fb4-f36a-4ae7-b252-d44b5a5c4866"/>
+    <PID name="Scanner un pointeau" mc="Standard.Interaction" uid="395f960b-f467-4c07-bf54-8cf41c6bf599"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">1</ATT>
+      <ATT name="UiData"><![CDATA[eJztU9FO2zAU/RXL73VZm5ZNCkXQoAoRKGq3SXtCN/FtMTh2ZzvQfBLfsR+bQ1JGOzXKJDReeLJ1fc89516fGx6vM0ke0Fih1RH9xA4oOR6F0+QOU0cE9yFKXLHCI6rNkmWaoxSacQFLAxlDLpw2zOLPHFWKDCVmqJx9iWwSJ9m8jkRVhJIM7rS5eaE+oKPw2ugVGlcQBZlnlFDo3EXgwL99B5ljLUXlUtLuKOxuAH9B566QSLca6TU1Yst8y1JtkFXYFvrGYFPgyDdkZ2s3w0VLlitfokYSXLsoOfcan6/l5bJCkj5b7zTarVpqat6gBIfca9mZ22UZIg9lpBwRKA6Gs52fIdD7kgaLJOgs+kPoBICHnaQ36HV4ECQDGKTB5+GwefoSrLtQ+lHFkKDcETF3RqglHdV0GRKOxP56qkSQeQpKoSG5IistlEPIw+4zvrFlLfFcjXW20lY4/2F7SFuUGt8KyQ2WFWJhy0HXx15ELNS9bZ9+uowMPHo5MRRotk3ab9y2zXbxCm+ZLCv45doq+H82699Q725JwffZcMLikx9ns5vTk/HFZDb9dhW9jUlaLOrrb/tjoFd2CD7s8F52+Dq9fmsf7H36DZmjoS8=]]></ATT>
+      <ATT name="PreviewData"><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAIAAAAmdTLBAAAAGElEQVR4nGP4TxlgGNU/qn9U/6j+EaofAB8cJiE1IQRUAAAAAElFTkSuQmCC]]></ATT>
+      <ATT name="Name"><![CDATA[Diagramme de séquence Scanner un pointeau]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="f8c7ef1c-f9ad-4541-88a4-52925591e1ac"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

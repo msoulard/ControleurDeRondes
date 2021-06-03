@@ -261,6 +261,7 @@ Page {
         }
 
         Connections {
+            id: connectionNFC
             target: lecteurNFC
             onTagDetecte: {
                 console.log("Tag : " + tagNFC)

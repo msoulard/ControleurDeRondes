@@ -13,6 +13,14 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Identification" mc="Standard.Interaction" uid="7e996020-5892-41b2-8870-1278a14fd64f"/>
+        <COMPID name="Choix de la ronde" mc="Standard.Interaction" uid="b1170ba4-e169-4e42-9702-0f48a739df5b"/>
+        <COMPID name="Scanner un pointeau" mc="Standard.Interaction" uid="395f960b-f467-4c07-bf54-8cf41c6bf599"/>
+        <COMPID name="Déclarer une anomalie" mc="Standard.Interaction" uid="9680bfdf-65c0-41ff-a400-3b42bf71f974"/>
+        <COMPID name="Réaliser une ronde" mc="Standard.Interaction" uid="f0835548-ffcf-4b34-89c0-64331bf54bb0"/>
+        <COMPID name="Requête SQL" mc="Standard.Interaction" uid="caad1d3b-bec2-4e8f-b41e-4c245dd4d845"/>
+      </COMP>
       <COMP relation="OwnedElement">
         <COMPID name="Réaliser une ronde" mc="Standard.UseCase" uid="668f0523-eec6-48ef-b6c6-5d61a9b5ddd9"/>
         <COMPID name="Constater une anomalie" mc="Standard.UseCase" uid="789a5018-401a-4e9f-a368-39e886b03995"/>

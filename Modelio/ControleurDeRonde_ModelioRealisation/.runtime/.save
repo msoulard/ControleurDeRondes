@@ -1,3 +1,4 @@
-#Wed Jun 02 19:28:59 CEST 2021
+#Thu Jun 03 13:32:20 CEST 2021
+org.modelio.diagram.editor.OpenedDiagrams2='Diagramme de s\u00E9quence Identification' {a3f4664d-6cc3-4e54-b192-ca1359ae88a8} Standard.SequenceDiagram
 org.modelio.diagram.editor.OpenedDiagrams1='Diagramme de classe Rondier en QML' {f7459f80-2df4-4ff1-9bbc-529cc61cab62} Standard.ClassDiagram
 org.modelio.diagram.editor.OpenedDiagrams0='Diagramme de classe Rondier en C++' {8f535ac4-3d5b-412c-b023-aa69ddc3e794} Standard.ClassDiagram

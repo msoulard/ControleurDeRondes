@@ -2,9 +2,12 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.11
 import QtQuick.Controls 2.15
 
+import "main.js" as Fonction
+
 Page {
     property alias textFieldBadge: textFieldBadge
     property alias buttonValiderBadge: buttonValiderBadge
+    property alias connectionNFC: connectionNFC
 
     id: identification
     title: "Identification"
@@ -63,6 +66,10 @@ Page {
         x: parent.width/5*3
         y: parent.height/3*2
         text: qsTr("S'identifier")
+    }
+    Connections {
+        id: connectionNFC
+        target: lecteurNFC
     }
 }
 

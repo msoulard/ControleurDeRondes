@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagramme de séquence Choix de la ronde" version="4">
+  <OBJECT>
+    <ID name="Diagramme de séquence Choix de la ronde" mc="Standard.SequenceDiagram" uid="62767b80-da53-449b-a970-32987d63b724"/>
+    <PID name="Choix de la ronde" mc="Standard.Interaction" uid="b1170ba4-e169-4e42-9702-0f48a739df5b"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">1</ATT>
+      <ATT name="UiData"><![CDATA[eJztU8FO4zAQ/RUr97rdpjRUCkWQoAoRKGp3V9oTmtSzxeDYXduF5JP4Dn4Mh6Qs7apRVkLLZU+2nufNvBm/CY/zTJAH1IYreeR9oT2PHI/DaXqHC0s4c5BHbLHCI0/pJc0UQ8EVZRyWGjKKjFulqcFfa5QLpCgwQ2nNG7IJnGTzGokrxCMZ3Cl981a6543Da61WqG1BJGSuooBCrW0MFtzbdxBrrKXItRBedxx2N4Q/qHNbCPS2Guk3NWLKeEMXSiOtuC30RWAWwJBtip3ldoY/W1a5cilqJsHcxum50/h6LS+XFZP4NN9ptFu11NS8RgEWmdOyM7fLEiIPJVKOCCQDzejOz5BhPxgG6WGvw+DA7wwGo7QDo6DX8fujw4AN/TToD5qnL8DYC6keZQIpih0Rc6u5XHrjulyGhCExz0+VCBLdKp6XkACilWQYdl/ZjQ0rgecyUtlKGW7dd+0p2SJVdMsF01hmSLgpx1wfexkJl/emffjpMtbw6OQkUKDetqjfuGub3WIV31BRZnCrtZXw3+zV37E+3ZCc7TPhhCYnP85mN6cn0cVkNv12FX+MSVqs6ftv+22gd3YY/LfDZ9nh6/T6o32w9+kF84CcuQ==]]></ATT>
+      <ATT name="PreviewData"><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAIAAAAmdTLBAAAAGElEQVR4nGP4TxlgGNU/qn9U/6j+EaofAB8cJiE1IQRUAAAAAElFTkSuQmCC]]></ATT>
+      <ATT name="Name"><![CDATA[Diagramme de séquence Choix de la ronde]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="41a34cb9-dc60-4b7b-abed-8f0ca0613fbd"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
