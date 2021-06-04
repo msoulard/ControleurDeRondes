@@ -1,3 +1,11 @@
+/**
+ * @file rondier.h
+ * @brief The Rondier class
+ * @details Déclaration de la classe Rondier
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #ifndef RONDIER_H
 #define RONDIER_H
 

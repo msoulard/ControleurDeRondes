@@ -1,3 +1,11 @@
+/**
+ * @file rondier.cpp
+ * @brief Implémentation de la classe Rondier
+ * @details Classe permettant de gérer toutes les données nécessaire et du lien avec le QML
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #include "rondier.h"
 
 Rondier::Rondier(QQmlApplicationEngine &_engine, QObject *parent) : QObject(parent),
@@ -5,7 +13,7 @@ Rondier::Rondier(QQmlApplicationEngine &_engine, QObject *parent) : QObject(pare
 {
     //emplacement BDD téléphone(/data/data/org.qtproject.rondier/db/Rondier_BDDRemplie.db)
     //emplacement BDD ordi(/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db)
-    bdd.connexion("C:/Users/soula/Documents/Cours/SNIR2/Projet 2021/Maëva/ControleurDeRondes/BDDs/RondierRondier_BDDRemplie.db");
+    bdd.connexion("/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
     ordre = 0;
     idHistoriqueRonde = -1;
     idHistoriquePointeau = -1;

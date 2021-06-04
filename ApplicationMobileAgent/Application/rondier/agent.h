@@ -1,3 +1,11 @@
+/**
+ * @file agent.h
+ * @brief The Agent class
+ * @details Déclaration de la classe Agent
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #ifndef AGENT_H
 #define AGENT_H
 

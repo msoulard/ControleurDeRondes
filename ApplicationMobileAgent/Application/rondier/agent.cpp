@@ -1,5 +1,18 @@
+/**
+ * @file agent.cpp
+ * @brief Implémentation de la classe Agent
+ * @details Classe permettant l'accès aux attributs d'un agent
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #include "agent.h"
 
+/**
+ * @brief Agent::Agent
+ * @param parent
+ * @details Constructeur de la classe Agent
+ */
 Agent::Agent(QObject *parent) :
     QObject(parent)
 {

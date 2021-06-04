@@ -1,3 +1,11 @@
+/**
+ * @file pointeau.cpp
+ * @brief Implémentation de la classe Pointeau
+ * @details Classe permettant l'accès aux attributs d'un pointeau
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #include "pointeau.h"
 
 Pointeau::Pointeau(QObject *parent) : QObject(parent)

@@ -1,3 +1,11 @@
+/**
+ * @file ronde.h
+ * @brief The Ronde class
+ * @details Déclaration de la classe Ronde
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #ifndef RONDE_H
 #define RONDE_H
 

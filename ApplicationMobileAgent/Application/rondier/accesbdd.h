@@ -1,3 +1,11 @@
+/**
+ * @file accesbdd.h
+ * @brief The AccesBdd class
+ * @details Déclaration de la classe AccesBdd
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #ifndef ACCESBDD_H
 #define ACCESBDD_H
 

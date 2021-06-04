@@ -70,6 +70,13 @@ Page {
     Connections {
         id: connectionNFC
         target: lecteurNFC
+        onTagDetecte: {
+            console.log("Tag : " + tagNFC)
+            textFieldBadge.text = tagNFC;
+            selectionRonde.message.text = qsTr("Bonjour " +Fonction.obtenirNomAgent(tagNFC)+", veuillez choisir votre ronde");
+            selectionRonde.comboBoxListeRondes.model = Fonction.obtenirListeNomsRonde();
+            Fonction.changerPage();
+        }
     }
 }
 

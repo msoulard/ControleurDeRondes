@@ -1,10 +1,29 @@
+/**
+ * @file accesbdd.cpp
+ * @brief Implémentation de la classe AccesBdd
+ * @details Classe permettant l'accès à la base de données
+ * @author Maëva Soulard
+ * @date 28/05/2021
+ */
+
 #include "accesbdd.h"
 
+/**
+ * @brief AccesBdd::AccesBdd
+ * @param parent
+ * @details Constructeur de la classe AccesBdd
+ */
 AccesBdd::AccesBdd(QObject *parent) : QObject(parent)
 {
 
 }
 
+/**
+ * @brief AccesBdd::connexion
+ * @param _emplacementFichier
+ * @return
+ * @details Méthode permettant l'ouverture de la base de données
+ */
 bool AccesBdd::connexion(QString _emplacementFichier)
 {
     bool retour = false;
@@ -20,6 +39,13 @@ bool AccesBdd::connexion(QString _emplacementFichier)
     return retour;
 }
 
+/**
+ * @brief AccesBdd::obtenirAgent
+ * @param _numBadge
+ * @param _agent
+ * @return
+ * @details Méthode permettant de récupérer l'agent identifié
+ */
 bool AccesBdd::obtenirAgent(QString _numBadge, Agent &_agent)
 {
     bool retour = false;
@@ -44,6 +70,13 @@ bool AccesBdd::obtenirAgent(QString _numBadge, Agent &_agent)
     return retour;
 }
 
+/**
+ * @brief AccesBdd::obtenirListeRondes
+ * @param _listeRondes
+ * @param _idAgent
+ * @return
+ * @details Méthode permettant de récupérer la liste des rondes que l'agent identifié peut faire
+ */
 bool AccesBdd::obtenirListeRondes(QList<Ronde *> &_listeRondes, int _idAgent)
 {
     bool retour = false;
@@ -70,6 +103,13 @@ bool AccesBdd::obtenirListeRondes(QList<Ronde *> &_listeRondes, int _idAgent)
     return retour;
 }
 
+/**
+ * @brief AccesBdd::obtenirListePointeaux
+ * @param _listePointeaux
+ * @param _idRonde
+ * @return
+ * @details Méthode qui permet d'obtenir la liste des pointeaux en fonction de la ronde choisie
+ */
 bool AccesBdd::obtenirListePointeaux(QList<Pointeau *> &_listePointeaux, int _idRonde)
 {
     Pointeau *unPointeau;
@@ -107,6 +147,14 @@ bool AccesBdd::obtenirListePointeaux(QList<Pointeau *> &_listePointeaux, int _id
     return retour;
 }
 
+/**
+ * @brief AccesBdd::mettreAJourTableAEteEffectueePar
+ * @param _idAgent
+ * @param _idRonde
+ * @param _horodatage
+ * @return
+ * @details Méthode permettant de mettre à jour la table aEteEffectueePar en fonction de l'agent, de la ronde choisie et de la date
+ */
 int AccesBdd::mettreAJourTableAEteEffectueePar(int _idAgent, int _idRonde, QDateTime _horodatage)
 {
     int retour = -1;
@@ -127,6 +175,15 @@ int AccesBdd::mettreAJourTableAEteEffectueePar(int _idAgent, int _idRonde, QDate
     return retour;
 }
 
+/**
+ * @brief AccesBdd::mettreAJourTableAEteScanneParSansAnomalie
+ * @param _idHistoriqueRonde
+ * @param _idPointeau
+ * @param _ordre
+ * @param _horodatage
+ * @return
+ * @details Méthode qui permet de mettre à jour la table aEteScannePar sans anomalie
+ */
 int AccesBdd::mettreAJourTableAEteScanneParSansAnomalie(int _idHistoriqueRonde, int _idPointeau, int _ordre, QDateTime _horodatage)
 {
     int retour = -1;
@@ -149,6 +206,13 @@ int AccesBdd::mettreAJourTableAEteScanneParSansAnomalie(int _idHistoriqueRonde, 
     return retour;
 }
 
+/**
+ * @brief AccesBdd::mettreAJourTableAEteScanneParAvecAnomalie
+ * @param _idAnomalie
+ * @param _idHistoriquePointeau
+ * @return
+ * @details Méthode permettant de mettre à jour la table aEteScannePar avec une anomalie
+ */
 bool AccesBdd::mettreAJourTableAEteScanneParAvecAnomalie(int _idAnomalie, int _idHistoriquePointeau)
 {
     bool retour = false;
@@ -167,6 +231,16 @@ bool AccesBdd::mettreAJourTableAEteScanneParAvecAnomalie(int _idAnomalie, int _i
     return retour;
 }
 
+/**
+ * @brief AccesBdd::mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore
+ * @param _idAnomalie
+ * @param _idHistoriqueRonde
+ * @param _idPointeau
+ * @param _ordre
+ * @param _horodatage
+ * @return
+ * @details Méthode permettant de mettre à jour la table aEteScannePar s'il y a un défaut d'ordre ou un pointeau ignoré
+ */
 bool AccesBdd::mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(int _idAnomalie, int _idHistoriqueRonde, int _idPointeau, int _ordre, QDateTime _horodatage)
 {
     bool retour = false;
@@ -190,6 +264,12 @@ bool AccesBdd::mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnore(int _idA
     return retour;
 }
 
+/**
+ * @brief AccesBdd::mettreAJourTableAnomalies
+ * @param _description
+ * @return
+ * @details Méthode permettant de mettre à jour la table Anomalies
+ */
 int AccesBdd::mettreAJourTableAnomalies(QString _description)
 {
     int retour = -1;

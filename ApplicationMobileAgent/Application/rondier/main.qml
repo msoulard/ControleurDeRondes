@@ -24,13 +24,6 @@ ApplicationWindow{
                 selectionRonde.comboBoxListeRondes.model = Fonction.obtenirListeNomsRonde();
                 Fonction.changerPage();
             }
-            connectionNFC.onTagDetecte: {
-                console.log("Tag : " + tagNFC)
-                textFieldTag.text = tagNFC;
-                selectionRonde.message.text = qsTr("Bonjour " +Fonction.obtenirNomAgent(tagNFC)+", veuillez choisir votre ronde");
-                selectionRonde.comboBoxListeRondes.model = Fonction.obtenirListeNomsRonde();
-                Fonction.changerPage();
-            }
         }
 
         SelectionRonde{
