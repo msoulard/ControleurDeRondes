@@ -128,6 +128,7 @@ Page {
                 anchors.bottomMargin: 40
                 anchors.fill: parent
                 delegate: representation
+                model: pointeauxModel
             }
         }
 

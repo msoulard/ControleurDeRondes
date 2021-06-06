@@ -8,12 +8,18 @@
 
 #include "rondier.h"
 
+/**
+ * @brief Rondier::Rondier
+ * @param _engine
+ * @param parent
+ * @details Constructeur de la classe Rondier
+ */
 Rondier::Rondier(QQmlApplicationEngine &_engine, QObject *parent) : QObject(parent),
     engine(_engine)
 {
     //emplacement BDD téléphone(/data/data/org.qtproject.rondier/db/Rondier_BDDRemplie.db)
     //emplacement BDD ordi(/home/USERS/ELEVES/SNIR2019/msoulard/ControleurDeRondes2021/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db)
-    bdd.connexion("/data/data/org.qtproject.rondier/db/Rondier_BDDRemplie.db");
+    bdd.connexion("C:/Users/soula/Documents/Cours/SNIR2/Projet 2021/Maëva/ControleurDeRondes/BDDs/Rondier/Rondier_BDDRemplie.db");
     ordre = 0;
     idHistoriqueRonde = -1;
     idHistoriquePointeau = -1;
@@ -21,6 +27,10 @@ Rondier::Rondier(QQmlApplicationEngine &_engine, QObject *parent) : QObject(pare
     engine.rootContext()->setContextProperty("lecteurNFC", &leLecteur);
 }
 
+/**
+ * @brief Rondier::~Rondier
+ * @details Destructeur de la classe Rondier
+ */
 Rondier::~Rondier()
 {
     delete rondeCourante;
@@ -34,6 +44,11 @@ Rondier::~Rondier()
     }
 }
 
+/**
+ * @brief Rondier::mettreAJourAgent
+ * @param _numBadge
+ * @details Méthode permettant de mettre à jour l'attribut agent de la classe
+ */
 void Rondier::mettreAJourAgent(QString _numBadge)
 {
     if(bdd.obtenirAgent(_numBadge, agent)){
@@ -42,6 +57,11 @@ void Rondier::mettreAJourAgent(QString _numBadge)
     }
 }
 
+/**
+ * @brief Rondier::obtenirRondes
+ * @return
+ * @details Méthode permettant de récupérer la liste des noms des rondes et de mettre à jour l'attribut listeRondes de la classe
+ */
 QStringList Rondier::obtenirRondes()
 {
     QStringList listeNomsRonde;
@@ -53,6 +73,12 @@ QStringList Rondier::obtenirRondes()
     return listeNomsRonde;
 }
 
+/**
+ * @brief Rondier::obtenirNomRondeCourante
+ * @param _index
+ * @return
+ * @details Méthode permettant de mettre à jour l'attribut rondeCourante de la classe et de récupérer le nom de la ronde courante
+ */
 QString Rondier::obtenirNomRondeCourante(int _index)
 {
     rondeCourante = listeRondes.at(_index);
@@ -60,6 +86,10 @@ QString Rondier::obtenirNomRondeCourante(int _index)
     return rondeCourante->getNom();
 }
 
+/**
+ * @brief Rondier::mettreAJourListePointeaux
+ * @details Méthode permettant de mettre à jour l'attribut listePointeaux de la classe et de récupérer la liste de pointeaux en QML
+ */
 void Rondier::mettreAJourListePointeaux()
 {
     QList<QObject*> listeEmplacementPointeaux;
@@ -80,6 +110,11 @@ void Rondier::mettreAJourListePointeaux()
     }
 }
 
+/**
+ * @brief Rondier::obtenirListeDesignations
+ * @return
+ * @details Méthode permettant de récupérer la liste des désignations des pointeaux
+ */
 QStringList Rondier::obtenirListeDesignations()
 {
     QStringList listeDesignations;
@@ -91,6 +126,11 @@ QStringList Rondier::obtenirListeDesignations()
     return listeDesignations;
 }
 
+/**
+ * @brief Rondier::obtenirListeBatiments
+ * @return
+ * @details Méthode permettant de récupérer la liste des bâtiments des pointeaux
+ */
 QStringList Rondier::obtenirListeBatiments()
 {
     QStringList listeBatiments;
@@ -102,6 +142,11 @@ QStringList Rondier::obtenirListeBatiments()
     return listeBatiments;
 }
 
+/**
+ * @brief Rondier::obtenirListeEtages
+ * @return
+ * @details Méthode permettant de récupérer la liste des étages des pointeaux
+ */
 QStringList Rondier::obtenirListeEtages()
 {
     QStringList listeEtages;
@@ -113,6 +158,11 @@ QStringList Rondier::obtenirListeEtages()
     return listeEtages;
 }
 
+/**
+ * @brief Rondier::obtenirListeTempsMini
+ * @return
+ * @details Méthode permettant de récupérer la liste des temps minimum des pointeaux
+ */
 QStringList Rondier::obtenirListeTempsMini()
 {
     QStringList listeTempsMini;
@@ -124,6 +174,11 @@ QStringList Rondier::obtenirListeTempsMini()
     return listeTempsMini;
 }
 
+/**
+ * @brief Rondier::obtenirListeTempsMaxi
+ * @return
+ * @details Méthode permettant de récupérer la liste des temps maximum des pointeaux
+ */
 QStringList Rondier::obtenirListeTempsMaxi()
 {
     QStringList listeTempsMaxi;
@@ -135,6 +190,11 @@ QStringList Rondier::obtenirListeTempsMaxi()
     return listeTempsMaxi;
 }
 
+/**
+ * @brief Rondier::obtenirListeTags
+ * @return
+ * @details Méthode permettant de récupérer la liste des tags MIFARE des pointeaux
+ */
 QStringList Rondier::obtenirListeTags()
 {
     QStringList listeTags;
@@ -147,6 +207,11 @@ QStringList Rondier::obtenirListeTags()
     return listeTags;
 }
 
+/**
+ * @brief Rondier::obtenirListeEmplacements
+ * @return
+ * @details Méthode permettant de récupérer la liste des emplacements des pointeaux
+ */
 QStringList Rondier::obtenirListeEmplacements()
 {
     QStringList listeEmplacementsPointeaux;
@@ -158,6 +223,11 @@ QStringList Rondier::obtenirListeEmplacements()
     return listeEmplacementsPointeaux;
 }
 
+/**
+ * @brief Rondier::mettreAJourTableAEteEffectueeParBDD
+ * @param _index
+ * @details Méthode permettant de mettre à jour la table aEteEffectueePar dans la base de données
+ */
 void Rondier::mettreAJourTableAEteEffectueeParBDD(int _index)
 {
     Pointeau *p = listePointeaux.at(_index);
@@ -168,6 +238,11 @@ void Rondier::mettreAJourTableAEteEffectueeParBDD(int _index)
     }
 }
 
+/**
+ * @brief Rondier::mettreAJourTableAEteScanneParSansAnomalieBDD
+ * @param _index
+ * @details Méthode permettant de mettre à jour la table aEteScannePar sans anomalie dans la base de données
+ */
 void Rondier::mettreAJourTableAEteScanneParSansAnomalieBDD(int _index)
 {
     Pointeau *p = listePointeaux.at(_index);
@@ -178,6 +253,11 @@ void Rondier::mettreAJourTableAEteScanneParSansAnomalieBDD(int _index)
     }
 }
 
+/**
+ * @brief Rondier::mettreAJourTablesAEteScanneParAvecAnomalieEtAnomaliesBDD
+ * @param _description
+ * @details Méthode permettant de mettre à jour la table aEteScannePar avec une anomalie et la table anomalies dans la base de données
+ */
 void Rondier::mettreAJourTablesAEteScanneParAvecAnomalieEtAnomaliesBDD(QString _description)
 {
     int idAnomalie = bdd.mettreAJourTableAnomalies(_description);
@@ -192,6 +272,13 @@ void Rondier::mettreAJourTablesAEteScanneParAvecAnomalieEtAnomaliesBDD(QString _
 
 }
 
+/**
+ * @brief Rondier::mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD
+ * @param _index
+ * @param _idAnomalie
+ * @param _description
+ * @details Méthode permettant de mettre à jour la table aEteScannePar avec un défaut d'ordre ou un pointeau ignoré et la table anomalies dans la base de données
+ */
 void Rondier::mettreAJourTableAEteScanneParDefautOrdreEtPointeauIgnoreBDD(int _index, int _idAnomalie, QString _description)
 {
     Pointeau *p = listePointeaux.at(_index);
