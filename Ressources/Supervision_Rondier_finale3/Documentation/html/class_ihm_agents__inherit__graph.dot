@@ -1,0 +1,8 @@
+digraph "IhmAgents"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{IhmAgents\n|- ui\l- listeAgents\l- nomAgents\l- prenomAgents\l- badgeAgents\l- idAgent\l- idAgents\l- statutAgents\l- bdd\l- widgetModifAgent\let 10 de plus...\l|+ IhmAgents()\l+ ~IhmAgents()\l+ ActualiserListeDesAgents()\l+ ActualiserListeNomAgent()\l+ ActualiserListeBadgeAgent()\l+ ActualiserStatutAgent()\l+ InitialiserTableaux()\l+ ActualiserTableauFiltres()\l+ DemanderEnregistrement()\l+ ObtenirNomAgent()\l- on_pushButtonAppliquer\l_clicked()\l- onpushButtonModifier\l_clicked()\l- on_comboBoxStatut_current\lIndexChanged()\l- on_pushButtonNouveau\l_clicked()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{QWidget\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

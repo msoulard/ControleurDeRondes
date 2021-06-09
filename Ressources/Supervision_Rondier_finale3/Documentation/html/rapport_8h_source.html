@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Controleur de rondes:  Fichier source de /home/USERS/ELEVES/SNIR2019/yletessier/Documents/Projet_Controleur2021/Supervision_Rondier_finale/rapport.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Controleur de rondes
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Contrleur de rondes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('rapport_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/USERS/ELEVES/SNIR2019/yletessier/Documents/Projet_Controleur2021/Supervision_Rondier_finale/rapport.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="rapport_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RAPPORT_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RAPPORT_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Qt</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QDateTime&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QSqlQuery&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structtype_pointeau_rapport.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtype_pointeau_rapport.html">typePointeauRapport</a></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structtype_pointeau_rapport.html#ad6e01fba9a5a794100db297386ea03dc">   13</a></span>&#160;    QString <a class="code" href="structtype_pointeau_rapport.html#ad6e01fba9a5a794100db297386ea03dc">nomPointeau</a>;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structtype_pointeau_rapport.html#ae6839e14f725489df8bd2b9956a3e516">   14</a></span>&#160;    QDateTime <a class="code" href="structtype_pointeau_rapport.html#ae6839e14f725489df8bd2b9956a3e516">temps</a>;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structtype_pointeau_rapport.html#ad62acf4395801419ad98cf2c9c426ce4">   15</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structtype_pointeau_rapport.html#ad62acf4395801419ad98cf2c9c426ce4">anomalieOrdre</a>;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structtype_pointeau_rapport.html#a06874aedafa51b7231092db2f516f6e3">   16</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structtype_pointeau_rapport.html#a06874aedafa51b7231092db2f516f6e3">anomalieTemps</a>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structtype_maincourante.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtype_maincourante.html">typeMaincourante</a></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structtype_maincourante.html#acd9f83802f7473a28984a9762d2335b2">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structtype_maincourante.html#acd9f83802f7473a28984a9762d2335b2">idPointeau</a>;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structtype_maincourante.html#a935a6658d2910a2fda8f437d93d4bae2">   22</a></span>&#160;    QString <a class="code" href="structtype_maincourante.html#a935a6658d2910a2fda8f437d93d4bae2">texte</a>;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structtype_maincourante.html#ad6e8f6ca7bafc5bc75f39dc998328c8f">   23</a></span>&#160;    QDateTime <a class="code" href="structtype_maincourante.html#ad6e8f6ca7bafc5bc75f39dc998328c8f">heure</a>;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structtype_maincourante.html#a2e3595094416f6509654898e18f0c7f5">   24</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structtype_maincourante.html#a2e3595094416f6509654898e18f0c7f5">type</a>;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structtype_maincourante.html#a3dc1e69417e0222f5a2ac888641f5602">   25</a></span>&#160;    <span class="keywordtype">bool</span> afficherRapport = <span class="keyword">true</span>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_rapport.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_rapport.html">Rapport</a></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_rapport.html">Rapport</a>(QString _nomAgent, QString _nomRonde, QList&lt;typePointeauRapport*&gt; _listePointeaux, QList&lt;typeMaincourante*&gt; _listeMaincourante);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    QString ObtenirNomAgent() <span class="keyword">const</span>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> DefinirNomAgent(<span class="keyword">const</span> QString &amp;value);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    QString ObtenirNomRonde() <span class="keyword">const</span>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> DefinirNomRonde(<span class="keyword">const</span> QString &amp;value);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QList&lt;typePointeauRapport *&gt; ObtenirtListePointeaux() <span class="keyword">const</span>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> DefinirListePointeaux(<span class="keyword">const</span> QList&lt;typePointeauRapport*&gt; &amp;value);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QList&lt;typeMaincourante *&gt; ObtenirListeMaincourante() <span class="keyword">const</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> DefinirListeMaincourante(<span class="keyword">const</span> QList&lt;typeMaincourante *&gt; &amp;value);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//    QString &amp;ObtenirlecteurPDF();</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//    void ModifierLecteurPDF(QString _lecteur);</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_rapport.html#a4ba4de0dda68bd7c5c195f8e80c161f3">   49</a></span>&#160;    QString <a class="code" href="class_rapport.html#a4ba4de0dda68bd7c5c195f8e80c161f3">nomAgent</a>;</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_rapport.html#a62e6d037c324f8510bc71b3caf051726">   50</a></span>&#160;    QString <a class="code" href="class_rapport.html#a62e6d037c324f8510bc71b3caf051726">nomRonde</a>;</div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_rapport.html#ab02619480e198429af5ff725799b23ed">   51</a></span>&#160;    QList&lt;typePointeauRapport *&gt; <a class="code" href="class_rapport.html#ab02619480e198429af5ff725799b23ed">listePointeaux</a>;</div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_rapport.html#a344b4f99c9b082f92e6c421e3a9b9f70">   52</a></span>&#160;    QList&lt;typeMaincourante *&gt; <a class="code" href="class_rapport.html#a344b4f99c9b082f92e6c421e3a9b9f70">listeMaincourante</a>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//    QString lecteurPDF;</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // RAPPORT_H</span></div><div class="ttc" id="structtype_pointeau_rapport_html_ae6839e14f725489df8bd2b9956a3e516"><div class="ttname"><a href="structtype_pointeau_rapport.html#ae6839e14f725489df8bd2b9956a3e516">typePointeauRapport::temps</a></div><div class="ttdeci">QDateTime temps</div><div class="ttdef"><b>Definition:</b> rapport.h:14</div></div>
+<div class="ttc" id="structtype_pointeau_rapport_html"><div class="ttname"><a href="structtype_pointeau_rapport.html">typePointeauRapport</a></div><div class="ttdef"><b>Definition:</b> rapport.h:11</div></div>
+<div class="ttc" id="structtype_maincourante_html"><div class="ttname"><a href="structtype_maincourante.html">typeMaincourante</a></div><div class="ttdef"><b>Definition:</b> rapport.h:19</div></div>
+<div class="ttc" id="class_rapport_html_ab02619480e198429af5ff725799b23ed"><div class="ttname"><a href="class_rapport.html#ab02619480e198429af5ff725799b23ed">Rapport::listePointeaux</a></div><div class="ttdeci">QList&lt; typePointeauRapport * &gt; listePointeaux</div><div class="ttdef"><b>Definition:</b> rapport.h:51</div></div>
+<div class="ttc" id="class_rapport_html_a62e6d037c324f8510bc71b3caf051726"><div class="ttname"><a href="class_rapport.html#a62e6d037c324f8510bc71b3caf051726">Rapport::nomRonde</a></div><div class="ttdeci">QString nomRonde</div><div class="ttdef"><b>Definition:</b> rapport.h:50</div></div>
+<div class="ttc" id="structtype_maincourante_html_a935a6658d2910a2fda8f437d93d4bae2"><div class="ttname"><a href="structtype_maincourante.html#a935a6658d2910a2fda8f437d93d4bae2">typeMaincourante::texte</a></div><div class="ttdeci">QString texte</div><div class="ttdef"><b>Definition:</b> rapport.h:22</div></div>
+<div class="ttc" id="structtype_maincourante_html_a2e3595094416f6509654898e18f0c7f5"><div class="ttname"><a href="structtype_maincourante.html#a2e3595094416f6509654898e18f0c7f5">typeMaincourante::type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition:</b> rapport.h:24</div></div>
+<div class="ttc" id="class_rapport_html_a4ba4de0dda68bd7c5c195f8e80c161f3"><div class="ttname"><a href="class_rapport.html#a4ba4de0dda68bd7c5c195f8e80c161f3">Rapport::nomAgent</a></div><div class="ttdeci">QString nomAgent</div><div class="ttdef"><b>Definition:</b> rapport.h:49</div></div>
+<div class="ttc" id="structtype_maincourante_html_ad6e8f6ca7bafc5bc75f39dc998328c8f"><div class="ttname"><a href="structtype_maincourante.html#ad6e8f6ca7bafc5bc75f39dc998328c8f">typeMaincourante::heure</a></div><div class="ttdeci">QDateTime heure</div><div class="ttdef"><b>Definition:</b> rapport.h:23</div></div>
+<div class="ttc" id="class_rapport_html_a344b4f99c9b082f92e6c421e3a9b9f70"><div class="ttname"><a href="class_rapport.html#a344b4f99c9b082f92e6c421e3a9b9f70">Rapport::listeMaincourante</a></div><div class="ttdeci">QList&lt; typeMaincourante * &gt; listeMaincourante</div><div class="ttdef"><b>Definition:</b> rapport.h:52</div></div>
+<div class="ttc" id="structtype_pointeau_rapport_html_a06874aedafa51b7231092db2f516f6e3"><div class="ttname"><a href="structtype_pointeau_rapport.html#a06874aedafa51b7231092db2f516f6e3">typePointeauRapport::anomalieTemps</a></div><div class="ttdeci">bool anomalieTemps</div><div class="ttdef"><b>Definition:</b> rapport.h:16</div></div>
+<div class="ttc" id="structtype_pointeau_rapport_html_ad6e01fba9a5a794100db297386ea03dc"><div class="ttname"><a href="structtype_pointeau_rapport.html#ad6e01fba9a5a794100db297386ea03dc">typePointeauRapport::nomPointeau</a></div><div class="ttdeci">QString nomPointeau</div><div class="ttdef"><b>Definition:</b> rapport.h:13</div></div>
+<div class="ttc" id="structtype_maincourante_html_acd9f83802f7473a28984a9762d2335b2"><div class="ttname"><a href="structtype_maincourante.html#acd9f83802f7473a28984a9762d2335b2">typeMaincourante::idPointeau</a></div><div class="ttdeci">int idPointeau</div><div class="ttdef"><b>Definition:</b> rapport.h:21</div></div>
+<div class="ttc" id="class_rapport_html"><div class="ttname"><a href="class_rapport.html">Rapport</a></div><div class="ttdef"><b>Definition:</b> rapport.h:28</div></div>
+<div class="ttc" id="structtype_pointeau_rapport_html_ad62acf4395801419ad98cf2c9c426ce4"><div class="ttname"><a href="structtype_pointeau_rapport.html#ad62acf4395801419ad98cf2c9c426ce4">typePointeauRapport::anomalieOrdre</a></div><div class="ttdeci">bool anomalieOrdre</div><div class="ttdef"><b>Definition:</b> rapport.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="rapport_8h.html">rapport.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Controleur de rondes:  Fichier source de /home/USERS/ELEVES/SNIR2019/yletessier/Documents/Projet_Controleur2021/Supervision_Rondier_finale/parametre.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Controleur de rondes
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Contrleur de rondes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('parametre_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/USERS/ELEVES/SNIR2019/yletessier/Documents/Projet_Controleur2021/Supervision_Rondier_finale/parametre.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="parametre_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PARAMETRE_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PARAMETRE_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//Qt</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QDialog&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//Custom</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="accesmysql_8h.html">accesmysql.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="message_8h.html">message.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="accesxml_8h.html">accesxml.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="class_parametre.html">Parametre</a>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_parametre.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_parametre.html">Parametre</a> : <span class="keyword">public</span> QDialog</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_parametre.html">Parametre</a>(QString _cheminXML, QList&lt;Smartphone&gt; _listeSmartphone, QString _idSmartphoneScanner, QWidget *parent = 0);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ~<a class="code" href="class_parametre.html">Parametre</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span> slots:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> on_pushButtonAnnuler_clicked();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> on_pushButtonEnregistrer_clicked();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> onListeSmartphoneChange(QList&lt;Smartphone&gt; _listeSmartphone);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;signals:</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> smartphoneScannerChange(QString);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//Méthodes</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> ActualiserListeSmartphone();</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//Ui</span></div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_parametre.html#a2cdd58fb070e03b554e24ca9fb6cf8c2">   40</a></span>&#160;    <a class="code" href="class_ui_1_1_parametre.html">Ui::Parametre</a> *<a class="code" href="class_parametre.html#a2cdd58fb070e03b554e24ca9fb6cf8c2">ui</a>;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_parametre.html#ab7a187ec2e835d6c481b94efca63b762">   41</a></span>&#160;    QList&lt;Smartphone&gt; <a class="code" href="class_parametre.html#ab7a187ec2e835d6c481b94efca63b762">listeSmartphone</a>;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_parametre.html#a54548182de9d090337d760100be152f5">   42</a></span>&#160;    QString <a class="code" href="class_parametre.html#a54548182de9d090337d760100be152f5">idSmartphoneScanner</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//Attributs</span></div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_parametre.html#a37c66cd23e4e7480edca12bfb60018ab">   45</a></span>&#160;    QString <a class="code" href="class_parametre.html#a37c66cd23e4e7480edca12bfb60018ab">cheminXML</a>;          <span class="comment">//Fichier de configuration XML.</span></div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_parametre.html#aeb5991fbe00778f576eb3035b7f6b35f">   46</a></span>&#160;    <a class="code" href="class_acces_x_m_l.html">AccesXML</a> *<a class="code" href="class_parametre.html#aeb5991fbe00778f576eb3035b7f6b35f">xmlConfig</a>;        <span class="comment">//fichier XML de configuration.</span></div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_parametre.html#aefadb423246d7c5f77e2ada2d08632f4">   47</a></span>&#160;    <a class="code" href="class_message.html">Message</a> <a class="code" href="class_parametre.html#aefadb423246d7c5f77e2ada2d08632f4">boiteMessage</a>;       <span class="comment">//Permet d&#39;afficher des messages.</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // PARAMETRE_H</span></div><div class="ttc" id="class_parametre_html_a37c66cd23e4e7480edca12bfb60018ab"><div class="ttname"><a href="class_parametre.html#a37c66cd23e4e7480edca12bfb60018ab">Parametre::cheminXML</a></div><div class="ttdeci">QString cheminXML</div><div class="ttdef"><b>Definition:</b> parametre.h:45</div></div>
+<div class="ttc" id="namespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> creationagent.h:16</div></div>
+<div class="ttc" id="accesxml_8h_html"><div class="ttname"><a href="accesxml_8h.html">accesxml.h</a></div><div class="ttdoc">Déclaration de la classe AccesXML. </div></div>
+<div class="ttc" id="accesmysql_8h_html"><div class="ttname"><a href="accesmysql_8h.html">accesmysql.h</a></div><div class="ttdoc">The AccesMySQL class. </div></div>
+<div class="ttc" id="class_acces_x_m_l_html"><div class="ttname"><a href="class_acces_x_m_l.html">AccesXML</a></div><div class="ttdef"><b>Definition:</b> accesxml.h:30</div></div>
+<div class="ttc" id="message_8h_html"><div class="ttname"><a href="message_8h.html">message.h</a></div><div class="ttdoc">Définission des méthodes de la classe Message. </div></div>
+<div class="ttc" id="class_parametre_html_a2cdd58fb070e03b554e24ca9fb6cf8c2"><div class="ttname"><a href="class_parametre.html#a2cdd58fb070e03b554e24ca9fb6cf8c2">Parametre::ui</a></div><div class="ttdeci">Ui::Parametre * ui</div><div class="ttdef"><b>Definition:</b> parametre.h:40</div></div>
+<div class="ttc" id="class_message_html"><div class="ttname"><a href="class_message.html">Message</a></div><div class="ttdef"><b>Definition:</b> message.h:23</div></div>
+<div class="ttc" id="class_parametre_html_ab7a187ec2e835d6c481b94efca63b762"><div class="ttname"><a href="class_parametre.html#ab7a187ec2e835d6c481b94efca63b762">Parametre::listeSmartphone</a></div><div class="ttdeci">QList&lt; Smartphone &gt; listeSmartphone</div><div class="ttdef"><b>Definition:</b> parametre.h:41</div></div>
+<div class="ttc" id="class_parametre_html_aefadb423246d7c5f77e2ada2d08632f4"><div class="ttname"><a href="class_parametre.html#aefadb423246d7c5f77e2ada2d08632f4">Parametre::boiteMessage</a></div><div class="ttdeci">Message boiteMessage</div><div class="ttdef"><b>Definition:</b> parametre.h:47</div></div>
+<div class="ttc" id="class_parametre_html_aeb5991fbe00778f576eb3035b7f6b35f"><div class="ttname"><a href="class_parametre.html#aeb5991fbe00778f576eb3035b7f6b35f">Parametre::xmlConfig</a></div><div class="ttdeci">AccesXML * xmlConfig</div><div class="ttdef"><b>Definition:</b> parametre.h:46</div></div>
+<div class="ttc" id="class_parametre_html_a54548182de9d090337d760100be152f5"><div class="ttname"><a href="class_parametre.html#a54548182de9d090337d760100be152f5">Parametre::idSmartphoneScanner</a></div><div class="ttdeci">QString idSmartphoneScanner</div><div class="ttdef"><b>Definition:</b> parametre.h:42</div></div>
+<div class="ttc" id="class_ui_1_1_parametre_html"><div class="ttname"><a href="class_ui_1_1_parametre.html">Ui::Parametre</a></div><div class="ttdef"><b>Definition:</b> ui_parametre.h:156</div></div>
+<div class="ttc" id="class_parametre_html"><div class="ttname"><a href="class_parametre.html">Parametre</a></div><div class="ttdef"><b>Definition:</b> parametre.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="parametre_8h.html">parametre.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

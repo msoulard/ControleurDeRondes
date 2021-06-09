@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Controleur de rondes:  Fichier source de /home/USERS/ELEVES/SNIR2019/yletessier/Documents/Projet_Controleur2021/Supervision_Rondier_finale/ihmpointeaux.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Controleur de rondes
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Contrleur de rondes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ihmpointeaux_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/USERS/ELEVES/SNIR2019/yletessier/Documents/Projet_Controleur2021/Supervision_Rondier_finale/ihmpointeaux.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ihmpointeaux_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef IHMPOINTEAUX_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define IHMPOINTEAUX_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pointeaux_8h.html">pointeaux.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="accesmysql_8h.html">accesmysql.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="modifpointeau_8h.html">modifpointeau.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="creationpointeau_8h.html">creationpointeau.h</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ihmlieux_8h.html">ihmlieux.h</a>&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span><a class="code" href="class_ihm_pointeaux.html">IhmPointeaux</a>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ihm_pointeaux.html">IhmPointeaux</a> : <span class="keyword">public</span> QWidget</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_ihm_pointeaux.html">IhmPointeaux</a>(QList&lt;Pointeaux *&gt; &amp;_listePointeaux, <a class="code" href="class_acces_my_s_q_l.html">AccesMySQL</a> &amp; mySqlBdd, QWidget *parent = <span class="keyword">nullptr</span>);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ~<a class="code" href="class_ihm_pointeaux.html">IhmPointeaux</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> ActualiserListeDesPointeaux();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> InitialiserTableaux();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> ActualiserDesignation();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span> slots:</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;         <span class="keywordtype">void</span> onpushButtonModifier_clicked();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;         <span class="keywordtype">void</span> on_pushButton_2_clicked();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#a7cde9dc4cf365d99134db2d433efbd05">   39</a></span>&#160;    Ui::IhmPointeaux *<a class="code" href="class_ihm_pointeaux.html#a7cde9dc4cf365d99134db2d433efbd05">ui</a>;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#a733ebe8d82424e56310400becaccbcdd">   40</a></span>&#160;    <a class="code" href="class_acces_my_s_q_l.html">AccesMySQL</a> <a class="code" href="class_ihm_pointeaux.html#a733ebe8d82424e56310400becaccbcdd">bdd</a>;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#aec3daa45c36307862989cec4c419154d">   41</a></span>&#160;    QList&lt;Pointeaux *&gt; <a class="code" href="class_ihm_pointeaux.html#aec3daa45c36307862989cec4c419154d">listePointeaux</a>;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#aff226d96e07652d0ebf7aeae5aa80e7f">   42</a></span>&#160;    QList&lt;Lieu *&gt; <a class="code" href="class_ihm_pointeaux.html#aff226d96e07652d0ebf7aeae5aa80e7f">listeLieux</a>;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#acf12b0f15cf774836873cd354097a555">   43</a></span>&#160;    QList&lt;QString&gt; <a class="code" href="class_ihm_pointeaux.html#acf12b0f15cf774836873cd354097a555">designation</a>;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#a89aefd93593c0f9683f9b668c52b6dac">   44</a></span>&#160;    QList&lt;int&gt; <a class="code" href="class_ihm_pointeaux.html#a89aefd93593c0f9683f9b668c52b6dac">id</a>;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#ac79db591b2797cb4bb9284b826370f0b">   45</a></span>&#160;    QList&lt;bool&gt; <a class="code" href="class_ihm_pointeaux.html#ac79db591b2797cb4bb9284b826370f0b">statut</a>;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#a567b268ad67f22866dfc213a6c544a83">   46</a></span>&#160;    QList&lt;QString&gt; <a class="code" href="class_ihm_pointeaux.html#a567b268ad67f22866dfc213a6c544a83">tag</a>;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#a25f01555de9139a197e9d19fa3f7e46c">   47</a></span>&#160;    <a class="code" href="class_modif_pointeau.html">ModifPointeau</a> *<a class="code" href="class_ihm_pointeaux.html#a25f01555de9139a197e9d19fa3f7e46c">widgetModifPointeau</a>;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_ihm_pointeaux.html#a89055a08dcfcb4f423658e76301876a3">   48</a></span>&#160;    <a class="code" href="class_creation_pointeau.html">CreationPointeau</a> *<a class="code" href="class_ihm_pointeaux.html#a89055a08dcfcb4f423658e76301876a3">widgetCreationpointeau</a>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif // IHMPOINTEAUX_H</span></div><div class="ttc" id="class_ihm_pointeaux_html_aff226d96e07652d0ebf7aeae5aa80e7f"><div class="ttname"><a href="class_ihm_pointeaux.html#aff226d96e07652d0ebf7aeae5aa80e7f">IhmPointeaux::listeLieux</a></div><div class="ttdeci">QList&lt; Lieu * &gt; listeLieux</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:42</div></div>
+<div class="ttc" id="class_modif_pointeau_html"><div class="ttname"><a href="class_modif_pointeau.html">ModifPointeau</a></div><div class="ttdef"><b>Definition:</b> modifpointeau.h:20</div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_a25f01555de9139a197e9d19fa3f7e46c"><div class="ttname"><a href="class_ihm_pointeaux.html#a25f01555de9139a197e9d19fa3f7e46c">IhmPointeaux::widgetModifPointeau</a></div><div class="ttdeci">ModifPointeau * widgetModifPointeau</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:47</div></div>
+<div class="ttc" id="namespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> creationagent.h:16</div></div>
+<div class="ttc" id="class_ihm_pointeaux_html"><div class="ttname"><a href="class_ihm_pointeaux.html">IhmPointeaux</a></div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:23</div></div>
+<div class="ttc" id="accesmysql_8h_html"><div class="ttname"><a href="accesmysql_8h.html">accesmysql.h</a></div><div class="ttdoc">The AccesMySQL class. </div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_acf12b0f15cf774836873cd354097a555"><div class="ttname"><a href="class_ihm_pointeaux.html#acf12b0f15cf774836873cd354097a555">IhmPointeaux::designation</a></div><div class="ttdeci">QList&lt; QString &gt; designation</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:43</div></div>
+<div class="ttc" id="ihmlieux_8h_html"><div class="ttname"><a href="ihmlieux_8h.html">ihmlieux.h</a></div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_a733ebe8d82424e56310400becaccbcdd"><div class="ttname"><a href="class_ihm_pointeaux.html#a733ebe8d82424e56310400becaccbcdd">IhmPointeaux::bdd</a></div><div class="ttdeci">AccesMySQL bdd</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:40</div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_ac79db591b2797cb4bb9284b826370f0b"><div class="ttname"><a href="class_ihm_pointeaux.html#ac79db591b2797cb4bb9284b826370f0b">IhmPointeaux::statut</a></div><div class="ttdeci">QList&lt; bool &gt; statut</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:45</div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_aec3daa45c36307862989cec4c419154d"><div class="ttname"><a href="class_ihm_pointeaux.html#aec3daa45c36307862989cec4c419154d">IhmPointeaux::listePointeaux</a></div><div class="ttdeci">QList&lt; Pointeaux * &gt; listePointeaux</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:41</div></div>
+<div class="ttc" id="pointeaux_8h_html"><div class="ttname"><a href="pointeaux_8h.html">pointeaux.h</a></div><div class="ttdoc">The pointeaux class. </div></div>
+<div class="ttc" id="modifpointeau_8h_html"><div class="ttname"><a href="modifpointeau_8h.html">modifpointeau.h</a></div><div class="ttdoc">The ModifPointeau class. </div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_a89055a08dcfcb4f423658e76301876a3"><div class="ttname"><a href="class_ihm_pointeaux.html#a89055a08dcfcb4f423658e76301876a3">IhmPointeaux::widgetCreationpointeau</a></div><div class="ttdeci">CreationPointeau * widgetCreationpointeau</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:48</div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_a89aefd93593c0f9683f9b668c52b6dac"><div class="ttname"><a href="class_ihm_pointeaux.html#a89aefd93593c0f9683f9b668c52b6dac">IhmPointeaux::id</a></div><div class="ttdeci">QList&lt; int &gt; id</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:44</div></div>
+<div class="ttc" id="creationpointeau_8h_html"><div class="ttname"><a href="creationpointeau_8h.html">creationpointeau.h</a></div><div class="ttdoc">The CreationPointeau class. </div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_a7cde9dc4cf365d99134db2d433efbd05"><div class="ttname"><a href="class_ihm_pointeaux.html#a7cde9dc4cf365d99134db2d433efbd05">IhmPointeaux::ui</a></div><div class="ttdeci">Ui::IhmPointeaux * ui</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:39</div></div>
+<div class="ttc" id="class_creation_pointeau_html"><div class="ttname"><a href="class_creation_pointeau.html">CreationPointeau</a></div><div class="ttdef"><b>Definition:</b> creationpointeau.h:19</div></div>
+<div class="ttc" id="class_acces_my_s_q_l_html"><div class="ttname"><a href="class_acces_my_s_q_l.html">AccesMySQL</a></div><div class="ttdef"><b>Definition:</b> accesmysql.h:33</div></div>
+<div class="ttc" id="class_ihm_pointeaux_html_a567b268ad67f22866dfc213a6c544a83"><div class="ttname"><a href="class_ihm_pointeaux.html#a567b268ad67f22866dfc213a6c544a83">IhmPointeaux::tag</a></div><div class="ttdeci">QList&lt; QString &gt; tag</div><div class="ttdef"><b>Definition:</b> ihmpointeaux.h:46</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="ihmpointeaux_8h.html">ihmpointeaux.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

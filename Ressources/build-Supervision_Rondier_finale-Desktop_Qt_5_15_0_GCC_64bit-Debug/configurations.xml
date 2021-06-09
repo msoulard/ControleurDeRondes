@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <ipServeurBDD>172.18.58.7</ipServeurBDD>
+    <portServeurBDD>3306</portServeurBDD>
+    <nomBDD>StationAccueil</nomBDD>
+    <utilisateurBDD>snir</utilisateurBDD>
+    <motDePasseBDD>snir</motDePasseBDD>
+    <telephoneDefaut>4TE7N16B17000721</telephoneDefaut>
+</configuration>
